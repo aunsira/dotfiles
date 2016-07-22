@@ -85,6 +85,8 @@ endif
 
 " Disable next line commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" Remove trailing whitespace on save for ruby files
+autocmd BufWritePre *.rb :%s/\s\+$//e
 
 " Set whitespace character
 set listchars=eol:¬,tab:→→,trail:~,extends:>,precedes:<
