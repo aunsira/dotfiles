@@ -57,6 +57,7 @@ colorscheme vividchalk
 set updatetime=250
 set expandtab                     " always uses spaces instead of tab characters
 set autowrite
+set wildmenu                      " Enhanced tab completion
 
 " Set theme/settings for macvim
 if has("gui_running")
