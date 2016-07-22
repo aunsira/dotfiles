@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<root>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_FINDER</name>
+    <url>file:///System/Library/CoreServices/Finder.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_LINE</name>
+    <url>file:///Applications/LINE.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_ITERM</name>
+    <url>file:///Applications/iTerm.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_CHROME</name>
+    <url>file:///Applications/Google%20Chrome.app/</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Slack</name>
+    <url type="file">/Applications/Slack.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Tweetbot</name>
+    <url type="file">/Applications/Tweetbot.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Editor</name>
+    <!-- <url>file:///Applications/Sublime%20Text.app</url> -->
+    <url type="file">/usr/local/Cellar/macvim/7.4-104/MacVim.app</url>
+  </vkopenurldef>
+  <item>
+    <name>Delete key by typing E+I</name>
+    <identifier>delete_key_EI</identifier>
+    <autogen>__SimultaneousKeyPresses__ KeyCode::E, KeyCode::I, KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION</autogen>
+  </item>
+  <item>
+    <name>Arrow keys with Vim directions</name>
+    <identifier>Fn+hjlk</identifier>
+    <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::FN, KeyCode::CURSOR_LEFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::FN, KeyCode::CURSOR_DOWN</autogen>
+    <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::FN, KeyCode::CURSOR_UP</autogen>
+    <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::FN, KeyCode::CURSOR_RIGHT</autogen>
+  </item>
+  <item>
+    <name>Remap F19 to Hyper</name>
+    <appendix>This maps F19 to Control + Shift + Option + Command.</appendix>
+    <identifier>f19_to_hyper</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::F19,
+      KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+C to open Chrome</name>
+    <identifier>hyper_c_to_chrome</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::C, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::VK_OPEN_URL_CHROME,
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+S to open Editor</name>
+    <identifier>hyper_s_to_editor</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::D, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::VK_OPEN_URL_APP_Editor,
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+T to open iTerm</name>
+    <identifier>hyper_t_to_iTerm</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::F, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::VK_OPEN_URL_ITERM,
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+A to open Slack</name>
+    <identifier>hyper_a_to_Slack</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::A, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::VK_OPEN_URL_APP_Slack,
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+F to open Line</name>
+    <identifier>hyper_f_to_Line</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::E, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      @begin
+      KeyCode::VK_OPEN_URL_LINE,
+      @end
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+B to open Tweetbot</name>
+    <identifier>hyper_b_to_Tweetbot</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::B, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::VK_OPEN_URL_APP_Tweetbot,
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+Q to mission control</name>
+    <identifier>hyper_q_to_mission_control</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::Q, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::MISSION_CONTROL,
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+H to left cursor</name>
+    <identifier>hyper_h_to_left_cursor</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::H, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_LEFT,
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+J to down cursor</name>
+    <identifier>hyper_j_to_down_cursor</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::J, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_DOWN,
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+K to up cursor</name>
+    <identifier>hyper_k_to_up_cursor</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::K, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_UP,
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+L to right cursor</name>
+    <identifier>hyper_l_to_right_cursor</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::L, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_RIGHT,
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+U to left workspace</name>
+    <identifier>hyper_u_to_left_workspace</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::U, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+I to right workspace</name>
+    <identifier>hyper_i_to_right_workspace</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::I, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+N to delete</name>
+    <identifier>hyper_n_to_delete</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::N, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::DELETE
+    </autogen>
+  </item>
+  <item>
+    <name>Control + Command + L to sleep</name>
+    <identifier>control_command_l_to_sleep_machine</identifier>
+    <autogen>
+      __KeyToKey__ KeyCode::U, VK_CONTROL, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_CONSUMERKEY_EJECT, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+2 to switch windows app</name>
+    <identifier>hyper_2_to_switch_windows_application</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::2, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L
+    </autogen>
+  </item>
+</root>
