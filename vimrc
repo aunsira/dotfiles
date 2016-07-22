@@ -20,6 +20,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 
@@ -53,7 +54,7 @@ set noswapfile
 set guioptions-=L
 set guioptions-=r
 set background=dark
-colorscheme vividchalk
+colorscheme railscasts
 set updatetime=250
 set expandtab                     " always uses spaces instead of tab characters
 set autowrite
