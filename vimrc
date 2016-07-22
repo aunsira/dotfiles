@@ -104,4 +104,8 @@ let g:EasyMotion_smartcase = 1
 " Set status line
 set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 
+" Set character for indentation line
 let g:indentLine_char = '|'
+
+" Clear hilights
+nnoremap <leader><space> :noh<cr>
