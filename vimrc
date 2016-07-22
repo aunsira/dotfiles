@@ -3,21 +3,10 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-" call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
-" Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'git://github.com/tpope/vim-vividchalk.git'
 Plugin 'kana/vim-arpeggio'
@@ -32,10 +21,9 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'airblade/vim-gitgutter'
 
-" All of your Plugins must be added before the following line
-call vundle#end()       "required
+call vundle#end()
 
-set backspace=2         " more powerful backspacing
+set backspace=2                   " more powerful backspacing
 
 " Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
@@ -110,8 +98,10 @@ map <C-n> :NERDTreeToggle<CR>
 " Set ctrl p for vim search file
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+" Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
 
+" Set status line
 set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 
 let g:indentLine_char = '|'
