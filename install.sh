@@ -3,7 +3,7 @@
 basedir=$(greadlink -m `dirname $0`)
 
 links=(
-  vimrc
+  vimrc zshrc tmux.conf gitconfig
 )
 
 read -n1 -p "Symlink config files to $HOME (overwriting)? (y/n)" symlink_answer

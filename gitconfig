@@ -1,0 +1,34 @@
+[user]
+	name =aun
+	email =aun.sira@gmail.com
+[diff]
+[pager]
+  diff = true
+[color]
+  ui = auto
+[alias]
+  st = status -a
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative
+  ch = checkout -
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+[core]
+	excludesfile = /Users/aun/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[sendemail]
+  from = Sira Sarakij <aun.sira@gmail.com>
+  suppresscc = self
+  chainreplyto = false
+  smtpencryption = tls
+  smtpserver = smtp.gmail.com
+  smtpserverport = 587
+  smtpuser = aun.sira@gmail.com
+[diff]
+	tool = meld
