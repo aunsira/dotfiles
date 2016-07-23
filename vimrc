@@ -13,11 +13,12 @@ Plugin 'kana/vim-arpeggio'
 Plugin 'easymotion/vim-easymotion'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Yggdroot/indentLine'
+" Plugin 'Yggdroot/indentLine'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
@@ -59,6 +60,7 @@ set updatetime=250
 set expandtab                     " always uses spaces instead of tab characters
 set autowrite
 set wildmenu                      " Enhanced tab completion
+set colorcolumn=81
 
 " Set theme/settings for macvim
 if has("gui_running")
@@ -103,16 +105,15 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
 
-" Set status line
-set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
+" Customize own statusline
+" set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 
-" Set character for indentation line
-let g:indentLine_char = '|'
+" Set character for indentation line plugin
+" let g:indentLine_char = '|'
 
 " Clear hilights
 nnoremap <leader><space> :noh<cr>
 
-" Differentiate cursor when mode is changed
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" Whitespace warning
+let ruby_space_errors=1
+let c_space_errors=1
