@@ -19,7 +19,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdtree'
 " Plugin 'Yggdroot/indentLine'
-Plugin 'dkprice/vim-easygrep'
+Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 
