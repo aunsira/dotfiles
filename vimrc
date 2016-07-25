@@ -117,3 +117,6 @@ nnoremap <leader><space> :noh<cr>
 " Whitespace warning
 let ruby_space_errors=1
 let c_space_errors=1
+
+" Highlight background of column line
+hi ColorColumn guibg=#000000
