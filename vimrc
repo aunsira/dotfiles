@@ -120,3 +120,9 @@ let c_space_errors=1
 
 " Highlight background of column line
 hi ColorColumn guibg=#000000
+
+" Alias Ack with Ag instead
+let g:ackprg = 'ag --vimgrep'
+
+" Shortcut for typing :Ack
+nnoremap <leader>f :Ack<Space>
