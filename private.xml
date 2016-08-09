@@ -196,4 +196,31 @@
       KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L
     </autogen>
   </item>
+  <item>
+    <name>Hyper+N to volume down</name>
+    <identifier>hyper_n_to_volume_down</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::N, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::VK_CONSUMERKEY_VOLUME_DOWN
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+M to volume up</name>
+    <identifier>hyper_m_to_volume_up</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::M, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::VK_CONSUMERKEY_VOLUME_UP
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+comma to mute</name>
+    <identifier>hyper_comma_to_mute</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::COMMA, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::VK_CONSUMERKEY_VOLUME_MUTE
+    </autogen>
+  </item>
 </root>
