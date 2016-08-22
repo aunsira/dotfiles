@@ -55,7 +55,7 @@ set noswapfile
 set guioptions-=L
 set guioptions-=r
 set background=dark
-colorscheme railscasts
+colorscheme mustang
 set updatetime=250
 set expandtab                     " always uses spaces instead of tab characters
 set wildmenu                      " Enhanced tab completion
@@ -88,11 +88,6 @@ let g:Powerline_symbols = 'fancy'
 " Set close tag filenames like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb"
 
-" Easier split navigation Use ctrl-[hjkl] to select the active split!
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 " Shortcut for typing :Ack
