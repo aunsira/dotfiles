@@ -58,7 +58,6 @@ set background=dark
 colorscheme railscasts
 set updatetime=250
 set expandtab                     " always uses spaces instead of tab characters
-set autowrite
 set wildmenu                      " Enhanced tab completion
 set colorcolumn=81
 
@@ -72,7 +71,6 @@ if has("gui_running")
   set ruler
   " set guifont=Ubuntu_Mono_derivative_Powerline:h14
   set guifont=Monaco:h12
-  autocmd FocusLost * :wa
 endif
 
 " Disable next line commenting
