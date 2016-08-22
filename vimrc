@@ -95,9 +95,15 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
+" Shortcut for typing :Ack
+nnoremap <leader>f :Ack<Space>
+" Clear hilights
+nnoremap <leader><space> :noh<cr>
+map <Leader>e :NERDTreeFind<CR>zz
+map <Leader>q :q<CR>
+map <Leader>s :w<CR>
 
 " Set ctrl p for vim search file
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -111,9 +117,6 @@ let g:EasyMotion_smartcase = 1
 " Set character for indentation line plugin
 " let g:indentLine_char = '|'
 
-" Clear hilights
-nnoremap <leader><space> :noh<cr>
-
 " Whitespace warning
 let ruby_space_errors=1
 let c_space_errors=1
@@ -123,6 +126,3 @@ hi ColorColumn guibg=#000000
 
 " Alias Ack with Ag instead
 let g:ackprg = 'ag --vimgrep'
-
-" Shortcut for typing :Ack
-nnoremap <leader>f :Ack<Space>
