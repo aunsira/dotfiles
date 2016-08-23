@@ -22,7 +22,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'morhetz/gruvbox'
+" Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 
@@ -98,6 +98,7 @@ nnoremap <leader><space> :noh<cr>
 map <Leader>e :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <Leader>s :w<CR>
+map <leader>l :ls<CR>
 
 " Set ctrl p for vim search file
 set runtimepath^=~/.vim/bundle/ctrlp.vim
