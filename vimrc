@@ -23,6 +23,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 " Plugin 'morhetz/gruvbox'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
 
