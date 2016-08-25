@@ -100,7 +100,7 @@ map <Leader>e :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <Leader>s :w<CR>
 map <leader>l :ls<CR>
-map <leader>w <C-w>w<CR>
+map <leader>w <C-w>w
 
 " Set ctrl p for vim search file
 set runtimepath^=~/.vim/bundle/ctrlp.vim
