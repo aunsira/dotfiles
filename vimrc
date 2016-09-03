@@ -34,6 +34,8 @@ au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
+let g:gruvbox_contrast_dark='hard'
+
 filetype plugin indent on
 syntax on
 set t_Co=256

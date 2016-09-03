@@ -21,3 +21,5 @@ alias FUCK='fuck'
 export CDPATH="~/code/git/skilllane-web/:~/code/git/:~/code/:"
 
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+
+alias tmux='tmux -2'
