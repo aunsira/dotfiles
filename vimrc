@@ -121,7 +121,7 @@ let ruby_space_errors=1
 let c_space_errors=1
 
 " Highlight background of column line
-hi ColorColumn guibg=#000000
+hi ColorColumn guibg=#FF5733 ctermbg=237
 
 " Alias Ack with Ag instead
 let g:ackprg = 'ag --vimgrep'
