@@ -100,6 +100,26 @@ map <Leader>q :q<CR>
 map <Leader>s :w<CR>
 map <leader>l :ls<CR>
 map <leader>w <C-w>w
+vmap <leader>c "*y
+
+" Indent lines with cmd+[ and cmd+]
+nmap <C-]> >>
+nmap <C-[> <<
+vmap <C-[> <gv
+vmap <C-]> >gv
+
+" Faster viewport scrolling (3 lines at a time)
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+vnoremap <C-e> 3<C-e>
+vnoremap <C-y> 3<C-y>
+
+" Tab to next buffer
+nnoremap <tab> :bnext<cr>
+" Shift-tab to previous buffer
+nnoremap <leader><tab> :bprevious<cr>
+" Switch between last two buffers
+nnoremap <leader>. <C-^>
 
 " Set ctrl p for vim search file
 set runtimepath^=~/.vim/bundle/ctrlp.vim
