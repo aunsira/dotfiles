@@ -8,22 +8,20 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'git://github.com/tpope/vim-vividchalk.git'
-Plugin 'kana/vim-arpeggio'
 Plugin 'easymotion/vim-easymotion'
-" Plugin 'Valloric/YouCompleteMe'
-" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'chriskempson/base16-vim'
-Plugin 'scrooloose/nerdtree'
-" Plugin 'Yggdroot/indentLine'
+Plugin 'vim-ruby/vim-ruby' , { 'for': 'rb' }
+Plugin 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 " Plugin 'morhetz/gruvbox'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mattn/emmet-vim', { 'for': 'html' }
+Plugin 'tpope/vim-surround'
+Plugin 'alvan/vim-closetag'
+Plugin 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
 
 call vundle#end()
 
@@ -73,7 +71,6 @@ if has("gui_running")
   set bs=2
   set ai
   set ruler
-  " set guifont=Ubuntu_Mono_derivative_Powerline:h14
   set guifont=Monaco:h12
 endif
 
@@ -109,12 +106,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
-
-" Customize own statusline
-" set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
-
-" Set character for indentation line plugin
-" let g:indentLine_char = '|'
 
 " Whitespace warning
 let ruby_space_errors=1
