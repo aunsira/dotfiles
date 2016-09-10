@@ -22,18 +22,12 @@ Plugin 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
 
 call vundle#end()
 
-set backspace=2                   " more powerful backspacing
-
-" Don't write backup file if vim is being called by "crontab -e"
-au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
-" Don't write backup file if vim is being called by "chpass"
-au BufWrite /private/etc/pw.* set nowritebackup nobackup
-
 let g:gruvbox_contrast_dark='hard'
 
 filetype plugin indent on
 syntax on
 set t_Co=256
+set backspace=indent,eol,start    " more powerful backspacing
 set tabstop=2                     " size of a hard tabstop
 set shiftwidth=2                  " size of an indent
 set ignorecase                    " ignore case in search
@@ -47,8 +41,7 @@ set smartindent
 set nocompatible                  " Use Vim defaults instead of 100% vi compatibility
 set laststatus=2
 set encoding=utf-8
-set number
-set scrolloff=3                   " Keep 5 lines below and above ther cursor
+set scrolloff=5                   " Keep 5 lines below and above ther cursor
 set guicursor+=a:blinkon0         " Disable all blinking cursor
 set noswapfile
 set guioptions-=L
@@ -59,6 +52,11 @@ set updatetime=250
 set expandtab                     " always uses spaces instead of tab characters
 set wildmenu                      " Enhanced tab completion
 set colorcolumn=81
+set ttyfast                       " We are on a quick terminal"
+set lazyredraw
+set number
+set relativenumber                " Show numbers in column
+set cursorline                    " Indicate what line we are on"
 
 " Set theme/settings for macvim
 if has("gui_running")
