@@ -5,9 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'L9'
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-rails'
