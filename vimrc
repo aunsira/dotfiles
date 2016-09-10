@@ -19,6 +19,7 @@ Plugin 'mattn/emmet-vim', { 'for': 'html' }
 Plugin 'tpope/vim-surround'
 Plugin 'alvan/vim-closetag'
 Plugin 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 
@@ -116,9 +117,6 @@ nnoremap <leader><tab> :bprevious<cr>
 " Switch between last two buffers
 nnoremap <leader>. <C-^>
 
-" Set ctrl p for vim search file
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
 
@@ -131,3 +129,6 @@ hi ColorColumn guibg=#FF5733 ctermbg=237
 
 " Alias Ack with Ag instead
 let g:ackprg = 'ag --vimgrep'
+
+" Remap the default <C-Y> leader of Emmet Plugin
+let g:user_emmet_leader_key='<C-Z>'
