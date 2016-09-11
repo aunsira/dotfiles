@@ -20,6 +20,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'alvan/vim-closetag'
 Plugin 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 
@@ -118,6 +119,10 @@ nnoremap <leader><tab> :bprevious<cr>
 nnoremap <leader>. <C-^>
 " Map fzf plugin
 nmap <C-p> :FZF<CR>
+" Quickly open a second window to view files side by side
+nmap <LEADER>vs :vsplit<CR>
+" bind K to grep word under cursor
+nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
