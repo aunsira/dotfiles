@@ -19,7 +19,7 @@ Plugin 'mattn/emmet-vim', { 'for': 'html' }
 Plugin 'tpope/vim-surround'
 Plugin 'alvan/vim-closetag'
 Plugin 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 
 call vundle#end()
 
@@ -116,6 +116,8 @@ nnoremap <tab> :bnext<cr>
 nnoremap <leader><tab> :bprevious<cr>
 " Switch between last two buffers
 nnoremap <leader>. <C-^>
+" Map fzf plugin
+nmap <C-p> :FZF<CR>
 
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
