@@ -24,4 +24,7 @@ source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 
 alias tmux='tmux -2'
 
+# Don't exit on ctrl-d
+set -o ignoreeof
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
