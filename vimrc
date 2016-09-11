@@ -21,6 +21,7 @@ Plugin 'alvan/vim-closetag'
 Plugin 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 
