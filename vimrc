@@ -140,3 +140,6 @@ let g:ackprg = 'ag --vimgrep'
 
 " Remap the default <C-Y> leader of Emmet Plugin
 let g:user_emmet_leader_key='<C-Z>'
+
+" CTRL-N and CTRL-P to revious-history instead of down and up.
+let g:fzf_history_dir = '~/.fzf-history'
