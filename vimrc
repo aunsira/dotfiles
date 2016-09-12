@@ -101,8 +101,8 @@ map <leader>w <C-w>w
 vmap <leader>c "*y
 
 " Indent lines with cmd+[ and cmd+]
-nmap <C-]> >>
-nmap <C-[> <<
+nmap <D-]> >>
+nmap <D-[> <<
 vmap <C-[> <gv
 vmap <C-]> >gv
 
