@@ -14,15 +14,19 @@ if [ -x "$(command -v rbenv)" ]; then
   eval "$(rbenv init -)"
 fi
 
-# The Fuck plugin
+# aliases
 alias fuck='eval $(thefuck $(fc -ln -1))'
 alias FUCK='fuck'
+alias tmux='tmux -2'
+alias vimn='vim -u NONE'
+alias cls='clear'
+alias p8='ping 8.8.8.8'
+alias ls="ls -AFG"
+alias ll="ls -FGlh"
 
 export CDPATH=$CDPATH:$HOME/code/git:$HOME/code/git/skilllane-web:$HOME/code
 
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
-
-alias tmux='tmux -2'
 
 # Don't exit on ctrl-d
 set -o ignoreeof
