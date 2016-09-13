@@ -15,6 +15,11 @@ if [ -x "$(command -v rbenv)" ]; then
 fi
 
 # aliases
+alias ...="cd ../.."                        # go up parent dir twice
+alias ....="cd ../../.."                    # .. thrice
+alias .....="cd ../../../.."                # .. four times
+alias ......="cd ../../../../.."            # .. five times
+alias cd..="cd .."
 alias fuck='eval $(thefuck $(fc -ln -1))'
 alias FUCK='fuck'
 alias tmux='tmux -2'
