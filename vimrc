@@ -136,6 +136,13 @@ vnoremap <C-@> <Esc>gV
 onoremap <C-@> <Esc>
 cnoremap <C-@> <C-c>
 inoremap <C-@> <Esc>`^
+" Go to position of last edit. Mnem: 'Go to Edit'
+nnoremap ge `.
+" Leader-; to enter command mode. No more holding shift!
+nnoremap <leader>; :
+vnoremap <leader>; :
+" Easy access to the start of the line
+nnoremap 0 ^
 
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
