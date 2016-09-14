@@ -130,12 +130,12 @@ nmap <C-p> :FZF<CR>
 nmap <LEADER>vs :vsplit<CR>
 " bind K to grep word under cursor
 nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
-" Use C-Space to Esc out of any mode
-nnoremap <NUL> <Esc>:noh<CR>
-vnoremap <NUL> <Esc>gV
-onoremap <NUL> <Esc>
-cnoremap <NUL> <C-c>
-inoremap <NUL> <Esc>`^
+" Use C-Space to Esc out of any mode (Terminal sees <C-@> as <C-space> WTF, but ok)
+nnoremap <C-@> <Esc>:noh<CR>
+vnoremap <C-@> <Esc>gV
+onoremap <C-@> <Esc>
+cnoremap <C-@> <C-c>
+inoremap <C-@> <Esc>`^
 
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
