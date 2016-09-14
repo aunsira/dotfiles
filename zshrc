@@ -28,6 +28,8 @@ alias cls='clear'
 alias p8='ping 8.8.8.8'
 alias ls="ls -AFG"
 alias ll="ls -FGlh"
+alias gl='git lg'
+alias glp='git lg -p'
 
 export CDPATH=$CDPATH:$HOME/code/git:$HOME/code/git/skilllane-web:$HOME/code
 
