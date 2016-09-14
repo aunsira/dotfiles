@@ -72,6 +72,12 @@ if has("gui_running")
   set ai
   set ruler
   set guifont=Monaco:h12
+  " Use C-Space to Esc out of any mode
+  nnoremap <C-Space> <Esc>:noh<CR>
+  vnoremap <C-Space> <Esc>gV
+  onoremap <C-Space> <Esc>
+  cnoremap <C-Space> <C-c>
+  inoremap <C-Space> <Esc>`^
 endif
 
 " Disable next line commenting
@@ -93,8 +99,6 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb"
 map <C-n> :NERDTreeToggle<CR>
 " Shortcut for typing :Ack
 nnoremap <leader>f :Ack<Space>
-" Clear hilights
-nnoremap <leader><space> :noh<cr>
 map <Leader>e :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <Leader>s :w<CR>
@@ -126,6 +130,12 @@ nmap <C-p> :FZF<CR>
 nmap <LEADER>vs :vsplit<CR>
 " bind K to grep word under cursor
 nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" Use C-Space to Esc out of any mode
+nnoremap <NUL> <Esc>:noh<CR>
+vnoremap <NUL> <Esc>gV
+onoremap <NUL> <Esc>
+cnoremap <NUL> <C-c>
+inoremap <NUL> <Esc>`^
 
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
