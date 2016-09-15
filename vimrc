@@ -22,6 +22,7 @@ Plugin 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-commentary'
+Plugin 'troydm/easybuffer.vim'
 
 call vundle#end()
 
@@ -103,7 +104,7 @@ map <Leader>e :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <Leader>s :w<CR>
 " Switch buffers easier
-map <leader>b :ls<CR>:b<Space>
+map <leader>b :EasyBufferHorizontal<CR>
 map <leader>w <C-w>w
 vmap <leader>c "*y
 
