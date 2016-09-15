@@ -102,7 +102,8 @@ nnoremap <leader>f :Ack<Space>
 map <Leader>e :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <Leader>s :w<CR>
-map <leader>l :ls<CR>
+" Switch buffers easier
+map <leader>b :ls<CR>:b<Space>
 map <leader>w <C-w>w
 vmap <leader>c "*y
 
