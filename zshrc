@@ -1,6 +1,6 @@
 export ZSH=/Users/aun/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="sammy"
 
 plugins=(git tmux postgres rails zsh-autosuggestions zsh-syntax-highlighting)
 
@@ -30,6 +30,7 @@ alias ls="ls -AFG"
 alias ll="ls -FGlh"
 alias gl='git lg'
 alias glp='git lg -p'
+alias e='exit'
 
 export CDPATH=$CDPATH:$HOME/code/git:$HOME/code/git/skilllane-web:$HOME/code
 
