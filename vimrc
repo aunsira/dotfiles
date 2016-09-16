@@ -107,6 +107,7 @@ map <Leader>s :w<CR>
 map <leader>b :EasyBufferHorizontal<CR>
 map <leader>w <C-w>w
 vmap <leader>c "*y
+nmap <leader>p "*p
 
 " Indent lines with cmd+[ and cmd+]
 nmap <D-]> >>
