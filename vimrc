@@ -102,6 +102,7 @@ let mapleader = "\<Space>"
 map <C-n> :NERDTreeToggle<CR>
 " Shortcut for typing :Ack
 nnoremap <leader>f :Ack<Space>
+
 map <Leader>e :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <Leader>s :w<CR>
@@ -129,33 +130,39 @@ nnoremap <tab> :bnext<cr>
 nnoremap <leader><tab> :bprevious<cr>
 " Switch between last two buffers
 nnoremap <leader>. <C-^>
+
 " Map fzf plugin
 nmap <C-p> :FZF<CR>
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
 " bind K to grep word under cursor
 nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 " Use C-Space to Esc out of any mode (Terminal sees <C-@> as <C-space> WTF, but ok)
 nnoremap <C-@> <Esc>:noh<CR>
 vnoremap <C-@> <Esc>gV
 onoremap <C-@> <Esc>
 cnoremap <C-@> <C-c>
 inoremap <C-@> <Esc>`^
+
 " Go to position of last edit. Mnem: 'Go to Edit'
 nnoremap ge `.
 " Leader-; to enter command mode. No more holding shift!
 nnoremap <leader>; :
 vnoremap <leader>; :
+
 " Easy access to the start of the line
 nnoremap 0 ^
 " Window resizing
 noremap <leader>= <C-w>=
+
 " Git shortcuts
 map <leader>gs :Gstatus<cr>
 map <leader>gc :Gcommit<cr>
 map <leader>gg :Gbrowse<cr>
 map <leader>gb :Gblame<cr>
 map <leader>gd :Gdiff<cr>
+
 " Make Y act like other capitals
 map Y y$
 
