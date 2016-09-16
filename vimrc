@@ -96,6 +96,8 @@ let g:Powerline_symbols = 'fancy'
 " Set close tag filenames like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb"
 
+let mapleader = "\<Space>"
+
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 " Shortcut for typing :Ack
@@ -146,6 +148,16 @@ nnoremap <leader>; :
 vnoremap <leader>; :
 " Easy access to the start of the line
 nnoremap 0 ^
+" Window resizing
+noremap <leader>= <C-w>=
+" Git shortcuts
+map <leader>gs :Gstatus<cr>
+map <leader>gc :Gcommit<cr>
+map <leader>gg :Gbrowse<cr>
+map <leader>gb :Gblame<cr>
+map <leader>gd :Gdiff<cr>
+" Make Y act like other capitals
+map Y y$
 
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
