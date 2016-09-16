@@ -31,6 +31,7 @@ alias ll="ls -FGlh"
 alias gl='git lg'
 alias glp='git lg -p'
 alias e='exit'
+alias rs='rails s -p 3001'
 
 export CDPATH=$CDPATH:$HOME/code/git:$HOME/code/git/skilllane-web:$HOME/code
 
