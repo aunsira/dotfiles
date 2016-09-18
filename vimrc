@@ -23,7 +23,7 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-commentary'
 Plugin 'troydm/easybuffer.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim', { 'if': has('gui_running')  }
 
 call vundle#end()
 
