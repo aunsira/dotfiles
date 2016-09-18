@@ -23,6 +23,10 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-commentary'
 Plugin 'troydm/easybuffer.vim'
+if has("gui_running")
+  " Use CtrlP instead of FZF in MacVim
+  Plugin 'kien/ctrlp.vim'
+endif
 
 call vundle#end()
 
@@ -79,8 +83,6 @@ if has("gui_running")
   onoremap <C-Space> <Esc>
   cnoremap <C-Space> <C-c>
   inoremap <C-Space> <Esc>`^
-  " Use CtrlP instead of FZF in MacVim
-  Plugin 'kien/ctrlp.vim'
 endif
 
 " Disable next line commenting
