@@ -166,6 +166,21 @@ map <leader>gd :Gdiff<cr>
 " Make Y act like other capitals
 map Y y$
 
+" move by line on the screen rather than by line in the file
+nmap k gk
+nmap j gj
+
+" Emacs-like beginning and end of line.
+imap <c-e> <c-o>$
+imap <c-a> <c-o>^
+
+" break this line into a new one below
+map <CR> i<CR><Esc>
+" add newline above current line
+map <Esc><CR> O<Esc>
+" add newline below current line
+map <Leader><CR> o<Esc>
+
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
 
