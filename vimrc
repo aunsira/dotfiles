@@ -100,6 +100,9 @@ let g:Powerline_symbols = 'fancy'
 " Set close tag filenames like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb"
 
+" Show hidden files in nerdtree
+let NERDTreeShowHidden=1
+
 let mapleader = "\<Space>"
 
 " Toggle NERDTree
