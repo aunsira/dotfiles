@@ -43,12 +43,6 @@ if has("gui_running")
   set ai
   set ruler
   set guifont=Monaco:h12
-  " Use C-Space to Esc out of any mode
-  nnoremap <C-Space> <Esc>:noh<CR>
-  vnoremap <C-Space> <Esc>gV
-  onoremap <C-Space> <Esc>
-  cnoremap <C-Space> <C-c>
-  inoremap <C-Space> <Esc>`^
 endif
 
 " Set whitespace character
