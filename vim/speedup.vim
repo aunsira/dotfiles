@@ -92,3 +92,16 @@ map <CR> i<CR><Esc>
 map <Esc><CR> O<Esc>
 " add newline below current line
 map <Leader><CR> o<Esc>
+
+function! CurrenRelativeDirectory()
+  let relative_dir = substitute(expand("%:p:h"), getcwd()."/", "", "")."/"
+  return escape(relative_dir, " ")
+endfunction
+
+" Easy navigation for editing and coding
+nnoremap <leader>rr :r <C-r>=CurrenRelativeDirectory()<cr>
+nnoremap <leader>er :e <C-r>=escape(expand("%:p:h"), ' ')<cr>/
+nnoremap <Leader>es :e ~/code/git/skilllane-web/ClassroomApp/
+nnoremap <Leader>eg :e ~/code/git/
+nnoremap <Leader>eh :e ~/
+nnoremap <Leader>cd :cd ~/
