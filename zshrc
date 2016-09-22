@@ -32,6 +32,7 @@ alias gl='git lg'
 alias glp='git lg -p'
 alias e='exit'
 alias rs='rails s -p 3001'
+alias cdcl='cd ClassroomApp'
 
 export CDPATH=$CDPATH:$HOME/code/git:$HOME/code/git/skilllane-web:$HOME/code
 
@@ -42,4 +43,3 @@ set -o ignoreeof
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
