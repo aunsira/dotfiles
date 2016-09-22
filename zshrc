@@ -41,3 +41,8 @@ source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
 set -o ignoreeof
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='
+  (git ls-tree -r --name-only HEAD ||
+       find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
+        sed s/^..//) 2> /dev/null'
