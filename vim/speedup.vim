@@ -6,7 +6,7 @@ map <C-n> :NERDTreeToggle<CR>
 " Shortcut for typing :Ack
 nnoremap <leader>f :Ack<Space>
 
-map <Leader>e :NERDTreeFind<CR>zz
+map <Leader>ne :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <Leader>s :w<CR>
 map <Leader>x :x<CR>
