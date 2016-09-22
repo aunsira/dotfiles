@@ -105,3 +105,5 @@ nnoremap <Leader>es :e ~/code/git/skilllane-web/ClassroomApp/
 nnoremap <Leader>eg :e ~/code/git/
 nnoremap <Leader>eh :e ~/
 nnoremap <Leader>cd :cd ~/
+nnoremap <Leader>cs :cd ~/code/git/skilllane-web/ClassroomApp/
+nnoremap <Leader>cg :cd ~/code/git/
