@@ -26,3 +26,15 @@ if [[ "$symlink_vim_answer" == "y" ]]; then
     echo -e ${HOME}/.vim/custom/$vim_file \t→\t $basedir/vim/$vim_file
   done
 fi
+
+_zshfiles_path=$basedir/zsh;
+read -n1 -p "Symlink all zsh files to ~/.zsh/ (overwriting)? (y/n)" symlink_zsh_answer
+echo ""
+if [[ "$symlink_zsh_answer" == "y" ]]; then
+  for zsh in "$_zshfiles_path"/*; do
+    zsh_file=`basename "$zsh"`
+    echo $zsh_file
+    ln -sfn $basedir/zsh/$zsh_file ${HOME}/.zsh/$vim_file
+    echo -e ${HOME}/.zsh/$vim_file \t→\t $basedir/zsh/$zsh_file
+  done
+fi

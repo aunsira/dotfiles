@@ -1,0 +1,17 @@
+export PATH=/usr/local/bin:$PATH
+export LANG=en_US.UTF-8
+
+# Ruby environment config
+if [ -x "$(command -v rbenv)" ]; then
+  eval "$(rbenv init -)"
+fi
+
+export CDPATH=$CDPATH:$HOME/code/git:$HOME/code/git/skilllane-web:$HOME/code
+
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+
+# Don't exit on ctrl-d
+set -o ignoreeof
+
+# Config FZF for start using fuzzy search
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
