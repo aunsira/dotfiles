@@ -34,7 +34,7 @@ if [[ "$symlink_zsh_answer" == "y" ]]; then
   for zsh in "$_zshfiles_path"/*; do
     zsh_file=`basename "$zsh"`
     echo $zsh_file
-    ln -sfn $basedir/zsh/$zsh_file ${HOME}/.zsh/$vim_file
-    echo -e ${HOME}/.zsh/$vim_file \t→\t $basedir/zsh/$zsh_file
+    ln -sfn $basedir/zsh/$zsh_file ${HOME}/.zsh/$zsh_file
+    echo -e ${HOME}/.zsh/$zsh_file \t→\t $basedir/zsh/$zsh_file
   done
 fi
