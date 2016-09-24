@@ -107,3 +107,9 @@ nnoremap <Leader>eh :e ~/
 nnoremap <Leader>cd :cd ~/
 nnoremap <Leader>cs :cd ~/code/git/skilllane-web/ClassroomApp/
 nnoremap <Leader>cg :cd ~/code/git/
+
+" Shortcut for Tabularize
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>

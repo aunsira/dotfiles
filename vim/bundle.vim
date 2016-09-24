@@ -5,27 +5,29 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby' , { 'for': 'rb' }
-Plugin 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'morhetz/gruvbox'
+Plugin 'alvan/vim-closetag'
+Plugin 'christoomey/vim-conflicted'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim', { 'for': 'html' }
-Plugin 'tpope/vim-surround'
-Plugin 'alvan/vim-closetag'
-Plugin 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tpope/vim-commentary'
-Plugin 'troydm/easybuffer.vim'
-Plugin 'christoomey/vim-conflicted'
-Plugin 'vim-scripts/ReplaceWithRegister'
+Plugin 'mileszs/ack.vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
+Plugin 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'troydm/easybuffer.vim'
+Plugin 'vim-ruby/vim-ruby' , { 'for': 'rb' }
+Plugin 'vim-scripts/ReplaceWithRegister'
 if has("gui_running")
   " Use CtrlP instead of FZF in MacVim
   Plugin 'kien/ctrlp.vim'
