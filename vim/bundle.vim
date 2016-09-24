@@ -13,7 +13,6 @@ Plugin 'vim-ruby/vim-ruby' , { 'for': 'rb' }
 Plugin 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'morhetz/gruvbox'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mattn/emmet-vim', { 'for': 'html' }
@@ -26,6 +25,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'troydm/easybuffer.vim'
 Plugin 'christoomey/vim-conflicted'
 Plugin 'vim-scripts/ReplaceWithRegister'
+Plugin 'nanotech/jellybeans.vim'
 if has("gui_running")
   " Use CtrlP instead of FZF in MacVim
   Plugin 'kien/ctrlp.vim'
