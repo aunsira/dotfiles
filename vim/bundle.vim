@@ -25,6 +25,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-commentary'
 Plugin 'troydm/easybuffer.vim'
 Plugin 'christoomey/vim-conflicted'
+Plugin 'vim-scripts/ReplaceWithRegister'
 if has("gui_running")
   " Use CtrlP instead of FZF in MacVim
   Plugin 'kien/ctrlp.vim'
