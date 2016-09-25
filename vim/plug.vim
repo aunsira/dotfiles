@@ -15,6 +15,7 @@ Plug 'gmarik/Vundle.vim'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/gv.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kchmck/vim-coffee-script'
