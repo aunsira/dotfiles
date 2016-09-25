@@ -21,7 +21,6 @@ set noswapfile
 set guioptions-=L
 set guioptions-=r
 set background=dark
-colorscheme jellybeans
 set updatetime=250
 set expandtab                     " always uses spaces instead of tab characters
 set wildmenu                      " Enhanced tab completion
@@ -36,9 +35,7 @@ set splitright
 
 " Set theme/settings for macvim
 if has("gui_running")
-  syntax on
   set hlsearch
-  colorscheme gruvbox
   set bs=2
   set ai
   set ruler

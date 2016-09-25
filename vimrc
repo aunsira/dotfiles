@@ -1,4 +1,3 @@
-filetype off
 let mapleader = "\<Space>"
 
 function! s:SourceConfigFilesIn(directory)
@@ -11,6 +10,3 @@ function! s:SourceConfigFilesIn(directory)
 endfunction
 
 call s:SourceConfigFilesIn('custom')
-
-filetype plugin indent on
-syntax on
