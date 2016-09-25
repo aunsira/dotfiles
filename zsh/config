@@ -8,7 +8,7 @@ fi
 
 export CDPATH=$CDPATH:$HOME/code/git:$HOME/code/git/skilllane-web:$HOME/code
 
-source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh"
 
 # Don't exit on ctrl-d
 set -o ignoreeof

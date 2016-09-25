@@ -15,7 +15,7 @@ set stl+=%*                         " Return to normal stl hilight
 
 set stl+=%t                         " Filename
 
-set stl+=%2*                        " Red highlight
+set stl+=%4*                        " Black highlight
 set stl+=%m                         " Modified flag
 
 set stl+=%*                         " Return to normal stl hilight

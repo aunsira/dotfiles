@@ -7,15 +7,16 @@ alias cd..="cd .."
 alias cdcl='cd ClassroomApp'
 
 # For speed me up
-alias fuck='eval $(thefuck $(fc -ln -1))'
 alias FUCK='fuck'
-alias tmux='tmux -2'
-alias vimn='vim -u NONE'
 alias cls='clear'
-alias p8='ping 8.8.8.8'
-alias ls="ls -AFG"
-alias ll="ls -FGlh"
+alias e='exit'
+alias fuck='eval $(thefuck $(fc -ln -1))'
 alias gl='git lg'
 alias glp='git lg -p'
-alias e='exit'
+alias gto='git-open'
+alias ll="ls -FGlh"
+alias ls="ls -AFG"
+alias p8='ping 8.8.8.8'
 alias rs='rails s -p 3001'
+alias tmux='tmux -2'
+alias vimn='vim -u NONE'
