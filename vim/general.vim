@@ -21,7 +21,7 @@ set noswapfile
 set guioptions-=L
 set guioptions-=r
 set background=dark
-colorscheme gruvbox
+colorscheme jellybeans
 set updatetime=250
 set expandtab                     " always uses spaces instead of tab characters
 set wildmenu                      " Enhanced tab completion
