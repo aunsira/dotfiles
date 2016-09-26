@@ -113,3 +113,6 @@ map <Leader>a :Tabularize /
 
 " Next search will be at the middle screen
 noremap n nzz
+
+" map goyo
+map <Leader>gy :Goyo 140x70<cr>

@@ -46,5 +46,9 @@ endif
 set listchars=eol:¬,tab:→→,trail:~,extends:>,precedes:<
 set list
 
-" Highlight background of column line
-hi ColorColumn guibg=#FF5733 ctermbg=237
+function! HiColor()
+  " Set selected code color
+  hi Visual term=reverse cterm=reverse guibg=Grey
+  " Highlight background of column line
+  hi ColorColumn guibg=#FF5733 ctermbg=237
+endfunction

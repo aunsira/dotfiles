@@ -10,3 +10,5 @@ function! s:SourceConfigFilesIn(directory)
 endfunction
 
 call s:SourceConfigFilesIn('custom')
+" Seems that highlight color only work in vimrc
+call HiColor()

@@ -3,6 +3,7 @@ alias ...="cd ../.."                        # go up parent dir twice
 alias ....="cd ../../.."                    # .. thrice
 alias .....="cd ../../../.."                # .. four times
 alias ......="cd ../../../../.."            # .. five times
+alias cd-="cd -"
 alias cd..="cd .."
 alias cdcl='cd ClassroomApp'
 
