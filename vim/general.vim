@@ -32,6 +32,8 @@ set relativenumber                " Show numbers in column
 set cursorline                    " Indicate what line we are on"
 set splitbelow
 set splitright
+set visualbell
+set t_vb=
 
 " Set theme/settings for macvim
 if has("gui_running")
