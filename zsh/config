@@ -13,5 +13,11 @@ source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh"
 # Don't exit on ctrl-d
 set -o ignoreeof
 
+# FZF options
+export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bind '?:toggle-preview'"
+command -v blsd > /dev/null && export FZF_ALT_C_COMMAND='blsd'
+command -v tree > /dev/null && export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+
 # Config FZF for start using fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
