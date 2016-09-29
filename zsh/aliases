@@ -1,33 +1,33 @@
 # Shortcut for changing directories
-alias ...    = "cd ../.."                        # go up parent dir twice
-alias ....   = "cd ../../.."                    # .. thrice
-alias .....  = "cd ../../../.."                # .. four times
-alias ...... = "cd ../../../../.."            # .. five times
-alias cd-    = "cd -"
-alias cd..   = "cd .."
-alias cdcl   = 'cd ClassroomApp'
+alias ...="cd ../.."                        # go up parent dir twice
+alias ....="cd ../../.."                    # .. thrice
+alias .....="cd ../../../.."                # .. four times
+alias ......="cd ../../../../.."            # .. five times
+alias cd-="cd -"
+alias cd..="cd .."
+alias cdcl='cd ClassroomApp'
 
 # For speed me up
-alias FUCK = 'fuck'
-alias cls  = 'clear'
-alias e    = 'exit'
-alias fuck = 'eval $(thefuck $(fc -ln -1))'
-alias gaf  = 'git add $(gf)'
-alias gch  = 'git checkout $(gh)'
-alias gco  = 'git checkout'
-alias gd   = 'git diff'
-alias gdf  = 'git diff $(gf)'
-alias gdh  = 'git diff $(gh)'
-alias gl   = 'git lg'
-alias glp  = 'git lg -p'
-alias gst  = 'git status'
-alias gto  = 'git-open'
-alias ll   = "ls -FGlh"
-alias ls   = "ls -AFG"
-alias p8   = 'ping 8.8.8.8'
-alias rs   = 'rails s -p 3001'
-alias tmux = 'tmux -2'
-alias vimn = 'vim -u NONE'
+alias FUCK='fuck'
+alias cls='clear'
+alias e='exit'
+alias fuck='eval $(thefuck $(fc -ln -1))'
+alias gaf='git add $(gf)'
+alias gch='git checkout $(gh)'
+alias gco='git checkout'
+alias gd='git diff'
+alias gdf='git diff $(gf)'
+alias gdh='git diff $(gh)'
+alias gl='git lg'
+alias glp='git lg -p'
+alias gst='git status'
+alias gto='git-open'
+alias ll="ls -FGlh"
+alias ls="ls -AFG"
+alias p8='ping 8.8.8.8'
+alias rs='rails s -p 3001'
+alias tmux='tmux -2'
+alias vimn='vim -u NONE'
 
 fzf-gt-widget() LBUFFER+=$(gb | join-lines)
 zle -N fzf-gt-widget
