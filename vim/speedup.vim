@@ -116,3 +116,6 @@ noremap n nzz
 
 " map goyo
 map <Leader>gy :Goyo 140x70<cr>
+
+" Use GV without hit colon
+map <Leader>gv :GV<cr>
