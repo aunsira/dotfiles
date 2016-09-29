@@ -44,4 +44,4 @@ endif
 
 call plug#end()
 
-colorscheme jellybeans
+colorscheme gruvbox
