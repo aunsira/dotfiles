@@ -119,3 +119,5 @@ map <Leader>gy :Goyo 140x70<cr>
 
 " Use GV without hit colon
 map <Leader>gv :GV<cr>
+
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
