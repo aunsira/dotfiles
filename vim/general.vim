@@ -52,4 +52,8 @@ function! HiColor()
 
   let g:gruvbox_contrast_dark='hard'
   colorscheme gruvbox
+
+  " Statusline color
+  hi StatusLine ctermbg=Black ctermfg=White
+  hi StatusLineNC ctermbg=White ctermfg=Black
 endfunction

@@ -1,9 +1,4 @@
 " ======================== Statusline configurations ========================
-"define 3 custom highlight groups
-hi User1 ctermbg=lightgray ctermfg=yellow guifg=orange guibg=#444444 cterm=bold gui=bold
-hi User2 ctermbg=lightgray ctermfg=red guifg=#dc143c guibg=#444444 gui=none
-hi User3 ctermbg=lightgray ctermfg=red guifg=#ffff00 guibg=#444444 gui=bold
-
 set statusline=                     " Clear the statusline for vimrc reloads
 
 set stl=%*                          " Normal statusline highlight
