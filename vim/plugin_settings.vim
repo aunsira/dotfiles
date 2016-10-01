@@ -26,6 +26,11 @@ let g:user_emmet_leader_key='<C-Z>'
 " CTRL-N and CTRL-P to revious-history instead of down and up.
 let g:fzf_history_dir = '~/.fzf-history'
 
+if has('nvim')
+  let $FZF_DEFAULT_OPTS .= ' --inline-info'
+  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+endif
+
 " Set Smartcase for popup completion
 let g:kompleter_case_sensitive = 2
 
