@@ -11,6 +11,7 @@ echo ""
 if [[ "$symlink_answer" == "y" ]]; then
   for fl in "${links[@]}"; do
     ln -sfn $basedir/$fl ${HOME}/.$fl
+    ln -sfn $basedir/vimrc ${HOME}/.config/nvim/init.vim
     echo -e "${HOME}/.$fl \t→\t $basedir/$fl"
   done
 fi
