@@ -53,4 +53,7 @@ function! HiColor()
   hi Visual term=reverse cterm=reverse guibg=Grey
   " Highlight background of column line
   hi ColorColumn guibg=#FF5733 ctermbg=237
+
+  let g:gruvbox_contrast_dark='hard'
+  colorscheme gruvbox
 endfunction

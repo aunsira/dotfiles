@@ -43,5 +43,3 @@ if has("gui_running")
 endif
 
 call plug#end()
-
-colorscheme gruvbox

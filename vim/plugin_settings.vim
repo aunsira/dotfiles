@@ -1,8 +1,6 @@
 " Plugins customization
 " =======================================================================
 
-let g:gruvbox_contrast_dark='hard'
-
 " Set Powerline
 let g:Powerline_symbols = 'fancy'
 
