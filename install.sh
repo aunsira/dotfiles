@@ -23,7 +23,9 @@ if [[ "$symlink_vim_answer" == "y" ]]; then
     vim_file=`basename "$vfl"`
     echo $vim_file
     ln -sfn $basedir/vim/$vim_file ${HOME}/.vim/custom/$vim_file
+    ln -sfn $basedir/vim/$vim_file ${HOME}/.config/nvim/custom/$vim_file
     echo -e ${HOME}/.vim/custom/$vim_file \t→\t $basedir/vim/$vim_file
+    echo -e ${HOME}/.config/nvim/custom/$vim_file \t→\t $basedir/vim/$vim_file
   done
 fi
 

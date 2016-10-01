@@ -9,6 +9,7 @@ alias cdcl='cd ClassroomApp'
 
 # For speed me up
 alias FUCK='fuck'
+alias cdh='cd ~'
 alias cls='clear'
 alias e='exit'
 alias fuck='eval $(thefuck $(fc -ln -1))'
@@ -28,7 +29,8 @@ alias ls="ls -AFG"
 alias p8='ping 8.8.8.8'
 alias rs='rails s -p 3001'
 alias tmux='tmux -2'
-alias vimn='vim -u NONE'
+alias vim='nvim'
+alias vimn='nvim -u NONE'
 
 fzf-gt-widget() LBUFFER+=$(gb | join-lines)
 zle -N fzf-gt-widget

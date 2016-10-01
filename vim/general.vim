@@ -1,6 +1,5 @@
 " General configurations
 " ==========================================================================
-set t_Co=256
 set backspace=indent,eol,start    " more powerful backspacing
 set tabstop=2                     " size of a hard tabstop
 set shiftwidth=2                  " size of an indent
@@ -12,7 +11,6 @@ set hlsearch                      " highlight all search matches"
 set incsearch                     " show search results as I type"
 set autoindent
 set smartindent
-set nocompatible                  " Use Vim defaults instead of 100% vi compatibility
 set laststatus=2
 set encoding=utf-8
 set scrolloff=5                   " Keep 5 lines below and above ther cursor
@@ -25,7 +23,6 @@ set updatetime=250
 set expandtab                     " always uses spaces instead of tab characters
 set wildmenu                      " Enhanced tab completion
 set colorcolumn=81
-set ttyfast                       " We are on a quick terminal"
 set lazyredraw
 set number
 set relativenumber                " Show numbers in column
@@ -33,7 +30,6 @@ set cursorline                    " Indicate what line we are on"
 set splitbelow
 set splitright
 set visualbell
-set t_vb=
 
 " Set theme/settings for macvim
 if has("gui_running")
