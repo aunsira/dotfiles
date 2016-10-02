@@ -14,7 +14,6 @@ map <Leader>x :x<CR>
 map <leader>b :EasyBufferHorizontal<CR>
 map <leader>w <C-w>w
 vmap <leader>y "*y
-nmap <leader>p :FZF<cr>
 
 " Indent lines with cmd+[ and cmd+]
 nmap <D-]> >>
@@ -36,7 +35,7 @@ nnoremap <leader><tab> :bprevious<cr>
 nnoremap <leader>. <C-^>
 
 " Map fzf plugin
-nmap <C-p> :FZF<CR>
+nmap <leader>p :FZF<cr>
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
 " bind K to grep word under cursor
