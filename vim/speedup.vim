@@ -14,7 +14,7 @@ map <Leader>x :x<CR>
 map <leader>b :EasyBufferHorizontal<CR>
 map <leader>w <C-w>w
 vmap <leader>y "*y
-nmap <leader>p "*p
+nmap <leader>p :FZF<cr>
 
 " Indent lines with cmd+[ and cmd+]
 nmap <D-]> >>
