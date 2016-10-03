@@ -13,7 +13,7 @@ map <Leader>x :x<CR>
 " Switch buffers easier
 map <leader>b :EasyBufferHorizontal<CR>
 map <leader>w <C-w>w
-vmap <leader>y "*y
+vnoremap <leader>y "*y
 
 " Indent lines with cmd+[ and cmd+]
 nmap <D-]> >>
