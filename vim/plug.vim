@@ -28,9 +28,9 @@ Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'skalnik/vim-vroom', { 'for': ['rb'] }
 Plug 'szw/vim-kompleter'
-Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rails', { 'for': []      }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'troydm/easybuffer.vim'

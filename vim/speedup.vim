@@ -120,3 +120,7 @@ map <Leader>gy :Goyo 140x70<cr>
 map <Leader>gv :GV<cr>
 
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+
+" vim-commentary
+map  gc  <Plug>Commentary
+nmap gcc <Plug>CommentaryLine
