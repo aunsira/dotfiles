@@ -16,7 +16,7 @@
   smudge = git-lfs smudge %f
 [core]
   excludesfile = /Users/aun/.gitignore_global
-  editor = /usr/bin/vim
+  editor = nvim
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]
