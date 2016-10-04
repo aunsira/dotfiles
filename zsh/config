@@ -21,3 +21,12 @@ command -v tree > /dev/null && export FZF_ALT_C_OPTS="--preview 'tree -C {} | he
 
 # Config FZF for start using fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+gg() {
+  search=""
+  echo "Googling: $@"
+  for term in $@; do
+    search="$search%20$term"
+  done
+  open "http://www.google.com/search?q=$search"
+}
