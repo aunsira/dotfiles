@@ -9,12 +9,13 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'ervandew/supertab'
 Plug 'evanmiller/nginx-vim-syntax', { 'for': 'nginx' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'gmarik/Vundle.vim'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-peekaboo'
@@ -27,7 +28,6 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'skalnik/vim-vroom', { 'for': ['rb'] }
-Plug 'szw/vim-kompleter'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails', { 'for': []      }
