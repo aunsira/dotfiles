@@ -24,6 +24,16 @@
     <name>KeyCode::VK_OPEN_URL_APP_Tweetbot</name>
     <url type="file">/Applications/Tweetbot.app</url>
   </vkopenurldef>
+
+  <inputsourcedef>
+    <name>KeyCode::Colemak</name>
+    <inputsourceid_equal>com.apple.keylayout.Colemak</inputsourceid_equal>
+  </inputsourcedef>
+  <inputsourcedef>
+    <name>KeyCode::Thai</name>
+    <inputsourceid_equal>com.apple.keylayout.Thai</inputsourceid_equal>
+  </inputsourcedef>
+
   <item>
     <name>Delete key by typing E+I</name>
     <identifier>delete_key_EI</identifier>
@@ -199,5 +209,25 @@
       KeyCode::COMMA, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
       KeyCode::VK_CONSUMERKEY_VOLUME_MUTE
     </autogen>
+  </item>
+  <item>
+    <name>Hyper+s to change input source</name>
+    <identifier>hyper_s_to_change_input_source</identifier>
+    <block>
+      <inputsource_only>KeyCode::Colemak</inputsource_only>
+      <autogen>
+        __KeyToKey__
+        KeyCode::D, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_CHANGE_INPUTSOURCE_THAI
+      </autogen>
+    </block>
+    <block>
+      <inputsource_only>KeyCode::Thai</inputsource_only>
+      <autogen>
+        __KeyToKey__
+        KeyCode::D, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_CHANGE_INPUTSOURCE_COLEMAK
+      </autogen>
+    </block>
   </item>
 </root>
