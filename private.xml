@@ -217,7 +217,7 @@
       <inputsource_only>KeyCode::Colemak</inputsource_only>
       <autogen>
         __KeyToKey__
-        KeyCode::D, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::SPACE, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
         KeyCode::VK_CHANGE_INPUTSOURCE_THAI
       </autogen>
     </block>
@@ -225,7 +225,7 @@
       <inputsource_only>KeyCode::Thai</inputsource_only>
       <autogen>
         __KeyToKey__
-        KeyCode::D, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::SPACE, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
         KeyCode::VK_CHANGE_INPUTSOURCE_COLEMAK
       </autogen>
     </block>
