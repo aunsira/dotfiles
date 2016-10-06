@@ -5,8 +5,8 @@
     <url>file:///System/Library/CoreServices/Finder.app</url>
   </vkopenurldef>
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_LINE</name>
-    <url>file:///Applications/LINE.app</url>
+    <name>KeyCode::VK_OPEN_URL_TELEGRAM</name>
+    <url>file:///Applications/Telegram.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_ITERM</name>
@@ -23,11 +23,6 @@
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Tweetbot</name>
     <url type="file">/Applications/Tweetbot.app</url>
-  </vkopenurldef>
-  <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Editor</name>
-    <!-- <url>file:///Applications/Sublime%20Text.app</url> -->
-    <url type="file">/usr/local/Cellar/macvim/7.4-104/MacVim.app</url>
   </vkopenurldef>
   <item>
     <name>Delete key by typing E+I</name>
@@ -62,15 +57,6 @@
     </autogen>
   </item>
   <item>
-    <name>Hyper+S to open Editor</name>
-    <identifier>hyper_s_to_editor</identifier>
-    <autogen>
-      __KeyToKey__
-      KeyCode::D, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-      KeyCode::VK_OPEN_URL_APP_Editor,
-    </autogen>
-  </item>
-  <item>
     <name>Hyper+T to open iTerm</name>
     <identifier>hyper_t_to_iTerm</identifier>
     <autogen>
@@ -89,13 +75,13 @@
     </autogen>
   </item>
   <item>
-    <name>Hyper+F to open Line</name>
-    <identifier>hyper_f_to_Line</identifier>
+    <name>Hyper+F to open Telegram</name>
+    <identifier>hyper_f_to_telegram</identifier>
     <autogen>
       __KeyToKey__
       KeyCode::E, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
       @begin
-      KeyCode::VK_OPEN_URL_LINE,
+      KeyCode::VK_OPEN_URL_TELEGRAM,
       @end
     </autogen>
   </item>
@@ -169,15 +155,6 @@
       __KeyToKey__
       KeyCode::I, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
       KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L
-    </autogen>
-  </item>
-  <item>
-    <name>Hyper+N to delete</name>
-    <identifier>hyper_n_to_delete</identifier>
-    <autogen>
-      __KeyToKey__
-      KeyCode::N, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-      KeyCode::DELETE
     </autogen>
   </item>
   <item>
