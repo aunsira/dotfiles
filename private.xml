@@ -33,6 +33,10 @@
     <name>KeyCode::Thai</name>
     <inputsourceid_equal>com.apple.keylayout.Thai</inputsourceid_equal>
   </inputsourcedef>
+  <inputsourcedef>
+    <name>KeyCode::ABC</name>
+    <inputsourceid_equal>com.apple.keylayout.ABC</inputsourceid_equal>
+  </inputsourcedef>
 
   <item>
     <name>Delete key by typing E+I</name>
@@ -211,8 +215,8 @@
     </autogen>
   </item>
   <item>
-    <name>Hyper+s to change input source</name>
-    <identifier>hyper_s_to_change_input_source</identifier>
+    <name>Hyper+space to change input source</name>
+    <identifier>hyper_space_to_change_input_source</identifier>
     <block>
       <inputsource_only>KeyCode::Colemak</inputsource_only>
       <autogen>
@@ -223,6 +227,14 @@
     </block>
     <block>
       <inputsource_only>KeyCode::Thai</inputsource_only>
+      <autogen>
+        __KeyToKey__
+        KeyCode::SPACE, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_CHANGE_INPUTSOURCE_COLEMAK
+      </autogen>
+    </block>
+    <block>
+      <inputsource_only>KeyCode::ABC</inputsource_only>
       <autogen>
         __KeyToKey__
         KeyCode::SPACE, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
