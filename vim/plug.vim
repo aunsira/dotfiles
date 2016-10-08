@@ -23,6 +23,7 @@ Plug 'morhetz/gruvbox'
 Plug 'mxw/vim-jsx', { 'for': ['jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plug 'sirakij/vim-thai-keys'
 Plug 'skalnik/vim-vroom', { 'for': ['rb'] }
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-fugitive'
