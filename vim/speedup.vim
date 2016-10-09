@@ -9,7 +9,6 @@ nnoremap <leader>f :Ack<Space>
 map <Leader>ne :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <Leader>s :w<CR>
-map <Leader>x :x<CR>
 " Switch buffers easier
 map <leader>b :EasyBufferHorizontal<CR>
 map <leader>w <C-w>w
@@ -126,3 +125,8 @@ nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 " vim-commentary
 map  gc  <Plug>Commentary
 nmap gcc <Plug>CommentaryLine
+
+" Use Easymotion instead of normal vim search
+map  / <Plug>(easymotion-sn)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
