@@ -24,8 +24,6 @@ set expandtab                     " always uses spaces instead of tab characters
 set wildmenu                      " Enhanced tab completion
 set colorcolumn=81
 set lazyredraw
-set number
-set relativenumber                " Show numbers in column
 set cursorline                    " Indicate what line we are on"
 set splitbelow
 set splitright
@@ -50,7 +48,6 @@ function! HiColor()
   " Highlight background of column line
   hi ColorColumn guibg=#FF5733 ctermbg=237
 
-  let g:gruvbox_contrast_dark='hard'
   colorscheme gruvbox
 
   " Statusline color
