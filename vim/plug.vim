@@ -6,6 +6,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'cohama/lexima.vim'
+Plug 'dyng/ctrlsf.vim', { 'on' : 'CtrlSF' }
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'ervandew/supertab'
@@ -18,7 +19,6 @@ Plug 'junegunn/gv.vim', { 'on' : 'GV' }
 Plug 'junegunn/vim-peekaboo'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
 Plug 'morhetz/gruvbox'
 Plug 'mxw/vim-jsx', { 'for': ['jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }

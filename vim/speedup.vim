@@ -3,8 +3,8 @@
 
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
-" Shortcut for typing :Ack
-nnoremap <leader>f :Ack<Space>
+" Shortcut for typing :CtrlSF
+nnoremap <leader>f :CtrlSF<Space>
 
 map <Leader>ne :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
@@ -38,7 +38,7 @@ nmap <leader>p :FZF<cr>
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
 " bind K to grep word under cursor
-nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap K :CtrlSF <C-R><C-W><CR>:cw<CR>
 
 " Use C-Space to Esc out of any mode (Terminal sees <C-@> as <C-space> WTF, but ok)
 nnoremap <C-@> <Esc>:noh<CR>
