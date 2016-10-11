@@ -130,3 +130,9 @@ nmap gcc <Plug>CommentaryLine
 map  / <Plug>(easymotion-sn)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" Try hard mode
+noremap h <NOP>
+noremap j <NOP>
+noremap k <NOP>
+noremap l <NOP>

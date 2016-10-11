@@ -28,6 +28,7 @@ set cursorline                    " Indicate what line we are on"
 set splitbelow
 set splitright
 set visualbell
+set number
 
 " Set theme/settings for macvim
 if has("gui_running")
