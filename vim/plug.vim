@@ -23,6 +23,7 @@ Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'morhetz/gruvbox'
 Plug 'mxw/vim-jsx', { 'for': ['jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
+Plug 'pgdouyon/vim-evanesco'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'sirakij/vim-thai-keys'
 Plug 'skalnik/vim-vroom', { 'for': ['rb'] }
