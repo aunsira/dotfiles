@@ -34,6 +34,7 @@ Plug 'tpope/vim-surround'
 Plug 'troydm/easybuffer.vim', { 'on': 'EasyBufferHorizontal' }
 Plug 'vim-ruby/vim-ruby' , { 'for': 'rb' }
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'wellle/targets.vim'
 
 if has("gui_running")
   " Use CtrlP instead of FZF in MacVim
