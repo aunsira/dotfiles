@@ -2,6 +2,7 @@
 " ==========================================================================
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-buftabline'
 Plug 'christoomey/vim-conflicted'
