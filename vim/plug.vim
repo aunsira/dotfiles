@@ -21,6 +21,7 @@ Plug 'junegunn/gv.vim', { 'on' : 'GV' }
 Plug 'junegunn/vim-peekaboo'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 Plug 'mxw/vim-jsx', { 'for': ['jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
