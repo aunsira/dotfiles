@@ -33,4 +33,13 @@ let g:lexima_enable_basic_rules=1
 let g:lexima_enable_newline_rules=1
 let g:lexima_enable_endwise_rules=1
 
-let g:ctrlsf_auto_close = 0
+let g:startify_custom_header = [
+      \ '                                ',
+      \ '            __                  ',
+      \ '    __  __ /\_\    ___ ___      ',
+      \ '   /\ \/\ \\/\ \ /'' __` __`\   ',
+      \ '   \ \ \_/ |\ \ \/\ \/\ \/\ \   ',
+      \ '    \ \___/  \ \_\ \_\ \_\ \_\  ',
+      \ '     \/__/    \/_/\/_/\/_/\/_/  ',
+      \ ]
+
