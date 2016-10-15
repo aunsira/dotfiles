@@ -12,3 +12,8 @@ endfunction
 call s:SourceConfigFilesIn('custom')
 " Seems that highlight color only work in vimrc
 call HiColor()
+
+" Remove trailing whitespace on save for ruby files
+autocmd BufWritePre *.rb :%s/\s\+$//e
+" Disable next line commenting
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
