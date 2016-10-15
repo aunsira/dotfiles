@@ -42,16 +42,3 @@ endif
 " Set whitespace character
 set listchars=eol:¬,tab:→→,trail:~,extends:>,precedes:<
 set list
-
-function! HiColor()
-  " Set selected code color
-  hi Visual term=reverse cterm=reverse guibg=Grey
-  " Highlight background of column line
-  hi ColorColumn guibg=#FF5733 ctermbg=237
-
-  colorscheme gruvbox
-
-  " Statusline color
-  hi StatusLine ctermbg=Black ctermfg=White
-  hi StatusLineNC ctermbg=White ctermfg=Black
-endfunction
