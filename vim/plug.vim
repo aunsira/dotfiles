@@ -37,9 +37,4 @@ Plug 'vim-ruby/vim-ruby' , { 'for': 'rb' }
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'wellle/targets.vim'
 
-if has("gui_running")
-  " Use CtrlP instead of FZF in MacVim
-  Plug 'kien/ctrlp.vim'
-endif
-
 call plug#end()

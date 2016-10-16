@@ -14,10 +14,7 @@ set smartindent
 set laststatus=2
 set encoding=utf-8
 set scrolloff=5                   " Keep 5 lines below and above ther cursor
-set guicursor+=a:blinkon0         " Disable all blinking cursor
 set noswapfile
-set guioptions-=L
-set guioptions-=r
 set background=dark
 set updatetime=250
 set expandtab                     " always uses spaces instead of tab characters
@@ -29,16 +26,6 @@ set splitright
 set visualbell
 set number
 set relativenumber
-
-" Set theme/settings for macvim
-if has("gui_running")
-  set hlsearch
-  set bs=2
-  set ai
-  set ruler
-  set guifont=Monaco:h12
-endif
-
 " Set whitespace character
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
 autocmd InsertEnter * set list listchars=tab:»·,trail:\·,precedes:«,extends:»
