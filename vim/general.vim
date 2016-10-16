@@ -22,13 +22,13 @@ set background=dark
 set updatetime=250
 set expandtab                     " always uses spaces instead of tab characters
 set wildmenu                      " Enhanced tab completion
-set colorcolumn=81
+set colorcolumn=+1
 set lazyredraw
-set cursorline                    " Indicate what line we are on"
 set splitbelow
 set splitright
 set visualbell
 set number
+set relativenumber
 
 " Set theme/settings for macvim
 if has("gui_running")
@@ -40,5 +40,8 @@ if has("gui_running")
 endif
 
 " Set whitespace character
-set listchars=eol:¬,tab:→→,trail:~,extends:>,precedes:<
-set list
+set fillchars=vert:\│             " show/hide whitespace marker in insert mode
+autocmd InsertEnter * set list listchars=tab:»·,trail:\·,precedes:«,extends:»
+autocmd InsertLeave * set list listchars=tab:\ \ ,trail:\·,precedes:«,extends:»
+autocmd WinEnter * set cul
+autocmd WinLeave * set nocul
