@@ -7,9 +7,10 @@
 [color]
   ui = auto
 [alias]
-  st = status -a
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative
   ch = checkout -
+  commend = commit --amend --no-edit
+  please = push --force-with-lease
 [filter "lfs"]
   required = true
   clean = git-lfs clean %f
