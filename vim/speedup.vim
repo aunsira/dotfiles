@@ -29,9 +29,9 @@ vnoremap <C-y> 3<C-y>
 " Tab to next buffer
 nnoremap <tab> :bnext<cr>
 " Shift-tab to previous buffer
-nnoremap <leader><tab> :bprevious<cr>
+nnoremap ,<tab> :bprevious<cr>
 " Switch between last two buffers
-nnoremap <leader>. <C-^>
+nnoremap ,. <C-^>
 
 " Map fzf plugin
 nmap <leader>p :FZF<cr>
