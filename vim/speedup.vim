@@ -9,8 +9,6 @@ nnoremap <leader>f :CtrlSF<Space>
 map <Leader>ne :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <Leader>s :w<CR>
-" Switch buffers easier
-map <leader>b :EasyBufferHorizontal<CR>
 map <leader>w <C-w>w
 vnoremap <leader>y "*y
 
