@@ -27,7 +27,7 @@ vnoremap <C-y> 3<C-y>
 " Tab to next buffer
 nnoremap <tab> :bnext<cr>
 " Shift-tab to previous buffer
-nnoremap ,<tab> :bprevious<cr>
+nnoremap <leader><tab> :bprevious<cr>
 " Switch between last two buffers
 nnoremap ,. <C-^>
 
@@ -120,3 +120,8 @@ nmap gcc <Plug>CommentaryLine
 map  / <Plug>(easymotion-sn)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" Kill buffer with leader + d
+map <leader>d :bd<CR>
+
+map <Leader>l :ls<CR>:buffer<Space>

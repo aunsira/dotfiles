@@ -15,7 +15,6 @@ Plug 'ervandew/supertab'
 Plug 'evanmiller/nginx-vim-syntax', { 'for': 'nginx' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'godlygeek/tabular'
-Plug 'jeetsukumaran/vim-buffergator'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'junegunn/gv.vim', { 'on' : 'GV' }
@@ -25,6 +24,7 @@ Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'mhinz/vim-startify'
 Plug 'mxw/vim-jsx', { 'for': ['jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
+Plug 'qpkorr/vim-bufkill'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'sirakij/vim-thai-keys'
 Plug 'skalnik/vim-vroom', { 'for': ['rb'] }
