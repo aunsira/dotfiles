@@ -7,19 +7,6 @@
     { "keys": ["super+shift+t"], "command": "reopen_last_file" },
     { "keys": ["ctrl+tab"], "command": "next_view" },
     { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
-    { "keys": ["ctrl+space"], "command": "exit_insert_mode",
-      "context":
-      [
-        { "key": "setting.command_mode", "operand": false },
-        { "key": "setting.is_widget", "operand": false }
-      ]
-    },
-    { "keys": ["ctrl+space"], "command": "exit_visual_mode",
-        "context":
-        [
-          { "key": "setting.command_mode"},
-          { "key": "num_selections", "operand": 1},
-          { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
-        ]
-    }
+    { "keys": ["shift+space"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+    { "keys": ["super+b"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
 ]
