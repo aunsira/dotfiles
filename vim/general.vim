@@ -28,6 +28,10 @@ set visualbell
 set number
 set relativenumber 
 set nowrap
+set foldlevelstart=0              " don't fold initially
+set nostartofline
+set confirm                       " confirm unsaved changes
+
 " Set whitespace character
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
 autocmd InsertEnter * set list listchars=tab:»·,trail:\·,precedes:«,extends:»
