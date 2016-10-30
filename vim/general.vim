@@ -26,7 +26,8 @@ set splitbelow
 set splitright
 set visualbell
 set number
-set relativenumber
+set relativenumber 
+set nowrap
 " Set whitespace character
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
 autocmd InsertEnter * set list listchars=tab:»·,trail:\·,precedes:«,extends:»
