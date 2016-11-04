@@ -29,7 +29,7 @@ nnoremap <tab> :bnext<cr>
 " Shift-tab to previous buffer
 nnoremap <leader><tab> :bprevious<cr>
 " Switch between last two buffers
-nnoremap ,. <C-^>
+nnoremap <leader>\ <C-^>
 
 " Map fzf plugin
 nmap <leader>p :FZF<cr>
