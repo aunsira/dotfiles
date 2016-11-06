@@ -12,9 +12,9 @@ map <Leader>s :w<CR>
 map <leader>w <C-w>w
 vnoremap <leader>y "*y
 
-" Indent lines with cmd+[ and cmd+]
-nmap <D-]> >>
-nmap <D-[> <<
+" Indent lines with ctrl+[ and ctrl+]
+nmap <C-]> >>
+nmap <C-[> <<
 vmap <C-[> <gv
 vmap <C-]> >gv
 
