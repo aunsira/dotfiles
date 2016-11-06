@@ -24,10 +24,10 @@ nnoremap <C-y> 3<C-y>
 vnoremap <C-e> 3<C-e>
 vnoremap <C-y> 3<C-y>
 
-" Tab to next buffer
-nnoremap <tab> :bnext<cr>
-" Shift-tab to previous buffer
-nnoremap <leader><tab> :bprevious<cr>
+" To next buffer
+nnoremap <leader>] :bnext<cr>
+" To previous buffer
+nnoremap <leader>[ :bprev<cr>
 " Switch between last two buffers
 nnoremap <leader>\ <C-^>
 
