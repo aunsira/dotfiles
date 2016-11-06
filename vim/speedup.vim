@@ -118,7 +118,7 @@ map  gc  <Plug>Commentary
 nmap gcc <Plug>CommentaryLine
 
 " Use Easymotion instead of normal vim search
-map  / <Plug>(easymotion-sn)
+map <Leader>/ <Plug>(easymotion-sn)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
