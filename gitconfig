@@ -33,3 +33,5 @@
   smtpuser = aun.sira@gmail.com
 [diff]
   tool = meld
+[push]
+  default = simple
