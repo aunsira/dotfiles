@@ -14,6 +14,7 @@ alias amend="git commit --amend"
 alias b="bundle exec"
 alias c='clear'
 alias cdh='cd ~'
+alias deploy='rake deploy:archive'
 alias e='exit'
 alias fuck='eval $(thefuck $(fc -ln -1))'
 alias g='git status'
