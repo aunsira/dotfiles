@@ -35,8 +35,13 @@ nnoremap <leader>\ <C-^>
 nmap <leader>p :FZF<cr>
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
+
 " bind K to grep word under cursor
 nnoremap K :CtrlSF <C-R><C-W><CR>:cw<CR>
+" bind K to grep word from visual selection
+vnoremap K y:CtrlSF '<C-r>"'<C-b><CR>
+" normal search on visual selection
+vnoremap // y/<C-R>"<CR>
 
 " Use C-Space to Esc out of any mode (Terminal sees <C-@> as <C-space> WTF, but ok)
 nnoremap <C-@> <Esc>:noh<CR>
