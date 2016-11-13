@@ -134,3 +134,9 @@ map <Leader>l :ls<CR>:buffer<Space>
 
 " Change in a line
 nmap cil ^c$
+
+" Replace all
+map <Leader>ra :%s/
+
+" Git push stash code
+map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
