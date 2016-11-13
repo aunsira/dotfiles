@@ -29,7 +29,7 @@ nnoremap <leader>] :bnext<cr>
 " To previous buffer
 nnoremap <leader>[ :bprev<cr>
 " Switch between last two buffers
-nnoremap <leader>\ <C-^>
+nnoremap <leader><tab> <C-^>
 
 " Map fzf plugin
 nmap <leader>p :FZF<cr>
@@ -62,7 +62,7 @@ nnoremap 0 ^
 noremap <leader>= <C-w>=
 
 " Git shortcuts
-map <leader>gs :Gstatus<cr>
+map <leader>gs :Gstatus<cr>gg<c-n>
 map <leader>gc :Gcommit<cr>
 map <leader>gg :Gbrowse<cr>
 map <leader>gb :Gblame<cr>
@@ -111,7 +111,7 @@ map <Leader>a :Tabularize /
 noremap n nzz
 
 " map goyo
-map <Leader>gy :Goyo 140x70<cr>
+map <Leader>G :Goyo 140x70<cr>
 
 " Use GV without hit colon
 map <Leader>gv :GV<cr>
