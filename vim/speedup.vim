@@ -131,3 +131,6 @@ map <Leader>k <Plug>(easymotion-k)
 map <leader>d :bd<CR>
 
 map <Leader>l :ls<CR>:buffer<Space>
+
+" Change in a line
+nmap cil ^c$
