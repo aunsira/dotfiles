@@ -35,7 +35,6 @@ nnoremap <leader><tab> <C-^>
 nmap <leader>p :FZF<cr>
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
-nmap <LEADER>sp :split<CR>
 
 " bind K to grep word under cursor
 nnoremap K :CtrlSF <C-R><C-W><CR>:cw<CR>
