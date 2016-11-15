@@ -140,3 +140,7 @@ map <Leader>ra :%s/
 
 " Git push stash code
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
+
+" Quickly open recently files
+nmap <leader>ap :e config/application.yml<cr>
+nmap <leader>mp :e ~/code/git/dotfiles/vim/speedup.vim<cr>
