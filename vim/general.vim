@@ -31,6 +31,7 @@ set nowrap
 set foldlevelstart=0              " don't fold initially
 set nostartofline
 set confirm                       " confirm unsaved changes
+set hidden
 
 " Set whitespace character
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
