@@ -144,3 +144,18 @@ map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 " Quickly open recently files
 nmap <leader>ap :e config/application.yml<cr>
 nmap <leader>mp :e ~/code/git/dotfiles/vim/speedup.vim<cr>
+
+" Markdown Underlines
+function! UnderlineHeading(level)
+  if a:level == 1
+    normal! yypVr=
+  elseif a:level == 2
+    normal! yypVr-
+  else
+    normal! I###<space>
+  endif
+endfunction
+
+nnoremap <leader>u1 :call UnderlineHeading(1);
+nnoremap <leader>u2 :call UnderlineHeading(2);
+nnoremap <leader>u3 :call UnderlineHeading(3);
