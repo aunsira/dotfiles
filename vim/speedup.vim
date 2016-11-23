@@ -145,6 +145,8 @@ map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 nmap <leader>ap :e config/application.yml<cr>
 nmap <leader>mp :e ~/code/git/dotfiles/vim/speedup.vim<cr>
 
+map <Leader>t :w<cr>:call RunCurrentSpecFile()<CR>
+
 " Markdown Underlines
 function! UnderlineHeading(level)
   if a:level == 1
