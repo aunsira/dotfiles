@@ -28,6 +28,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'sirakij/vim-thai-keys'
 Plug 'skalnik/vim-vroom', { 'for': ['rb'] }
+Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails', { 'for': [] }
