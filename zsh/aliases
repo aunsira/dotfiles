@@ -42,6 +42,7 @@ alias gto='git-open'
 alias gv='vim +GV +"autocmd BufWipeout <buffer> qall"'
 alias ll="ls -FGlh"
 alias ls="ls -AFG"
+alias migrate='rake db:migrate'
 alias p8='ping 8.8.8.8'
 alias reset='git reset --hard head'
 alias rs='bundle check && rails s -p 3001'
