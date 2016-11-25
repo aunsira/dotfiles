@@ -1,7 +1,7 @@
 [user]
   name =aun
   email =aun.sira@gmail.com
-	signingkey = E082F950EEBBA50B
+	signingkey = 30D26B2E14A5A33D
 [diff]
 [pager]
   diff = true
