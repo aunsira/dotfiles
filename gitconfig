@@ -1,6 +1,7 @@
 [user]
   name =aun
   email =aun.sira@gmail.com
+	signingkey = E082F950EEBBA50B
 [diff]
 [pager]
   diff = true
@@ -35,3 +36,5 @@
   tool = meld
 [push]
   default = simple
+[commit]
+	gpgsign = true
