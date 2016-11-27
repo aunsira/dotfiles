@@ -33,6 +33,7 @@ set nostartofline
 set confirm                       " confirm unsaved changes
 set hidden
 set autoread
+set timeoutlen=200
 
 " Set whitespace character
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
