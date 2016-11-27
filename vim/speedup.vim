@@ -10,6 +10,13 @@ map <Leader>ne :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <Leader>s :w<CR>
 map <leader>w <C-w>w
+
+" paste from clipboard
+nnoremap <leader>p "*p
+vnoremap <leader>p "*p
+nnoremap <leader>P "*P
+vnoremap <leader>P "*P
+" yank to clipboard
 vnoremap <leader>y "*y
 
 " Indent lines with ctrl+[ and ctrl+]
