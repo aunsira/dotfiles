@@ -39,7 +39,7 @@ nnoremap <leader>[ :bprev<cr>
 nnoremap <leader><tab> <C-^>
 
 " Map fzf plugin
-nmap <leader>p :FZF<cr>
+nmap <C-p> :FZF<cr>
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
 
