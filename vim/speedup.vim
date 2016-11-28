@@ -126,8 +126,8 @@ map <Leader>gv :GV<cr>
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
 " vim-commentary
-map  cm  <Plug>Commentary
-nmap cmm <Plug>CommentaryLine
+map  dc  <Plug>Commentary
+nmap dcc <Plug>CommentaryLine
 
 " Use Easymotion instead of normal vim search
 map <Leader>/ <Plug>(easymotion-sn)
@@ -138,9 +138,6 @@ map <Leader>k <Plug>(easymotion-k)
 map <leader>d :bd<CR>
 
 map <Leader>l :ls<CR>:buffer<Space>
-
-" Change in a line
-nmap cil ^c$
 
 " Replace all
 map <Leader>ra :%s/
