@@ -34,6 +34,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails', { 'for': [] }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'tyru/open-browser-github.vim'
+Plug 'tyru/open-browser.vim'
 Plug 'vim-ruby/vim-ruby' , { 'for': 'rb' }
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'wellle/targets.vim'
