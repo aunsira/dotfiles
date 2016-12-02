@@ -32,9 +32,9 @@ vnoremap <C-e> 3<C-e>
 vnoremap <C-y> 3<C-y>
 
 " To next buffer
-nnoremap <tab>] :bnext<cr>
+nnoremap <F2> :bnext<cr>
 " To previous buffer
-nnoremap <tab>[ :bprev<cr>
+nnoremap <F1> :bprev<cr>
 " Switch between last two buffers
 nnoremap <leader><tab> <C-^>
 
