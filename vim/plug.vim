@@ -4,7 +4,6 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'ap/vim-buftabline'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'cohama/lexima.vim'
@@ -33,6 +32,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'troydm/easybuffer.vim'
 Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'vim-ruby/vim-ruby' , { 'for': 'rb' }

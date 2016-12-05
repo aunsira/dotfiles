@@ -32,11 +32,14 @@ vnoremap <C-e> 3<C-e>
 vnoremap <C-y> 3<C-y>
 
 " To next buffer
-nnoremap <F2> :bnext<cr>
+nnoremap ]b :bnext<cr>
 " To previous buffer
-nnoremap <F1> :bprev<cr>
+nnoremap [b :bprev<cr>
 " Switch between last two buffers
 nnoremap <leader><tab> <C-^>
+
+nnoremap ]t :tabn<cr>
+nnoremap [t :tabp<cr>
 
 " Map fzf plugin
 nmap <C-p> :FZF<cr>
@@ -167,3 +170,5 @@ endfunction
 nnoremap <leader>u1 :call UnderlineHeading(1);
 nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
+
+nnoremap <leader>be :EasyBufferHorizontal<cr>
