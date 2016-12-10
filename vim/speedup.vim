@@ -12,10 +12,10 @@ map <Leader>s :w<CR>
 map <leader>w <C-w>w
 
 " paste from clipboard
-nnoremap <leader>p "*p
-vnoremap <leader>p "*p
-nnoremap <leader>P "*P
-vnoremap <leader>P "*P
+nnoremap <leader>p "*p:w<cr>
+vnoremap <leader>p "*p:w<cr>
+nnoremap <leader>P "*P:w<cr>
+vnoremap <leader>P "*P:w<cr>
 " yank to clipboard
 vnoremap <leader>y "*y
 
