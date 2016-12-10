@@ -119,3 +119,7 @@ join-lines() {
     echo -n "${(q)item} "
   done
 }
+
+function rrg {
+  bin/rake routes | grep $1
+}
