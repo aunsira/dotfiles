@@ -9,6 +9,9 @@ alias cd..="cd .."
 alias cdcl='cd ClassroomApp'
 
 # For speed me up
+alias -g G='| grep'
+alias -g L='| less'
+alias -g M='| more'
 alias FUCK='fuck'
 alias amend="git commit --amend"
 alias b="bundle exec"
