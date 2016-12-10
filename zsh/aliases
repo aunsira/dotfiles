@@ -6,7 +6,7 @@ alias ......="cd ../../../../.."            # .. five times
 alias cd-="cd -"
 alias cd.='cd ..'
 alias cd..="cd .."
-alias cdcl='cd ClassroomApp'
+alias skl='cd ClassroomApp'
 
 # For speed me up
 alias -g G='| grep'
