@@ -101,6 +101,9 @@ map <Esc><CR> O<Esc>
 " add newline below current line
 map <Leader><CR> o<Esc>
 
+" Reindent file.
+map <Leader>i mmgg=G`m
+
 function! CurrenRelativeDirectory()
   let relative_dir = substitute(expand("%:p:h"), getcwd()."/", "", "")."/"
   return escape(relative_dir, " ")
@@ -152,6 +155,7 @@ map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 
 " Quickly open recently files
 nmap <leader>ap :e config/application.yml<cr>
+map <Leader>sc :sp db/schema.rb<cr>
 nmap <leader>mp :e ~/code/git/dotfiles/vim/speedup.vim<cr>
 
 map <Leader>t :w<cr>:call RunCurrentSpecFile()<CR>
@@ -172,3 +176,17 @@ nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
 
 nnoremap <leader>be :EasyBufferHorizontal<cr>
+
+" Add binding.
+map <Leader>bd orequire 'pry'<cr>binding.pry<esc>:w<cr>
+
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <Leader>rn :call RenameFile()<cr>
