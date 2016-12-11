@@ -33,10 +33,9 @@ set confirm                       " confirm unsaved changes
 set hidden
 set autoread
 set timeoutlen=500
+set nocul
 
 " Set whitespace character
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
 autocmd InsertEnter * set list listchars=tab:»·,trail:\·,precedes:«,extends:»
 autocmd InsertLeave * set list listchars=tab:\ \ ,trail:\·,precedes:«,extends:»
-autocmd WinEnter * set cul
-autocmd WinLeave * set nocul
