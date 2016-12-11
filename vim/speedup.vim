@@ -59,6 +59,12 @@ vnoremap <C-@> <Esc>gV
 onoremap <C-@> <Esc>
 cnoremap <C-@> <C-c>
 inoremap <C-@> <Esc>`^
+" For GUI
+nnoremap <C-Space> <Esc>:noh<CR>
+vnoremap <C-Space> <Esc>gV
+onoremap <C-Space> <Esc>
+cnoremap <C-Space> <C-c>
+inoremap <C-Space> <Esc>`^
 
 " Go to position of last edit. Mnem: 'Go to Edit'
 nnoremap ge `.
