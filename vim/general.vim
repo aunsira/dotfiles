@@ -12,7 +12,6 @@ set incsearch                     " show search results as I type"
 set autoindent
 set smartindent
 set laststatus=2
-set encoding=utf-8
 set scrolloff=5                   " Keep 5 lines below and above ther cursor
 set noswapfile
 set background=dark
