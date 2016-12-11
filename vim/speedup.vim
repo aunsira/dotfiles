@@ -190,3 +190,6 @@ function! RenameFile()
   endif
 endfunction
 map <Leader>rn :call RenameFile()<cr>
+
+" Jump list (to newer position)
+nnoremap <C-t> <C-i>
