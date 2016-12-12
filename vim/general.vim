@@ -24,6 +24,7 @@ set lazyredraw
 set splitbelow
 set splitright
 set visualbell
+set relativenumber
 set number
 set nowrap
 set foldlevelstart=0              " don't fold initially
@@ -33,6 +34,7 @@ set hidden
 set autoread
 set timeoutlen=500
 set nocul
+set re=1                          " use old regexpengine to avoid lagging scroll.
 
 " Set whitespace character
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
