@@ -40,3 +40,10 @@ if [[ "$symlink_zsh_answer" == "y" ]]; then
     echo -e ${HOME}/.zsh/$zsh_file \t→\t $basedir/zsh/$zsh_file
   done
 fi
+
+read -n1 -p "Symlink karabiner.json ~/.karabiner.d/configuration/karabiner.json (overwriting)? (y/n)" symlink_karabiner_answer
+echo ""
+if [[ "$symlink_karabiner_answer" == "y" ]]; then
+  ln -sfn $basedir/karabiner.json ${HOME}/.karabiner.d/configuration/karabiner.json
+  echo -e ${HOME}/.karabiner.d/configuration/karabiner.json \t→\t $basedir/karabiner.json
+fi
