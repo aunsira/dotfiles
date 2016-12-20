@@ -94,7 +94,7 @@ map Y yg_
 nmap k gk
 nmap j gj
 noremap H ^
-noremap L $
+noremap L g_
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
