@@ -88,7 +88,7 @@ map <leader>opr :OpenGithubPullReq<cr>
 map <leader>of :OpenGithubFile<cr>
 
 " Make Y act like other capitals
-map Y y$
+map Y yg_
 
 " move by line on the screen rather than by line in the file
 nmap k gk
