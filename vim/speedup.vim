@@ -241,3 +241,6 @@ function! s:restore_change_marks() abort
   call setpos("']", s:change_marks[1])
 endfunction
 nnoremap z. :call <SID>save_change_marks()<Bar>w<Bar>call <SID>restore_change_marks()<cr>
+
+" Mark position before search, use `u to go back to last position
+nnoremap / mu/
