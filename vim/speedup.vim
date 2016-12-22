@@ -212,6 +212,8 @@ nnoremap <silent> Ul :GV! -100<cr>
 nnoremap <silent> Ur             :Gread<cr>
 nnoremap <silent> Us             :Gstatus<cr>
 nnoremap <silent> Uw :if !exists(":Gwrite")<bar>call fugitive#detect(expand('%:p'))<bar>endif<bar>Gwrite<bar>SignifyRefresh<cr>
+nnoremap <silent> Upr            :OpenGithubPullReq<cr>
+nnoremap <silent> Um             :OpenGithubFile<cr>
 
 nmap UB Ub
 nmap UD Ud
@@ -221,6 +223,8 @@ nmap UL Ul
 nmap UR Ur
 map US Usgg<c-n>
 nmap UW Uw
+nmap UPR Upr
+nmap UM Um
 
 " Split window mappings
 nnoremap Zh     :leftabove vsplit<CR>
