@@ -201,3 +201,43 @@ map <Leader>rn :call RenameFile()<cr>
 nnoremap <C-t> <C-i>
 
 map <leader>sop :source ~/.config/nvim/init.vim<cr>:PlugInstall<cr>
+
+" Alternative way for fugutive
+nnoremap <silent> Ub             :Gblame<cr>
+nnoremap <silent> Ud :if &diff<bar>diffupdate<bar>else<bar>Gdiff<bar>endif<cr>
+nnoremap <silent> Ue             :Gedit<cr>
+nnoremap          Uf             :Gcommit --fixup=
+nnoremap <silent> Ugf            :Gedit <C-R><C-W><cr>
+nnoremap <silent> Ul :GV! -100<cr>
+nnoremap <silent> Ur             :Gread<cr>
+nnoremap <silent> Us             :Gstatus<cr>
+nnoremap <silent> Uw :if !exists(":Gwrite")<bar>call fugitive#detect(expand('%:p'))<bar>endif<bar>Gwrite<bar>SignifyRefresh<cr>
+
+nmap UB Ub
+nmap UD Ud
+nmap UE Ue
+nmap UF Uf
+nmap UL Ul
+nmap UR Ur
+map US Usgg<c-n>
+nmap UW Uw
+
+" Split window mappings
+nnoremap Zh     :leftabove vsplit<CR>
+nnoremap Zj     :belowright split<CR>
+nnoremap Zk     :aboveleft split<CR>
+nnoremap Zl     :rightbelow vsplit<CR>
+nmap     ZH     Zh
+nmap     ZJ     Zj
+nmap     ZK     Zk
+nmap     ZL     Zl
+
+" do not clobber '[ '] on :write
+function! s:save_change_marks() abort
+  let s:change_marks = [getpos("'["), getpos("']")]
+endfunction
+function! s:restore_change_marks() abort
+  call setpos("'[", s:change_marks[0])
+  call setpos("']", s:change_marks[1])
+endfunction
+nnoremap z. :call <SID>save_change_marks()<Bar>w<Bar>call <SID>restore_change_marks()<cr>
