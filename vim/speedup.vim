@@ -18,6 +18,7 @@ nnoremap <leader>P "*P:w<cr>
 vnoremap <leader>P "*P:w<cr>
 " yank to clipboard
 vnoremap <leader>y "*y
+vnoremap <leader>d "*d
 
 " Indent lines with ctrl+[ and ctrl+]
 nmap <C-]> >>
@@ -149,7 +150,7 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " Kill buffer with leader + d
-map <leader>d :bd<CR>
+nnoremap <leader>d :bd<CR>
 
 map <Leader>l :ls<CR>:buffer<Space>
 
@@ -182,6 +183,7 @@ nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
 
 nnoremap <leader>be :EasyBufferHorizontal<cr>
+nmap BE :EasyBufferHorizontal<cr>
 
 " Add binding.
 map <Leader>bd orequire 'pry'<cr>binding.pry<esc>:w<cr>
