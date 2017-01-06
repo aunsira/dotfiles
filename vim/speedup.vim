@@ -143,6 +143,8 @@ nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 " vim-commentary
 map  gc  <Plug>Commentary
 nmap gcc <Plug>CommentaryLine
+map <leader>\ <Plug>CommentaryLine
+vmap <leader>\ <Plug>Commentary
 
 " Use Easymotion instead of normal vim search
 map <Leader>/ <Plug>(easymotion-sn)
@@ -187,6 +189,8 @@ nmap BE :EasyBufferHorizontal<cr>
 
 " Add binding.
 map <Leader>bd orequire 'pry'<cr>binding.pry<esc>:w<cr>
+" Add console.log
+map <Leader>cl oconsole.log();<Left><Left>
 
 function! RenameFile()
   let old_name = expand('%')
