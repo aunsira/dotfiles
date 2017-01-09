@@ -1,0 +1,9 @@
+alt - u					: /usr/local/bin/khd -p "- up"
+alt - e					: /usr/local/bin/khd -p "- down"
+alt - n					: /usr/local/bin/khd -p "- left"
+alt - i					: /usr/local/bin/khd -p "- right"
+
+# alt - u					: khd -p "- up"
+# alt - e					: khd -p "- down"
+# alt - n					: khd -p "- left"
+# alt - i					: khd -p "- right"
