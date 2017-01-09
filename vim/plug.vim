@@ -38,6 +38,5 @@ Plug 'tyru/open-browser.vim'
 Plug 'vim-ruby/vim-ruby' , { 'for': 'rb' }
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'wellle/targets.vim'
-Plug 'yuttie/comfortable-motion.vim'
 
 call plug#end()
