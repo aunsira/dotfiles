@@ -3,7 +3,7 @@
 basedir=$(greadlink -m `dirname $0`)
 
 links=(
-  zshrc tmux.conf gitconfig
+  zshrc tmux.conf gitconfig khdrc
 )
 
 read -n1 -p "Symlink dot files to $HOME (overwriting)? (y/n)" symlink_answer
