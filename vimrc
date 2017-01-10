@@ -16,6 +16,3 @@ call s:SourceConfigFilesIn('local')
 autocmd BufWritePre *.rb :%s/\s\+$//e
 " Disable next line commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-" Highlight line number when enter insert mode
-au InsertEnter * hi CursorLineNr guifg=#bec468 ctermfg=149
-au InsertLeave * hi CursorLineNr guifg=#66afce ctermfg=74
