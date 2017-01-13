@@ -42,6 +42,9 @@ nnoremap <leader><tab> <C-^>
 nnoremap ]t :tabn<cr>
 nnoremap [t :tabp<cr>
 
+" New tab
+nnoremap <leader>t :tabe<cr>
+
 " Map fzf plugin
 nmap <C-p> :FZF<cr>
 " Quickly open a second window to view files side by side
@@ -167,7 +170,7 @@ nmap <leader>ap :e config/application.yml<cr>
 map <Leader>sc :sp db/schema.rb<cr>
 nmap <leader>mp :e ~/code/git/dotfiles/vim/speedup.vim<cr>
 
-map <Leader>t :w<cr>:call RunCurrentSpecFile()<CR>
+" map <Leader>t :w<cr>:call RunCurrentSpecFile()<CR>
 
 " Markdown Underlines
 function! UnderlineHeading(level)
