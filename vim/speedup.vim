@@ -3,8 +3,8 @@
 
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
-" Shortcut for typing :CtrlSF
-nnoremap <leader>f :CtrlSF<Space>
+" Shortcut for typing :Ag
+nnoremap <leader>f :Ag<Space>
 
 map <Leader>ne :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
@@ -51,9 +51,9 @@ nmap <C-p> :FZF<cr>
 nmap <LEADER>vs :vsplit<CR>
 
 " bind K to grep word under cursor
-nnoremap K :CtrlSF <C-R><C-W><CR>:cw<CR>
+nnoremap K :Ag <C-R><C-W><CR>
 " bind K to grep word from visual selection
-vnoremap K y:CtrlSF '<C-r>"'<C-b><CR>
+vnoremap K y:Ag <C-R>"<CR>
 " normal search on visual selection
 vnoremap // y/<C-R>"<CR>
 
@@ -187,8 +187,8 @@ nnoremap <leader>u1 :call UnderlineHeading(1);
 nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
 
-nnoremap <leader>be :EasyBufferHorizontal<cr>
-nmap BE :EasyBufferHorizontal<cr>
+nnoremap <leader>be :Buffers<cr>
+nmap BE :Buffers<cr>
 
 " Add binding.
 map <Leader>bd orequire 'pry'<cr>binding.pry<esc>:w<cr>

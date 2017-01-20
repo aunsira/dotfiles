@@ -7,7 +7,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'cohama/lexima.vim'
-Plug 'dyng/ctrlsf.vim', { 'on' : 'CtrlSF' }
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'ervandew/supertab'
@@ -15,6 +14,7 @@ Plug 'evanmiller/nginx-vim-syntax', { 'for': 'nginx' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'junegunn/gv.vim', { 'on' : 'GV' }
 Plug 'junegunn/vim-peekaboo'
@@ -32,9 +32,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'troydm/easybuffer.vim'
 Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-ruby/vim-ruby' , { 'for': 'rb' }
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'wellle/targets.vim'
