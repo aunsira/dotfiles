@@ -100,6 +100,11 @@ nmap j gj
 noremap H ^
 noremap L g_
 
+" Some sign that hard to type to
+imap uu _
+imap hh =>
+imap vv <Bar>
+
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
