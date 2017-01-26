@@ -192,8 +192,11 @@ nnoremap <leader>u1 :call UnderlineHeading(1);
 nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
 
-nnoremap <leader>be :Buffers<cr>
-nmap BE :Buffers<cr>
+nnoremap <leader>bb :Buffers<cr>
+nmap Bb :Buffers<cr>
+nmap <F1> :Buffers<cr>
+
+nmap <leader>ba :bufdo bd<cr>
 
 " Add binding.
 map <Leader>bd orequire 'pry'<cr>binding.pry<esc>:w<cr>
