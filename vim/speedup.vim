@@ -281,3 +281,11 @@ nnoremap <leader>? :call <SID>goog(expand("<cWORD>"), 0)<cr>
 nnoremap <leader>! :call <SID>goog(expand("<cWORD>"), 1)<cr>
 xnoremap <leader>? "gy:call <SID>goog(@g, 0)<cr>gv
 xnoremap <leader>! "gy:call <SID>goog(@g, 1)<cr>gv
+
+onoremap p i(
+onoremap ' i'
+onoremap " i"
+vnoremap <leader>' <esc>a'<esc>`<i'<esc>`>el
+vnoremap <leader>" <esc>a"<esc>`<i"<esc>`>el
+nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
