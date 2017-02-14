@@ -19,11 +19,18 @@
 [core]
   excludesfile = /Users/aun/.gitignore_global
   editor = nvim
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+[merge]
+  tool = vimdiff
+[mergetool]
+  prompt = true
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[difftool]
+  prompt = false
+  # `:cq` or `:cquit` to abort all diffs
   trustExitCode = true
+[diff]
+  tool = vimdiff
 [sendemail]
   from = Sira Sarakij <aun.sira@gmail.com>
   suppresscc = self
@@ -32,8 +39,6 @@
   smtpserver = smtp.gmail.com
   smtpserverport = 587
   smtpuser = aun.sira@gmail.com
-[diff]
-  tool = meld
 [push]
   default = simple
 [commit]
