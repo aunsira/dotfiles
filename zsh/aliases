@@ -18,6 +18,7 @@ alias be="bundle exec"
 alias bi="bundle install"
 alias c='clear'
 alias cdh='cd ~'
+alias cdl='cd ~/.config/nvim'
 alias deploy='rake deploy:archive'
 alias e='exit'
 alias fetch='git fetch'
