@@ -43,6 +43,12 @@ nnoremap <leader><tab> <C-^>
 nnoremap ]t :tabn<cr>
 nnoremap [t :tabp<cr>
 
+" Use actually useful arrow keys
+map <up> :bn<cr>
+map <down> :bp<cr>
+map <right> :tabn<cr>
+map <left> :tabp<cr>
+
 " New tab
 nnoremap <leader>t :tabe<cr>
 
