@@ -296,3 +296,9 @@ vnoremap <leader>' <esc>a'<esc>`<i'<esc>`>el
 vnoremap <leader>" <esc>a"<esc>`<i"<esc>`>el
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+
+" Map Ctrl+V to paste in Insert mode
+imap <C-V> <C-R>*
+
+" Map Ctrl+C to copy in Visual mode
+vmap <C-C> "+y
