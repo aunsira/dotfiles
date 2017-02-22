@@ -2,6 +2,7 @@
 " ==========================================================================
 
 call plug#begin('~/.config/nvim/plugged')
+
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-conflicted'
@@ -23,6 +24,7 @@ Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'mxw/vim-jsx', { 'for': ['jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
 Plug 'qpkorr/vim-bufkill'
+Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'sirakij/vim-thai-keys'
 Plug 'skalnik/vim-vroom', { 'for': ['rb'] }
