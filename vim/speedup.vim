@@ -141,8 +141,11 @@ nnoremap <Leader>cd :cd ~/
 nnoremap <Leader>cs :cd ~/code/git/skilllane-web/ClassroomApp/
 nnoremap <Leader>cg :cd ~/code/git/
 
-" Shortcut for Tabularize
-map <Leader>a :Tabularize /
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " Next search will be at the middle screen
 noremap n nzz
