@@ -1,6 +1,3 @@
-" Bundle plugins
-" ==========================================================================
-
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'

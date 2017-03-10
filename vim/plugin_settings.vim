@@ -1,9 +1,6 @@
 " Plugins customization
 " =======================================================================
 
-" Set Powerline
-let g:Powerline_symbols = 'fancy'
-
 " Set close tag filenames like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb"
 
