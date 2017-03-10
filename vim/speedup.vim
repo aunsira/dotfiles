@@ -100,6 +100,7 @@ map <leader>of :OpenGithubFile<cr>
 
 " Make Y act like other capitals
 map Y yg_
+map <leader>Y vg_"*y
 
 " move by line on the screen rather than by line in the file
 nmap k gk
@@ -305,3 +306,6 @@ imap <C-V> <C-R>*
 
 " Map Ctrl+C to copy in Visual mode
 vmap <C-C> "+y
+
+" remove trailing whitespaces
+nmap <silent> <leader>rw <ESC>:%s/\s\+$//<CR>
