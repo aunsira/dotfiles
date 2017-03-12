@@ -35,6 +35,7 @@ set autoread
 set timeoutlen=500
 set nocul
 set re=1                          " use old regexpengine to avoid lagging scroll.
+set termguicolors
 
 " Set whitespace character
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
