@@ -1,6 +1,6 @@
 export ZSH=/Users/aun/.oh-my-zsh
 
-ZSH_THEME="sammy-black"
+ZSH_THEME="sammy"
 
 plugins=(tmux postgres rails zsh-autosuggestions zsh-syntax-highlighting git-open)
 
