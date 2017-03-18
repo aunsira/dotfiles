@@ -148,8 +148,12 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" Next search will be at the middle screen
+" Auto center with these motions
 noremap n nzz
+noremap N Nzz
+noremap G Gzz
+noremap } }zz
+noremap { {zz
 
 " map goyo
 map <Leader>G :Goyo 140x70<cr>
