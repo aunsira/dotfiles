@@ -309,3 +309,5 @@ vmap <C-C> "+y
 
 " remove trailing whitespaces
 nmap <silent> <leader>rw <ESC>:%s/\s\+$//<CR>
+
+nnoremap Q @q
