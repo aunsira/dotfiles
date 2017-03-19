@@ -16,7 +16,8 @@ Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'junegunn/gv.vim', { 'on' : 'GV' }
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-peekaboo'
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'junegunn/vim-slash'
+Plug 'kchmck/vim-coffee-script'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'mxw/vim-jsx', { 'for': ['jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
@@ -27,6 +28,7 @@ Plug 'sirakij/vim-thai-keys'
 Plug 'skalnik/vim-vroom', { 'for': ['rb'] }
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
