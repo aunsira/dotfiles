@@ -95,6 +95,7 @@ map <leader>gg :Gbrowse<cr>
 map <leader>gb :Gblame<cr>
 map <leader>gd :Gdiff<cr>
 map <leader>gr :Gread<cr>:w<cr>
+map <leader>gp :Gpush<cr>
 map <leader>opr :OpenGithubPullReq<cr>
 map <leader>of :OpenGithubFile<cr>
 
