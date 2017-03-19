@@ -318,14 +318,3 @@ nnoremap Q @q
 
 " Places the current match at the center of the window.
 noremap <plug>(slash-after) zz
-
-function! s:flash()
-  set cursorline!
-  redraw
-  sleep 20m
-  set cursorline!
-  return ''
-endfunction
-
-" Blinking line after search
-noremap <expr> <plug>(slash-after) <sid>flash()
