@@ -21,11 +21,9 @@ vnoremap <leader>P "*P:w<cr>
 vnoremap <leader>y "*y
 vnoremap <leader>d "*d
 
-" Indent lines with ctrl+[ and ctrl+]
-nmap <C-]> >>
-nmap <C-[> <<
-vmap <C-[> <gv
-vmap <C-]> >gv
+" Remap jump to definition for ctags
+nmap <leader>] <C-]>
+nmap <leader>g] g<C-]>
 
 " Faster viewport scrolling (3 lines at a time)
 nnoremap <C-e> 3<C-e>
