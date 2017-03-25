@@ -317,3 +317,6 @@ nnoremap Q @q
 
 " Places the current match at the center of the window.
 noremap <plug>(slash-after) zz
+
+" Re tag
+nnoremap <leader>rt :!ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *<cr>
