@@ -320,3 +320,5 @@ noremap <plug>(slash-after) zz
 
 " Re tag
 nnoremap <leader>rt :!ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *<cr>
+
+noremap <leader>nr  :set nonumber<cr>:set norelativenumber<cr>
