@@ -38,8 +38,11 @@ nnoremap [b :bprev<cr>
 " Switch between last two buffers
 nnoremap <leader><tab> <C-^>
 
+" Tab navigation
 nnoremap ]t :tabn<cr>
 nnoremap [t :tabp<cr>
+nmap <Tab> gt
+nmap <S-Tab> gT
 
 " Use actually useful arrow keys
 map <up> :bn<cr>
