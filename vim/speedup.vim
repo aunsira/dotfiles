@@ -325,3 +325,14 @@ noremap <plug>(slash-after) zz
 nnoremap <leader>rt :!ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *<cr>
 
 noremap <leader>nr  :set nonumber<cr>:set norelativenumber<cr>
+
+" Convert Ruby 1.8 to 1.9 Hash Syntax
+" http://robots.thoughtbot.com/convert-ruby-1-8-to-1-9-hash-syntax
+if !exists("*ConvertRubyHashSyntax")
+  function ConvertRubyHashSyntax()
+    %s/:\([^ ]*\)\(\s*\)=>/\1:/g
+    ''
+  :endfunction
+endif
+
+nnoremap <leader>h :call ConvertRubyHashSyntax()<CR>
