@@ -12,8 +12,8 @@ endfunction
 call s:SourceConfigFilesIn('custom')
 call s:SourceConfigFilesIn('local')
 
-" Remove trailing whitespace on save for ruby files
-autocmd BufWritePre *.rb :%s/\s\+$//e
+" Remove trailing whitespace on write.
+autocmd BufWritePre * :%s/\s\+$//e
 " Disable next line commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
