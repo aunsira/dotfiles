@@ -6,10 +6,10 @@ Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
-Plug 'evanmiller/nginx-vim-syntax', { 'for': 'nginx' }
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'evanmiller/nginx-vim-syntax'
+Plug 'fatih/vim-go'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
@@ -18,14 +18,14 @@ Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-slash'
 Plug 'kchmck/vim-coffee-script'
-Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'mxw/vim-jsx', { 'for': ['jsx'] }
-Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] }
+Plug 'mattn/emmet-vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 Plug 'qpkorr/vim-bufkill'
 Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'sirakij/vim-thai-keys'
-Plug 'skalnik/vim-vroom', { 'for': ['rb'] }
+Plug 'skalnik/vim-vroom'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-endwise'
@@ -35,7 +35,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
-Plug 'vim-ruby/vim-ruby' , { 'for': 'rb' }
+Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'wellle/targets.vim'
 
