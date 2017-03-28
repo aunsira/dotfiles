@@ -14,6 +14,10 @@ let g:EasyMotion_smartcase = 1
 let ruby_space_errors=1
 let c_space_errors=1
 
+" vim-ruby
+let g:ruby_indent_access_modifier_style = 'indent'
+let g:ruby_indent_assignment_style = 'variable'
+
 " Remap the default <C-Y> leader of Emmet Plugin
 let g:user_emmet_leader_key='<C-Z>'
 
