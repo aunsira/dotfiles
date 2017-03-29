@@ -52,3 +52,6 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+" Trigger a highlight in the appropri
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
