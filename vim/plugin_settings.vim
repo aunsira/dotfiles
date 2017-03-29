@@ -18,9 +18,6 @@ let c_space_errors=1
 let g:ruby_indent_access_modifier_style = 'indent'
 let g:ruby_indent_assignment_style = 'variable'
 
-" Remap the default <C-Y> leader of Emmet Plugin
-let g:user_emmet_leader_key='<C-Z>'
-
 " CTRL-N and CTRL-P to revious-history instead of down and up.
 let g:fzf_history_dir = '~/.fzf-history'
 
