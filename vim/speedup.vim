@@ -8,6 +8,7 @@ nnoremap <leader>f :Ag<Space>
 
 map <Leader>ne :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
+map <C-x> :q<cr>
 nnoremap <Leader>Q :qa!<cr>
 map <Leader>s :w<CR>
 map <leader>w <C-w>w
