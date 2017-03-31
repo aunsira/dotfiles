@@ -31,13 +31,6 @@ let g:lexima_enable_basic_rules=1
 let g:lexima_enable_newline_rules=1
 let g:lexima_enable_endwise_rules=1
 
-" Airline settings
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
-
 " Fzf Tweaks
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
