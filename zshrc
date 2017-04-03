@@ -8,3 +8,5 @@ source $ZSH/oh-my-zsh.sh
 
 . ~/.zsh/aliases
 . ~/.zsh/config
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

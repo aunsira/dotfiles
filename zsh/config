@@ -19,9 +19,6 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 command -v blsd > /dev/null && export FZF_ALT_C_COMMAND='blsd'
 command -v tree > /dev/null && export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
-# Config FZF for start using fuzzy search
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 gg() {
   search=""
   echo "Googling: $@"
