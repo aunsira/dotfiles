@@ -209,9 +209,7 @@ nnoremap <leader>u1 :call UnderlineHeading(1);
 nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
 
-nnoremap <leader>bb :Buffers<cr>
-nmap Bb :Buffers<cr>
-nnoremap <C-B> :Buffers<cr>
+nnoremap <silent> <Leader><Enter> :Buffers<CR>
 
 nmap <leader>ba :bufdo bd<cr>
 
