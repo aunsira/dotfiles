@@ -11,7 +11,8 @@ map <Leader>q :q<CR>
 map <C-x> :q<cr>
 nnoremap <Leader>Q :qa!<cr>
 map <Leader>s :w<CR>
-map <leader>w <C-w>w
+nnoremap <tab>   <c-w>w
+nnoremap <S-tab> <c-w>W
 
 " paste from clipboard
 nnoremap <leader>p "*p:w<cr>
@@ -42,8 +43,6 @@ nnoremap <leader><tab> <C-^>
 " Tab navigation
 nnoremap ]t :tabn<cr>
 nnoremap [t :tabp<cr>
-nmap <Tab> gt
-nmap <S-Tab> gT
 
 " Use actually useful arrow keys
 map <up> :bn<cr>
