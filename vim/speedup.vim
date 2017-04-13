@@ -124,7 +124,7 @@ map <CR> i<CR><Esc>
 " add newline above current line
 map <Esc><CR> O<Esc>
 " add newline below current line
-map <Leader><CR> o<Esc>
+map z<CR> o<Esc>
 
 " Reindent file.
 map <Leader>i mmgg=G`m
