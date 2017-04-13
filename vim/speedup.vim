@@ -242,7 +242,7 @@ nnoremap          Uf             :Gcommit --fixup=
 nnoremap <silent> Ugf            :Gedit <C-R><C-W><cr>
 nnoremap <silent> Ul :GV! -100<cr>
 nnoremap <silent> Ur             :Gread<cr>
-nnoremap <silent> Us             :Gstatus<cr>
+nmap     <silent> Us             :Gstatus<cr> <C-N>
 nnoremap <silent> Uw :if !exists(":Gwrite")<bar>call fugitive#detect(expand('%:p'))<bar>endif<bar>Gwrite<bar>SignifyRefresh<cr>
 nnoremap <silent> Upr            :OpenGithubPullReq<cr>
 nnoremap <silent> Um             :OpenGithubFile<cr>
