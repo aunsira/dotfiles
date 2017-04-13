@@ -30,7 +30,7 @@
         "f10": "mute",
         "f11": "volume_down",
         "f12": "volume_up",
-        "right_command": "f17"
+        "right_command": "right_option"
       },
       "virtual_hid_keyboard": {
         "caps_lock_delay_milliseconds": 0,
