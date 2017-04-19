@@ -83,6 +83,9 @@
         "f10": "mute",
         "f11": "volume_decrement",
         "f12": "volume_increment",
+        "f7": "rewind",
+        "f8": "play_or_pause",
+        "f9": "fastforward",
         "left_command": "left_option",
         "left_option": "left_command"
       },
