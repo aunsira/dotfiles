@@ -10,7 +10,8 @@ map <Leader>ne :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <C-x> :q<cr>
 nnoremap <Leader>Q :qa!<cr>
-map <Leader>s :w<CR>
+map <C-s> <esc>:w<CR>
+imap <C-s> <esc>:w<CR>
 nnoremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
 
@@ -109,11 +110,6 @@ nmap k gk
 nmap j gj
 noremap H ^
 noremap L g_
-
-" Some sign that hard to type to
-imap uu _
-imap hh =>
-imap vv <Bar>
 
 " Emacs-like beginning and end of line.
 imap <c-e> <c-o>$
@@ -334,3 +330,12 @@ if !exists("*ConvertRubyHashSyntax")
 endif
 
 nnoremap <leader>h :call ConvertRubyHashSyntax()<CR>
+
+imap <C-l> :<Space>
+
+command! Q q " Bind :Q to :q
+command! Qall qall
+command! QA qall
+command! E e
+command! W w
+command! Wq wq
