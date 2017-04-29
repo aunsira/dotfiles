@@ -61,3 +61,16 @@ join-lines() {
 function rrg {
   bin/rake routes | grep $1
 }
+
+function git-new-remote-tracking {
+  git checkout -b $1 && git push -u origin $1
+}
+
+function git-nuke {
+  git branch -D $1 && git push origin :$1
+}
+
+function take {
+  mkdir $1
+  cd $1
+}
