@@ -2,6 +2,15 @@ fzf-gt-widget() LBUFFER+=$(gb | join-lines)
 zle -N fzf-gt-widget
 bindkey '^b^b' fzf-gt-widget
 
+gg() {
+  search=""
+  echo "Googling: $@"
+  for term in $@; do
+    search="$search%20$term"
+  done
+  open "http://www.google.com/search?q=$search"
+}
+
 # GIT heart FZF
 # --------------------------------------------
 is_in_git_repo() {

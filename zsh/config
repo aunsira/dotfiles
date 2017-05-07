@@ -18,12 +18,3 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bin
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 command -v blsd > /dev/null && export FZF_ALT_C_COMMAND='blsd'
 command -v tree > /dev/null && export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
-
-gg() {
-  search=""
-  echo "Googling: $@"
-  for term in $@; do
-    search="$search%20$term"
-  done
-  open "http://www.google.com/search?q=$search"
-}
