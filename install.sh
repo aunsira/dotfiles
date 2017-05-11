@@ -41,9 +41,9 @@ if [[ "$symlink_zsh_answer" == "y" ]]; then
   done
 fi
 
-read -n1 -p "Symlink karabiner.json ~/.karabiner.d/configuration/karabiner.json (overwriting)? (y/n)" symlink_karabiner_answer
+read -n1 -p "Symlink karabiner.json ~/.config/karabiner/karabiner.json (overwriting)? (y/n)" symlink_karabiner_answer
 echo ""
 if [[ "$symlink_karabiner_answer" == "y" ]]; then
-  ln -sfn $basedir/karabiner.json ${HOME}/.karabiner.d/configuration/karabiner.json
+  ln -sfn $basedir/karabiner.json ${HOME}/.config/karabiner/karabiner.json
   echo -e ${HOME}/.karabiner.d/configuration/karabiner.json \t→\t $basedir/karabiner.json
 fi
