@@ -17,6 +17,7 @@ Plug 'junegunn/gv.vim', { 'on' : 'GV' }
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-peekaboo'
 Plug 'kchmck/vim-coffee-script'
+Plug 'matze/vim-move'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'qpkorr/vim-bufkill'
