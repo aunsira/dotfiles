@@ -20,6 +20,7 @@ set expandtab                     " always uses spaces instead of tab characters
 set wildmenu                      " Enhanced tab completion
 set textwidth=90
 set colorcolumn=+1
+set showcmd
 set lazyredraw
 set splitbelow
 set splitright
