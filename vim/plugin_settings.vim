@@ -49,4 +49,4 @@ let g:fzf_colors =
 " Trigger a highlight in the appropri
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
-let g:move_key_modifier = 'C'
+let g:move_map_keys = 0

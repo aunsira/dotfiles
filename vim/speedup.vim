@@ -339,3 +339,9 @@ command! QA qall
 command! E e
 command! W w
 command! Wq wq
+
+" vim-move
+nmap zj <Plug>MoveLineDown
+nmap zk <Plug>MoveLineUp
+vmap zj <plug>MoveBlockDown
+vmap zk <plug>MoveBlockUp
