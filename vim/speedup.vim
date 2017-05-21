@@ -263,6 +263,12 @@ nmap     ZH     Zh
 nmap     ZJ     Zj
 nmap     ZK     Zk
 nmap     ZL     Zl
+nmap     ZT     :tabclose<cr>
+nnoremap <M-h> :aboveleft vsplit<CR>
+nnoremap <M-j> :belowright split<CR>
+nnoremap <M-k> <C-W>s
+nnoremap <M-l> <C-W>v
+nnoremap <silent> <M-t> :tab split<cr>
 
 " do not clobber '[ '] on :write
 function! s:save_change_marks() abort
@@ -345,3 +351,12 @@ nmap zj <Plug>MoveLineDown
 nmap zk <Plug>MoveLineUp
 vmap zj <plug>MoveBlockDown
 vmap zk <plug>MoveBlockUp
+
+" Quick hash/array
+inoremap {; {<CR>};<Esc>O
+inoremap {, {<CR>},<Esc>O
+inoremap [; [<CR>];<Esc>O
+inoremap [, [<CR>],<Esc>O
+
+" Open built-in Terminal
+nnoremap <M-z> :terminal<cr>
