@@ -112,8 +112,8 @@ noremap H ^
 noremap L g_
 
 " Emacs-like beginning and end of line.
-imap <c-e> <c-o>$
-imap <c-a> <c-o>^
+imap <c-x><c-l> <c-o>$
+imap <c-x><c-h> <c-o>^
 
 " break this line into a new one below
 map <CR> i<CR><Esc>
