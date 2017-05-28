@@ -350,11 +350,5 @@ nmap zk <Plug>MoveLineUp
 vmap zj <plug>MoveBlockDown
 vmap zk <plug>MoveBlockUp
 
-" Quick hash/array
-inoremap {; {<CR>};<Esc>O
-inoremap {, {<CR>},<Esc>O
-inoremap [; [<CR>];<Esc>O
-inoremap [, [<CR>],<Esc>O
-
 " Open built-in Terminal
 nnoremap <M-z> :terminal<cr>
