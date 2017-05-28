@@ -112,8 +112,8 @@ noremap H ^
 noremap L g_
 
 " Emacs-like beginning and end of line.
-imap <c-x><c-l> <c-o>$
-imap <c-x><c-h> <c-o>^
+imap <c-l> <c-o>$
+imap <c-h> <c-o>^
 
 " break this line into a new one below
 map <CR> i<CR><Esc>
@@ -336,8 +336,6 @@ if !exists("*ConvertRubyHashSyntax")
 endif
 
 nnoremap <leader>h :call ConvertRubyHashSyntax()<CR>
-
-imap <C-l> :<Space>
 
 command! Q q " Bind :Q to :q
 command! Qall qall
