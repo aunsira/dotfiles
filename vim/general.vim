@@ -26,7 +26,6 @@ set splitbelow
 set splitright
 set visualbell
 set relativenumber
-set number
 set nowrap
 set foldlevelstart=0              " don't fold initially
 set nostartofline

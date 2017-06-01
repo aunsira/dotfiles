@@ -7,6 +7,7 @@ alias cd-="cd -"
 alias cd.='cd ..'
 alias cd..="cd .."
 alias skl='cd ClassroomApp'
+alias dot='cd ~/code/git/dotfiles'
 
 # For speed me up
 alias -g G='| grep'
