@@ -9,6 +9,7 @@ nnoremap <leader>f :Ag<Space>
 map <Leader>ne :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
 map <C-x> :q<cr>
+map <M-q> :q<cr>
 nnoremap <Leader>Q :qa!<cr>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
@@ -56,6 +57,8 @@ nnoremap <leader>t :tabe<cr>
 
 " Map fzf plugin
 nmap <C-p> :FZF<cr>
+imap <c-x><c-k> <plug>(fzf-complete-word)
+
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
 
@@ -100,6 +103,12 @@ map <leader>gr :Gread<cr>:w<cr>
 map <leader>gp :Gpush<cr>
 map <leader>opr :OpenGithubPullReq<cr>
 map <leader>of :OpenGithubFile<cr>
+
+map <M-s> :Gstatus<cr>gg<c-n>
+map <M-d> :Gdiff<cr>
+map <M-b> :Gblame<cr>
+map <M-p> :Gpush<cr>
+map <M-r> :Gread<cr>:w<cr>
 
 " Make Y act like other capitals
 map Y yg_
@@ -158,6 +167,7 @@ map <Leader>G :Goyo 140x70<cr>
 
 " Use GV without hit colon
 map <Leader>gv :GV<cr>
+map <M-v> :GV<cr>
 
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
