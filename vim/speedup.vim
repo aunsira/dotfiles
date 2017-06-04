@@ -117,8 +117,6 @@ map <leader>Y vg_"*y
 " move by line on the screen rather than by line in the file
 nmap k gk
 nmap j gj
-noremap H ^
-noremap L g_
 
 " Emacs-like beginning and end of line.
 imap <c-l> <c-o>$
