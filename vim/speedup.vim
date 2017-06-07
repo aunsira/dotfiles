@@ -121,6 +121,8 @@ nmap j gj
 " Emacs-like beginning and end of line.
 imap <c-l> <c-o>$
 imap <c-h> <c-o>^
+noremap H ^
+noremap L g_
 
 " break this line into a new one below
 map <CR> i<CR><Esc>
@@ -366,3 +368,8 @@ inoremap <M-h> <C-o>h
 inoremap <M-l> <C-o>a
 inoremap <M-j> <C-o>j
 inoremap <M-k> <C-o>k
+
+" Remap H, M, L
+nmap <M-1> H
+nmap <M-2> M
+nmap <M-3> L
