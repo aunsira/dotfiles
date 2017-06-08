@@ -26,8 +26,8 @@ vnoremap <leader>y "*y
 vnoremap <leader>d "*d
 
 " Remap jump to definition for ctags
-nmap <leader>] <C-]>
-nmap <leader>g] g<C-]>
+nmap <leader>] <C-]>zz
+nmap <leader>g] g<C-]>zz
 
 " Faster viewport scrolling (3 lines at a time)
 nnoremap <C-e> 3<C-e>
@@ -236,7 +236,8 @@ endfunction
 map <Leader>rn :call RenameFile()<cr>
 
 " Jump list (to newer position)
-nnoremap <C-t> <C-i>
+nnoremap <C-t> <C-i>zz
+nnoremap <C-o> <C-o>zz
 
 map <leader>sop :source ~/.config/nvim/init.vim<cr>:PlugInstall<cr>
 
