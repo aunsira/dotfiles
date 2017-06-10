@@ -41,6 +41,13 @@ if [[ "$symlink_zsh_answer" == "y" ]]; then
   done
 fi
 
+read -n1 -p "Symlink tmux script to ~/.tmux/scripts/ (y/n)" symlink_script_answer
+echo ""
+if [[ "$symlink_script_answer" == "y" ]]; then
+  ln -sfn $basedir/scripts/remaining_battery.sh ${HOME}/.tmux/scripts/remaining_battery.sh
+  echo -e ${HOME}/.tmux/scripts/remaining_battery.sh \t→\t $basedir/scripts/remaining_battery.sh
+fi
+
 read -n1 -p "Symlink karabiner.json ~/.config/karabiner/karabiner.json (overwriting)? (y/n)" symlink_karabiner_answer
 echo ""
 if [[ "$symlink_karabiner_answer" == "y" ]]; then
