@@ -47,13 +47,13 @@ nnoremap ]t :tabn<cr>
 nnoremap [t :tabp<cr>
 
 " Use actually useful arrow keys
-map <up> :bn<cr>
-map <down> :bp<cr>
-map <right> :tabn<cr>
-map <left> :tabp<cr>
+nnoremap <Left> :vertical resize +1<CR>
+nnoremap <Right> :vertical resize -1<CR>
+nnoremap <Up> :resize +1<CR>
+nnoremap <Down> :resize -1<CR>
 
 " New tab
-nnoremap <leader>t :tabe<cr>
+nnoremap <leader>tn :tabe<cr>
 
 " Map fzf plugin
 nmap <C-p> :FZF<cr>
@@ -187,8 +187,18 @@ nnoremap <leader>d :bd<CR>
 
 map <Leader>l :ls<CR>:buffer<Space>
 
-" Replace all
-map <Leader>ra :%s/
+function! VisualFindAndReplace()
+    :OverCommandLine%s/
+    :w
+endfunction
+function! VisualFindAndReplaceWithSelection() range
+    :'<,'>OverCommandLine s/
+    :w
+endfunction
+
+" Shortcut to find and replace.
+nnoremap <Leader>ra :call VisualFindAndReplace()<CR>
+xnoremap <Leader>ra :call VisualFindAndReplaceWithSelection()<CR>
 
 " Git push stash code
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
@@ -324,9 +334,6 @@ imap <C-V> <C-R>*
 " Map Ctrl+C to copy in Visual mode
 vmap <C-C> "+y
 
-" remove trailing whitespaces
-nmap <silent> <leader>rw <ESC>:%s/\s\+$//<CR>
-
 nnoremap Q @q
 
 " Places the current match at the center of the window.
@@ -335,7 +342,7 @@ noremap <plug>(slash-after) zz
 " Re tag
 nnoremap <leader>rt :!ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *<cr>
 
-noremap <leader>nr  :set nonumber<cr>:set norelativenumber<cr>
+noremap <leader>nr  :set number<cr>:set relativenumber<cr>
 
 " Convert Ruby 1.8 to 1.9 Hash Syntax
 " http://robots.thoughtbot.com/convert-ruby-1-8-to-1-9-hash-syntax
