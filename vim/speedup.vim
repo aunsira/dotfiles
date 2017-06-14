@@ -339,8 +339,8 @@ nnoremap Q @q
 " Places the current match at the center of the window.
 noremap <plug>(slash-after) zz
 
-" Re tag
-nnoremap <leader>rt :!ctags -R --exclude=.svn --exclude=.git --exclude=log --exclude=tmp *<cr>
+" Retag
+nnoremap <Leader>rt :!ctags --tag-relative --extra=+f -Rf.git/tags --exclude=.git,pkg --languages=-javascript,sql<CR><CR>
 
 noremap <leader>nr  :set number<cr>:set relativenumber<cr>
 
