@@ -1,6 +1,13 @@
+--sort=yes
+--tag-relative=yes
 --recurse=yes
+--languages=javascript,ruby
+
+--exclude=coverage
 --exclude=.git
+--exclude="*.min.js"
 --exclude=vendor/*
 --exclude=node_modules/*
+--exclude=tmp 2>/dev/null
 --exclude=db/*
 --exclude=log/*

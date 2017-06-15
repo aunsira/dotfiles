@@ -340,7 +340,7 @@ nnoremap Q @q
 noremap <plug>(slash-after) zz
 
 " Retag
-nnoremap <Leader>rt :!ctags --tag-relative --extra=+f -Rf.git/tags --exclude=.git,pkg --languages=-javascript,sql<CR><CR>
+nnoremap <Leader>rt :!ctags -a -Rf .git/tags<CR><CR>
 
 noremap <leader>nr  :set number<cr>:set relativenumber<cr>
 

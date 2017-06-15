@@ -36,6 +36,7 @@ set re=1                          " use old regexpengine to avoid lagging scroll
 set termguicolors
 set diffopt=filler,vertical
 set guicursor=                    " To disable cursor style of nvim v0.2.0
+set tags=.git/tags                " Set project directory's ctags
 
 " Set whitespace character
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
