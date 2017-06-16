@@ -342,7 +342,20 @@ noremap <plug>(slash-after) zz
 " Retag
 nnoremap <Leader>rt :!ctags -a -Rf .git/tags<CR><CR>
 
-noremap <leader>nr  :set number<cr>:set relativenumber<cr>
+function! NumberToggle()
+  if(&relativenumber == 1)
+    if (&number == 1)
+      set nonumber
+      set norelativenumber
+    else
+      set number
+    endif
+  else
+    set relativenumber
+  endif
+endfunc
+command! NumberToggle call NumberToggle()
+noremap <F5> :NumberToggle<cr>
 
 " Convert Ruby 1.8 to 1.9 Hash Syntax
 " http://robots.thoughtbot.com/convert-ruby-1-8-to-1-9-hash-syntax
