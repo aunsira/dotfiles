@@ -119,8 +119,8 @@ nmap k gk
 nmap j gj
 
 " Emacs-like beginning and end of line.
-imap <c-l> <c-o>$
-imap <c-h> <c-o>^
+imap <c-e> <c-o>$
+imap <c-a> <c-o>^
 noremap H ^
 noremap L g_
 
