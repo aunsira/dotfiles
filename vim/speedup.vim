@@ -249,7 +249,8 @@ map <Leader>rn :call RenameFile()<cr>
 nnoremap <C-t> <C-i>zz
 nnoremap <C-o> <C-o>zz
 
-map <leader>sop :source ~/.config/nvim/init.vim<cr>:PlugInstall<cr>
+" Reload configuration file
+map <leader>sop :source ~/.config/nvim/init.vim<cr>
 
 " Alternative way for fugutive
 nnoremap <silent> Ub             :Gblame<cr>
