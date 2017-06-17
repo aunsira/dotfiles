@@ -390,8 +390,3 @@ inoremap <M-h> <C-o>h
 inoremap <M-l> <C-o>a
 inoremap <M-j> <C-o>j
 inoremap <M-k> <C-o>k
-
-" Remap H, M, L
-noremap <M-1> H
-noremap <M-2> M
-noremap <M-3> L
