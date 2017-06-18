@@ -18,15 +18,10 @@ if [[ "$symlink_answer" == "y" ]]; then
 fi
 
 _vimfiles_path=$basedir/vim;
-read -n1 -p "Symlink all vim custom files to ~/.config/nvim/custom/ (overwriting)? (y/n)" symlink_vim_answer
+read -n1 -p "Symlink all vim config files to ~/.config/nvim/vim (overwriting)? (y/n)" symlink_vim_answer
 echo ""
 if [[ "$symlink_vim_answer" == "y" ]]; then
-  for vfl in "$_vimfiles_path"/*; do
-    vim_file=`basename "$vfl"`
-    echo $vim_file
-    ln -sfn $basedir/vim/$vim_file ${HOME}/.config/nvim/custom/$vim_file
-    echo -e ${HOME}/.config/nvim/custom/$vim_file \t→\t $basedir/vim/$vim_file
-  done
+  ln -sfn $basedir/vim ${HOME}/.config/nvim/vim
 fi
 
 _zshfiles_path=$basedir/zsh;

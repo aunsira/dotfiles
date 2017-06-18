@@ -6,7 +6,7 @@ if [ -x "$(command -v rbenv)" ]; then
   eval "$(rbenv init -)"
 fi
 
-export CDPATH=$CDPATH:$HOME/code/git:$HOME/code/git/skilllane-web:$HOME/code
+export CDPATH=$CDPATH:$HOME/code/git:$HOME/code
 
 # Don't exit on ctrl-d
 set -o ignoreeof

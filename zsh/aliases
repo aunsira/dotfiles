@@ -6,7 +6,6 @@ alias ......="cd ../../../../.."            # .. five times
 alias cd-="cd -"
 alias cd.='cd ..'
 alias cd..="cd .."
-alias skl='cd ClassroomApp'
 alias dot='cd ~/code/git/dotfiles'
 
 # For speed me up
@@ -64,6 +63,7 @@ alias stashclear='git stash clear'
 alias stashls='git stash list'
 alias stashpop='git stash pop'
 alias stashshow='git stash show stash@{0}  -p'
+alias t='tmux -2'
 alias tmux='tmux -2'
 alias u='cd ..'
 alias v="nvim"

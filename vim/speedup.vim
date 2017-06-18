@@ -8,11 +8,8 @@ nnoremap <leader>f :Ag<Space>
 
 map <Leader>ne :NERDTreeFind<CR>zz
 map <Leader>q :q<CR>
-map <C-x> :q<cr>
 map <M-q> :q<cr>
 nnoremap <Leader>Q :qa!<cr>
-map <C-s> <esc>:w<CR>
-imap <C-s> <esc>:w<CR>
 nnoremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
 
@@ -88,11 +85,6 @@ nnoremap ge `.
 nnoremap <leader>; :
 vnoremap <leader>; :
 
-" Easy access to the start of the line
-nnoremap 0 ^
-" Window resizing
-noremap <leader>= <C-w>=
-
 " Git shortcuts
 map <leader>gs :Gstatus<cr>gg<c-n>
 map <leader>gc :Gcommit<cr>
@@ -142,11 +134,9 @@ endfunction
 " Easy navigation for editing and coding
 nnoremap <leader>rr :r <C-r>=CurrenRelativeDirectory()<cr>
 nnoremap <leader>er :e <C-r>=escape(expand("%:p:h"), ' ')<cr>/
-nnoremap <Leader>es :e ~/code/git/skilllane-web/ClassroomApp/
 nnoremap <Leader>eg :e ~/code/git/
 nnoremap <Leader>eh :e ~/
 nnoremap <Leader>cd :cd ~/
-nnoremap <Leader>cs :cd ~/code/git/skilllane-web/ClassroomApp/
 nnoremap <Leader>cg :cd ~/code/git/
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -185,8 +175,6 @@ map <Leader>k <Plug>(easymotion-k)
 " Kill buffer with leader + d
 nnoremap <leader>d :bd<CR>
 
-map <Leader>l :ls<CR>:buffer<Space>
-
 function! VisualFindAndReplace()
     :OverCommandLine%s/
     :w
@@ -207,8 +195,6 @@ map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 nmap <leader>ap :e config/application.yml<cr>
 map <Leader>sc :sp db/schema.rb<cr>
 nmap <leader>mp :e ~/code/git/dotfiles/vim/speedup.vim<cr>
-
-" map <Leader>t :w<cr>:call RunCurrentSpecFile()<CR>
 
 " Markdown Underlines
 function! UnderlineHeading(level)
@@ -336,9 +322,6 @@ imap <C-V> <C-R>*
 vmap <C-C> "+y
 
 nnoremap Q @q
-
-" Places the current match at the center of the window.
-noremap <plug>(slash-after) zz
 
 " Retag
 nnoremap <Leader>rt :!ctags -a -Rf .git/tags<CR><CR>
