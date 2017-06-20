@@ -374,3 +374,6 @@ inoremap <M-h> <C-o>h
 inoremap <M-l> <C-o>a
 inoremap <M-j> <C-o>j
 inoremap <M-k> <C-o>k
+
+" Command to remove trailing whitespaces
+command Tws %s/\s\+$//
