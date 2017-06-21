@@ -38,6 +38,7 @@ Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 
 call plug#end()
