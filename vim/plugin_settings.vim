@@ -1,5 +1,5 @@
 " Plugins customization
-" =======================================================================
+" ---------------------
 
 " Set close tag filenames like *.xml, *.html, *.xhtml, ...
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb"
@@ -46,7 +46,5 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-" Trigger a highlight in the appropri
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-
+" Disable default key of vim-move
 let g:move_map_keys = 0

@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'aunsira/vim-thai-keys'
 Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'cohama/lexima.vim'
@@ -25,7 +26,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'qpkorr/vim-bufkill'
 Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-Plug 'aunsira/vim-thai-keys'
 Plug 'skalnik/vim-vroom'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }

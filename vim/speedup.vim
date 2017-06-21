@@ -1,5 +1,5 @@
-" Shortcuts and mapping stuffs that make me speedup
-" ====================================================================
+" Shortcuts and mapping stuffs
+" ----------------------------
 
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -152,6 +152,8 @@ noremap G Gzz
 noremap } }zz
 noremap { {zz
 noremap <plug>(slash-after) zz
+noremap <C-d> <C-d>zz
+noremap <C-u> <C-u>zz
 
 " map goyo
 map <Leader>G :Goyo 140x70<cr>

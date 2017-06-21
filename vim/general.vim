@@ -1,5 +1,6 @@
 " General configurations
-" ==========================================================================
+" ----------------------
+
 set backspace=indent,eol,start    " more powerful backspacing
 set tabstop=2                     " size of a hard tabstop
 set shiftwidth=2                  " size of an indent
@@ -38,8 +39,4 @@ set diffopt=filler,vertical
 set guicursor=                    " To disable cursor style of nvim v0.2.0
 set tags=.git/tags                " Set project directory's ctags
 set scrolloff=5
-
-" Set whitespace character
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
-autocmd InsertEnter * set list listchars=tab:»·,trail:\·,precedes:«,extends:»
-autocmd InsertLeave * set list listchars=tab:\ \ ,trail:\·,precedes:«,extends:»
