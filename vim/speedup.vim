@@ -376,4 +376,4 @@ inoremap <M-j> <C-o>j
 inoremap <M-k> <C-o>k
 
 " Command to remove trailing whitespaces
-command Tws %s/\s\+$//
+command! Tws %s/\s\+$//

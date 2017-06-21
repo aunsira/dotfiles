@@ -71,3 +71,6 @@ set statusline+=\ %{_s_syntax()}                " syntax
 set statusline+=\ %#Normal#\ %*                 " separator
 set statusline+=\ %2c\ -\ %3l/%L                " x, y/ymax
 set statusline+=\                               " end w/ space
+
+" Disable next line commenting
+au FileType * set fo-=c fo-=r fo-=o

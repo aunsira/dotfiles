@@ -1,7 +1,5 @@
 " Remove trailing whitespace on ruby write.
 autocmd BufWritePre *.rb :%s/\s\+$//e
-" Disable next line commenting
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Redefine :Ag command
 autocmd VimEnter * command! -nargs=* Ag
