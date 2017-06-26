@@ -3,15 +3,19 @@
 
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
+map <Leader>ne :NERDTreeFind<CR>zz
+
 " Shortcut for typing :Ag
 nnoremap <leader>f :Ag<Space>
 
-map <Leader>ne :NERDTreeFind<CR>zz
+" Write/Exit shortcuts
+imap <C-o> <esc>:w<CR>
 map <Leader>q :q<CR>
 map <M-q> :q<cr>
 nnoremap <Leader>Q :qa!<cr>
-nnoremap <tab>   <c-w>w
-nnoremap <S-tab> <c-w>W
+
+" Easy to colon
+nnoremap <tab> :
 
 " paste from clipboard
 nnoremap <leader>p "*p:w<cr>
@@ -79,8 +83,8 @@ onoremap <C-Space> <Esc>
 cnoremap <C-Space> <C-c>
 inoremap <C-Space> <Esc>`^
 
-" Go to position of last edit. Mnem: 'Go to Edit'
-nnoremap ge `.
+" Go to position of last edit(`.) and recenter. Mnem: 'Go to Edit'
+nnoremap ge `.zz
 " Leader-; to enter command mode. No more holding shift!
 nnoremap <leader>; :
 vnoremap <leader>; :
@@ -111,8 +115,8 @@ nmap k gk
 nmap j gj
 
 " Emacs-like beginning and end of line.
-imap <c-e> <c-o>$
-imap <c-a> <c-o>^
+imap <c-e> <esc>A
+imap <c-a> <esc>I
 noremap H ^
 noremap L g_
 
