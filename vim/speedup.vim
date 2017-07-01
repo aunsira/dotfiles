@@ -15,7 +15,11 @@ map <M-q> :q<cr>
 nnoremap <Leader>Q :qa!<cr>
 
 " Easy to colon
-nnoremap <tab> :
+nnoremap <space><space> :
+
+" Circular windows navigation
+nnoremap <tab>   <c-w>w
+nnoremap <S-tab> <c-w>W
 
 " paste from clipboard
 nnoremap <leader>p "*p:w<cr>
@@ -122,8 +126,6 @@ noremap L g_
 
 " break this line into a new one below
 map <CR> i<CR><Esc>
-" add newline above current line
-map <Esc><CR> O<Esc>
 " add newline below current line
 map z<CR> o<Esc>
 
@@ -382,3 +384,6 @@ inoremap <M-k> <C-o>k
 
 " Command to remove trailing whitespaces
 command! Tws %s/\s\+$//
+
+" Disable default leader key of EasyMotion
+map <Nop> <Plug>(easymotion-prefix)
