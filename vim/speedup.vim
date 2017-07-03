@@ -6,7 +6,7 @@ map <C-n> :NERDTreeToggle<CR>
 map <Leader>ne :NERDTreeFind<CR>zz
 
 " Shortcut for typing :Ag
-nnoremap <leader>f :Ag<Space>
+nnoremap <leader>f :Ag!<Space>
 
 " Write/Exit shortcuts
 imap <C-o> <esc>:w<CR>
@@ -68,9 +68,9 @@ imap <c-x><c-k> <plug>(fzf-complete-word)
 nmap <LEADER>vs :vsplit<CR>
 
 " bind K to grep word under cursor
-nnoremap K :Ag <C-R><C-W><CR>
+nnoremap K :Ag! <C-R><C-W><CR>
 " bind K to grep word from visual selection
-vnoremap K y:Ag <C-R>"<CR>
+vnoremap K y:Ag! <C-R>"<CR>
 " normal search on visual selection
 vnoremap // y/<C-R>"<CR>
 
@@ -387,3 +387,9 @@ command! Tws %s/\s\+$//
 
 " Disable default leader key of EasyMotion
 map <Nop> <Plug>(easymotion-prefix)
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
