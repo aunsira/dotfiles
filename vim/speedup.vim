@@ -224,9 +224,9 @@ nnoremap <silent> <Leader><Enter> :Buffers<CR>
 nmap <leader>ba :bufdo bd<cr>
 
 " Add binding.
-map <Leader>bd orequire 'pry'<cr>binding.pry<esc>:w<cr>
+nnoremap <leader>bd orequire "pry"; binding.pry<esc>
 " Add console.log
-map <Leader>cl oconsole.log();<Left><Left>
+nnoremap <Leader>cl oconsole.log();<Left><Left>
 
 function! RenameFile()
   let old_name = expand('%')
