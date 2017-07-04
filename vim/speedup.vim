@@ -332,7 +332,7 @@ vmap <C-C> "+y
 nnoremap Q @q
 
 " Retag
-nnoremap <Leader>rt :!ctags -a -Rf .git/tags<CR><CR>
+nnoremap <Leader>rt :!ctags -a -Rf .git/tags --exclude=.git --exclude="*.min.js" --exclude=node_modules --exclude=admin/node_modules --exclude=tmp 2>/dev/null<CR><CR>
 
 function! NumberToggle()
   if(&relativenumber == 1)
