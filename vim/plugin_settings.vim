@@ -51,5 +51,6 @@ let g:move_map_keys = 0
 
 " Linter
 let g:ale_fixers = {
-  \ 'javascript': ['eslint']
+  \ 'javascript': ['eslint'],
+  \ 'ruby': ['rubocop']
   \ }
