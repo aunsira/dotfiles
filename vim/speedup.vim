@@ -16,6 +16,7 @@ nnoremap <Leader>Q :qa!<cr>
 
 " Easy to colon
 nnoremap <space><space> :
+vnoremap <space><space> :
 
 " Circular windows navigation
 nnoremap <tab>   <c-w>w

@@ -52,6 +52,7 @@ alias hpr='hub pull-request'
 alias ll="ls -FGlh"
 alias ls="ls -AFG"
 alias master='git checkout master'
+alias ni='npm install'
 alias p8='ping 8.8.8.8'
 alias rc='bin/rails console'
 alias rdm='bin/rake db:migrate'
