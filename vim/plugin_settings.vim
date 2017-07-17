@@ -54,3 +54,11 @@ let g:ale_fixers = {
   \ 'javascript': ['eslint'],
   \ 'ruby': ['rubocop']
   \ }
+
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
+
+" vim-jsdoc
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+let g:jsdoc_enable_es6 = 1

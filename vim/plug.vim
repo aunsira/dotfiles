@@ -10,6 +10,7 @@ Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'evanmiller/nginx-vim-syntax'
 Plug 'fatih/vim-go'
+Plug 'heavenshell/vim-jsdoc'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
