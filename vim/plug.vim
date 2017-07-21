@@ -20,14 +20,17 @@ Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-peekaboo'
 Plug 'kchmck/vim-coffee-script'
 Plug 'matze/vim-move'
+Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'osyo-manga/vim-over'
+Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'qpkorr/vim-bufkill'
 Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'skalnik/vim-vroom'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-endwise'

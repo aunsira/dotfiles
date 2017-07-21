@@ -397,3 +397,6 @@ command! -bang -nargs=* Ag
 
 " Test file
 nnoremap <leader>tf :TestFile<cr>
+
+" Go to definition in js
+nnoremap td :TernDef<cr>zz
