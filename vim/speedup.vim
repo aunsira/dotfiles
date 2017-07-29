@@ -221,6 +221,7 @@ nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
 
 nnoremap <silent> <Leader><Enter> :Buffers<CR>
+nnoremap <backspace>  :Buffers<cr>
 
 nmap <leader>ba :bufdo bd<cr>
 
@@ -400,3 +401,24 @@ nnoremap <leader>tf :TestFile<cr>
 
 " Go to definition in js
 nnoremap td :TernDef<cr>zz
+
+" Quick fix lint
+nmap zn :ALEFix<cr>
+
+" quickfix list
+nnoremap ]q :cnext<cr>
+nnoremap [q :cprevious<cr>
+nnoremap ]Q :clast<cr>
+nnoremap [Q :cfirst<cr>
+
+" loclist
+nnoremap ]l :lnext<cr>
+nnoremap [l :lprevious<cr>
+nnoremap ]L :llast<cr>
+nnoremap [L :lfirst<cr>
+
+" ale errors
+nmap ]w <plug>(ale_next)
+nmap [w <plug>(ale_previous)
+nmap ]W <plug>(ale_first)
+nmap ]W <plug>(ale_last)

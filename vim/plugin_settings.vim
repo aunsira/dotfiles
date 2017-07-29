@@ -54,6 +54,7 @@ let g:ale_fixers = {
   \ 'javascript': ['eslint'],
   \ 'ruby': ['rubocop']
   \ }
+let g:ale_lint_delay = 1000
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
