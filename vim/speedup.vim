@@ -9,7 +9,8 @@ map <Leader>ne :NERDTreeFind<CR>zz
 nnoremap <leader>f :Ag!<Space>
 
 " Write/Exit shortcuts
-imap <C-o> <esc>:w<CR>
+imap <C-p> <esc>:w<CR>
+nmap <C-p> <esc>:w<CR>
 map <Leader>q :q<CR>
 map <M-q> :q<cr>
 nnoremap <Leader>Q :qa!<cr>
@@ -62,7 +63,7 @@ nnoremap <Down> :resize -1<CR>
 nnoremap <leader>tn :tabe<cr>
 
 " Map fzf plugin
-nmap <C-p> :FZF<cr>
+nnoremap <Enter> :FZF<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 
 " Quickly open a second window to view files side by side
@@ -125,8 +126,6 @@ imap <c-a> <esc>I
 noremap H ^
 noremap L g_
 
-" break this line into a new one below
-map <CR> i<CR><Esc>
 " add newline below current line
 map z<CR> o<Esc>
 
@@ -220,7 +219,6 @@ nnoremap <leader>u1 :call UnderlineHeading(1);
 nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
 
-nnoremap <silent> <Leader><Enter> :Buffers<CR>
 nnoremap <backspace>  :Buffers<cr>
 
 nmap <leader>ba :bufdo bd<cr>
