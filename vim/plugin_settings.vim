@@ -66,3 +66,6 @@ let g:jsdoc_enable_es6 = 1
 
 " javascript library syntax
 let g:used_javascript_libs = 'jquery,underscore,react,requirejs,handlebars'
+
+" Run vim-test with test environment
+let $NODE_ENV='test'
