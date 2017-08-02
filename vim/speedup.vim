@@ -14,10 +14,6 @@ map <Leader>q :q<CR>
 map <M-q> :q<cr>
 nnoremap <Leader>Q :qa!<cr>
 
-" Easy to colon
-nnoremap <space><space> :
-vnoremap <space><space> :
-
 " Circular windows navigation
 nnoremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
@@ -62,7 +58,7 @@ nnoremap <Down> :resize -1<CR>
 nnoremap <leader>tn :tabe<cr>
 
 " Map fzf plugin
-nnoremap <Enter> :FZF<cr>
+nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 imap <c-x><c-k> <plug>(fzf-complete-word)
 
 " Quickly open a second window to view files side by side
@@ -218,7 +214,7 @@ nnoremap <leader>u1 :call UnderlineHeading(1);
 nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
 
-nnoremap <backspace>  :Buffers<cr>
+nnoremap <enter> :Buffers<cr>
 
 nmap <leader>ba :bufdo bd<cr>
 
