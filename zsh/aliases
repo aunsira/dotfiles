@@ -57,6 +57,7 @@ alias hpr='hub pull-request'
 alias ll="ls -FGlh"
 alias ls="ls -AFG"
 alias master='git checkout master'
+alias mon='nodemon '
 alias yi='yarn install'
 alias yt='yarn test'
 alias p8='ping 8.8.8.8'

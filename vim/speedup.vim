@@ -220,8 +220,6 @@ nmap <leader>ba :bufdo bd<cr>
 
 " Add binding.
 nnoremap <leader>bd orequire "pry"; binding.pry<esc>
-" Add console.log
-nnoremap <Leader>cl oconsole.log();<Left><Left>
 
 function! RenameFile()
   let old_name = expand('%')
@@ -415,3 +413,12 @@ nmap ]w <plug>(ale_next)
 nmap [w <plug>(ale_previous)
 nmap ]W <plug>(ale_first)
 nmap ]W <plug>(ale_last)
+
+" Node shit stuff
+inoremap <silent> <M-r> =><space>
+inoremap <silent> <M-t> return<space>
+inoremap <silent> <M-f> function<space>
+inoremap <silent> <M-q> require('');<left><left><left>
+nnoremap <silent> <M-a> A;<esc>
+nnoremap <Leader>cl oconsole.log();<Left><Left>
+inoremap <silent> <M-c> console.log();<Left><Left>
