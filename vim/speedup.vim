@@ -9,6 +9,8 @@ map <Leader>ne :NERDTreeFind<CR>zz
 nnoremap <leader>f :Ag!<Space>
 
 " Write/Exit shortcuts
+map <C-b> <esc>:w<CR>
+imap <C-b> <esc>:w<CR>
 imap <C-o> <esc>:w<CR>
 map <Leader>q :q<CR>
 map <M-q> :q<cr>
