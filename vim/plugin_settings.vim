@@ -1,9 +1,6 @@
 " Plugins customization
 " ---------------------
 
-" Set close tag filenames like *.xml, *.html, *.xhtml, ...
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb"
-
 " Show hidden files in nerdtree
 let NERDTreeShowHidden=1
 
