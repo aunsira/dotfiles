@@ -40,3 +40,4 @@ set guicursor=                    " To disable cursor style of nvim v0.2.0
 set tags=.git/tags                " Set project directory's ctags
 set scrolloff=5
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
+set rnu
