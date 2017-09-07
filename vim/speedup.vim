@@ -68,6 +68,7 @@ nmap <LEADER>vs :vsplit<CR>
 
 " bind K to grep word under cursor
 nnoremap K :Ag! <C-R><C-W><CR>
+nnoremap <M-Tab> :Ag! <C-R><C-W><CR>
 " bind K to grep word from visual selection
 vnoremap K y:Ag! <C-R>"<CR>
 " normal search on visual selection
@@ -98,7 +99,6 @@ map <leader>gc :Gcommit<cr>
 map <leader>gg :Gbrowse<cr>
 map <leader>gb :Gblame<cr>
 map <leader>gd :Gdiff<cr>
-map <leader>gr :Gread<cr>:w<cr>
 map <leader>gp :Gpush<cr>
 map <leader>opr :OpenGithubPullReq<cr>
 map <leader>of :OpenGithubFile<cr>
@@ -424,3 +424,10 @@ inoremap <silent> <M-q> require('');<left><left><left>
 nnoremap <silent> <M-a> A;<esc>
 nnoremap <Leader>cl oconsole.log();<Left><Left>
 inoremap <silent> <M-c> console.log();<Left><Left>
+
+" Goland stuff
+map <leader>gr :GoRun<cr><esc><C-w>j<esc>
+map <leader>gf :GoDef<cr><esc>
+
+" Close quickfix/location window
+nnoremap <leader>cs :cclose<bar>lclose<cr>

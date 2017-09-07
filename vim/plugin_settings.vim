@@ -66,3 +66,7 @@ let g:used_javascript_libs = 'jquery,underscore,react,requirejs,handlebars'
 
 " Run vim-test with test environment
 let $NODE_ENV='test'
+
+" GoLang stuff
+let g:go_term_mode = "split"
+let g:go_term_enabled = 1

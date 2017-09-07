@@ -1,4 +1,4 @@
-set statusline=\ %f     " Path to the file
+set statusline=\ %F     " Path to the file
 set statusline+=\ %4*%m " Modified flag
 set statusline+=%*      " Clear highlight from modified flag
 set statusline+=\ %y    " Filetype
