@@ -70,3 +70,4 @@ let $NODE_ENV='test'
 " GoLang stuff
 let g:go_term_mode = "split"
 let g:go_term_enabled = 1
+let g:delve_backend = "native"

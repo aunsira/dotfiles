@@ -29,6 +29,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'qpkorr/vim-bufkill'
 Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+Plug 'sebdah/vim-delve'
 Plug 'skalnik/vim-vroom'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'thoughtbot/vim-rspec'
