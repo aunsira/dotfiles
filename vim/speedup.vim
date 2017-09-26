@@ -426,7 +426,7 @@ nnoremap <Leader>cl oconsole.log();<Left><Left>
 inoremap <silent> <M-c> console.log();<Left><Left>
 
 " Goland stuff
-map <leader>gr :GoRun<cr><esc><C-w>j<esc>
+map <leader>gr :GoRun %<cr><esc><C-w>j<esc>
 map <leader>gf :GoDef<cr><esc>
 
 " Close quickfix/location window
