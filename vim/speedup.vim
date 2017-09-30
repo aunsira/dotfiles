@@ -424,9 +424,10 @@ nnoremap <silent> <M-a> A;<esc>
 nnoremap <Leader>cl oconsole.log();<Left><Left>
 inoremap <silent> <M-c> console.log();<Left><Left>
 
-" Goland stuff
+" Golang stuff
 map <leader>gr :GoRun %<cr><esc><C-w>j<esc>
-map <leader>gf :GoDef<cr><esc>
+nmap <C-g> :GoDecls<cr>
+imap <C-g> <esc>:<C-u>GoDecls<cr>
 
 " Close quickfix/location window
 nnoremap <leader>cs :cclose<bar>lclose<cr>

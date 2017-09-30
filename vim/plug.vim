@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'SirVer/ultisnips'
 Plug 'aunsira/vim-thai-keys'
 Plug 'chr4/nginx.vim'
 Plug 'christoomey/vim-conflicted'
@@ -23,6 +24,7 @@ Plug 'matze/vim-move'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'osyo-manga/vim-over'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'pangloss/vim-javascript'
