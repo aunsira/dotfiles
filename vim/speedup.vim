@@ -383,8 +383,18 @@ command! Tws %s/\s\+$//
 " Disable default leader key of EasyMotion
 map <Nop> <Plug>(easymotion-prefix)
 
+" Search in project, but open at bottom of screen.
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview())
+
+" as well as above, but open in full screen.
+" command! -bang -nargs=* Ag
+"   \ call fzf#vim#ag(<q-args>,
+"   \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+"   \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+"   \                 <bang>0)
+
+" Search file and also show preview.
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
