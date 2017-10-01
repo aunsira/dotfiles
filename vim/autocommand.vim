@@ -39,6 +39,16 @@ augroup go
   autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 augroup END
 
+augroup js
+  autocmd!
+  autocmd FileType javascript nnoremap <silent> <leader>ar i=><space>
+  autocmd FileType javascript nnoremap <silent> <leader>rt ireturn<space>
+  autocmd FileType javascript nnoremap <silent> <leader>fn ifunction<space>
+  autocmd FileType javascript nnoremap <silent> <leader>re irequire('');<left><left><left>
+  autocmd FileType javascript nnoremap <silent> <leader>a A;<esc>
+  autocmd FileType javascript nnoremap <silent> <leader>cl oconsole.log();<Left><Left>
+augroup END
+
 " Help in new tabs
 function! s:helptab()
   if &buftype == 'help'

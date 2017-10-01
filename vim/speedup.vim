@@ -372,10 +372,10 @@ vmap zk <plug>MoveBlockUp
 nnoremap <M-z> :terminal<cr>
 
 " Movement in insert mode
-inoremap <M-h> <C-o>h
-inoremap <M-l> <C-o>a
-inoremap <M-j> <C-o>j
-inoremap <M-k> <C-o>k
+inoremap <C-h> <C-o>h
+inoremap <C-l> <C-o>a
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
 
 " Command to remove trailing whitespaces
 command! Tws %s/\s\+$//
@@ -419,25 +419,15 @@ nnoremap [l :lprevious<cr>
 nnoremap ]L :llast<cr>
 nnoremap [L :lfirst<cr>
 
+" Close quickfix/location window
+nnoremap <leader>cs :cclose<bar>lclose<cr>
+
 " ale errors
 nmap ]w <plug>(ale_next)
 nmap [w <plug>(ale_previous)
 nmap ]W <plug>(ale_first)
 nmap ]W <plug>(ale_last)
 
-" Node shit stuff
-inoremap <silent> <M-r> =><space>
-inoremap <silent> <M-t> return<space>
-inoremap <silent> <M-f> function<space>
-inoremap <silent> <M-q> require('');<left><left><left>
-nnoremap <silent> <M-a> A;<esc>
-nnoremap <Leader>cl oconsole.log();<Left><Left>
-inoremap <silent> <M-c> console.log();<Left><Left>
-
 " Golang stuff
-map <leader>gr :GoRun %<cr><esc><C-w>j<esc>
 nmap <C-g> :GoDecls<cr>
 imap <C-g> <esc>:<C-u>GoDecls<cr>
-
-" Close quickfix/location window
-nnoremap <leader>cs :cclose<bar>lclose<cr>
