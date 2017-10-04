@@ -67,10 +67,12 @@ let g:used_javascript_libs = 'jquery,underscore,react,requirejs,handlebars'
 " Run vim-test with test environment
 let $NODE_ENV='test'
 
-" GoLang stuff
+" Golang stuff
+let g:delve_backend = "native"
+let g:delve_new_command = "enew"
+
 let g:go_term_mode = "split"
 let g:go_term_enabled = 1
-let g:delve_backend = "native"
 let g:go_fmt_command = "goimports"
 let g:go_list_type = "quickfix"
 let g:go_auto_type_info = 0
