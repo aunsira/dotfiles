@@ -45,7 +45,7 @@ augroup js
   autocmd FileType javascript inoremap <silent> <M-t> return<space>
   autocmd FileType javascript inoremap <silent> <M-f> function<space>
   autocmd FileType javascript inoremap <silent> <M-q> require('');<left><left><left>
-  autocmd FileType javascript nnoremap <silent> <M-a>a A;<esc>
+  autocmd FileType javascript nnoremap <silent> <M-a> A;<esc>
   autocmd FileType javascript nnoremap <silent> <leader>cl oconsole.log();<Left><Left>
   autocmd FileType javascript inoremap <silent> <M-c> console.log();<Left><Left>
 augroup END
