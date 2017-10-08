@@ -385,7 +385,7 @@ map <Nop> <Plug>(easymotion-prefix)
 
 " Search in project, but open at bottom of screen.
 command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview())
+  \ call fzf#vim#ag(<q-args>, '--color-path 400 --color-line-number 400', fzf#vim#with_preview())
 
 " as well as above, but open in full screen.
 " command! -bang -nargs=* Ag
