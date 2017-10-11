@@ -139,7 +139,7 @@ nnoremap <leader>rr :r <C-r>=CurrenRelativeDirectory()<cr>
 nnoremap <leader>er :e <C-r>=escape(expand("%:p:h"), ' ')<cr>/
 nnoremap <Leader>eg :e ~/code/git/
 nnoremap <Leader>eh :e ~/
-nnoremap <Leader>cd :cd ~/
+nnoremap <Leader>cd :cd <C-r>=escape(expand("%:p:h"), ' ')<cr>/
 nnoremap <Leader>cg :cd ~/code/git/
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -217,6 +217,7 @@ nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
 
 nnoremap <enter> :Buffers<cr>
+nnoremap <silent> <Leader>` :Marks<CR>
 
 nmap <leader>ba :bufdo bd<cr>
 
@@ -431,3 +432,6 @@ nmap ]W <plug>(ale_last)
 " Golang stuff
 nmap <C-g> :GoDecls<cr>
 imap <C-g> <esc>:<C-u>GoDecls<cr>
+
+" Go to marked
+nnoremap gm `u
