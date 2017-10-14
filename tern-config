@@ -5,8 +5,10 @@
     "ecmascript"
   ],
   "plugins": {
+    "commonjs": {},
     "es_modules": {},
     "node": {},
+    "node_resolve": {},
     "requirejs": {
       "baseURL": "./",
       "paths": {}

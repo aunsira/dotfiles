@@ -35,6 +35,8 @@ augroup go
 
   autocmd FileType go nmap <silent> <Leader>c <Plug>(go-coverage-toggle)
 
+  autocmd FileType go nmap <silent> <2-LeftMouse> <Plug>(go-def)
+
   autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
   autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
   autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
@@ -50,6 +52,7 @@ augroup js
   autocmd FileType javascript nnoremap <silent> <M-a> A;<esc>
   autocmd FileType javascript nnoremap <silent> <leader>cl oconsole.log();<Left><Left>
   autocmd FileType javascript inoremap <silent> <M-c> console.log();<Left><Left>
+  autocmd FileType javascript nnoremap <silent> <2-LeftMouse> :TernDef<cr>
 augroup END
 
 " Help in new tabs
@@ -60,3 +63,5 @@ function! s:helptab()
   endif
 endfunction
 autocmd BufEnter *.txt call s:helptab()
+
+autocmd FileType go,javascript nnoremap <silent> <Leader>z <C-o>zz
