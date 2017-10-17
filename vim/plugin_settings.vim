@@ -82,6 +82,7 @@ let g:go_gocode_autobuild = 0
 let g:go_gocode_unimported_packages = 1
 let g:go_autodetect_gopath = 1
 let g:go_info_mode = "guru"
+let g:go_doc_keywordprg_enabled = 0
 
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
