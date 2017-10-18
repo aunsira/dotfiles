@@ -18,6 +18,10 @@ function! s:build_go_files()
   endif
 endfunction
 
+augroup ruby
+  autocmd FileType ruby nnoremap <silent> <2-LeftMouse> <C-]>
+augroup END
+
 augroup go
   autocmd!
 
@@ -64,4 +68,4 @@ function! s:helptab()
 endfunction
 autocmd BufEnter *.txt call s:helptab()
 
-autocmd FileType go,javascript nnoremap <silent> <Leader>z <C-o>zz
+autocmd FileType go,javascript,ruby nnoremap <silent> <Leader>z <C-o>zz
