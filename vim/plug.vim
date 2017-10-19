@@ -8,6 +8,7 @@ Plug 'christoomey/vim-conflicted'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
@@ -31,6 +32,7 @@ Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'roxma/nvim-completion-manager'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'sebdah/vim-delve'
+Plug 'slashmili/alchemist.vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
