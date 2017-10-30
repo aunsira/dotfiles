@@ -20,10 +20,10 @@ nnoremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
 
 " paste from clipboard
-nnoremap <leader>p "*p:w<cr>
-vnoremap <leader>p "*p:w<cr>
-nnoremap <leader>P "*P:w<cr>
-vnoremap <leader>P "*P:w<cr>
+nnoremap <leader>p "*p=`]:w<cr>
+vnoremap <leader>p "*p=`]:w<cr>
+nnoremap <leader>P "*P=`]:w<cr>
+vnoremap <leader>P "*P=`]:w<cr>
 " yank to clipboard
 vnoremap <leader>y "*y
 vnoremap <leader>d "*d
@@ -434,3 +434,6 @@ imap <C-g> <esc>:<C-u>GoDecls<cr>
 
 " Go to marked
 nnoremap gm `u
+
+" Correct indent while pasting
+nnoremap p p=`]
