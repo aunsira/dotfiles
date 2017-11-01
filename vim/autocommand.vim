@@ -19,7 +19,7 @@ function! s:build_go_files()
 endfunction
 
 augroup ruby
-  autocmd FileType ruby nnoremap <silent> <2-LeftMouse> <C-]>
+  autocmd FileType ruby nnoremap <silent> <2-LeftMouse> *<C-]>
 augroup END
 
 augroup go
@@ -39,7 +39,7 @@ augroup go
 
   autocmd FileType go nmap <silent> <Leader>c <Plug>(go-coverage-toggle)
 
-  autocmd FileType go nmap <silent> <2-LeftMouse> <Plug>(go-def)
+  autocmd FileType go nmap <silent> <2-LeftMouse> *<Plug>(go-def)
 
   autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
   autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
@@ -56,7 +56,7 @@ augroup js
   autocmd FileType javascript nnoremap <silent> <M-a> A;<esc>
   autocmd FileType javascript nnoremap <silent> <leader>cl oconsole.log();<Left><Left>
   autocmd FileType javascript inoremap <silent> <M-c> console.log();<Left><Left>
-  autocmd FileType javascript nnoremap <silent> <2-LeftMouse> :TernDef<cr>
+  autocmd FileType javascript nnoremap <silent> <2-LeftMouse> *:TernDef<cr>
 augroup END
 
 " Help in new tabs

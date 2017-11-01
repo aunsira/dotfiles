@@ -84,11 +84,6 @@ let g:go_autodetect_gopath = 1
 let g:go_info_mode = "guru"
 let g:go_doc_keywordprg_enabled = 0
 
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_interfaces = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
 let g:go_highlight_space_tab_error = 0
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_trailing_whitespace_error = 0

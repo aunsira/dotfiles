@@ -61,6 +61,7 @@ nnoremap <leader>tn :tabe<cr>
 " Map fzf plugin
 nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 imap <c-x><c-k> <plug>(fzf-complete-word)
+nnoremap <leader>l :Lines<cr>
 
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
@@ -177,7 +178,7 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " Kill buffer with leader + d
-nnoremap <leader>d :bd<CR>
+nnoremap <leader>d :bd!<CR>
 
 function! VisualFindAndReplace()
     :OverCommandLine%s/
@@ -327,7 +328,12 @@ vmap <C-C> "+y
 nnoremap Q @q
 
 " Retag
-nnoremap <Leader>rt :!ctags -a -Rf .git/tags --exclude=.git --exclude="*.min.js" --exclude=node_modules --exclude=admin/node_modules --exclude=tmp 2>/dev/null<CR><CR>
+function! RenewTagsFile()
+  exe 'silent !rm -rf .ctags'
+  exe 'silent !ctags -a -Rf .git/tags --languages=javascript --exclude=.git --exclude="*.min.js" --exclude=node_modules --exclude=admin/node_modules --exclude=tmp 2>/dev/null'
+  exe 'redraw!'
+endfunction
+nnoremap <Leader>rt :call RenewTagsFile()<CR>
 
 function! NumberToggle()
   if(&relativenumber == 1)
@@ -437,3 +443,6 @@ nnoremap gm `u
 
 " Correct indent while pasting
 nnoremap p p=`]
+
+" Highlight current word without move to the next
+nnoremap * *Nzz
