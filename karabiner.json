@@ -8,9 +8,37 @@
     {
       "complex_modifications": {
         "parameters": {
+          "basic.to_delayed_action_delay_milliseconds": 500,
           "basic.to_if_alone_timeout_milliseconds": 200
         },
-        "rules": []
+        "rules": [
+          {
+            "manipulators": [
+              {
+                "description": "Change right option to Hyper (i.e., command+control+option+shift)",
+                "from": {
+                  "key_code": "right_option",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
       },
       "devices": [
         {
@@ -23,6 +51,7 @@
             "vendor_id": 13
           },
           "ignore": false,
+          "manipulate_caps_lock_led": false,
           "simple_modifications": []
         }
       ],
@@ -192,9 +221,37 @@
     {
       "complex_modifications": {
         "parameters": {
+          "basic.to_delayed_action_delay_milliseconds": 500,
           "basic.to_if_alone_timeout_milliseconds": 1000
         },
-        "rules": []
+        "rules": [
+          {
+            "manipulators": [
+              {
+                "description": "Change right option to Hyper (i.e., command+control+option+shift)",
+                "from": {
+                  "key_code": "right_option",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
       },
       "devices": [
         {
@@ -207,6 +264,7 @@
             "vendor_id": 3897
           },
           "ignore": false,
+          "manipulate_caps_lock_led": false,
           "simple_modifications": []
         },
         {
@@ -219,6 +277,7 @@
             "vendor_id": 1241
           },
           "ignore": false,
+          "manipulate_caps_lock_led": false,
           "simple_modifications": []
         },
         {
@@ -231,6 +290,7 @@
             "vendor_id": 13
           },
           "ignore": false,
+          "manipulate_caps_lock_led": false,
           "simple_modifications": []
         },
         {
@@ -243,6 +303,7 @@
             "vendor_id": 1155
           },
           "ignore": false,
+          "manipulate_caps_lock_led": false,
           "simple_modifications": []
         },
         {
@@ -255,6 +316,7 @@
             "vendor_id": 1133
           },
           "ignore": true,
+          "manipulate_caps_lock_led": false,
           "simple_modifications": []
         },
         {
@@ -267,6 +329,7 @@
             "vendor_id": 1452
           },
           "ignore": false,
+          "manipulate_caps_lock_led": true,
           "simple_modifications": []
         }
       ],
@@ -468,9 +531,37 @@
     {
       "complex_modifications": {
         "parameters": {
+          "basic.to_delayed_action_delay_milliseconds": 500,
           "basic.to_if_alone_timeout_milliseconds": 1000
         },
-        "rules": []
+        "rules": [
+          {
+            "manipulators": [
+              {
+                "description": "Change right option to Hyper (i.e., command+control+option+shift)",
+                "from": {
+                  "key_code": "right_option",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
       },
       "devices": [],
       "fn_function_keys": [
@@ -687,9 +778,37 @@
     {
       "complex_modifications": {
         "parameters": {
+          "basic.to_delayed_action_delay_milliseconds": 500,
           "basic.to_if_alone_timeout_milliseconds": 1000
         },
-        "rules": []
+        "rules": [
+          {
+            "manipulators": [
+              {
+                "description": "Change right option to Hyper (i.e., command+control+option+shift)",
+                "from": {
+                  "key_code": "right_option",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
       },
       "devices": [
         {
@@ -702,6 +821,7 @@
             "vendor_id": 3897
           },
           "ignore": false,
+          "manipulate_caps_lock_led": false,
           "simple_modifications": []
         },
         {
@@ -714,6 +834,7 @@
             "vendor_id": 1241
           },
           "ignore": false,
+          "manipulate_caps_lock_led": false,
           "simple_modifications": []
         }
       ],
@@ -847,7 +968,7 @@
             "key_code": "delete_or_backspace"
           },
           "to": {
-            "key_code": "backslash"
+            "key_code": "grave_accent_and_tilde"
           }
         },
         {
@@ -927,15 +1048,15 @@
             "key_code": "right_control"
           },
           "to": {
-            "key_code": "escape"
+            "key_code": "backslash"
           }
         },
         {
           "from": {
-            "key_code": "escape"
+            "key_code": "left_control"
           },
           "to": {
-            "key_code": "grave_accent_and_tilde"
+            "key_code": "left_option"
           }
         }
       ],
