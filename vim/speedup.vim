@@ -100,6 +100,7 @@ map <leader>gg :Gbrowse<cr>
 map <leader>gb :Gblame<cr>
 map <leader>gd :Gdiff<cr>
 map <leader>gp :Gpush<cr>
+map <leader>gr :Gread<cr>
 map <leader>opr :OpenGithubPullReq<cr>
 map <leader>of :OpenGithubFile<cr>
 
@@ -330,7 +331,7 @@ nnoremap Q @q
 " Retag
 function! RenewTagsFile()
   exe 'silent !rm -rf .ctags'
-  exe 'silent !ctags -a -Rf .git/tags --languages=javascript --exclude=.git --exclude="*.min.js" --exclude=node_modules --exclude=admin/node_modules --exclude=tmp 2>/dev/null'
+  exe 'silent !ctags -a -Rf .git/tags --exclude=.git --exclude="*.min.js" --exclude=node_modules --exclude=admin/node_modules --exclude=tmp 2>/dev/null'
   exe 'redraw!'
 endfunction
 nnoremap <Leader>rt :call RenewTagsFile()<CR>
