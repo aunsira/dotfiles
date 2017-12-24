@@ -22,6 +22,7 @@ Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-peekaboo'
 Plug 'matze/vim-move'
 Plug 'moll/vim-node'
+Plug 'mxw/vim-jsx'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'osyo-manga/vim-over'
@@ -49,3 +50,5 @@ Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 
 call plug#end()
+
+" vim:ft=vim

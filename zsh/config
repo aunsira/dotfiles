@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export GOPATH=~/gosrc
 mkdir -p $GOPATH
 export PATH=/usr/local/bin:$GOPATH/bin:$PATH

@@ -69,3 +69,5 @@ endfunction
 autocmd BufEnter *.txt call s:helptab()
 
 autocmd FileType go,javascript,ruby nnoremap <silent> <Leader>z <C-o>zz
+
+" vim:ft=vim

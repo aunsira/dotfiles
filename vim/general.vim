@@ -1,6 +1,3 @@
-" General configurations
-" ----------------------
-
 set backspace=indent,eol,start    " more powerful backspacing
 set tabstop=2                     " size of a hard tabstop
 set shiftwidth=2                  " size of an indent
@@ -42,3 +39,5 @@ set scrolloff=5
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
 set rnu
 set mouse=a
+
+" vim:ft=vim

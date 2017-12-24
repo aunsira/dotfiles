@@ -32,7 +32,7 @@
 [diff]
   tool = vimdiff
 [sendemail]
-  from = Sira Sarakij <aun.sira@gmail.com>
+  from = Sira Sarakit <aun.sira@gmail.com>
   suppresscc = self
   chainreplyto = false
   smtpencryption = tls

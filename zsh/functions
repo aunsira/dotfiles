@@ -1,4 +1,8 @@
-fzf-gt-widget() LBUFFER+=$(gb | join-lines)
+#!/bin/bash
+
+fzf-gt-widget() {
+  LBUFFER+=$(gb | join-lines)
+}
 zle -N fzf-gt-widget
 bindkey '^b^b' fzf-gt-widget
 
@@ -83,3 +87,5 @@ function take {
   mkdir $1
   cd $1
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

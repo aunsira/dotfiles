@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Shortcut for changing directories
 alias ...="cd ../.."                        # go up parent dir twice
 alias ....="cd ../../.."                    # .. thrice

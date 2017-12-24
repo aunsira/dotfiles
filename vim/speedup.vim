@@ -1,6 +1,3 @@
-" Shortcuts and mapping stuffs
-" ----------------------------
-
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 map <Leader>ne :NERDTreeFind<CR>zz
@@ -126,6 +123,7 @@ noremap L g_
 
 " add newline below current line
 map z<CR> o<Esc>
+map Z<CR> O<Esc>
 
 " Reindent file.
 map <Leader>i mmgg=G`m
@@ -447,3 +445,5 @@ nnoremap p p=`]
 
 " Highlight current word without move to the next
 nnoremap * *Nzz
+
+" vim:ft=vim
