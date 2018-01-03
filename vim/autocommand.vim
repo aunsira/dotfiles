@@ -34,6 +34,7 @@ augroup go
 
   autocmd FileType go nmap <silent> <leader>b :<C-u>call <SID>build_go_files()<CR>
   autocmd FileType go nmap <silent> <leader>t  <Plug>(go-test)
+  autocmd FileType go nmap <silent> <leader>gf <Plug>(go-test-func)
   autocmd FileType go nmap <silent> <leader>r  <Plug>(go-run)
   autocmd FileType go nmap <silent> <leader>e  <Plug>(go-install)
 

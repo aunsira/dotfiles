@@ -88,4 +88,12 @@ function take {
   cd $1
 }
 
+function current-commit() {
+  git rev-parse HEAD
+}
+
+function before-fixup-commit() {
+  git rev-parse HEAD~2
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

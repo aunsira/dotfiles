@@ -1,8 +1,9 @@
 #!/bin/bash
 
 export GOPATH=~/gosrc
+export GOROOT=/usr/local/opt/go/libexec
 mkdir -p $GOPATH
-export PATH=/usr/local/bin:$GOPATH/bin:$PATH
+export PATH=/usr/local/bin:$GOPATH/bin:$GOROOT/bin:$PATH
 export LANG=en_US.UTF-8
 
 # Ruby environment config
