@@ -45,10 +45,12 @@ let g:move_map_keys = 0
 
 " Linter
 let g:ale_fixers = {
-  \ 'javascript': ['eslint'],
+  \ 'javascript': ['prettier,eslint'],
   \ 'ruby': ['rubocop']
   \ }
 let g:ale_lint_delay = 1000
+let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_fix_on_save = 1
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
@@ -88,4 +90,5 @@ let g:go_highlight_extra_types = 0
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_types = 0
 
+let g:jsx_ext_required = 0
 " vim:ft=vim
