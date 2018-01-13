@@ -92,6 +92,60 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Cmd+delete to backslash",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "f1",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Cmd+equal_sign to `",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": [
+                      "any"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
@@ -347,6 +401,30 @@
             "manipulators": [
               {
                 "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "backslash"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Cmd+delete to backslash",
+            "manipulators": [
+              {
+                "from": {
                   "key_code": "f1",
                   "modifiers": {
                     "mandatory": [
@@ -362,6 +440,33 @@
                     "key_code": "tab",
                     "modifiers": [
                       "command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Cmd+equal_sign to `",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": [
+                      "any"
                     ]
                   }
                 ],
@@ -741,6 +846,60 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Cmd+delete to backslash",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "f1",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Cmd+equal_sign to `",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": [
+                      "any"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
@@ -1037,6 +1196,60 @@
                     "key_code": "tab",
                     "modifiers": [
                       "command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Cmd+delete to backslash",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "f1",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Cmd+equal_sign to `",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": [
+                      "any"
                     ]
                   }
                 ],
