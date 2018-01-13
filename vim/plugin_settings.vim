@@ -45,7 +45,7 @@ let g:move_map_keys = 0
 
 " Linter
 let g:ale_fixers = {
-  \ 'javascript': ['prettier,eslint'],
+  \ 'javascript': ['eslint', 'prettier'],
   \ 'ruby': ['rubocop']
   \ }
 let g:ale_lint_delay = 1000
