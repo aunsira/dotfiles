@@ -67,6 +67,30 @@
             ]
           },
           {
+            "description": "Cmd+delete to backslash",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "backslash"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "Change backslash to Cmd+Tab",
             "manipulators": [
               {
@@ -94,38 +118,11 @@
             ]
           },
           {
-            "description": "Cmd+delete to backslash",
+            "description": "Cmd+period to `",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "f1",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "tab",
-                    "modifiers": [
-                      "command"
-                    ]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Cmd+equal_sign to `",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "equal_sign",
+                  "key_code": "period",
                   "modifiers": {
                     "mandatory": [
                       "command"
@@ -397,7 +394,7 @@
             ]
           },
           {
-            "description": "Change backslash to Cmd+Tab",
+            "description": "Cmd+delete to backslash",
             "manipulators": [
               {
                 "from": {
@@ -421,7 +418,7 @@
             ]
           },
           {
-            "description": "Cmd+delete to backslash",
+            "description": "Change backslash to Cmd+Tab",
             "manipulators": [
               {
                 "from": {
@@ -448,11 +445,11 @@
             ]
           },
           {
-            "description": "Cmd+equal_sign to `",
+            "description": "Cmd+period to `",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "equal_sign",
+                  "key_code": "period",
                   "modifiers": {
                     "mandatory": [
                       "command"
@@ -821,6 +818,30 @@
             ]
           },
           {
+            "description": "Cmd+delete to backslash",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "backslash"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "Change backslash to Cmd+Tab",
             "manipulators": [
               {
@@ -848,38 +869,11 @@
             ]
           },
           {
-            "description": "Cmd+delete to backslash",
+            "description": "Cmd+period to `",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "f1",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "tab",
-                    "modifiers": [
-                      "command"
-                    ]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Cmd+equal_sign to `",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "equal_sign",
+                  "key_code": "period",
                   "modifiers": {
                     "mandatory": [
                       "command"
@@ -1018,7 +1012,7 @@
             "key_code": "backslash"
           },
           "to": {
-            "key_code": "grave_accent_and_tilde"
+            "key_code": "delete_or_backspace"
           }
         },
         {
@@ -1031,10 +1025,10 @@
         },
         {
           "from": {
-            "key_code": "delete_forward"
+            "key_code": "delete_or_backspace"
           },
           "to": {
-            "key_code": "right_shift"
+            "key_code": "grave_accent_and_tilde"
           }
         },
         {
@@ -1090,7 +1084,7 @@
             "key_code": "grave_accent_and_tilde"
           },
           "to": {
-            "key_code": "backslash"
+            "key_code": "f1"
           }
         },
         {
@@ -1177,6 +1171,30 @@
             ]
           },
           {
+            "description": "Cmd+delete to backslash",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "backslash"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "Change backslash to Cmd+Tab",
             "manipulators": [
               {
@@ -1204,38 +1222,11 @@
             ]
           },
           {
-            "description": "Cmd+delete to backslash",
+            "description": "Cmd+period to `",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "f1",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "tab",
-                    "modifiers": [
-                      "command"
-                    ]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Cmd+equal_sign to `",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "equal_sign",
+                  "key_code": "period",
                   "modifiers": {
                     "mandatory": [
                       "command"
