@@ -7,6 +7,7 @@ autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType gitcommit,markdown set nonumber
 autocmd FileType gitcommit,markdown set spell
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
