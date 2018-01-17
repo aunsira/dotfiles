@@ -90,11 +90,17 @@ let g:go_highlight_extra_types = 0
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_types = 0
 
+" JSX
 let g:jsx_ext_required = 0
 
+" vim-closetag
 let g:closetag_emptyTags_caseSensitive = 1
 let g:closetag_shortcut = '>'
-let g:closetag_close_shortcut = '<leader>>'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+
+" UltiSnips
+let g:UltiSnipsSnippetsDir="~/code/git/dotfiles/vim/snips"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
+let g:UltiSnipsEditSplit= "context"
 " vim:ft=vim

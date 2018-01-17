@@ -39,5 +39,6 @@ set scrolloff=5
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
 set rnu
 set mouse=a
+set rtp+=~/code/git/dotfiles/vim
 
 " vim:ft=vim
