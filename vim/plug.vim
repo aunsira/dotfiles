@@ -2,6 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
+Plug 'alvan/vim-closetag'
 Plug 'aunsira/vim-thai-keys'
 Plug 'chr4/nginx.vim'
 Plug 'christoomey/vim-conflicted'

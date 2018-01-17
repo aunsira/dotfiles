@@ -91,4 +91,10 @@ let g:go_highlight_build_constraints = 1
 let g:go_highlight_types = 0
 
 let g:jsx_ext_required = 0
+
+let g:closetag_emptyTags_caseSensitive = 1
+let g:closetag_shortcut = '>'
+let g:closetag_close_shortcut = '<leader>>'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 " vim:ft=vim
