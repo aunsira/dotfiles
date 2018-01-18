@@ -17,10 +17,10 @@ nnoremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
 
 " paste from clipboard
-nnoremap <leader>p "*p=`]:w<cr>
-vnoremap <leader>p "*p=`]:w<cr>
-nnoremap <leader>P "*P=`]:w<cr>
-vnoremap <leader>P "*P=`]:w<cr>
+nnoremap <leader>p "*p<cr>
+vnoremap <leader>p "*p<cr>
+nnoremap <leader>P "*P<cr>
+vnoremap <leader>P "*P<cr>
 " yank to clipboard
 vnoremap <leader>y "*y
 vnoremap <leader>d "*d

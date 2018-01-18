@@ -103,4 +103,6 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
 let g:UltiSnipsSnippetsDir="~/code/git/dotfiles/vim/snips"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 let g:UltiSnipsEditSplit= "context"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " vim:ft=vim
