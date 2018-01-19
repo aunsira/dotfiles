@@ -95,7 +95,7 @@
             "manipulators": [
               {
                 "from": {
-                  "key_code": "f1",
+                  "key_code": "f18",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -422,7 +422,7 @@
             "manipulators": [
               {
                 "from": {
-                  "key_code": "f1",
+                  "key_code": "f18",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -846,7 +846,7 @@
             "manipulators": [
               {
                 "from": {
-                  "key_code": "f1",
+                  "key_code": "f18",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -1199,7 +1199,7 @@
             "manipulators": [
               {
                 "from": {
-                  "key_code": "f1",
+                  "key_code": "f18",
                   "modifiers": {
                     "mandatory": [
                       "any"
