@@ -16,6 +16,7 @@ alias -g L='| less'
 alias -g M='| more'
 alias amend="git commit --amend"
 alias autosquash='git rebase -i --autosquash'
+alias b="bundle"
 alias be="bundle exec"
 alias bi="bundle install"
 alias c='clear'
