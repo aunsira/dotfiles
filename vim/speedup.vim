@@ -24,6 +24,7 @@ vnoremap <leader>P "*P<cr>
 " yank to clipboard
 vnoremap <leader>y "*y
 vnoremap <leader>d "*d
+map <leader>x y
 
 " Remap jump to definition for ctags
 nmap <leader>] <C-]>zz

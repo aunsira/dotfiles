@@ -20,6 +20,7 @@ endfunction
 
 augroup ruby
   autocmd FileType ruby nnoremap <silent> <2-LeftMouse> *<C-]>
+  autocmd FileType ruby nnoremap <silent> gd *<C-]>zz
 augroup END
 
 augroup go
