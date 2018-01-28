@@ -60,6 +60,12 @@ nnoremap <leader>tn :tabe<cr>
 nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 imap <c-x><c-k> <plug>(fzf-complete-word)
 nnoremap <leader>l :Lines<cr>
+nnoremap <enter> :Buffers<cr>
+nnoremap <silent> <Leader>` :Marks<CR>
+nnoremap <leader>ca :Files app/<cr>
+nnoremap <leader>cm :Files app/models/<cr>
+nnoremap <leader>cc :Files app/controllers/<cr>
+nnoremap <leader>cp :Files spec/<cr>
 
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
@@ -181,17 +187,15 @@ map <Leader>k <Plug>(easymotion-k)
 nnoremap <leader>d :bd!<CR>
 
 function! VisualFindAndReplace()
-    :OverCommandLine%s/
-    :w
+    :OverCommandLine%s///g
 endfunction
 function! VisualFindAndReplaceWithSelection() range
-    :'<,'>OverCommandLine s/
-    :w
+    :'<,'>OverCommandLine s///g
 endfunction
 
 " Shortcut to find and replace.
-nnoremap <Leader>ra :call VisualFindAndReplace()<CR>
-xnoremap <Leader>ra :call VisualFindAndReplaceWithSelection()<CR>
+nnoremap <Leader>ra :call VisualFindAndReplace()<CR><left><left><left>
+xnoremap <Leader>ra :call VisualFindAndReplaceWithSelection()<CR><left><left><left>
 
 " Git push stash code
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
@@ -215,9 +219,6 @@ endfunction
 nnoremap <leader>u1 :call UnderlineHeading(1);
 nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
-
-nnoremap <enter> :Buffers<cr>
-nnoremap <silent> <Leader>` :Marks<CR>
 
 nmap <leader>ba :bufdo bd<cr>
 
@@ -382,6 +383,11 @@ inoremap <C-h> <C-o>h
 inoremap <C-l> <C-o>a
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
+" Movement in command mode
+cnoremap <c-h> <left>
+cnoremap <c-j> <down>
+cnoremap <c-k> <up>
+cnoremap <c-l> <right>
 
 " Command to remove trailing whitespaces
 command! Tws %s/\s\+$//
@@ -446,5 +452,19 @@ nnoremap p p=`]
 
 " Highlight current word without move to the next
 nnoremap * *Nzz
+
+function! Dotfiles()
+  :Files ~/code/git/dotfiles
+endfunction
+command! Dotfiles call Dotfiles()
+
+function! ToggleAutoFix()
+  if g:ale_fix_on_save == 1
+    let g:ale_fix_on_save = 0
+  else
+    let g:ale_fix_on_save = 1
+  endif
+endfunction
+command! ToggleAutoFix call ToggleAutoFix()
 
 " vim:ft=vim

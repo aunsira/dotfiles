@@ -2,6 +2,7 @@ set backspace=indent,eol,start    " more powerful backspacing
 set tabstop=2                     " size of a hard tabstop
 set shiftwidth=2                  " size of an indent
 set ignorecase                    " ignore case in search
+set smartcase
 set softtabstop=2                 " a combination of spaces and tabs are used to simulate tab stops at a width other than the (hard)tabstop
 set smarttab                      " make 'tab' insert indents instead of tabs at the beginning of a line
 set showmatch                     " show bracket matches"
@@ -39,5 +40,6 @@ set scrolloff=5
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
 set mouse=a
 set rtp+=~/code/git/dotfiles/vim
+set path+=**                      " For clever completion with the :find command
 
 " vim:ft=vim

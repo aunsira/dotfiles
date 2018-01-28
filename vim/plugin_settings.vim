@@ -105,4 +105,11 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 let g:UltiSnipsEditSplit= "context"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let test#strategy = "make"
+let test#ruby#rspec#options = {
+  \ 'nearest': '--backtrace',
+  \ 'file':    '-f QuickfixFormatter',
+  \ 'suite':   '--tag ~slow',
+\}
 " vim:ft=vim
