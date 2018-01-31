@@ -79,13 +79,13 @@ vnoremap K y:Ag! <C-R>"<CR>
 vnoremap // y/<C-R>"<CR>
 
 " Use C-Space to Esc out of any mode (Terminal sees <C-@> as <C-space> WTF, but ok)
-nnoremap <C-@> <Esc>:noh<CR>
+nnoremap <C-@> <Esc>:noh<bar>:redraw!<cr>
 vnoremap <C-@> <Esc>gV
 onoremap <C-@> <Esc>
 cnoremap <C-@> <C-c>
 inoremap <C-@> <Esc>`^
 " For GUI
-nnoremap <C-Space> <Esc>:noh<CR>
+nnoremap <C-Space> <Esc>:noh<bar>:redraw!<cr>
 vnoremap <C-Space> <Esc>gV
 onoremap <C-Space> <Esc>
 cnoremap <C-Space> <C-c>

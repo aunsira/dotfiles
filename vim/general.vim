@@ -41,5 +41,6 @@ set fillchars=vert:\│             " show/hide whitespace marker in insert mode
 set mouse=a
 set rtp+=~/code/git/dotfiles/vim
 set path+=**                      " For clever completion with the :find command
+set cul
 
 " vim:ft=vim
