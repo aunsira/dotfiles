@@ -19,6 +19,7 @@ alias autosquash='git rebase -i --autosquash'
 alias b="bundle"
 alias be="bundle exec"
 alias bi="bundle install"
+alias br='bundle exec rspec'
 alias c='clear'
 alias cdgo='cd ~/gosrc/src/github.com'
 alias cdh='cd ~'

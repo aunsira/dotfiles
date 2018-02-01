@@ -349,4 +349,5 @@ key_bindings:
   - { key: U,        mods: Command,        chars: "\x06\x6e" }
   - { key: H,        mods: Command,        chars: "\x06\x70" }
   - { key: F,        mods: Command,        chars: "\x06\x63" }
+  - { key: D,        mods: Command,        chars: "\x06\x0f" }
   - { key: Space,    mods: Control,        chars: "\x00"     }
