@@ -6,8 +6,9 @@ map <Leader>ne :NERDTreeFind<CR>zz
 nnoremap <leader>f :Ag!<Space>
 
 " Write/Exit shortcuts
-inoremap <C-s> <esc>:call <SID>save_change_marks()<Bar>:update<Bar>call <SID>restore_change_marks()<cr>
-nnoremap <C-s> <esc>:call <SID>save_change_marks()<Bar>:update<Bar>call <SID>restore_change_marks()<cr>
+inoremap <C-s> <esc>:update<cr>
+nnoremap <C-s> <esc>:update<cr>
+inoremap <C-c> <esc>
 map <Leader>q :q<CR>
 map <M-q> :q<cr>
 nnoremap <Leader>Q :qa!<cr>
