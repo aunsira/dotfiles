@@ -35,7 +35,7 @@ window:
 tabspaces: 8
 
 # When true, bold text is drawn using the bright variant of colors.
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 # Font configuration (changes require restart)
 font:
@@ -44,17 +44,16 @@ font:
     family: Menlo for Powerline
     # Style can be specified to pick a specific face.
     style: Regular
+    antialias: true
 
   # The bold font face
   bold:
     family: Menlo for Powerline
-    # Style can be specified to pick a specific face.
     style: Bold
 
   # The italic font face
   italic:
     family: Menlo for Powerline
-    # Style can be specified to pick a specific face.
     style: Italic
 
   # Point size of the font
@@ -83,36 +82,52 @@ render_timer: false
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
+custom_cursor_colors: true
 
-# Colors (Dracula)
+# Colors (Tomorrow Night Bright)
 colors:
   # Default colors
   primary:
-    background: '0x282a36'
-    foreground: '0xf8f8f2'
+    background: '0x191919'
+    foreground: '0xeaeaea'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text:   '0xf1c1c1'
+    cursor: '0xff2600'
 
   # Normal colors
   normal:
     black:   '0x000000'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xbd93f9'
-    magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
-    white:   '0xbbbbbb'
+    red:     '0xff615a'
+    green:   '0xb1e969'
+    yellow:  '0xebd99c'
+    blue:    '0x7aa6da'
+    magenta: '0xe86aff'
+    cyan:    '0x82fff7'
+    white:   '0xdedacf'
 
   # Bright colors
   bright:
-    black:   '0x555555'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xcaa9fa'
-    magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
+    black:   '0x666666'
+    red:     '0xff3334'
+    green:   '0x9ec400'
+    yellow:  '0xe7c547'
+    blue:    '0x7aa6da'
+    magenta: '0xb77ee0'
+    cyan:    '0x54ced6'
     white:   '0xffffff'
+
+  # Dim colors (Optional)
+  dim:
+￼   black:   '0x333333'
+￼   red:     '0xf2777a'
+￼   green:   '0x99cc99'
+￼   yellow:  '0xffcc66'
+￼   blue:    '0x6699cc'
+￼   magenta: '0xcc99cc'
+￼   cyan:    '0x66cccc'
+￼   white:   '0xdddddd'
 
 # Visual Bell
 #
@@ -185,7 +200,7 @@ selection:
 
 dynamic_title: true
 
-hide_cursor_when_typing: false
+hide_cursor_when_typing: true
 
 # Style of the cursor
 #
@@ -247,7 +262,6 @@ key_bindings:
   - { key: V,        mods: Command, action: Paste                        }
   - { key: C,        mods: Command, action: Copy                         }
   - { key: Q,        mods: Command, action: Quit                         }
-  - { key: W,        mods: Command, action: Quit                         }
   - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
   - { key: End,                     chars: "\x1bOF",   mode: AppCursor   }
@@ -346,8 +360,24 @@ key_bindings:
   - { key: F10,      mods: Command, chars: "\x1b[21;3~"                  }
   - { key: F11,      mods: Command, chars: "\x1b[23;3~"                  }
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
-  - { key: U,        mods: Command,        chars: "\x06\x6e" }
-  - { key: H,        mods: Command,        chars: "\x06\x70" }
-  - { key: F,        mods: Command,        chars: "\x06\x63" }
-  - { key: D,        mods: Command,        chars: "\x06\x0f" }
-  - { key: Space,    mods: Control,        chars: "\x00"     }
+  - { key: U,        mods: Command,       chars: "\x06\x6e" }
+  - { key: H,        mods: Command,       chars: "\x06\x70" }
+  - { key: F,        mods: Command,       chars: "\x06\x63" }
+  - { key: D,        mods: Command,       chars: "\x06\x0f" }
+  - { key: J,        mods: Command,       chars: "\x06\x2d" }
+  - { key: J,        mods: Command|Shift, chars: "\x06\x7c" }
+  - { key: W,        mods: Command,       chars: "\x06\x78" }
+  - { key: Space,    mods: Control,       chars: "\x00"     }
+  - { key: Down,     mods: Command,       chars: "\x06\x44" }
+  - { key: Up,       mods: Command,       chars: "\x06\x55" }
+  - { key: Left,     mods: Command,       chars: "\x06\x3c" }
+  - { key: Right,    mods: Command,       chars: "\x06\x3e" }
+  - { key: Key1,     mods: Command,       chars: "\x06\x31" }
+  - { key: Key2,     mods: Command,       chars: "\x06\x32" }
+  - { key: Key3,     mods: Command,       chars: "\x06\x33" }
+  - { key: Key4,     mods: Command,       chars: "\x06\x34" }
+  - { key: Key5,     mods: Command,       chars: "\x06\x35" }
+  - { key: Key6,     mods: Command,       chars: "\x06\x36" }
+  - { key: Key7,     mods: Command,       chars: "\x06\x37" }
+  - { key: Key8,     mods: Command,       chars: "\x06\x38" }
+  - { key: Key9,     mods: Command,       chars: "\x06\x39" }
