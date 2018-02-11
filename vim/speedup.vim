@@ -413,6 +413,8 @@ command! -bang -nargs=? -complete=dir Files
 
 " Test file
 nnoremap <leader>tf :TestFile<cr>
+nnoremap <leader>ts :TestNearest<cr>
+nnoremap <leader>tl :TestLast<cr>
 
 " Go to definition in js
 nnoremap td :TernDef<cr>zz

@@ -108,7 +108,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let test#strategy = "make"
 let test#ruby#rspec#options = {
-  \ 'nearest': '--backtrace',
+  \ 'nearest': '-f QuickfixFormatter',
   \ 'file':    '-f QuickfixFormatter',
   \ 'suite':   '--tag ~slow',
 \}
