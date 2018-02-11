@@ -468,4 +468,7 @@ function! ToggleAutoFix()
 endfunction
 command! ToggleAutoFix call ToggleAutoFix()
 
+imap uu _
+imap hh =>
+
 " vim:ft=vim
