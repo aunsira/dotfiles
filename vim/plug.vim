@@ -50,6 +50,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
+Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
