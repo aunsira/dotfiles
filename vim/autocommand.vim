@@ -72,4 +72,14 @@ autocmd BufEnter *.txt call s:helptab()
 
 autocmd FileType go,javascript,ruby nnoremap <silent> <Leader>z <C-o>zz
 
+au FileType qf call AdjustWindowHeight(3, 30)
+function! AdjustWindowHeight(minheight, maxheight)
+  exe max([min([line("$")+1, a:maxheight]), a:minheight]) . "wincmd _"
+endfunction
+
+augroup quickfix
+    autocmd!
+    autocmd FileType qf setlocal wrap
+augroup END
+
 " vim:ft=vim

@@ -9,8 +9,7 @@ nnoremap <leader>f :Ag!<Space>
 inoremap <C-s> <esc>:update<cr>
 nnoremap <C-s> <esc>:update<cr>
 inoremap <C-c> <esc>
-map <Leader>q :q<CR>
-map <M-q> :q<cr>
+map <Leader>q :copen<cr>
 nnoremap <Leader>Q :qa!<cr>
 
 " Circular windows navigation

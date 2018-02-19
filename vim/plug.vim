@@ -39,6 +39,7 @@ Plug 'slashmili/alchemist.vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
@@ -50,7 +51,6 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
-Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
