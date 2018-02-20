@@ -9,6 +9,9 @@ alias cd-="cd -"
 alias cd.='cd ..'
 alias cd..="cd .."
 alias dot='cd ~/code/git/dotfiles'
+alias ks='cd ~/code/git/k-sequencing'
+alias ky='cd ~/code/git/kiyo/kiyo_api'
+alias kyt='cd ~/code/git/kiyo-text'
 
 # For speed me up
 alias -g G='| grep'
