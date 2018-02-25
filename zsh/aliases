@@ -88,6 +88,7 @@ alias u='cd ..'
 alias v="nvim"
 alias vim='nvim'
 alias vimn='nvim -u NONE'
+alias vr='vimr -n'
 alias y='yarn'
 alias yi='yarn install'
 alias yt='yarn test'

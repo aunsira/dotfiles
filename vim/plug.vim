@@ -25,6 +25,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'matze/vim-move'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
+Plug 'nanotech/jellybeans.vim'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'osyo-manga/vim-over'

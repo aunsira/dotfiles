@@ -118,14 +118,14 @@
             ]
           },
           {
-            "description": "Right-shift + space to f1",
+            "description": "Ctrl + delete to f1",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "spacebar",
+                  "key_code": "delete_or_backspace",
                   "modifiers": {
                     "mandatory": [
-                      "right_shift"
+                      "right_control"
                     ],
                     "optional": [
                       "any"
@@ -442,14 +442,14 @@
             ]
           },
           {
-            "description": "Right-shift + space to f1",
+            "description": "Ctrl + delete to f1",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "spacebar",
+                  "key_code": "delete_or_backspace",
                   "modifiers": {
                     "mandatory": [
-                      "right_shift"
+                      "right_control"
                     ],
                     "optional": [
                       "any"
@@ -917,14 +917,14 @@
             ]
           },
           {
-            "description": "Right-shift + space to f1",
+            "description": "Ctrl + delete to f1",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "spacebar",
+                  "key_code": "delete_or_backspace",
                   "modifiers": {
                     "mandatory": [
-                      "right_shift"
+                      "right_control"
                     ],
                     "optional": [
                       "any"
@@ -1294,14 +1294,14 @@
             ]
           },
           {
-            "description": "Right-shift + space to f1",
+            "description": "Ctrl + delete to f1",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "spacebar",
+                  "key_code": "delete_or_backspace",
                   "modifiers": {
                     "mandatory": [
-                      "right_shift"
+                      "right_control"
                     ],
                     "optional": [
                       "any"
