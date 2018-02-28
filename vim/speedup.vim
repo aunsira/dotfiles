@@ -57,7 +57,7 @@ nnoremap <Down> :resize -1<CR>
 nnoremap <leader>tn :tabe<cr>
 
 " Map fzf plugin
-nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+nnoremap <silent> <expr> <C-p> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 imap <c-x><c-k> <plug>(fzf-complete-word)
 nnoremap <leader>l :Lines<cr>
 nnoremap <enter> :Buffers<cr>
@@ -96,6 +96,7 @@ nnoremap ge `.zz
 " Leader-; to enter command mode. No more holding shift!
 nnoremap <leader>; :
 vnoremap <leader>; :
+nnoremap <leader><leader> :
 
 " Git shortcuts
 map <leader>gs :Gstatus<cr>gg<c-n>
