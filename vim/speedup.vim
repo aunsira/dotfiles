@@ -97,6 +97,7 @@ nnoremap ge `.zz
 nnoremap <leader>; :
 vnoremap <leader>; :
 nnoremap <leader><leader> :
+vnoremap <leader><leader> :
 
 " Git shortcuts
 map <leader>gs :Gstatus<cr>gg<c-n>
@@ -142,7 +143,7 @@ function! CurrenRelativeDirectory()
 endfunction
 
 " Easy navigation for editing and coding
-nnoremap <leader>rr :r <C-r>=CurrenRelativeDirectory()<cr>
+" nnoremap <leader>rr :r <C-r>=CurrenRelativeDirectory()<cr>
 nnoremap <leader>er :e <C-r>=escape(expand("%:p:h"), ' ')<cr>/
 nnoremap <Leader>eg :e ~/code/git/
 nnoremap <Leader>eh :e ~/
@@ -202,7 +203,7 @@ xnoremap <Leader>ra :call VisualFindAndReplaceWithSelection()<CR><left><left><le
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 
 " Quickly open recently files
-nmap <leader>ap :e config/application.yml<cr>
+" nmap <leader>ap :e config/application.yml<cr>
 map <Leader>sc :sp db/schema.rb<cr>
 nmap <leader>mp :e ~/code/git/dotfiles/vim/speedup.vim<cr>
 
@@ -475,5 +476,10 @@ cnoremap uu _
 imap hh =>
 
 nnoremap <silent> <leader>rd :redraw!<cr>
+
+" Tmux-runner
+map <leader>sl :VtrSendLinesToRunner<cr>
+nnoremap <leader>ap :VtrAttachToPane<cr>
+nnoremap <leader>rr :VtrFocusRunner<cr>
 
 " vim:ft=vim
