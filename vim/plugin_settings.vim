@@ -106,6 +106,15 @@ let g:UltiSnipsEditSplit= "context"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-let test#strategy = "dispatch"
+let test#strategy = {
+  \ 'nearest': 'make',
+  \ 'file':    'dispatch',
+  \ 'suite':   'make',
+\}
+
+let test#ruby#rspec#options = {
+  \ 'nearest': '-f QuickfixFormatter',
+  \ 'suite':   '-f QuickfixFormatter',
+\}
 
 " vim:ft=vim

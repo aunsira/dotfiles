@@ -6,8 +6,10 @@ Plug 'alvan/vim-closetag'
 Plug 'aunsira/vim-thai-keys'
 Plug 'chr4/nginx.vim'
 Plug 'christoomey/vim-conflicted'
+Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
+Plug 'christoomey/vim-system-copy'
 Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'elixir-editors/vim-elixir'
@@ -23,10 +25,12 @@ Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'junegunn/gv.vim', { 'on' : 'GV' }
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-peekaboo'
+Plug 'kana/vim-textobj-user'
 Plug 'matze/vim-move'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'nanotech/jellybeans.vim'
+Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'osyo-manga/vim-over'
