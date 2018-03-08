@@ -107,14 +107,12 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let test#strategy = {
-  \ 'nearest': 'make',
+  \ 'nearest': 'vimux',
   \ 'file':    'dispatch',
-  \ 'suite':   'make',
 \}
 
 let test#ruby#rspec#options = {
   \ 'nearest': '-f QuickfixFormatter',
-  \ 'suite':   '-f QuickfixFormatter',
 \}
 
 " vim:ft=vim

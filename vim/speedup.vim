@@ -436,7 +436,7 @@ nnoremap ]L :llast<cr>
 nnoremap [L :lfirst<cr>
 
 " Close quickfix/location window
-nnoremap <leader>cs :cclose<bar>lclose<cr>
+nnoremap <leader>cs :cclose<bar>lclose<bar>VimuxCloseRunner<cr>
 
 " ale errors
 nmap ]w <plug>(ale_next)
@@ -481,5 +481,8 @@ nnoremap <silent> <leader>rd :redraw!<cr>
 map <leader>sl :VtrSendLinesToRunner<cr>
 nnoremap <leader>ap :VtrAttachToPane<cr>
 nnoremap <leader>rr :VtrFocusRunner<cr>
+
+" Shortcut for `q:`
+map qq q:
 
 " vim:ft=vim
