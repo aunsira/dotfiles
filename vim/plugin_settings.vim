@@ -63,6 +63,14 @@ let g:jsdoc_enable_es6 = 1
 " javascript library syntax
 let g:used_javascript_libs = 'jquery,underscore,react,requirejs,handlebars'
 
+" vim-test
+let test#strategy = {
+      \ 'nearest': 'vimux',
+      \ 'file':    'dispatch',
+      \}
+let test#ruby#rspec#options = {
+      \ 'nearest': '-f QuickfixFormatter',
+      \}
 " Run vim-test with test environment
 let $NODE_ENV='test'
 
@@ -106,13 +114,7 @@ let g:UltiSnipsEditSplit= "context"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-let test#strategy = {
-  \ 'nearest': 'vimux',
-  \ 'file':    'dispatch',
-\}
-
-let test#ruby#rspec#options = {
-  \ 'nearest': '-f QuickfixFormatter',
-\}
+" Vimux
+let g:VimuxUseNearest = 0
 
 " vim:ft=vim
