@@ -482,7 +482,4 @@ map <leader>sl :VtrSendLinesToRunner<cr>
 nnoremap <leader>ap :VtrAttachToPane<cr>
 nnoremap <leader>rr :VtrFocusRunner<cr>
 
-" Shortcut for `q:`
-map qq q:
-
 " vim:ft=vim
