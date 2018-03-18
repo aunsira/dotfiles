@@ -436,7 +436,7 @@ nnoremap ]L :llast<cr>
 nnoremap [L :lfirst<cr>
 
 " Close quickfix/location window
-nnoremap <leader>cs :cclose<bar>lclose<bar>VimuxCloseRunner<cr>
+nnoremap <leader>cs :cclose<bar>lclose<bar>VtrKillRunner<cr>
 
 " ale errors
 nmap ]w <plug>(ale_next)

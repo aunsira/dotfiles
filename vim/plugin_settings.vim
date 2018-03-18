@@ -65,7 +65,7 @@ let g:used_javascript_libs = 'jquery,underscore,react,requirejs,handlebars'
 
 " vim-test
 let test#strategy = {
-      \ 'nearest': 'vimux',
+      \ 'nearest': 'vtr',
       \ 'file':    'dispatch',
       \}
 let test#ruby#rspec#options = {
@@ -113,8 +113,5 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 let g:UltiSnipsEditSplit= "context"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" Vimux
-let g:VimuxUseNearest = 0
 
 " vim:ft=vim
