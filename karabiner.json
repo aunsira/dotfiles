@@ -596,7 +596,56 @@
       ],
       "name": "HHKB",
       "selected": true,
-      "simple_modifications": [],
+      "simple_modifications": [
+        {
+          "from": {
+            "key_code": "f7"
+          },
+          "to": {
+            "key_code": "rewind"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f8"
+          },
+          "to": {
+            "key_code": "play_or_pause"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f9"
+          },
+          "to": {
+            "key_code": "fastforward"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f10"
+          },
+          "to": {
+            "key_code": "mute"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f11"
+          },
+          "to": {
+            "key_code": "volume_decrement"
+          }
+        },
+        {
+          "from": {
+            "key_code": "f12"
+          },
+          "to": {
+            "key_code": "volume_increment"
+          }
+        }
+      ],
       "virtual_hid_keyboard": {
         "caps_lock_delay_milliseconds": 0,
         "keyboard_type": "ansi"
