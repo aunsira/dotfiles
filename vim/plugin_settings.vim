@@ -114,4 +114,9 @@ let g:UltiSnipsEditSplit= "context"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" SplitJoin
+let g:splitjoin_trailing_comma = 1
+let g:splitjoin_ruby_curly_braces = 0
+let g:splitjoin_ruby_hanging_args = 0
+
 " vim:ft=vim
