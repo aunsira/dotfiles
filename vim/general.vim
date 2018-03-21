@@ -41,5 +41,6 @@ set mouse=a
 set rtp+=~/code/git/dotfiles/vim
 set path+=**                      " For clever completion with the :find command
 set cul
+set relativenumber
 
 " vim:ft=vim
