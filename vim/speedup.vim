@@ -301,17 +301,6 @@ endfunc
 command! NumberToggle call NumberToggle()
 noremap <F5> :NumberToggle<cr>
 
-" Convert Ruby 1.8 to 1.9 Hash Syntax
-" http://robots.thoughtbot.com/convert-ruby-1-8-to-1-9-hash-syntax
-if !exists("*ConvertRubyHashSyntax")
-  function ConvertRubyHashSyntax()
-    %s/:\([^ ]*\)\(\s*\)=>/\1:/g
-    ''
-  :endfunction
-endif
-
-nnoremap <leader>h :call ConvertRubyHashSyntax()<CR>
-
 command! Q q " Bind :Q to :q
 command! Qall qall
 command! QA qall
@@ -417,5 +406,7 @@ nnoremap <silent> <leader>rd :redraw!<cr>
 map <leader>sl :VtrSendLinesToRunner<cr>
 nnoremap <leader>ap :VtrAttachToPane<cr>
 nnoremap <leader>rr :VtrFocusRunner<cr>
+
+nnoremap <leader>- :Switch<cr>
 
 " vim:ft=vim

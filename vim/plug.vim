@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/switch.vim'
 Plug 'SirVer/ultisnips'
 Plug 'alvan/vim-closetag'
 Plug 'aunsira/vim-thai-keys'
