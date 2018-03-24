@@ -166,13 +166,6 @@ map <Leader>k <Plug>(easymotion-k)
 " Kill buffer with leader + d
 nnoremap <leader>d :bd!<CR>
 
-function! VisualFindAndReplace()
-    :OverCommandLine%s///g
-endfunction
-function! VisualFindAndReplaceWithSelection() range
-    :'<,'>OverCommandLine s///g
-endfunction
-
 " Shortcut to find and replace.
 nnoremap <Leader>ra :call VisualFindAndReplace()<CR><left><left><left>
 xnoremap <Leader>ra :call VisualFindAndReplaceWithSelection()<CR><left><left><left>
@@ -184,17 +177,6 @@ map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 map <Leader>sc :sp db/schema.rb<cr>
 nmap <leader>mp :e ~/code/git/dotfiles/vim/speedup.vim<cr>
 
-" Markdown Underlines
-function! UnderlineHeading(level)
-  if a:level == 1
-    normal! yypVr=
-  elseif a:level == 2
-    normal! yypVr-
-  else
-    normal! I###<space>
-  endif
-endfunction
-
 nnoremap <leader>u1 :call UnderlineHeading(1);
 nnoremap <leader>u2 :call UnderlineHeading(2);
 nnoremap <leader>u3 :call UnderlineHeading(3);
@@ -204,15 +186,6 @@ nmap <leader>ba :bufdo bd<cr>
 " Add binding.
 nnoremap <leader>bd orequire "pry"; binding.pry<esc>
 
-function! RenameFile()
-  let old_name = expand('%')
-  let new_name = input('New file name: ', expand('%'), 'file')
-  if new_name != '' && new_name != old_name
-    exec ':saveas ' . new_name
-    exec ':silent !rm ' . old_name
-    redraw!
-  endif
-endfunction
 map <Leader>rn :call RenameFile()<cr>
 
 " Jump list (to newer position)
@@ -233,34 +206,16 @@ nmap     ZK     Zk
 nmap     ZL     Zl
 nmap     ZT     :tabclose<cr>
 
-" do not clobber '[ '] on :write
-function! s:save_change_marks() abort
-  let s:change_marks = [getpos("'["), getpos("']")]
-endfunction
-function! s:restore_change_marks() abort
-  call setpos("'[", s:change_marks[0])
-  call setpos("']", s:change_marks[1])
-endfunction
-nnoremap z. :call <SID>save_change_marks()<Bar>w<Bar>call <SID>restore_change_marks()<cr>
+nnoremap z. :call SaveChangeMarks()<Bar>w<Bar>call <SID>RestoreChangeMarks()<cr>
 
 " Mark position before search, use `u to go back to last position
 nnoremap / mu/
 
-" ----------------------------------------------------------------------------
-" <Leader>?/! | Google it / Feeling lucky
-" ----------------------------------------------------------------------------
-function! s:goog(pat, lucky)
-  let q = '"'.substitute(a:pat, '["\n]', ' ', 'g').'"'
-  let q = substitute(q, '[[:punct:] ]',
-       \ '\=printf("%%%02X", char2nr(submatch(0)))', 'g')
-  call system(printf('open "https://www.google.com/search?%sq=%s"',
-                   \ a:lucky ? 'btnI&' : '', q))
-endfunction
-
-nnoremap <leader>? :call <SID>goog(expand("<cWORD>"), 0)<cr>
-nnoremap <leader>! :call <SID>goog(expand("<cWORD>"), 1)<cr>
-xnoremap <leader>? "gy:call <SID>goog(@g, 0)<cr>gv
-xnoremap <leader>! "gy:call <SID>goog(@g, 1)<cr>gv
+" Google from selection
+nnoremap <leader>? :call Goog(expand("<cWORD>"), 0)<cr>
+nnoremap <leader>! :call Goog(expand("<cWORD>"), 1)<cr>
+xnoremap <leader>? "gy:call Goog(@g, 0)<cr>gv
+xnoremap <leader>! "gy:call Goog(@g, 1)<cr>gv
 
 onoremap p i(
 onoremap ' i'
@@ -278,27 +233,6 @@ vmap <C-C> "+y
 
 nnoremap Q @q
 
-" Retag
-function! RenewTagsFile()
-  exe 'silent !rm tags'
-  exe 'silent !ctags -a -Rf tags --exclude=.git --exclude="*.min.js" --exclude=node_modules --exclude=admin/node_modules --exclude=tmp 2>/dev/null'
-  exe 'redraw!'
-endfunction
-nnoremap <Leader>rt :call RenewTagsFile()<CR>
-
-function! NumberToggle()
-  if(&relativenumber == 1)
-    if (&number == 1)
-      set nonumber
-      set norelativenumber
-    else
-      set number
-    endif
-  else
-    set relativenumber
-  endif
-endfunc
-command! NumberToggle call NumberToggle()
 noremap <F5> :NumberToggle<cr>
 
 command! Q q " Bind :Q to :q
@@ -381,20 +315,6 @@ nnoremap gm `u
 
 " Highlight current word without move to the next
 nnoremap * *Nzz
-
-function! Dotfiles()
-  :Files ~/code/git/dotfiles
-endfunction
-command! Dotfiles call Dotfiles()
-
-function! ToggleAutoFix()
-  if g:ale_fix_on_save == 1
-    let g:ale_fix_on_save = 0
-  else
-    let g:ale_fix_on_save = 1
-  endif
-endfunction
-command! ToggleAutoFix call ToggleAutoFix()
 
 imap uu _
 cnoremap uu _
