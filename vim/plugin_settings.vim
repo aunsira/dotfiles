@@ -1,6 +1,3 @@
-" Show hidden files in nerdtree
-let NERDTreeShowHidden=1
-
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
 
@@ -55,11 +52,6 @@ let g:ale_fix_on_save = 1
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
 
-" vim-jsdoc
-let g:jsdoc_allow_input_prompt = 1
-let g:jsdoc_input_description = 1
-let g:jsdoc_enable_es6 = 1
-
 " javascript library syntax
 let g:used_javascript_libs = 'jquery,underscore,react,requirejs,handlebars'
 
@@ -73,10 +65,6 @@ let test#ruby#rspec#options = {
       \}
 " Run vim-test with test environment
 let $NODE_ENV='test'
-
-" Golang stuff
-let g:delve_backend = "native"
-let g:delve_new_command = "enew"
 
 let g:go_term_mode = "split"
 let g:go_term_enabled = 1

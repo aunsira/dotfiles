@@ -1,7 +1,3 @@
-" Toggle NERDTree
-map <C-n> :NERDTreeToggle<CR>
-map <Leader>ne :NERDTreeFind<CR>zz
-
 " Shortcut for typing :Ag
 nnoremap <leader>f :Ag!<Space>
 
@@ -57,7 +53,7 @@ nnoremap <Down> :resize -1<CR>
 nnoremap <leader>tn :tabe<cr>
 
 " Map fzf plugin
-nnoremap <silent> <expr> <C-p> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+nnoremap <silent> <C-p> :Files<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 nnoremap <leader>l :Lines<cr>
 nnoremap <enter> :Buffers<cr>
@@ -107,14 +103,6 @@ map <leader>gb :Gblame<cr>
 map <leader>gd :Gdiff<cr>
 map <leader>gp :Gpush<cr>
 map <leader>gr :Gread<cr>
-map <leader>opr :OpenGithubPullReq<cr>
-map <leader>of :OpenGithubFile<cr>
-
-map <M-s> :Gstatus<cr>gg<c-n>
-map <M-d> :Gdiff<cr>
-map <M-b> :Gblame<cr>
-map <M-p> :Gpush<cr>
-map <M-r> :Gread<cr>:w<cr>
 
 " Make Y act like other capitals
 map Y yg_
@@ -137,13 +125,7 @@ map Z<CR> O<Esc>
 " Reindent file.
 map <Leader>i mmgg=G`m
 
-function! CurrenRelativeDirectory()
-  let relative_dir = substitute(expand("%:p:h"), getcwd()."/", "", "")."/"
-  return escape(relative_dir, " ")
-endfunction
-
 " Easy navigation for editing and coding
-" nnoremap <leader>rr :r <C-r>=CurrenRelativeDirectory()<cr>
 nnoremap <leader>er :e <C-r>=escape(expand("%:p:h"), ' ')<cr>/
 nnoremap <Leader>eg :e ~/code/git/
 nnoremap <Leader>eh :e ~/
@@ -165,12 +147,8 @@ noremap { {zz
 noremap <C-d> <C-d>zz
 noremap <C-u> <C-u>zz
 
-" map goyo
-map <Leader>G :Goyo 140x70<cr>
-
 " Use GV without hit colon
 map <Leader>gv :GV<cr>
-map <M-v> :GV<cr>
 
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
@@ -203,7 +181,6 @@ xnoremap <Leader>ra :call VisualFindAndReplaceWithSelection()<CR><left><left><le
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 
 " Quickly open recently files
-" nmap <leader>ap :e config/application.yml<cr>
 map <Leader>sc :sp db/schema.rb<cr>
 nmap <leader>mp :e ~/code/git/dotfiles/vim/speedup.vim<cr>
 
@@ -245,30 +222,6 @@ nnoremap <C-o> <C-o>zz
 " Reload configuration file
 map <leader>sop :source ~/.config/nvim/init.vim<cr>
 
-" Alternative way for fugutive
-nnoremap <silent> Ub             :Gblame<cr>
-nnoremap <silent> Ud :if &diff<bar>diffupdate<bar>else<bar>Gdiff<bar>endif<cr>
-nnoremap <silent> Ue             :Gedit<cr>
-nnoremap          Uf             :Gcommit --fixup=
-nnoremap <silent> Ugf            :Gedit <C-R><C-W><cr>
-nnoremap <silent> Ul :GV! -100<cr>
-nnoremap <silent> Ur             :Gread<cr>
-nmap     <silent> Us             :Gstatus<cr> <C-N>
-nnoremap <silent> Uw :if !exists(":Gwrite")<bar>call fugitive#detect(expand('%:p'))<bar>endif<bar>Gwrite<bar>SignifyRefresh<cr>
-nnoremap <silent> Upr            :OpenGithubPullReq<cr>
-nnoremap <silent> Um             :OpenGithubFile<cr>
-
-nmap UB Ub
-nmap UD Ud
-nmap UE Ue
-nmap UF Uf
-nmap UL Ul
-nmap UR Ur
-map US Usgg<c-n>
-nmap UW Uw
-nmap UPR Upr
-nmap UM Um
-
 " Split window mappings
 nnoremap Zh     :leftabove vsplit<CR>
 nnoremap Zj     :belowright split<CR>
@@ -279,11 +232,6 @@ nmap     ZJ     Zj
 nmap     ZK     Zk
 nmap     ZL     Zl
 nmap     ZT     :tabclose<cr>
-nnoremap <M-h> :aboveleft vsplit<CR>
-nnoremap <M-j> :belowright split<CR>
-nnoremap <M-k> <C-W>s
-nnoremap <M-l> <C-W>v
-nnoremap <silent> <M-t> :tab split<cr>
 
 " do not clobber '[ '] on :write
 function! s:save_change_marks() abort
@@ -377,9 +325,6 @@ nmap zk <Plug>MoveLineUp
 vmap zj <plug>MoveBlockDown
 vmap zk <plug>MoveBlockUp
 
-" Open built-in Terminal
-nnoremap <M-z> :terminal<cr>
-
 " Movement in insert mode
 inoremap <C-h> <C-o>h
 inoremap <C-l> <C-o>a
@@ -417,9 +362,6 @@ nnoremap <leader>tf :TestFile<cr>
 nnoremap <leader>ts :TestNearest<cr>
 nnoremap <leader>tl :TestLast<cr>
 
-" Go to definition in js
-nnoremap td :TernDef<cr>zz
-
 " Quick fix lint
 nmap zn :ALEFix<cr>
 
@@ -450,9 +392,6 @@ imap <C-g> <esc>:<C-u>GoDecls<cr>
 
 " Go to marked
 nnoremap gm `u
-
-" Correct indent while pasting
-nnoremap p p=`]
 
 " Highlight current word without move to the next
 nnoremap * *Nzz

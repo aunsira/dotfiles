@@ -16,7 +16,6 @@ Plug 'elzr/vim-json'
 Plug 'epilande/vim-react-snippets'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
-Plug 'heavenshell/vim-jsdoc'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
@@ -32,16 +31,10 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'osyo-manga/vim-over'
-Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'qpkorr/vim-bufkill'
-Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
-Plug 'roxma/nvim-completion-manager'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-Plug 'sebdah/vim-delve'
 Plug 'slashmili/alchemist.vim'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
@@ -50,8 +43,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
-Plug 'tyru/open-browser-github.vim'
-Plug 'tyru/open-browser.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
