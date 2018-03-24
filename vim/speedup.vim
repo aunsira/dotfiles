@@ -339,9 +339,6 @@ cnoremap <c-l> <right>
 " Command to remove trailing whitespaces
 command! Tws %s/\s\+$//
 
-" Disable default leader key of EasyMotion
-map <Nop> <Plug>(easymotion-prefix)
-
 " Search in project, but open at bottom of screen.
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, '--color-path 400 --color-line-number 400', fzf#vim#with_preview())

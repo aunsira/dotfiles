@@ -1,5 +1,6 @@
 " Set ignore case for Easy motion
 let g:EasyMotion_smartcase = 1
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
 " Whitespace warning
 let ruby_space_errors=1
