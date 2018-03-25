@@ -6,6 +6,7 @@ inoremap <C-s> <esc>:update<cr>
 nnoremap <C-s> <esc>:update<cr>
 inoremap <C-c> <esc>
 map <Leader>q :copen<cr>
+map <C-x> <C-w>c
 nnoremap <Leader>Q :qa!<cr>
 
 " Circular windows navigation
@@ -131,6 +132,7 @@ nnoremap <Leader>eg :e ~/code/git/
 nnoremap <Leader>eh :e ~/
 nnoremap <Leader>cd :cd <C-r>=escape(expand("%:p:h"), ' ')<cr>/
 nnoremap <Leader>cg :cd ~/code/git/
+nnoremap <leader>ed :e ~/Dropbox/notes/datawow-notes.txt<cr>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)

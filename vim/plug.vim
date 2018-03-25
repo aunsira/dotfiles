@@ -35,6 +35,7 @@ Plug 'osyo-manga/vim-over'
 Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'qpkorr/vim-bufkill'
+Plug 'roxma/nvim-completion-manager'
 Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-dispatch'
