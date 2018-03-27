@@ -91,4 +91,6 @@ autocmd BufReadPost *
   \   exe "normal g`\"" |
   \ endif
 
+autocmd FileType netrw setl bufhidden=wipe
+
 " vim:ft=vim

@@ -27,7 +27,7 @@ set nowrap
 set foldlevelstart=0              " don't fold initially
 set nostartofline
 set confirm                       " confirm unsaved changes
-set hidden
+set nohidden
 set autoread
 set timeoutlen=500
 set nocul
