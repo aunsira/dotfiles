@@ -110,4 +110,8 @@ let g:splitjoin_ruby_hanging_args = 0
 
 " switch.vim
 let g:switch_mapping = ""
+
+" Allow netrw to remove non-empty local directories
+let g:netrw_localrmdir='rm -r'
+
 " vim:ft=vim
