@@ -32,6 +32,7 @@ alias dcl="docker-compose logs -f"
 alias dco="docker-compose"
 alias dcu="docker-compose up -d"
 alias deploy='rake deploy:archive'
+alias develop='git checkout develop'
 alias dp='docker ps'
 alias dpa='docker ps -a'
 alias e='exit'
