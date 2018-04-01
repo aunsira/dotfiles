@@ -54,15 +54,15 @@ nnoremap <Down> :resize -1<CR>
 nnoremap <leader>tn :tabe<cr>
 
 " Map fzf plugin
-nnoremap <silent> <C-p> :Files<cr>
+nnoremap <silent> <C-p> :Files!<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 nnoremap <leader>l :Lines<cr>
 nnoremap <enter> :Buffers<cr>
 nnoremap <silent> <Leader>` :Marks<CR>
-nnoremap <leader>ca :Files app/<cr>
-nnoremap <leader>cm :Files app/models/<cr>
-nnoremap <leader>cc :Files app/controllers/<cr>
-nnoremap <leader>cp :Files spec/<cr>
+nnoremap <leader>ca :Files! app/<cr>
+nnoremap <leader>cm :Files! app/models/<cr>
+nnoremap <leader>cc :Files! app/controllers/<cr>
+nnoremap <leader>cp :Files! spec/<cr>
 
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
@@ -265,19 +265,27 @@ cnoremap <c-l> <right>
 command! Tws %s/\s\+$//
 
 " Search in project, but open at bottom of screen.
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, '--color-path 400 --color-line-number 400', fzf#vim#with_preview())
+" command! -bang -nargs=* Ag
+"   \ call fzf#vim#ag(<q-args>, '--color-path 400 --color-line-number 400', fzf#vim#with_preview())
 
 " as well as above, but open in full screen.
-" command! -bang -nargs=* Ag
-"   \ call fzf#vim#ag(<q-args>,
-"   \                 <bang>0 ? fzf#vim#with_preview('up:60%')
-"   \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
-"   \                 <bang>0)
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
+
 
 " Search file and also show preview.
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+" as well as above, but open in full screen.
+" command! -bang -nargs=? -complete=dir Files
+"   \ call fzf#vim#files(<q-args>,
+"   \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+"   \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+"   \                 <bang>0)
 
 " Test file
 nnoremap <leader>tf :TestFile<cr>
