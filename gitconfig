@@ -7,6 +7,18 @@
   diff = true
 [color]
   ui = auto
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[color "diff"]
+  commit = green
+  meta = yellow
+  frag = cyan
+  old = red
+  new = green
+  whitespace = red reverse
 [alias]
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative
   ch = checkout -
@@ -19,6 +31,7 @@
 [core]
   excludesfile = /Users/aun/.gitignore_global
   editor = nvim
+  pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [merge]
   tool = vimdiff
 [mergetool]
