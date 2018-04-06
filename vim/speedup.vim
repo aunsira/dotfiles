@@ -126,6 +126,9 @@ map Z<CR> O<Esc>
 " Reindent file.
 map <Leader>i mmgg=G`m
 
+" File opening
+cnoremap <expr> %%  getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
+
 " Easy navigation for editing and coding
 nnoremap <leader>er :e <C-r>=escape(expand("%:p:h"), ' ')<cr>/
 nnoremap <Leader>eg :e ~/code/git/
