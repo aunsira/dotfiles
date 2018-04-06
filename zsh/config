@@ -6,6 +6,7 @@ export GOROOT=/usr/local/opt/go/libexec
 mkdir -p $GOPATH
 export PATH=/usr/local/bin:$GOPATH/bin:$GOROOT/bin:$PATH
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Ruby environment config
 if [ -x "$(command -v rbenv)" ]; then
