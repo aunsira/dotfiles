@@ -114,4 +114,9 @@ let g:switch_mapping = ""
 " Allow netrw to remove non-empty local directories
 let g:netrw_localrmdir='rm -r'
 
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#file#enable_buffer_path = 1
+let g:deoplete#enable_smart_case = 1
+
 " vim:ft=vim
