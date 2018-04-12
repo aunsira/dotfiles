@@ -110,8 +110,13 @@ map Y yg_
 map <leader>Y vg_"*y
 
 " move by line on the screen rather than by line in the file
-nmap k gk
-nmap j gj
+nnoremap k gk
+nnoremap j gj
+
+nnoremap gj 5j
+nnoremap gk 5k
+vnoremap gk 5k
+vnoremap gj 5j
 
 " Emacs-like beginning and end of line.
 imap <c-e> <esc>A
