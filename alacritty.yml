@@ -360,8 +360,8 @@ key_bindings:
   - { key: F10,      mods: Command, chars: "\x1b[21;3~"                  }
   - { key: F11,      mods: Command, chars: "\x1b[23;3~"                  }
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
-  - { key: U,        mods: Command,       chars: "\x06\x6e" }
-  - { key: H,        mods: Command,       chars: "\x06\x70" }
+  - { key: RBracket, mods: Command|Shift, chars: "\x06\x6e" }
+  - { key: LBracket, mods: Command|Shift, chars: "\x06\x70" }
   - { key: F,        mods: Command,       chars: "\x06\x63" }
   - { key: D,        mods: Command,       chars: "\x06\x0f" }
   - { key: J,        mods: Command,       chars: "\x06\x2d" }
