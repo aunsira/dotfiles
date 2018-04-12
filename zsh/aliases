@@ -81,6 +81,7 @@ alias retag='ctags -a -Rf .git/tags --exclude=.git --exclude="*.min.js" --exclud
 alias rg='rails generate'
 alias rr='bin/rake routes'
 alias rs='bundle check && rails s'
+alias sc='starscope -e ctags'
 alias server='NODE_ENV=development nodemon --inspect server.js'
 alias ss='spring stop'
 alias stash='git stash'
