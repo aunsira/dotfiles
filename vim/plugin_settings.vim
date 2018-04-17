@@ -61,9 +61,7 @@ let test#strategy = {
       \ 'nearest': 'vtr',
       \ 'file':    'dispatch',
       \}
-let test#ruby#rspec#options = {
-      \ 'nearest': '-f QuickfixFormatter',
-      \}
+
 " Run vim-test with test environment
 let $NODE_ENV='test'
 
