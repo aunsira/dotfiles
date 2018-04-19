@@ -349,4 +349,6 @@ nnoremap <leader>rr :VtrFocusRunner<cr>
 
 nnoremap <leader>- :Switch<cr>
 
+nnoremap <leader>lc q:k<C-c>
+
 " vim:ft=vim
