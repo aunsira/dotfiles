@@ -362,6 +362,7 @@ key_bindings:
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
   - { key: RBracket, mods: Command|Shift, chars: "\x06\x6e" }
   - { key: LBracket, mods: Command|Shift, chars: "\x06\x70" }
+  - { key: I,        mods: Command,       chars: "\x06\x71" }
   - { key: H,        mods: Command,       chars: "\x06\x5b" }
   - { key: F,        mods: Command,       chars: "\x06\x63" }
   - { key: D,        mods: Command,       chars: "\x06\x0f" }
