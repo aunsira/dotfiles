@@ -96,4 +96,8 @@ function before-fixup-commit() {
   git rev-parse HEAD~2
 }
 
+function current-branch() {
+  git rev-parse --abbrev-ref HEAD
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
