@@ -40,6 +40,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'qpkorr/vim-bufkill'
 Plug 'slashmili/alchemist.vim'
+Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-dispatch'
