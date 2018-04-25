@@ -17,8 +17,8 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
 Plug 'epilande/vim-react-snippets'
 Plug 'ervandew/supertab'
-Plug 'fatih/vim-go'
-Plug 'fishbullet/deoplete-ruby'
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fishbullet/deoplete-ruby', { 'for': 'ruby' }
 Plug 'janko-m/vim-test'
 Plug 'jordwalke/VimSplitBalancer'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
@@ -55,7 +55,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go'}
 
 call plug#end()
 
