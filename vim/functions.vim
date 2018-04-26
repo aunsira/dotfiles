@@ -1,10 +1,3 @@
-function! VisualFindAndReplace()
-    :OverCommandLine%s///g
-endfunction
-function! VisualFindAndReplaceWithSelection() range
-    :'<,'>OverCommandLine s///g
-endfunction
-
 " Markdown Underlines
 function! UnderlineHeading(level)
   if a:level == 1

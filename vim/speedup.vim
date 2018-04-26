@@ -178,10 +178,6 @@ map <Leader>k <Plug>(easymotion-k)
 " Kill buffer with leader + d
 nnoremap <leader>d :bd!<CR>
 
-" Shortcut to find and replace.
-nnoremap <Leader>ra :call VisualFindAndReplace()<CR><left><left><left>
-xnoremap <Leader>ra :call VisualFindAndReplaceWithSelection()<CR><left><left><left>
-
 " Git push stash code
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 
