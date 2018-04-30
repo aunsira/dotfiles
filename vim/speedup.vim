@@ -121,8 +121,8 @@ vnoremap gk 5k
 vnoremap gj 5j
 
 " Emacs-like beginning and end of line.
-imap <c-e> <esc>A
-imap <c-a> <esc>I
+inoremap <silent> <c-e> <esc>A
+inoremap <silent> <c-a> <esc>I
 noremap H ^
 noremap L g_
 
