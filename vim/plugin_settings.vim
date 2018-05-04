@@ -115,13 +115,4 @@ let g:switch_mapping = ""
 " Allow netrw to remove non-empty local directories
 let g:netrw_localrmdir='rm -r'
 
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#file#enable_buffer_path = 1
-let g:deoplete#enable_smart_case = 1
-
-" deoplete-go
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-
 " vim:ft=vim

@@ -2,7 +2,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'alvan/vim-closetag'
 Plug 'aunsira/vim-thai-keys'
@@ -18,7 +17,6 @@ Plug 'elzr/vim-json'
 Plug 'epilande/vim-react-snippets'
 Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'fishbullet/deoplete-ruby', { 'for': 'ruby' }
 Plug 'janko-m/vim-test'
 Plug 'jordwalke/VimSplitBalancer'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
@@ -34,7 +32,6 @@ Plug 'mxw/vim-jsx'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'qpkorr/vim-bufkill'
@@ -54,7 +51,6 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
-Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go'}
 
 call plug#end()
 
