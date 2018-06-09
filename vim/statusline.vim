@@ -9,6 +9,6 @@ set statusline+=/%L     " Total lines
 set statusline+=\ %c    " Column number
 
 " Disable next line commenting
-au FileType * set fo-=c fo-=r fo-=o
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 " vim:ft=vim
