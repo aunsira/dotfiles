@@ -42,6 +42,6 @@ set rtp+=~/code/git/dotfiles/vim
 set path+=**                      " For clever completion with the :find command
 set relativenumber
 set completeopt-=preview
-set clipboard=unnamed
+" set clipboard=unnamed
 
 " vim:ft=vim
