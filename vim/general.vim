@@ -43,5 +43,7 @@ set path+=**                      " For clever completion with the :find command
 set relativenumber
 set completeopt-=preview
 " set clipboard=unnamed
+set undofile                      " Maintain undo history between sessions
+set undodir=/tmp//,.
 
 " vim:ft=vim
