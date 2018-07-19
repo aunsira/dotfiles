@@ -271,32 +271,32 @@ allow(${1}).to receive(:${2}).and_return(${3})
 endsnippet
 
 snippet desc
-describe ${1} do
-${2}
+describe "${1}" do
+	${2}
 end
 endsnippet
 
 snippet it
 it "${1}" do
-${2}
+	${2}
 end
 endsnippet
 snippet con
 context "${1}" do
-${2}
+	${2}
 end
 endsnippet
 snippet bed
 before do
-${1}
+	${1}
 end
 endsnippet
 
 snippet spec
 require "spec_helper"
 
-describe ${1} do
-${2}
+describe "${1}" do
+	${2}
 end
 endsnippet
 
@@ -305,7 +305,7 @@ puts "\n\n************ #{${1}} **************\n\n"
 endsnippet
 snippet defi
 def initialize(${1})
-${2}
+	${2}
 end
 endsnippet
 
