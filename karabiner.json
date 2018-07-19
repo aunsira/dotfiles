@@ -168,6 +168,33 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Ctrl+delete to f19",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": {
+                    "mandatory": [
+                      "control"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f19",
+                    "modifiers": [
+                      "any"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
