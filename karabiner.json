@@ -141,6 +141,33 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Ctrl+left squeare bracket to esc",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "open_bracket",
+                  "modifiers": {
+                    "mandatory": [
+                      "control"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "escape",
+                    "modifiers": [
+                      "any"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
