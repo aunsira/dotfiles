@@ -100,4 +100,6 @@ function current-branch() {
   git rev-parse --abbrev-ref HEAD
 }
 
+j() { export JAVA_HOME=$(/usr/libexec/java_home); }
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
