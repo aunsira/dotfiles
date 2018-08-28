@@ -7,10 +7,13 @@
 --exclude=coverage
 --exclude=.git
 --exclude="*.min.js"
+--exclude=jquery.*.js
+--exclude=jquery-*.js
 --exclude=vendor/*
 --exclude=node_modules/*
 --exclude=admin/node_modules/*
 --exclude=tmp 2>/dev/null
+--exclude=bundle
 --exclude=db/*
 --exclude=log/*
 
