@@ -147,11 +147,11 @@
             ]
           },
           {
-            "description": "Cmd+Ctrl+j to f19",
+            "description": "command + control + spacebar to f19",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "j",
+                  "key_code": "spacebar",
                   "modifiers": {
                     "mandatory": [
                       "command",
