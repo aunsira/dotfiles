@@ -3,7 +3,7 @@
 basedir=$(greadlink -m `dirname $0`)
 
 links=(
-  zshrc tmux.conf gitconfig gitmessage gitignore_global khdrc ctags starscope.json
+  zshrc tmux.conf gitconfig gitmessage gitignore_global ctags starscope.json
 )
 
 read -n1 -p "Symlink dot files to $HOME (overwriting)? (y/n)" symlink_answer
