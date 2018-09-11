@@ -3,8 +3,9 @@
 export EDITOR=nvim
 export GOPATH=~/gosrc
 export GOROOT=/usr/local/opt/go/libexec
+export ELIXIR_PATH=/usr/local/opt/elixir/bin
 mkdir -p $GOPATH
-export PATH=/usr/local/bin:$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=/usr/local/bin:$GOPATH/bin:$GOROOT/bin:$ELIXIR_PATH/bin:$PATH
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
