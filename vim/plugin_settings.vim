@@ -115,4 +115,6 @@ let g:switch_mapping = ""
 " Allow netrw to remove non-empty local directories
 let g:netrw_localrmdir='rm -r'
 
+let g:alchemist_tag_disable = 1
+
 " vim:ft=vim

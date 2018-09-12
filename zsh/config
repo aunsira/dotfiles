@@ -26,3 +26,6 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bin
 export FZF_DEFAULT_COMMAND='ag --hidden --nocolor --ignore .git -g ""'
 command -v blsd > /dev/null && export FZF_ALT_C_COMMAND='blsd'
 command -v tree > /dev/null && export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+
+# Enable Kiex, Elixir version manager
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
