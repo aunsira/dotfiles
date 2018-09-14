@@ -335,7 +335,6 @@ nnoremap * *Nzz
 imap uu _
 cnoremap uu _
 imap hh =>
-imap rr ->
 
 nnoremap <silent> <leader>rd :redraw!<cr>
 
