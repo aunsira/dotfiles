@@ -118,4 +118,9 @@ let g:netrw_localrmdir='rm -r'
 
 let g:alchemist_tag_disable = 1
 
+" vim-grammarous
+let g:grammarous#disabled_rules = {
+      \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES', 'SENTENCE_WHITESPACE', 'UPPERCASE_SENTENCE_START'],
+      \ }
+
 " vim:ft=vim
