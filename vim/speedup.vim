@@ -27,11 +27,11 @@ map <leader>x y
 nmap <leader>] <C-]>zz
 nmap <leader>g] g<C-]>zz
 
-" Faster viewport scrolling (3 lines at a time)
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
-vnoremap <C-e> 3<C-e>
-vnoremap <C-y> 3<C-y>
+" Faster viewport scrolling (10 lines at a time)
+nnoremap <C-e> 10<C-e>
+nnoremap <C-y> 10<C-y>
+vnoremap <C-e> 10<C-e>
+vnoremap <C-y> 10<C-y>
 
 " To next buffer
 nnoremap ]b :bnext<cr>
