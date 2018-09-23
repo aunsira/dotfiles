@@ -24,6 +24,7 @@ alias be="bundle exec"
 alias bi="bundle install"
 alias br='bin/rspec'
 alias c='clear'
+alias cat='bat'
 alias cdgo='cd ~/gosrc/src/github.com'
 alias cdh='cd ~'
 alias cdl='cd ~/.config/nvim'
