@@ -2,8 +2,8 @@
 nnoremap <leader>f :Ag!<Space>
 
 " Write/Exit shortcuts
-inoremap <C-s> <esc>:update<cr>
-nnoremap <C-s> <esc>:update<cr>
+inoremap <C-s> <esc>:call Save()<cr>
+nnoremap <C-s> <esc>:call Save()<cr>
 inoremap <C-c> <esc>
 map <Leader>q :copen<cr>
 map <C-x> <C-w>c
@@ -214,7 +214,7 @@ nmap     ZK     Zk
 nmap     ZL     Zl
 nmap     ZT     :tabclose<cr>
 
-nnoremap z. :call SaveChangeMarks()<Bar>w<Bar>call <SID>RestoreChangeMarks()<cr>
+nnoremap z. :call Save()<CR>
 
 " Mark position before search, use `u to go back to last position
 nnoremap / mu/

@@ -19,14 +19,11 @@ function! RenameFile()
   endif
 endfunction
 
-" do not clobber '[ '] on :write
-function! SaveChangeMarks() abort
-  let s:change_marks = [getpos("'["), getpos("']")]
-endfunction
-
-function! RestoreChangeMarks() abort
-  call setpos("'[", s:change_marks[0])
-  call setpos("']", s:change_marks[1])
+function! Save()
+  if &filetype != 'MARKDOWN'
+    execute 'FixWhitespace'
+  endif
+  execute ':wa'
 endfunction
 
 " Google
