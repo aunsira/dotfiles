@@ -1,3 +1,17 @@
 snippet bd "binding.pry"
 <% binding.pry %>
 endsnippet
+
+snippet erbb
+<% ${1:variable} do |${2:arg}| %>
+	${3:code}
+<% end %>
+endsnippet
+
+snippet erbe
+<%= ${1:code} %>
+endsnippet
+
+snippet erb
+<% ${1:code} %>
+endsnippet
