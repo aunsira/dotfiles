@@ -344,4 +344,20 @@ nnoremap <leader>- :Switch<cr>
 
 nnoremap <leader>lc q:k<C-c>
 
+" Reduce finger motions
+nmap t' vi'"0p
+nmap t" vi""0p
+nmap t[ vi]"0p
+nmap t( vi)"0p
+nmap t{ vi}"0p
+nmap tw viw"0p
+
+nmap yw yiw
+nmap y' yi'
+nmap y" yi"
+nmap y[ yi[
+nmap y( yi(
+nmap y{ yi{
+nmap vw viw
+
 " vim:ft=vim
