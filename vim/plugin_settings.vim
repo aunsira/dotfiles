@@ -123,4 +123,6 @@ let g:grammarous#disabled_rules = {
       \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES', 'SENTENCE_WHITESPACE', 'UPPERCASE_SENTENCE_START'],
       \ }
 
+let g:matchup_matchparen_status_offscreen = 0
+
 " vim:ft=vim
