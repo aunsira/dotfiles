@@ -339,3 +339,54 @@ endsnippet
 snippet iexpb
 it { expect { ${1:object} }.${2} ${0} }
 endsnippet
+
+snippet gapi "Grape API Skeleton"
+module V1
+	class ${1:Model}API < Grape::API
+		version 'v1', using: :header, vendor: '${1/./\l$0/}'
+		format :json
+		prefix :api
+
+		helpers do
+		end
+
+		resource :${1/./\l$0/}s do
+			get do
+				@$1.limit(20)
+			end
+
+			params do
+				requires :id, type: Integer, desc: '$1 id.'
+			end
+			route_param :id do
+				get do
+					@$1.find(params[:id])
+				end
+			end
+
+			params do
+			end
+			post do
+				@$1.create!({
+				})
+			end
+
+			params do
+				requires :id, type: String, desc: '$1 ID.'
+			end
+			put ':id' do
+				@$1.find(params[:id]).update({
+				})
+			end
+
+			params do
+				requires :id, type: String, desc: '$1 ID.'
+			end
+			delete ':id' do
+				@$1.find(params[:id]).destroy
+			end
+		end
+
+	end
+end
+endsnippet
