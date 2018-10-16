@@ -97,11 +97,11 @@ snippet rw
 attr_accessor :${1:attr_names}
 endsnippet
 
-snippet tim
+snippet tim "time" w
 times { |${1:n}| ${2} }
 endsnippet
 
-snippet upt
+snippet upt "upto" w
 upto(${1:1.0/0.0}) { |${2:n}| ${3} }
 endsnippet
 
@@ -109,111 +109,111 @@ snippet loo
 loop { ${1} }
 endsnippet
 
-snippet ea
+snippet ea "each" w
 each { |${1:e}| ${2} }
 endsnippet
 
-snippet eab
+snippet eab "each_byte" w
 each_byte { |${1:byte}| ${2} }
 endsnippet
 
-snippet eac- "each_char { |chr| .. }"
+snippet eac- "each_char { |chr| .. }" w
 each_char { |${1:chr}| ${2} }
 endsnippet
 
-snippet eac- "each_cons(..) { |group| .. }"
+snippet eac- "each_cons(..) { |group| .. }" w
 each_cons(${1:2}) { |${2:group}| ${3} }
 endsnippet
 
-snippet eai
+snippet eai "each_index" w
 each_index { |${1:i}| ${2} }
 endsnippet
 
-snippet eak
+snippet eak "each_with_key" w
 each_key { |${1:key}| ${2} }
 endsnippet
 
-snippet eal
+snippet eal "each_line" w
 each_line { |${1:line}| ${2} }
 endsnippet
 
-snippet eap
+snippet eap "each_pair" w
 each_pair { |${1:name}, ${2:val}| ${3} }
 endsnippet
 
-snippet eas-
+snippet eas- "each_slice" w
 each_slice(${1:2}) { |${2:group}| ${3} }
 endsnippet
 
-snippet eav
+snippet eav "each_value" w
 each_value { |${1:val}| ${2} }
 endsnippet
 
-snippet eawi
+snippet eawi "each_with_index" w
 each_with_index { |${1:e}, ${2:i}| ${3} }
 endsnippet
 
-snippet reve
+snippet reve "reverse_each" w
 reverse_each { |${1:e}| ${2} }
 endsnippet
 
-snippet inj
+snippet inj "inject" w
 inject(${1:init}) { |${2:mem}, ${3:var}| ${4} }
 endsnippet
 
-snippet map
+snippet map "map" w
 map { |${1:e}| ${2} }
 endsnippet
 
-snippet mapwi-
+snippet mapwi- "enum_with_index" w
 enum_with_index.map { |${1:e}, ${2:i}| ${3} }
 endsnippet
 
-snippet sor
+snippet sor "sort" w
 sort { |a, b| ${1} }
 endsnippet
 
-snippet sorb
+snippet sorb "sort_by" w
 sort_by { |${1:e}| ${2} }
 endsnippet
 
-snippet ran
+snippet ran "sort_by rand" w
 sort_by { rand }
 endsnippet
 
-snippet all
+snippet all "all?" w
 all? { |${1:e}| ${2} }
 endsnippet
 
-snippet any
+snippet any "any?" w
 any? { |${1:e}| ${2} }
 endsnippet
 
-snippet cl
+snippet cl "classify" w
 classify { |${1:e}| ${2} }
 endsnippet
 
-snippet col
+snippet col "collect" w
 collect { |${1:e}| ${2} }
 endsnippet
 
-snippet det
+snippet det "detect" w
 detect { |${1:e}| ${2} }
 endsnippet
 
-snippet fet
+snippet fet "fetch" w
 fetch(${1:name}) { |${2:key}| ${3} }
 endsnippet
 
-snippet fin
+snippet fin "find" w
 find { |${1:e}| ${2} }
 endsnippet
 
-snippet fina
+snippet fina "find_all" w
 find_all { |${1:e}| ${2} }
 endsnippet
 
-snippet gre
+snippet gre "grep" w
 grep(${1:/pattern/}) { |${2:match}| ${3} }
 endsnippet
 
@@ -221,31 +221,31 @@ snippet sub
 ${1:g}sub(${2:/pattern/}) { |${3:match}| ${4} }
 endsnippet
 
-snippet sca
+snippet sca "scan" w
 scan(${1:/pattern/}) { |${2:match}| ${3} }
 endsnippet
 
-snippet max
+snippet max "max" w
 max { |a, b| ${1} }
 endsnippet
 
-snippet min
+snippet min "min" w
 min { |a, b| ${1} }
 endsnippet
 
-snippet par
+snippet par "partition" w
 partition { |${1:e}| ${2} }
 endsnippet
 
-snippet rej
+snippet rej "reject" w
 reject { |${1:e}| ${2} }
 endsnippet
 
-snippet sel
+snippet sel "select" w
 select { |${1:e}| ${2} }
 endsnippet
 
-snippet lam
+snippet lam "lambda" w
 lambda { |${1:args}| ${2} }
 endsnippet
 
@@ -255,15 +255,15 @@ do |${1:variable}|
 end
 endsnippet
 
-snippet :
+snippet : "hash" w
 ${1:key}: ${2:"value"}${3}
 endsnippet
 
-snippet h
+snippet h "string hash" w
 "${1:key}" => ${2:"value"}${3}
 endsnippet
 
-snippet ed
+snippet ed "each block" w
 ${1:arr}.each do |${2:e}|
 	${3}
 end
@@ -324,7 +324,7 @@ snippet ex
 expect(${1}).to ${2}
 endsnippet
 
-snippet tz
+snippet tz "timezone" w
 Time.zone.now
 endsnippet
 
