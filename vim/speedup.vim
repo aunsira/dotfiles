@@ -359,6 +359,23 @@ nmap y( yi(
 nmap y{ yi{
 
 nmap vw viw
+nmap v' vi'
+nmap v" vi"
+nmap v[ vi[
+nmap v( vi(
+nmap v{ vi{
+
 nmap cw ciw
+nmap c' ci'
+nmap c" ci"
+nmap c[ ci[
+nmap c( ci(
+nmap c{ ci{
+
+nmap d' di'
+nmap d" di"
+nmap d[ di[
+nmap d( di(
+nmap d{ di{
 
 " vim:ft=vim
