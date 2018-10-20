@@ -54,17 +54,17 @@ nnoremap <Down> :resize -1<CR>
 nnoremap <leader>tn :tabe<cr>
 
 " Map fzf plugin
-nnoremap <silent> <C-p> :Files!<cr>
+nnoremap <silent> <C-p> :Files<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 nnoremap <leader>l :Lines<cr>
 nnoremap <enter> :Buffers<cr>
 nnoremap <silent> <Leader>` :Marks<CR>
-nnoremap <leader>ca :Files! app/<cr>
-nnoremap <leader>cm :Files! app/models/<cr>
-nnoremap <leader>cc :Files! app/controllers/<cr>
-nnoremap <leader>cp :Files! spec/<cr>
+nnoremap <leader>ca :Files app/<cr>
+nnoremap <leader>cm :Files app/models/<cr>
+nnoremap <leader>cc :Files app/controllers/<cr>
+nnoremap <leader>cp :Files spec/<cr>
 
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
@@ -278,10 +278,9 @@ command! -bang -nargs=* Ag
   \         : fzf#vim#with_preview('right:50%:hidden', '?'),
   \ <bang>0)
 
-
 " Search file and also show preview.
-command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+" command! -bang -nargs=? -complete=dir Files
+"   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " as well as above, but open in full screen.
 " command! -bang -nargs=? -complete=dir Files
@@ -351,6 +350,7 @@ nmap t( vi)"0p
 nmap t{ vi}"0p
 nmap tw viw"0p
 
+nmap y yy
 nmap yw yiw
 nmap y' yi'
 nmap y" yi"
