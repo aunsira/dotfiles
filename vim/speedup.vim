@@ -150,6 +150,9 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+" Shortcut for replacing
+map <Leader>ra :%S/
+
 " Auto center with these motions
 noremap n nzz
 noremap N Nzz
