@@ -350,7 +350,6 @@ nmap t( vi)"0p
 nmap t{ vi}"0p
 nmap tw viw"0p
 
-nmap y yy
 nmap yw yiw
 nmap y' yi'
 nmap y" yi"
