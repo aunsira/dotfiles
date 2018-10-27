@@ -67,7 +67,6 @@ nnoremap <silent> <Leader>` :Marks<CR>
 nnoremap <leader>ca :Files app/<cr>
 nnoremap <leader>cm :Files app/models/<cr>
 nnoremap <leader>cc :Files app/controllers/<cr>
-nnoremap <leader>cp :Files spec/<cr>
 
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
@@ -108,7 +107,7 @@ map <leader>gg :Gbrowse<cr>
 map <leader>gb :Gblame<cr>
 map <leader>gd :Gdiff<cr>
 map <leader>gp :Gpush<cr>
-map <leader>gr :Gread<cr>
+map <leader>ge :Gread<cr>
 
 " Make Y act like other capitals
 map Y yg_
