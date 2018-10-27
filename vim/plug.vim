@@ -11,6 +11,7 @@ Plug 'aunsira/vim-thai-keys'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-system-copy'
+Plug 'christoomey/vim-titlecase'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'cohama/lexima.vim'
@@ -27,6 +28,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim', { 'on' : 'GV' }
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-peekaboo'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'matze/vim-move'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
