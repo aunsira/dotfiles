@@ -18,6 +18,9 @@ nnoremap <leader>p "*p<cr>
 vnoremap <leader>p "*p<cr>
 nnoremap <leader>P "*P<cr>
 vnoremap <leader>P "*P<cr>
+" Replacing from clipboard register with following commands, e.g. <leader>griw => to replace in a word
+nmap <leader>gr "*gr
+
 " yank to clipboard
 vnoremap <leader>y "*y
 vnoremap <leader>d "*d
@@ -345,13 +348,13 @@ nnoremap <leader>- :Switch<cr>
 
 nnoremap <leader>lc q:k<C-c>
 
-" Reduce finger movements
-nmap t' vi'"0p
-nmap t" vi""0p
-nmap t[ vi]"0p
-nmap t( vi)"0p
-nmap t{ vi}"0p
-nmap tw viw"0p
+" Reduce `in` verb while operating
+nmap t' gri'
+nmap t" gri"
+nmap t[ gri[
+nmap t( grip(
+nmap t{ gri{
+nmap tw griw
 
 nmap yw yiw
 nmap y' yi'
