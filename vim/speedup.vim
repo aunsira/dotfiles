@@ -1,5 +1,5 @@
 " Shortcut for typing :Ag
-nnoremap <leader>f :Ag!<Space>
+nnoremap <leader>ag :Ag!<Space>
 
 " Write/Exit shortcuts
 inoremap <C-s> <esc>:call Save()<cr>
@@ -64,9 +64,10 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 nnoremap <leader>l :Lines<cr>
 nnoremap <enter> :Buffers<cr>
 nnoremap <silent> <Leader>` :Marks<CR>
-nnoremap <leader>ca :Files app/<cr>
-nnoremap <leader>cm :Files app/models/<cr>
-nnoremap <leader>cc :Files app/controllers/<cr>
+nnoremap <leader>fa :Files app/<cr>
+nnoremap <leader>fm :Files app/models/<cr>
+nnoremap <leader>fc :Files app/controllers/<cr>
+nnoremap <leader>fs :Files spec/<cr>
 
 " Quickly open a second window to view files side by side
 nmap <LEADER>vs :vsplit<CR>
@@ -170,10 +171,7 @@ map <Leader>gv :GV<cr>
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
 " vim-commentary
-map  gc  <Plug>Commentary
-nmap gcc <Plug>CommentaryLine
-map <leader>\ <Plug>CommentaryLine
-vmap <leader>\ <Plug>Commentary
+map cm <Plug>Commentary
 
 " Use Easymotion instead of normal vim search
 map <Leader>/ <Plug>(easymotion-sn)
@@ -181,7 +179,7 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " Kill buffer with leader + d
-nnoremap <leader>d :bd!<CR>
+nnoremap <leader>bd :bd!<CR>
 
 " Git push stash code
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
@@ -197,7 +195,7 @@ nnoremap <leader>u3 :call UnderlineHeading(3);
 nmap <leader>ba :bufdo bd<cr>
 
 " Add binding.
-nnoremap <leader>bd orequire "pry"; binding.pry<esc>
+nnoremap <leader>bp orequire "pry"; binding.pry<esc>
 
 map <Leader>rn :call RenameFile()<cr>
 
@@ -381,5 +379,9 @@ nmap d" di"
 nmap d[ di[
 nmap d( di(
 nmap d{ di{
+
+" vim-rails
+nnoremap <leader>av :AV<cr>
+nnoremap <leader>at :AT<cr>
 
 " vim:ft=vim
