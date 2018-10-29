@@ -4,7 +4,6 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
 Plug 'SirVer/ultisnips'
 Plug 'alvan/vim-closetag'
-Plug 'andreypopp/vim-colors-plain'
 Plug 'andyl/vim-projectionist-elixir'
 Plug 'andymass/vim-matchup'
 Plug 'aunsira/vim-thai-keys'
@@ -61,7 +60,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
-Plug 'w0rp/ale'
+Plug 'w0rp/ale', { 'commit': '7af33637e874e' } " Avoid fail attempt to `ALEFix` in Ruby file
 Plug 'wellle/targets.vim'
 
 call plug#end()
