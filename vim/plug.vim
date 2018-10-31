@@ -60,7 +60,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
-Plug 'w0rp/ale', { 'commit': '7af33637e874e' } " Avoid fail attempt to `ALEFix` in Ruby file
+Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 
 call plug#end()
