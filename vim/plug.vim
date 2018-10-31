@@ -25,6 +25,7 @@ Plug 'jordwalke/VimSplitBalancer'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim', { 'on' : 'GV' }
+Plug 'junegunn/vim-after-object'
 Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
 Plug 'junegunn/vim-peekaboo'
 Plug 'kana/vim-textobj-entire'
