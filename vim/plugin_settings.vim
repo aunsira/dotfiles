@@ -125,4 +125,16 @@ let g:grammarous#disabled_rules = {
 
 let g:matchup_matchparen_status_offscreen = 0
 
+let g:projectionist_heuristics = {
+      \ '*.go': {
+      \   '*.go': {
+      \       'alternate': '{}_test.go',
+      \       'type': 'source'
+      \   },
+      \   '*_test.go': {
+      \       'alternate': '{}.go',
+      \       'type': 'test'
+      \   },
+      \ }}
+
 " vim:ft=vim
