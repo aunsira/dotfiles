@@ -381,6 +381,7 @@ nmap d( di(
 nmap d{ di{
 
 " vim-rails
+nnoremap <leader>A :A<cr>
 nnoremap <leader>av :AV<cr>
 nnoremap <leader>at :AT<cr>
 
