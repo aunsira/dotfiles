@@ -102,4 +102,20 @@ function current-branch() {
 
 j() { export JAVA_HOME=$(/usr/libexec/java_home); }
 
+function exit() {
+  if [[ -z $TMUX ]]; then
+    builtin exit
+    return
+  fi
+
+  panes=$(tmux list-panes | wc -l)
+  wins=$(tmux list-windows | wc -l)
+  count=$(($panes + $wins - 1))
+  if [ $count -eq 1 ]; then
+    tmux detach
+  else
+    builtin exit
+  fi
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
