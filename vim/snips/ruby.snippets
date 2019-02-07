@@ -278,6 +278,18 @@ snippet stub
 allow(${1}).to receive(:${2}).and_return(${3})
 endsnippet
 
+snippet stubany
+allow_any_instance_of(${1}).to receive(:${2}).and_return(${3})
+endsnippet
+
+snippet expect
+expect(${1}).to receive(:${2}).and_return(${3})
+endsnippet
+
+snippet expectany
+expect_any_instance_of(${1}).to receive(:${2}).and_return(${3})
+endsnippet
+
 snippet desc
 describe "${1}" do
 	${2}
@@ -285,8 +297,8 @@ end
 endsnippet
 
 snippet it
-it "${1}" do
-	${2}
+it "works" do
+	${1}
 end
 endsnippet
 
