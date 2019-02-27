@@ -331,8 +331,8 @@ nnoremap gm `u
 " Highlight current word without move to the next
 nnoremap * *Nzz
 
-imap uu _
-cnoremap uu _
+" imap uu _
+" cnoremap uu _
 
 nnoremap <silent> <leader>rd :redraw!<cr>
 
