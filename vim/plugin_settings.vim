@@ -38,6 +38,7 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+let g:fzf_buffers_jump = 1
 
 " Disable default key of vim-move
 let g:move_map_keys = 0

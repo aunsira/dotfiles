@@ -154,7 +154,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Shortcut for replacing
-map <Leader>ra :%S/
+map <leader>ra :%S/<c-r><c-w>/<c-r><c-w>
 
 " Auto center with these motions
 noremap n nzz
