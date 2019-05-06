@@ -21,6 +21,7 @@ Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'fatih/molokai'
 Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
 Plug 'janko-m/vim-test'
 Plug 'jordwalke/VimSplitBalancer'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
