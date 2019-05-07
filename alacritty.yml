@@ -366,6 +366,7 @@ key_bindings:
   - { key: H,        mods: Command,       chars: "\x06\x5b" }
   - { key: F,        mods: Command,       chars: "\x06\x63" }
   - { key: D,        mods: Command,       chars: "\x06\x0f" }
+  - { key: D,        mods: Command|Shift, chars: "\x06\x73" }
   - { key: J,        mods: Command,       chars: "\x06\x2d" }
   - { key: J,        mods: Command|Shift, chars: "\x06\x7c" }
   - { key: W,        mods: Command,       chars: "\x06\x78" }
