@@ -256,11 +256,11 @@ end
 endsnippet
 
 snippet : "hash" w
-${1:key}: ${2:"value"}${3}
+${1:key}: ${2:'value'}${3}
 endsnippet
 
 snippet h "string hash" w
-"${1:key}" => ${2:"value"}${3}
+'${1:key}' => ${2:'value'}${3}
 endsnippet
 
 snippet ed "each block" w
@@ -291,7 +291,7 @@ expect_any_instance_of(${1}).to receive(:${2}).and_return(${3})
 endsnippet
 
 snippet desc
-describe "${1}" do
+describe '${1}' do
 	${2}
 end
 endsnippet
@@ -305,13 +305,13 @@ subject(:${1}) { ${2} }
 endsnippet
 
 snippet it
-it "works" do
+it 'works' do
 	${1}
 end
 endsnippet
 
 snippet con
-context "${1}" do
+context '${1}' do
 	${2}
 end
 endsnippet
@@ -323,7 +323,7 @@ end
 endsnippet
 
 snippet spec
-require "spec_helper"
+require 'spec_helper'
 
 describe "${1}" do
 	${2}
@@ -331,7 +331,7 @@ end
 endsnippet
 
 snippet rspec
-require "rails_helper"
+require 'rails_helper'
 
 describe ${1} do
   ${2}
@@ -358,6 +358,10 @@ endsnippet
 
 snippet tz "timezone" w
 Time.zone.now
+endsnippet
+
+snippet tc "Time.current" w
+Time.current
 endsnippet
 
 snippet ->
