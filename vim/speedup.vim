@@ -27,8 +27,7 @@ vnoremap <leader>d "*d
 map <leader>x y
 
 " Remap jump to definition for ctags
-nmap <leader>] <C-]>zz
-nmap <leader>g] g<C-]>zz
+nmap <leader>] g<C-]>zz
 
 " Faster viewport scrolling (10 lines at a time)
 nnoremap <C-e> 10<C-e>
@@ -58,6 +57,7 @@ nnoremap <leader>tn :tabe<cr>
 
 " Map fzf plugin
 nnoremap <silent> <C-p> :Files<cr>
+nnoremap <silent> <C-b> :History<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
@@ -126,6 +126,15 @@ nnoremap <silent> Ur :Gread<cr>
 nmap <silent> Us :Gstatus<cr>gg<c-n>
 nnoremap <silent> Uw :if !exists(":Gwrite")<bar>call fugitive#detect(expand('%:p'))<bar>endif<bar>Gwrite<cr>
 
+nmap UB Ub
+nmap UD Ud
+nmap UF Uf
+nmap UL Ul
+nmap UR Ur
+nmap US Us
+nmap UW Uw
+nmap UC Uc
+
 " Make Y act like other capitals
 map Y yg_
 map <leader>Y vg_"*y
@@ -188,6 +197,7 @@ nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
 " vim-commentary
 map cm <Plug>Commentary
+map cmm <Plug>CommentaryLine
 
 " Use Easymotion instead of normal vim search
 map <Leader>/ <Plug>(easymotion-sn)
@@ -285,6 +295,7 @@ cnoremap <c-h> <left>
 cnoremap <c-j> <down>
 cnoremap <c-k> <up>
 cnoremap <c-l> <right>
+cnoremap <c-a> <C-b>
 
 " Search in project, but open at bottom of screen.
 " command! -bang -nargs=* Ag
@@ -368,6 +379,7 @@ nmap t[ gri[
 nmap t( grip(
 nmap t{ gri{
 nmap tw griw
+nmap ti gril==
 
 nmap yw yiw
 nmap y' yi'
@@ -400,5 +412,13 @@ nmap d{ di{
 nnoremap <leader>A :A<cr>
 nnoremap <leader>av :AV<cr>
 nnoremap <leader>at :AT<cr>
+
+inoremap <silent> <C-G><C-T> <C-R>=repeat(complete(col('.'),map(["%Y-%m-%d %H:%M:%S","%a, %d %b %Y %H:%M:%S %z","%Y %b %d","%d-%b-%y","%a %b %d %T %Z %Y"],'strftime(v:val)')+[localtime()]),0)<CR>
+
+" Select an entire object
+xnoremap <silent> ie gg0oG$
+
+" Close all but the current one
+nnoremap <leader>o :only<CR>
 
 " vim:ft=vim
