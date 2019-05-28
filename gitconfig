@@ -57,3 +57,5 @@
 [commit]
   gpgsign = true
   template = ~/.gitmessage
+[branch]
+  sort=-committerdate # Sort branches by last commit date, descending.
