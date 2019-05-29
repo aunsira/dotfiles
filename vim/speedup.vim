@@ -1,5 +1,6 @@
 " Shortcut for typing :Ag
 nnoremap <leader>ag :Ag!<Space>
+nnoremap <leader><BS> :Ag!<Space>
 
 " Write/Exit shortcuts
 inoremap <C-s> <esc>:call Save()<cr>
@@ -376,10 +377,10 @@ nnoremap <leader>lc q:k<C-c>
 nmap t' gri'
 nmap t" gri"
 nmap t[ gri[
-nmap t( grip(
+nmap t( gri(
 nmap t{ gri{
 nmap tw griw
-nmap ti gril==
+nmap tl gril==
 
 nmap yw yiw
 nmap y' yi'
@@ -401,6 +402,7 @@ nmap c" ci"
 nmap c[ ci[
 nmap c( ci(
 nmap c{ ci{
+nmap cl cil
 
 nmap d' di'
 nmap d" di"
