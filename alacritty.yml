@@ -368,7 +368,7 @@ key_bindings:
   - { key: W,        mods: Command,       chars: "\x06\x78" }
   - { key: K,        mods: Command,       chars: "\x06\x20" }
   - { key: S,        mods: Command,       chars: "\x06\x0f" }
-  - { key: S,        mods: Command|Shift, chars: "\x06\x73" }
+  - { key: Tab,      mods: Alt,           chars: "\x06\x73" }
   - { key: Space,    mods: Control,       chars: "\x00"     }
   - { key: Down,     mods: Command,       chars: "\x06\x44" }
   - { key: Up,       mods: Command,       chars: "\x06\x55" }
