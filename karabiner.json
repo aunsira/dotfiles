@@ -93,7 +93,7 @@
             ]
           },
           {
-            "description": "Ctrl+left squeare bracket to esc",
+            "description": "Ctrl+left square bracket to esc",
             "manipulators": [
               {
                 "from": {
@@ -120,15 +120,14 @@
             ]
           },
           {
-            "description": "control + command + spacebar to f19",
+            "description": "Left shift + delete to f19",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "spacebar",
+                  "key_code": "delete_or_backspace",
                   "modifiers": {
                     "mandatory": [
-                      "command",
-                      "control"
+                      "left_shift"
                     ],
                     "optional": []
                   }
@@ -173,11 +172,11 @@
             ]
           },
           {
-            "description": "control + command + j to down arrow",
+            "description": "control + command + n to down arrow",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "y",
+                  "key_code": "j",
                   "modifiers": {
                     "mandatory": [
                       "command",
@@ -199,11 +198,11 @@
             ]
           },
           {
-            "description": "control + command + k to up arrow",
+            "description": "control + command + p to up arrow",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "n",
+                  "key_code": "r",
                   "modifiers": {
                     "mandatory": [
                       "command",
