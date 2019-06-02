@@ -88,4 +88,7 @@ autocmd FileType netrw setl bufhidden=wipe
 " vim-after-object
 autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
 
+" :GV Default diffs to unfolded
+autocmd FileType git set foldlevel=1
+
 " vim:ft=vim

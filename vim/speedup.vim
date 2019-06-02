@@ -78,6 +78,7 @@ nnoremap K :Ag! <C-R><C-W><CR>
 nnoremap <M-Tab> :Ag! <C-R><C-W><CR>
 " bind K to grep word from visual selection
 vnoremap K y:Ag! <C-R>"<CR>
+vnoremap <leader><BS> y:Ag! <C-R>"<CR>
 " normal search on visual selection
 vnoremap // y/<C-R>"<CR>
 
@@ -126,6 +127,7 @@ nnoremap <expr><silent> Ul '@_<cmd>GV'.(v:count?'':'!').'<cr>'
 nnoremap <silent> Ur :Gread<cr>
 nmap <silent> Us :Gstatus<cr>gg<c-n>
 nnoremap <silent> Uw :if !exists(":Gwrite")<bar>call fugitive#detect(expand('%:p'))<bar>endif<bar>Gwrite<cr>
+nnoremap <silent> Ug :Gbrowse<cr>
 
 nmap UB Ub
 nmap UD Ud
@@ -180,7 +182,9 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Shortcut for replacing
-map <leader>ra :%S/<c-r><c-w>/<c-r><c-w>
+nnoremap <leader>sub :%s///g<left><left>
+vnoremap <leader>sub :s///g<left><left>
+map <leader>ra :%S/<c-r><c-w>/<c-r><c-w>/g<c-h><c-h>
 
 " Auto center with these motions
 noremap n nzz
@@ -402,7 +406,7 @@ nmap c" ci"
 nmap c[ ci[
 nmap c( ci(
 nmap c{ ci{
-nmap cl cil
+nmap cl Vs
 
 nmap d' di'
 nmap d" di"
@@ -415,6 +419,7 @@ nnoremap <leader>A :A<cr>
 nnoremap <leader>av :AV<cr>
 nnoremap <leader>at :AT<cr>
 
+" Insert current time
 inoremap <silent> <C-G><C-T> <C-R>=repeat(complete(col('.'),map(["%Y-%m-%d %H:%M:%S","%a, %d %b %Y %H:%M:%S %z","%Y %b %d","%d-%b-%y","%a %b %d %T %Z %Y"],'strftime(v:val)')+[localtime()]),0)<CR>
 
 " Select an entire object
