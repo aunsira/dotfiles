@@ -6,7 +6,7 @@ nnoremap <leader><BS> :Ag!<Space>
 inoremap <C-s> <esc>:call Save()<cr>
 nnoremap <C-s> <esc>:call Save()<cr>
 inoremap <C-c> <esc>
-map <Leader>q :copen<cr>
+map <Leader>q :copen<cr><tab>
 map <C-x> <C-w>c
 nnoremap <Leader>Q :qa!<cr>
 
@@ -58,6 +58,7 @@ nnoremap <leader>tn :tabe<cr>
 
 " Map fzf plugin
 nnoremap <silent> <C-p> :Files<cr>
+nnoremap <silent> <M-BS> :Files<cr>
 nnoremap <silent> <C-b> :History<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-l> <plug>(fzf-complete-line)
@@ -413,6 +414,7 @@ nmap d" di"
 nmap d[ di[
 nmap d( di(
 nmap d{ di{
+nmap dw daw
 
 " vim-rails
 nnoremap <leader>A :A<cr>
@@ -426,6 +428,12 @@ inoremap <silent> <C-G><C-T> <C-R>=repeat(complete(col('.'),map(["%Y-%m-%d %H:%M
 xnoremap <silent> ie gg0oG$
 
 " Close all but the current one
-nnoremap <leader>o :only<CR>
+nnoremap <leader>o :only<CR>zz
+
+" Open .env
+nnoremap <silent> <leader>env :sp .env<cr>
+
+nnoremap <leader>us :UltiSnipsEdit<Space>
+nnoremap <leader>tg :ALEToggle<cr>
 
 " vim:ft=vim

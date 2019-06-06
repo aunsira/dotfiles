@@ -120,14 +120,22 @@
             ]
           },
           {
-            "description": "Left shift + delete to f19",
+            "description": "Control + Spacebar to f19 (excluding Alacritty)",
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^io\\.alacritty$"
+                    ]
+                  }
+                ],
                 "from": {
-                  "key_code": "delete_or_backspace",
+                  "key_code": "spacebar",
                   "modifiers": {
                     "mandatory": [
-                      "left_shift"
+                      "left_control"
                     ],
                     "optional": []
                   }

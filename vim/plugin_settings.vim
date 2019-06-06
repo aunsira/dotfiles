@@ -53,6 +53,7 @@ let g:ale_lint_delay = 1000
 let g:ale_javascript_prettier_use_local_config = 1
 " let g:ale_fix_on_save = 1
 let g:ale_set_highlights = 0
+let g:ale_enabled = 0
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
@@ -102,8 +103,11 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.html.erb'
 let g:UltiSnipsSnippetsDir="~/code/git/dotfiles/vim/snips"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 let g:UltiSnipsEditSplit= "context"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:SuperTabDefaultCompletionType = "context"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 
 " SplitJoin
 let g:splitjoin_trailing_comma = 0
