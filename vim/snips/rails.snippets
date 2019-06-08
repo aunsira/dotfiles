@@ -259,23 +259,23 @@ RAILS_DEFAULT_LOGGER.${1:debug} ${0}
 endsnippet
 
 snippet logd
-logger.debug { '${1:message}' }
+Rails.logger.debug { '${1:message}' }
 endsnippet
 
 snippet loge
-logger.error { '${1:message}' }
+Rails.logger.error { '${1:message}' }
 endsnippet
 
 snippet logf
-logger.fatal { '${1:message}' }
+Rails.logger.fatal { '${1:message}' }
 endsnippet
 
 snippet logi
-logger.info { '${1:message}' }
+Rails.logger.info { '${1:message}' }
 endsnippet
 
 snippet logw
-logger.warn { '${1:message}' }
+Rails.logger.warn { '${1:message}' }
 endsnippet
 
 snippet mapc
@@ -514,4 +514,12 @@ endsnippet
 snippet tctss
 t.timestamps
 ${0}
+endsnippet
+
+snippet whe
+${1:Model}.where(${2:attr}: ${3:value})
+endsnippet
+
+snippet fi
+${1:Model}.find_by(${2:attr}: ${3:value})
 endsnippet

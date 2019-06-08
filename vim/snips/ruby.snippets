@@ -40,6 +40,7 @@ endsnippet
 snippet if
 if ${1:condition}
 	${2}
+end
 endsnippet
 
 snippet ife
@@ -47,6 +48,7 @@ if ${1:condition}
 	${2}
 else
 	${3}
+end
 endsnippet
 
 snippet elsif
@@ -57,29 +59,49 @@ endsnippet
 snippet unless
 unless ${1:condition}
 	${2}
+end
 endsnippet
 
 snippet while
 while ${1:condition}
 	${2}
+end
 endsnippet
 
 snippet until
 until ${1:condition}
 	${2}
+end
+endsnippet
+
+snippet gd "guard clause"
+return unless ${1}
 endsnippet
 
 snippet cla "class .. end"
-class ${1:`substitute(Filename(), '^.', '\u&', '')`}
-	${2}
+class `!p
+def ClassName(path):
+	return re.sub(r'[_]', '', path.title())
+snip.rv = ClassName(snip.basename)
+`
+	${1}
+end
 endsnippet
 
 snippet cla "class .. initialize .. end"
-class ${1:`substitute(Filename(), '^.', '\u&', '')`}
-	def initialize(${2:args})
+class `!p
+def ClassName(path):
+	return re.sub(r'[_]', '', path.title())
+snip.rv = ClassName(snip.basename)
+`
+	def initialize(${1:args})
 		${3}
 	end
 end
+endsnippet
+
+snippet new "Class.new"
+${1:Class}.new(${2:args})
 endsnippet
 
 # attr_reader
@@ -270,7 +292,7 @@ end
 endsnippet
 
 # For rspec
-snippet new
+snippet stubnew
 allow(${1}).to receive(:new).with(${2}).and_return(${3})
 endsnippet
 
@@ -291,8 +313,54 @@ expect_any_instance_of(${1}).to receive(:${2}).and_return(${3})
 endsnippet
 
 snippet desc
+describe `!p
+def ClassName(path):
+	return re.sub(r'[_]', '', path.title())
+snip.rv = ClassName(snip.basename)
+` do
+	subject(:instance) { described_class.new() }
+
+	before do
+	end
+
+	describe '#$2' do
+		subject(:${2}) { instance.$2 }
+
+		it 'works' do
+		end
+	end
+end
+endsnippet
+
+snippet descapi
+describe `!p
+def ClassName(path):
+	return re.sub(r'[_]', '', path.title())
+snip.rv = ClassName(snip.basename)
+`, type: :api do
+	let(:payload) do
+	end
+
+	before do
+		header('X-Api-Key', 'pingu123')
+	end
+
+	describe 'GET /api/' do
+		subject(:call) { call_api(payload) }
+
+		before { call }
+
+		it 'works' do
+			expect(last_response.status).to eq 200
+		end
+	end
+end
+endsnippet
+
+snippet descit
 describe '${1}' do
-	${2}
+	it 'works' do
+	end
 end
 endsnippet
 
@@ -346,6 +414,10 @@ snippet puts
 puts "\n\n************ #{${1}} **************\n\n"
 endsnippet
 
+snippet px
+puts "xxxxxxxxxxxxxx"
+endsnippet
+
 snippet defi
 def initialize(${1})
 	${2}
@@ -378,6 +450,30 @@ endsnippet
 
 snippet iexpb
 it { expect { ${1:object} }.${2} ${0} }
+endsnippet
+
+snippet exe
+expect(${1:object}).to eq ${2:expectation}
+endsnippet
+
+snippet exp
+expect(${1:object}).to be_present
+endsnippet
+
+snippet exs
+expect(${1:object}.size).to eq ${0}
+endsnippet
+
+snippet ex2
+expect(last_response.status).to eq 200
+endsnippet
+
+snippet fc "fixture create"
+create(:${1:object})
+endsnippet
+
+snippet fcl "fixture create_list"
+create_list(:${1:object}, ${2:number})
 endsnippet
 
 snippet gapi "Grape API Skeleton"
@@ -429,4 +525,52 @@ module V1
 
 	end
 end
+endsnippet
+
+snippet docv "document_verification" w
+document_verification
+endsnippet
+
+snippet doch "document_verification_history" w
+document_verification_history
+endsnippet
+
+snippet Docv "DocumentVerification" w
+DocumentVerification
+endsnippet
+
+snippet Doch "DocumentVerificationHistory" w
+DocumentVerificationHistory
+endsnippet
+
+snippet tcat "text_category" w
+text_category
+endsnippet
+
+snippet Tcat "TextCategory" w
+TextCategory
+endsnippet
+
+snippet mod "moderator" w
+moderator
+endsnippet
+
+snippet Mod "Moderator" w
+Moderator
+endsnippet
+
+snippet cons "consensus" w
+consensus
+endsnippet
+
+snippet Con "Consensus" w
+Consensus
+endsnippet
+
+snippet conh "consensus_history" w
+consensus_history
+endsnippet
+
+snippet Conh "ConsensusHistory" w
+ConsensusHistory
 endsnippet
