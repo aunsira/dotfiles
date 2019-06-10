@@ -363,6 +363,7 @@ nnoremap gm `u
 
 " Highlight current word without move to the next
 nnoremap * *Nzz
+nnoremap E *Nzz
 
 " imap uu _
 " cnoremap uu _
