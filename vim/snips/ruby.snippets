@@ -358,8 +358,11 @@ end
 endsnippet
 
 snippet descit
-describe '${1}' do
+describe '#$1' do
+	subject(:${1}) { instance.$1 }
+
 	it 'works' do
+		$1
 	end
 end
 endsnippet

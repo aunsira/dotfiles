@@ -437,4 +437,6 @@ nnoremap <silent> <leader>env :sp .env<cr>
 nnoremap <leader>us :UltiSnipsEdit<Space>
 nnoremap <leader>tg :ALEToggle<cr>
 
+nnoremap <leader>ss :!spring stop<cr>
+
 " vim:ft=vim

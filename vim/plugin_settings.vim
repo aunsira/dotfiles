@@ -61,9 +61,14 @@ let g:javascript_plugin_jsdoc = 1
 " javascript library syntax
 let g:used_javascript_libs = 'jquery,underscore,react,requirejs,handlebars'
 
+" Try test nearest with dispatch
 " vim-test
+" let test#strategy = {
+"       \ 'nearest': 'vtr',
+"       \ 'file':    'dispatch',
+"       \}
 let test#strategy = {
-      \ 'nearest': 'vtr',
+      \ 'nearest': 'dispatch',
       \ 'file':    'dispatch',
       \}
 
@@ -103,10 +108,8 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.html.erb'
 let g:UltiSnipsSnippetsDir="~/code/git/dotfiles/vim/snips"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 let g:UltiSnipsEditSplit= "context"
-let g:SuperTabDefaultCompletionType = "context"
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 " SplitJoin
