@@ -48,5 +48,9 @@ set undofile                      " Maintain undo history between sessions
 set undodir=/tmp//,.
 set viminfo='1000                 " Oldfiles to 1000 last recently opened files, :History uses it
 set maxmempattern=20000
+set gdefault                      " assume the /g flag on :s substitutions to replace all matches in a line
+set shiftround                    " When at 3 spaces and I hit >>, go to 4, not 5.
+set nocursorcolumn                " speed up syntax highlighting
+set noshowmatch                   " Do not show matching brackets by flickering
 
 " vim:ft=vim

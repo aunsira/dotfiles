@@ -59,7 +59,7 @@ nnoremap <leader>tn :tabe<cr>
 " Map fzf plugin
 nnoremap <silent> <C-p> :Files<cr>
 nnoremap <silent> <M-BS> :Files<cr>
-nnoremap <silent> <C-b> :History<cr>
+nnoremap <silent> <leader>h :History<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
@@ -183,9 +183,9 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Shortcut for replacing
-nnoremap <leader>sub :%s///g<left><left>
-vnoremap <leader>sub :s///g<left><left>
-map <leader>ra :%S/<c-r><c-w>/<c-r><c-w>/g<c-h><c-h>
+nnoremap <leader>sub :%s//
+vnoremap <leader>sub :s//
+map <leader>ra :%S/<c-r><c-w>/<c-r><c-w><c-w>
 
 " Auto center with these motions
 noremap n nzz
@@ -362,8 +362,8 @@ imap <C-g> <esc>:<C-u>GoDecls<cr>
 nnoremap gm `u
 
 " Highlight current word without move to the next
-nnoremap * *Nzz
-nnoremap E *Nzz
+nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
+nnoremap <silent> E :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
 
 " imap uu _
 " cnoremap uu _
@@ -438,5 +438,11 @@ nnoremap <leader>us :UltiSnipsEdit<Space>
 nnoremap <leader>tg :ALEToggle<cr>
 
 nnoremap <leader>ss :!spring stop<cr>
+
+" mimic the behavior of /%Vfoobar which searches within the previously
+" selected visual selection
+" while in search mode, pressing / will do this
+vnoremap / <Esc>/\%><C-R>=line("'<")-1<CR>l\%<<C-R>=line("'>")+1<CR>l
+vnoremap ? <Esc>?\%><C-R>=line("'<")-1<CR>l\%<<C-R>=line("'>")+1<CR>l
 
 " vim:ft=vim
