@@ -178,9 +178,11 @@ nnoremap <leader>ed :e ~/Dropbox/notes/datawow-notes.txt<cr>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
-
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+command! ReformatTable normal vip<cr>**|
+nmap <leader>rt :ReformatTable<cr>
+vmap <cr> <Plug>(EasyAlign)
 
 " Shortcut for replacing
 nnoremap <leader>sub :%s//
@@ -382,6 +384,7 @@ nnoremap <leader>lc q:k<C-c>
 " Reduce `in` verb while operating
 nmap t' gri'
 nmap t" gri"
+nmap tq griq
 nmap t[ gri[
 nmap t( gri(
 nmap t{ gri{
@@ -391,6 +394,7 @@ nmap tl gril==
 nmap yw yiw
 nmap y' yi'
 nmap y" yi"
+nmap yq yiq
 nmap y[ yi[
 nmap y( yi(
 nmap y{ yi{
@@ -398,6 +402,7 @@ nmap y{ yi{
 nmap vw viw
 nmap v' vi'
 nmap v" vi"
+nmap vq viq
 nmap v[ vi[
 nmap v( vi(
 nmap v{ vi{
@@ -405,6 +410,7 @@ nmap v{ vi{
 nmap cw ciw
 nmap c' ci'
 nmap c" ci"
+nmap cq ciq
 nmap c[ ci[
 nmap c( ci(
 nmap c{ ci{
@@ -412,6 +418,7 @@ nmap cl Vs
 
 nmap d' di'
 nmap d" di"
+nmap dq diq
 nmap d[ di[
 nmap d( di(
 nmap d{ di{
@@ -425,16 +432,13 @@ nnoremap <leader>at :AT<cr>
 " Insert current time
 inoremap <silent> <C-G><C-T> <C-R>=repeat(complete(col('.'),map(["%Y-%m-%d %H:%M:%S","%a, %d %b %Y %H:%M:%S %z","%Y %b %d","%d-%b-%y","%a %b %d %T %Z %Y"],'strftime(v:val)')+[localtime()]),0)<CR>
 
-" Select an entire object
-xnoremap <silent> ie gg0oG$
-
 " Close all but the current one
 nnoremap <leader>o :only<CR>zz
 
 " Open .env
 nnoremap <silent> <leader>env :sp .env<cr>
 
-nnoremap <leader>us :UltiSnipsEdit<Space>
+nnoremap <leader>ue :UltiSnipsEdit<Space>
 nnoremap <leader>tg :ALEToggle<cr>
 
 nnoremap <leader>ss :!spring stop<cr>

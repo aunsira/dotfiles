@@ -112,8 +112,9 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.html.erb'
 let g:UltiSnipsSnippetsDir="~/code/git/dotfiles/vim/snips"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 let g:UltiSnipsEditSplit= "context"
-let g:UltiSnipsJumpForwardTrigger = '<C-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+let g:UltiSnipsExpandTrigger = '<C-]>'
+let g:UltiSnipsJumpForwardTrigger = '<C-]>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-[>'
 
 
 " SplitJoin
@@ -134,7 +135,9 @@ let g:grammarous#disabled_rules = {
       \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES', 'SENTENCE_WHITESPACE', 'UPPERCASE_SENTENCE_START'],
       \ }
 
+" vim match-up
 let g:matchup_matchparen_status_offscreen = 0
+let g:matchup_matchparen_deferred = 1
 
 let g:projectionist_heuristics = {
       \ '*.go': {

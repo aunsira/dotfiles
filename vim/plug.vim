@@ -5,8 +5,9 @@ Plug 'AndrewRadev/switch.vim'
 Plug 'SirVer/ultisnips'
 Plug 'alvan/vim-closetag'
 Plug 'andyl/vim-projectionist-elixir'
-" Plug 'andymass/vim-matchup'
+Plug 'andymass/vim-matchup'
 Plug 'aunsira/vim-thai-keys'
+Plug 'beloglazov/vim-textobj-quotes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-system-copy'
@@ -23,6 +24,7 @@ Plug 'fatih/molokai'
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
 Plug 'janko-m/vim-test'
+Plug 'jiangmiao/auto-pairs'
 Plug 'jordwalke/VimSplitBalancer'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
