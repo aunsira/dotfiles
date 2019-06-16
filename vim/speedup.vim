@@ -220,7 +220,10 @@ map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 
 " Quickly open recently files
 map <Leader>sc :sp db/schema.rb<cr>
-nmap <leader>mp :e ~/code/git/dotfiles/vim/speedup.vim<cr>
+
+" Modes  \m mouseOff, \M mouseOn,
+noremap <Leader>m :set mouse=<CR>
+noremap <Leader>M :set mouse=a<CR>
 
 nnoremap <leader>u1 :call UnderlineHeading(1);
 nnoremap <leader>u2 :call UnderlineHeading(2);
