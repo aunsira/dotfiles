@@ -90,7 +90,7 @@ onoremap <C-@> <Esc>
 cnoremap <C-@> <C-c>
 inoremap <C-@> <Esc>`^
 " For GUI
-nnoremap <C-Space> <Esc>:noh<cr>
+nnoremap <C-Space> <Esc>:noh<cr>:f<cr>
 vnoremap <C-Space> <Esc>gV
 onoremap <C-Space> <Esc>
 cnoremap <C-Space> <C-c>
@@ -181,7 +181,6 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 command! ReformatTable normal vip<cr>**|
-nmap <leader>rt :ReformatTable<cr>
 vmap <cr> <Plug>(EasyAlign)
 
 " Shortcut for replacing
