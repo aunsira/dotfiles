@@ -59,11 +59,11 @@ nnoremap <leader>tn :tabe<cr>
 " Map fzf plugin
 nnoremap <silent> <C-p> :Files<cr>
 nnoremap <silent> <M-BS> :Files<cr>
-nnoremap <silent> <leader>h :History<cr>
+nnoremap <silent> <leader><leader> :History<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
-nnoremap <leader>l :Lines<cr>
+nnoremap <leader>L :Lines<cr>
 nnoremap <enter> :Buffers<cr>
 nnoremap <silent> <Leader>` :Marks<CR>
 nnoremap <leader>fa :Files app/<cr>
@@ -101,8 +101,6 @@ nnoremap ge `.zz
 " Leader-; to enter command mode. No more holding shift!
 nnoremap <leader>; :
 vnoremap <leader>; :
-nnoremap <leader><leader> :
-vnoremap <leader><leader> :
 
 " Git shortcuts
 map <leader>gs :Gstatus<cr>gg<c-n>
