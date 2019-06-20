@@ -450,4 +450,7 @@ nnoremap <leader>ss :!spring stop<cr>
 vnoremap / <Esc>/\%><C-R>=line("'<")-1<CR>l\%<<C-R>=line("'>")+1<CR>l
 vnoremap ? <Esc>?\%><C-R>=line("'<")-1<CR>l\%<<C-R>=line("'>")+1<CR>l
 
+" Insert a hash rocket with <c-l>
+imap <c-l> <space>=><space>
+
 " vim:ft=vim
