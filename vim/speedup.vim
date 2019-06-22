@@ -385,7 +385,6 @@ nnoremap <leader>lc q:k<C-c>
 " Reduce `in` verb while operating
 nmap t' gri'
 nmap t" gri"
-nmap tq griq
 nmap t[ gri[
 nmap t( gri(
 nmap t{ gri{
@@ -395,7 +394,6 @@ nmap tl gril==
 nmap yw yiw
 nmap y' yi'
 nmap y" yi"
-nmap yq yiq
 nmap y[ yi[
 nmap y( yi(
 nmap y{ yi{
@@ -403,7 +401,6 @@ nmap y{ yi{
 nmap vw viw
 nmap v' vi'
 nmap v" vi"
-nmap vq viq
 nmap v[ vi[
 nmap v( vi(
 nmap v{ vi{
@@ -411,7 +408,6 @@ nmap v{ vi{
 nmap cw ciw
 nmap c' ci'
 nmap c" ci"
-nmap cq ciq
 nmap c[ ci[
 nmap c( ci(
 nmap c{ ci{
@@ -419,11 +415,14 @@ nmap cl Vs
 
 nmap d' di'
 nmap d" di"
-nmap dq diq
 nmap d[ di[
 nmap d( di(
 nmap d{ di{
 nmap dw daw
+
+" vim-textobj-quotes eg. ciq, diq, viq, yiq, tiq
+xmap q iq
+omap q iq
 
 " vim-rails
 nnoremap <leader>A :A<cr>
@@ -449,8 +448,5 @@ nnoremap <leader>ss :!spring stop<cr>
 " while in search mode, pressing / will do this
 vnoremap / <Esc>/\%><C-R>=line("'<")-1<CR>l\%<<C-R>=line("'>")+1<CR>l
 vnoremap ? <Esc>?\%><C-R>=line("'<")-1<CR>l\%<<C-R>=line("'>")+1<CR>l
-
-" Insert a hash rocket with <c-l>
-imap <c-l> <space>=><space>
 
 " vim:ft=vim
