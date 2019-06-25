@@ -449,4 +449,10 @@ nnoremap <leader>ss :!spring stop<cr>
 vnoremap / <Esc>/\%><C-R>=line("'<")-1<CR>l\%<<C-R>=line("'>")+1<CR>l
 vnoremap ? <Esc>?\%><C-R>=line("'<")-1<CR>l\%<<C-R>=line("'>")+1<CR>l
 
+" Stay in visual after indenting
+vnoremap < <gv
+vnoremap > >gv
+vnoremap <silent> <C-h> <gv
+vnoremap <silent> <C-l> >gv
+
 " vim:ft=vim
