@@ -172,7 +172,7 @@ nnoremap <Leader>eg :e ~/code/git/
 nnoremap <Leader>eh :e ~/
 nnoremap <Leader>cd :cd <C-r>=escape(expand("%:p:h"), ' ')<cr>/
 nnoremap <Leader>cg :cd ~/code/git/
-nnoremap <leader>ed :e ~/Dropbox/notes/datawow-notes.txt<cr>
+nnoremap <leader>ed :Files ~/Dropbox/notes/<cr>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -366,7 +366,7 @@ nnoremap gm `u
 
 " Highlight current word without move to the next
 nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
-nnoremap <silent> E :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
+nnoremap <silent> <C-n> :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
 
 " imap uu _
 " cnoremap uu _
@@ -390,6 +390,7 @@ nmap t( gri(
 nmap t{ gri{
 nmap tw griw
 nmap tl gril==
+nmap tq griq
 
 nmap yw yiw
 nmap y' yi'
