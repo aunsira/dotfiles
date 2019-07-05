@@ -425,6 +425,11 @@ nmap dw daw
 xmap q iq
 omap q iq
 
+" Easier to reach % for matching block/bracket
+nmap <C-b> %
+xmap b i%
+omap b i%
+
 " vim-rails
 nnoremap <leader>A :A<cr>
 nnoremap <leader>av :AV<cr>
