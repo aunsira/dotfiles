@@ -67,14 +67,13 @@ let g:used_javascript_libs = 'jquery,underscore,react,requirejs,handlebars'
 
 " Try test nearest with dispatch
 " vim-test
-" let test#strategy = {
-"       \ 'nearest': 'vtr',
-"       \ 'file':    'dispatch',
-"       \}
 let test#strategy = {
-      \ 'nearest': 'dispatch',
+      \ 'nearest': 'vtr',
       \ 'file':    'dispatch',
       \}
+
+" Plugin vim-rspec
+let g:rspec_command = "!clear && bin/rspec {spec}"
 
 " Run vim-test with test environment
 let $NODE_ENV='test'

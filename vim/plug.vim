@@ -51,6 +51,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'rhysd/vim-grammarous'
 Plug 'rizzatti/dash.vim'
 Plug 'slashmili/alchemist.vim'
+Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
