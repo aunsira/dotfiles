@@ -67,6 +67,7 @@ alias gdh='git diff $(gh)'
 alias gdm='git diff master'
 alias gdo='git diff origin/$(current-branch)...HEAD'
 alias gdp='git diff --patience'
+alias ge='git edit'
 alias gl='git lg'
 alias gld='git lg -p --since="1 day ago"'
 alias glm="git log --pretty=format:'%h | %cd | %an | %s' -n 15"

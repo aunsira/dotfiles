@@ -24,6 +24,7 @@
   ch = checkout -
   commend = commit --amend --no-edit
   please = push --force-with-lease
+  edit = !$EDITOR $(git status --porcelain | awk '{print $2}')
 [filter "lfs"]
   required = true
   clean = git-lfs clean %f
