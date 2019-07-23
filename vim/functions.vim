@@ -158,6 +158,8 @@ command! -nargs=+ MovUp execute call('printf', ['-%s,-%s mov.'] + split(<q-args>
 command! -nargs=+ MovDown execute call('printf', ['+%s,+%s mov.'] + split(<q-args>, ' '))
 command! -nargs=+ CoUp execute call('printf', ['-%s,-%s co.'] + split(<q-args>, ' '))
 command! -nargs=+ CoDown execute call('printf', ['+%s,+%s co.'] + split(<q-args>, ' '))
+command! -nargs=+ GcUp execute call('printf', ['-%s,-%s Commentary'] + split(<q-args>, ' '))
+command! -nargs=+ GcDown execute call('printf', ['+%s,+%s Commentary'] + split(<q-args>, ' '))
 
 " Count word
 command! -nargs=1 Count execute printf('%%s/%s//gn', escape(<q-args>, '/')) | normal! ``

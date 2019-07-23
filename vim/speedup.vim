@@ -200,10 +200,6 @@ map <Leader>gv :GV<cr>
 
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
-" vim-commentary
-map cm <Plug>Commentary
-map cmm <Plug>CommentaryLine
-
 " Use Easymotion instead of normal vim search
 map <Leader>/ <Plug>(easymotion-sn)
 map <Leader>j <Plug>(easymotion-j)

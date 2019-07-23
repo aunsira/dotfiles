@@ -55,7 +55,7 @@ Plug 'slashmili/alchemist.vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dadbod'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
