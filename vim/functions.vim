@@ -151,15 +151,15 @@ function! s:PrettyJSON()
 endfunction
 command! PrettyJSON :call <sid>PrettyJSON()
 
-" del, mov, co
-command! -nargs=+ DelUp execute call('printf', ['-%s,-%s del'] + split(<q-args>, ' '))
-command! -nargs=+ DelDown execute call('printf', ['+%s,+%s del'] + split(<q-args>, ' '))
-command! -nargs=+ MovUp execute call('printf', ['-%s,-%s mov.'] + split(<q-args>, ' '))
-command! -nargs=+ MovDown execute call('printf', ['+%s,+%s mov.'] + split(<q-args>, ' '))
-command! -nargs=+ CoUp execute call('printf', ['-%s,-%s co.'] + split(<q-args>, ' '))
-command! -nargs=+ CoDown execute call('printf', ['+%s,+%s co.'] + split(<q-args>, ' '))
-command! -nargs=+ GcUp execute call('printf', ['-%s,-%s Commentary'] + split(<q-args>, ' '))
-command! -nargs=+ GcDown execute call('printf', ['+%s,+%s Commentary'] + split(<q-args>, ' '))
+" del, mov, co, Commentary then go back to last position
+command! -nargs=+ DelUp execute call('printf', ['-%s,-%s del'] + split(<q-args>, ' ')) | normal! `u
+command! -nargs=+ DelDown execute call('printf', ['+%s,+%s del'] + split(<q-args>, ' ')) | normal! `u
+command! -nargs=+ MovUp execute call('printf', ['-%s,-%s mov.'] + split(<q-args>, ' ')) | normal! `u
+command! -nargs=+ MovDown execute call('printf', ['+%s,+%s mov.'] + split(<q-args>, ' ')) | normal! `u
+command! -nargs=+ CoUp execute call('printf', ['-%s,-%s co.'] + split(<q-args>, ' ')) | normal! `u
+command! -nargs=+ CoDown execute call('printf', ['+%s,+%s co.'] + split(<q-args>, ' ')) | normal! `u
+command! -nargs=+ GcUp execute call('printf', ['-%s,-%s Commentary'] + split(<q-args>, ' ')) | normal! `u
+command! -nargs=+ GcDown execute call('printf', ['+%s,+%s Commentary'] + split(<q-args>, ' ')) | normal! `u
 
 " Count word
 command! -nargs=1 Count execute printf('%%s/%s//gn', escape(<q-args>, '/')) | normal! ``
