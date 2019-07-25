@@ -128,6 +128,7 @@ let g:switch_custom_definitions =
     \   ['processing', 'processed', 'unprocessed'],
     \   ['approved', 'declined', 'kenta'],
     \   ['gnoon', 'gnui', 'gdee'],
+    \   ['asc', 'desc'],
     \   ['foo', 'bar', 'baz']
     \ ]
 
