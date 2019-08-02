@@ -72,6 +72,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vim-scripts/SyntaxRange'
 Plug 'vim-scripts/ingo-library'
+Plug 'w0ng/vim-hybrid'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 
