@@ -28,6 +28,24 @@ def ${1:method_name}
 end
 endsnippet
 
+snippet defni
+def ${1:name}${2:(${3:args})}
+	fail(NotImplementedError.new)
+end
+endsnippet
+
+snippet defi
+def initialize(${1})
+	${2}
+end
+endsnippet
+
+snippet memo
+def ${1:name}
+	@$1 ||= ${2:value}
+end
+endsnippet
+
 snippet deft
 def test_${1:case_name}
 	${2}
@@ -76,6 +94,16 @@ endsnippet
 
 snippet gd "guard clause"
 return unless ${1}
+endsnippet
+
+snippet module "module .. end"
+module `!p
+def ClassName(path):
+	return re.sub(r'[_]', '', path.title())
+snip.rv = ClassName(snip.basename)
+`
+	${1}
+end
 endsnippet
 
 snippet cla "class .. end"
@@ -419,12 +447,6 @@ endsnippet
 
 snippet px
 puts "xxxxxxxxxxxxxx"
-endsnippet
-
-snippet defi
-def initialize(${1})
-	${2}
-end
 endsnippet
 
 snippet ex
