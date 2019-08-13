@@ -10,13 +10,16 @@
 
 # --- COMMIT END ---
 # Type can be
+#    build    (changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm))
+#    chore    (updating grunt tasks etc; no production code change)
+#    ci       (changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs))
+#    docs     (changes to documentation)
 #    feat     (new feature)
 #    fix      (bug fix)
+#    perf     (a code change that improves performance)
 #    refactor (refactoring production code)
 #    style    (formatting, missing semi colons, etc; no code change)
-#    docs     (changes to documentation)
-#    test     (adding or refactoring tests; no production code change)
-#    chore    (updating grunt tasks etc; no production code change)
+#    test     (adding missing tests or correcting existing tests)
 # --------------------
 # Remember to
 #    Capitalize the subject line
