@@ -87,7 +87,7 @@ join-lines() {
 }
 
 function rrg {
-  bin/rake routes | grep $1
+  rails routes | grep $1
 }
 
 function git-new-remote-tracking {
