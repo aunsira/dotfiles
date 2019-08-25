@@ -458,4 +458,7 @@ vnoremap > >gv
 vnoremap <silent> <C-h> <gv
 vnoremap <silent> <C-l> >gv
 
+nnoremap <leader>hh :SidewaysLeft<cr>
+nnoremap <leader>ll :SidewaysRight<cr>
+
 " vim:ft=vim
