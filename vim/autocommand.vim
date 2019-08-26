@@ -18,10 +18,10 @@ endfunction
 augroup ruby
   autocmd FileType ruby nnoremap <silent> <2-LeftMouse> *<C-]>
   autocmd FileType ruby nnoremap <silent> gd *<C-]>zz
-  " autocmd FileType ruby map <Leader>tf :call RunCurrentSpecFile()<CR>
-  autocmd FileType ruby map <Leader>ts :call RunNearestSpec()<CR>
-  autocmd FileType ruby map <Leader>tl :call RunLastSpec()<CR>
-  autocmd FileType ruby map <Leader>ta :call RunAllSpecs()<CR>
+  autocmd FileType ruby map <Leader>tc :w<cr>:call RunCurrentSpecFile()<CR>
+  autocmd FileType ruby map <Leader>ts :w<cr>:call RunNearestSpec()<CR>
+  autocmd FileType ruby map <Leader>tl :w<cr>:call RunLastSpec()<CR>
+  autocmd FileType ruby map <Leader>ta :w<cr>:call RunAllSpecs()<CR>
 augroup END
 
 augroup go
