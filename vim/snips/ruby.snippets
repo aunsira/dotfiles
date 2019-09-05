@@ -360,37 +360,22 @@ snip.rv = ClassName(snip.basename)
 end
 endsnippet
 
-snippet descapi
-describe `!p
-def ClassName(path):
-	return re.sub(r'[_]', '', path.title())
-snip.rv = ClassName(snip.basename)
-`, type: :api do
-	let(:payload) do
-	end
-
-	before do
-		header('X-Api-Key', 'pingu123')
-	end
-
-	describe 'GET /api/' do
-		subject(:call) { call_api(payload) }
-
-		before { call }
-
-		it 'works' do
-			expect(last_response.status).to eq 200
-		end
-	end
-end
-endsnippet
-
 snippet descit
 describe '#$1' do
 	subject(:${1}) { instance.$1 }
 
 	it 'works' do
 		$1
+	end
+end
+endsnippet
+
+snippet descapi "describe api" w
+describe '' do
+	subject(:call) { call_api }
+
+	it 'succeeds' do
+		expect(call.status).to eq 200
 	end
 end
 endsnippet
@@ -614,4 +599,12 @@ endsnippet
 
 snippet Conh "ConsensusHistory" w
 ConsensusHistory
+endsnippet
+
+snippet cb "call.body" w
+call.body
+endsnippet
+
+snippet cs "call.status" w
+call.status
 endsnippet
