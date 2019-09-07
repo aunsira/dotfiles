@@ -1,14 +1,3 @@
-" Markdown Underlines
-function! UnderlineHeading(level)
-  if a:level == 1
-    normal! yypVr=
-  elseif a:level == 2
-    normal! yypVr-
-  else
-    normal! I###<space>
-  endif
-endfunction
-
 function! RenameFile()
   let old_name = expand('%')
   let new_name = input('New file name: ', expand('%'), 'file')

@@ -218,9 +218,11 @@ map <Leader>sc :sp db/schema.rb<cr>
 noremap <Leader>m :set mouse=<CR>
 noremap <Leader>M :set mouse=a<CR>
 
-nnoremap <leader>u1 :call UnderlineHeading(1);
-nnoremap <leader>u2 :call UnderlineHeading(2);
-nnoremap <leader>u3 :call UnderlineHeading(3);
+nnoremap <leader>u1 m`yypVr=``
+nnoremap <leader>u2 m`yypVr-``
+nnoremap <leader>u3 m`^i### <esc>``4l
+nnoremap <leader>u4 m`^i#### <esc>``5l
+nnoremap <leader>u5 m`^i##### <esc>``6l
 
 nmap <leader>ba :bufdo bd<cr>
 
