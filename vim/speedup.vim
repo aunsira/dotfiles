@@ -90,7 +90,7 @@ onoremap <C-@> <Esc>
 cnoremap <C-@> <C-c>
 inoremap <C-@> <Esc>`^
 " For GUI
-nnoremap <C-Space> <Esc>:noh<cr>:f<cr>
+nnoremap <C-Space> <Esc>:noh<cr>
 vnoremap <C-Space> <Esc>gV
 onoremap <C-Space> <Esc>
 cnoremap <C-Space> <C-c>
