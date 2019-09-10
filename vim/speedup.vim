@@ -59,7 +59,6 @@ nnoremap <leader>tn :tabe<cr>
 " Map fzf plugin
 nnoremap <silent> <C-p> :Files<cr>
 nnoremap <silent> <M-BS> :Files<cr>
-nnoremap <silent> <leader><leader> :History<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
@@ -463,6 +462,7 @@ vnoremap <silent> <C-l> >gv
 nnoremap <leader>hh :SidewaysLeft<cr>
 nnoremap <leader>ll :SidewaysRight<cr>
 
-nnoremap <leader>1 :!
+nnoremap <leader><leader> :
+nnoremap <leader>, :!
 
 " vim:ft=vim
