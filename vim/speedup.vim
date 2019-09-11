@@ -275,7 +275,8 @@ vmap <C-C> "+y
 
 nnoremap Q @q
 
-noremap <F5> :NumberToggle<cr>
+nnoremap <F5> :NumberToggle<cr>
+nnoremap <F6> :setlocal spell! spell?<CR>
 
 command! Q q " Bind :Q to :q
 command! Qall qall
