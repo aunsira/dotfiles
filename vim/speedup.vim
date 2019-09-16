@@ -68,6 +68,7 @@ nnoremap <silent> <Leader>` :Marks<CR>
 nnoremap <leader>fa :Files app/<cr>
 nnoremap <leader>fm :Files app/models/<cr>
 nnoremap <leader>fc :Files app/controllers/<cr>
+nnoremap <leader>ff :Files spec/factories<cr>
 nnoremap <leader>fs :Files spec/<cr>
 
 " Quickly open a second window to view files side by side
@@ -464,6 +465,10 @@ nnoremap <leader>hh :SidewaysLeft<cr>
 nnoremap <leader>ll :SidewaysRight<cr>
 
 nnoremap <leader><leader> :
+vnoremap <leader><leader> :
 nnoremap <leader>, :!
+
+nnoremap [z I[]<Space><Esc>
+nnoremap [x I[x]<Space><Esc>
 
 " vim:ft=vim
