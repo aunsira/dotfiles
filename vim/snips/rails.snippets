@@ -523,3 +523,15 @@ endsnippet
 snippet fi
 ${1:Model}.find_by(${2:attr}: ${3:value})
 endsnippet
+
+snippet rh
+require 'rails_helper'
+
+describe ${1:ClassName} do
+	describe '${2:docstring}' do
+		it '$3' do
+			$4
+		end
+	end
+end
+endsnippet

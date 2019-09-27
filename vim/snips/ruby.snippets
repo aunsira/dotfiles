@@ -28,6 +28,12 @@ def ${1:method_name}
 end
 endsnippet
 
+snippet defs
+def self.$1
+	$2
+end
+endsnippet
+
 snippet defni
 def ${1:name}${2:(${3:args})}
 	fail(NotImplementedError.new)
