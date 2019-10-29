@@ -137,6 +137,8 @@ nmap US Us
 nmap UW Uw
 nmap UC Uc
 
+nnoremap \<space> :Gstatus<cr>
+
 " Make Y act like other capitals
 map Y yg_
 map <leader>Y vg_"*y
