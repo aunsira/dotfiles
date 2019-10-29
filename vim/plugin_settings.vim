@@ -155,8 +155,13 @@ let g:projectionist_heuristics = {
       \   '*_test.go': {
       \       'alternate': '{}.go',
       \       'type': 'test'
-      \   },
-      \ }}
+      \   }
+      \ },
+      \ "*.rb": {
+      \     "*.rb": { "alternate": "{}_spec.rb" },
+      \     "*_spec.rb": { "alternate": "{}.rb" },
+      \   }
+      \ }
 
 function! MKDPSplit(url)
   call system('x5050 Safari '.shellescape(a:url))
