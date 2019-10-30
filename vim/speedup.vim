@@ -137,7 +137,7 @@ nmap US Us
 nmap UW Uw
 nmap UC Uc
 
-nmap  <silent> \<space> :Gstatus<cr>gg<C-n>
+nmap  <silent> \<space> :ToggleGstatus<cr>
 nnoremap \p :Gpush<cr>
 nnoremap \b :Gblame<cr>
 nnoremap \<tab> :Gdiff<cr>

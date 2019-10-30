@@ -153,4 +153,13 @@ command! -nargs=+ GcDown execute call('printf', ['+%s,+%s Commentary'] + split(<
 " Count word
 command! -nargs=1 Count execute printf('%%s/%s//gn', escape(<q-args>, '/')) | normal! ``
 
+function! ToggleGstatus()
+  if buflisted(bufname('.git/index'))
+    bd .git/index
+  else
+    execute printf(':Gstatus') | normal! gg4j
+  endif
+endfunction
+command ToggleGstatus :call ToggleGstatus()
+
 " vim:ft=vim
