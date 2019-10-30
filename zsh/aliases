@@ -118,6 +118,7 @@ alias t='tmux -2'
 alias tmux='tmux -2'
 alias u='cd ..'
 alias v="nvim"
+alias v.="nvim ."
 alias vim='nvim'
 alias vimn='nvim -u NONE'
 alias vr='vimr -n'
