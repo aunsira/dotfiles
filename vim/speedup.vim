@@ -137,7 +137,10 @@ nmap US Us
 nmap UW Uw
 nmap UC Uc
 
-nnoremap \<space> :Gstatus<cr>
+nmap  <silent> \<space> :Gstatus<cr>gg<C-n>
+nnoremap \p :Gpush<cr>
+nnoremap \b :Gblame<cr>
+nnoremap \<tab> :Gdiff<cr>
 
 " Make Y act like other capitals
 map Y yg_
