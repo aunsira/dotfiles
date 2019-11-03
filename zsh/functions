@@ -133,4 +133,8 @@ function exit() {
   fi
 }
 
+function git-trust-bin() {
+  mkdir -p .git/safe
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
