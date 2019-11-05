@@ -160,6 +160,6 @@ function! ToggleGstatus()
     execute printf(':Gstatus') | normal! gg4j
   endif
 endfunction
-command ToggleGstatus :call ToggleGstatus()
+command! ToggleGstatus :call ToggleGstatus()
 
 " vim:ft=vim
