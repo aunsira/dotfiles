@@ -108,8 +108,7 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.html.erb'
 
 " UltiSnips
-let g:UltiSnipsSnippetsDir="~/code/git/dotfiles/vim/snips"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
+let g:UltiSnipsSnippetDirectories=[$HOME.'/code/git/dotfiles/vim/snips']
 let g:UltiSnipsEditSplit= "context"
 let g:UltiSnipsExpandTrigger = '<C-]>'
 let g:UltiSnipsJumpForwardTrigger = '<C-]>'
