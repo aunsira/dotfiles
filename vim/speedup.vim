@@ -216,6 +216,10 @@ nnoremap <leader>bw :BW<CR>
 " Git push stash code
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 
+" hub
+map <leader>hb :!hub browse<cr>
+map <leader>hc :!hub compare<cr>
+
 " Quickly open recently files
 map <Leader>sc :sp db/schema.rb<cr>
 
