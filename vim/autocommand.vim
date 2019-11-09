@@ -95,4 +95,10 @@ autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
 " :GV Default diffs to unfolded
 autocmd FileType git set foldlevel=1
 
+" Workaround slowdown in neovim. ref: https://github.com/SirVer/ultisnips/issues/593
+augroup ultisnips_no_auto_expansion
+  au!
+  au VimEnter * au! UltiSnips_AutoTrigger
+augroup END
+
 " vim:ft=vim

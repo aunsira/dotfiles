@@ -114,7 +114,6 @@ let g:UltiSnipsExpandTrigger = '<C-]>'
 let g:UltiSnipsJumpForwardTrigger = '<C-]>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-[>'
 
-
 " SplitJoin
 let g:splitjoin_trailing_comma = 0
 let g:splitjoin_ruby_curly_braces = 0
