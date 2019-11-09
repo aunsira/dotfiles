@@ -397,6 +397,7 @@ nmap t" gri"
 nmap t[ gri[
 nmap t( gri(
 nmap t{ gri{
+nmap t9 gri(
 nmap tw griw
 nmap tl gril==
 nmap tq griq
@@ -406,6 +407,7 @@ nmap y' yi'
 nmap y" yi"
 nmap y[ yi[
 nmap y( yi(
+nmap y9 yi(
 nmap y{ yi{
 
 nmap vw viw
@@ -413,6 +415,7 @@ nmap v' vi'
 nmap v" vi"
 nmap v[ vi[
 nmap v( vi(
+nmap v9 vi(
 nmap v{ vi{
 
 nmap cw ciw
@@ -421,12 +424,14 @@ nmap c" ci"
 nmap c[ ci[
 nmap c( ci(
 nmap c{ ci{
+nmap c9 ci(
 nmap cl Vs
 
 nmap d' di'
 nmap d" di"
 nmap d[ di[
 nmap d( di(
+nmap d9 di(
 nmap d{ di{
 nmap dw daw
 
