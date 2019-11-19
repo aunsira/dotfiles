@@ -140,7 +140,7 @@ nmap UC Uc
 nmap  <silent> \<space> :ToggleGstatus<cr>
 nnoremap \p :Gpush<cr>
 nnoremap \b :Gblame<cr>
-nnoremap \<tab> :Gdiff<cr>
+nnoremap <silent> \<tab> :<C-U>if &diff<bar>diffupdate<bar>elseif !v:count && empty(<SID>git_do('diff -- '.shellescape(FugitivePath())))<bar>echo 'no changes'<bar>else<bar>exe 'Gvdiff'.(v:count ? ' HEAD'.repeat('^', v:count) : '')<bar>call feedkeys('<c-v><c-l>')<bar>endif<cr>
 
 " Make Y act like other capitals
 map Y yg_
@@ -484,5 +484,8 @@ nnoremap <leader>, :!
 
 nnoremap [z I[]<Space><Esc>
 nnoremap [x I[x]<Space><Esc>
+
+inoremap uu _
+cnoremap uu _
 
 " vim:ft=vim
