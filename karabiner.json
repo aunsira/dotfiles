@@ -318,6 +318,29 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Eject key (mapped to f16) to CMD + h",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "f16",
+                  "modifiers": {
+                    "mandatory": [],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "h",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
