@@ -1,5 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'AaronLasseigne/yank-code'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
