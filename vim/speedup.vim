@@ -448,6 +448,7 @@ omap b i%
 nnoremap <leader>A :A<cr>
 nnoremap <leader>av :AV<cr>
 nnoremap <leader>at :AT<cr>
+nnoremap <leader>as :AS<cr>
 
 " Insert current time
 inoremap <silent> <C-G><C-T> <C-R>=repeat(complete(col('.'),map(["%Y-%m-%d %H:%M:%S","%a, %d %b %Y %H:%M:%S %z","%Y %b %d","%d-%b-%y","%a %b %d %T %Z %Y"],'strftime(v:val)')+[localtime()]),0)<CR>
@@ -462,6 +463,7 @@ nnoremap <leader>ue :UltiSnipsEdit<Space>
 nnoremap <leader>tg :ALEToggle<cr>
 
 nnoremap <leader>ss :!spring stop<cr>
+nnoremap <leader>pp :!rails db:test:prepare<cr>
 
 " mimic the behavior of /%Vfoobar which searches within the previously
 " selected visual selection
