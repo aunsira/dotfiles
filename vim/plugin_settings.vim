@@ -15,7 +15,7 @@ let g:ruby_indent_assignment_style = 'variable'
 let g:fzf_history_dir = '~/.fzf-history'
 
 if has('nvim')
-  let $FZF_DEFAULT_OPTS .= ' --inline-info'
+  let $FZF_DEFAULT_OPTS .= "--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
   let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 endif
 
