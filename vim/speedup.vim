@@ -314,15 +314,15 @@ cnoremap <c-l> <right>
 cnoremap <c-a> <C-b>
 
 " Search in project, but open at bottom of screen.
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, '', fzf#vim#with_preview('right:55%', '?'))
+" command! -bang -nargs=* Ag
+"   \ call fzf#vim#ag(<q-args>, '', fzf#vim#with_preview('right:55%', '?'))
 
 " as well as above, but open in full screen.
-" command! -bang -nargs=* Ag
-"   \ call fzf#vim#ag(<q-args>,
-"   \ <bang>0 ? fzf#vim#with_preview('up:60%')
-"   \         : fzf#vim#with_preview('right:50%:hidden', '?'),
-"   \ <bang>0)
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \ <bang>0 ? fzf#vim#with_preview('up:60%')
+  \         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \ <bang>0)
 
 " Search file and also show preview.
 " command! -bang -nargs=? -complete=dir Files
