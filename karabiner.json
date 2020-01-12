@@ -341,6 +341,31 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "CMD + Eject key to minimize",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "f16",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "m",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
