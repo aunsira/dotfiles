@@ -25,6 +25,7 @@ Plug 'ervandew/supertab'
 Plug 'fatih/molokai'
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
+Plug 'itchyny/vim-cursorword'
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jordwalke/VimSplitBalancer'
