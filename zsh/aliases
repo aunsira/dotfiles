@@ -92,6 +92,7 @@ alias killruby='killall -9 ruby'
 alias kp='kops'
 alias ll="ls -FGlh"
 alias ls="ls -AFG"
+alias m='git checkout master'
 alias master='git checkout master'
 alias mon='nodemon '
 alias nuke='git-nuke $(gb)'
