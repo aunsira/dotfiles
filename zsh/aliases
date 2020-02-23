@@ -95,6 +95,7 @@ alias ls="ls -AFG"
 alias m='git checkout master'
 alias master='git checkout master'
 alias mon='nodemon '
+alias notes='cd ~/Dropbox/notes/'
 alias nuke='git-nuke $(gb)'
 alias p8='ping 8.8.8.8'
 alias rc='bin/rails console'
