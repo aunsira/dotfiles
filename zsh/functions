@@ -149,4 +149,38 @@ function git-on-master {
   git rebase master && git push -f
 }
 
+function environment_lookup {
+  val=`eb list 2>/dev/null | grep $1`
+  if [[ $val == *"*"* ]]; then
+    echo "$val" | colrm 1 2
+  else
+    echo "$val"
+  fi
+}
+
+function deploy {
+  environment=`environment_lookup $1`
+  eb deploy $environment
+}
+
+function shell {
+  environment=`environment_lookup $1`
+  eb ssh $environment
+}
+
+function deployment-log {
+  environment=`environment_lookup $1`
+  eb logs $environment -g /aws/elasticbeanstalk/$environment/var/log/eb-activity.log --stream
+}
+
+function access-log {
+  environment=`environment_lookup $1`
+  eb logs $environment -g /aws/elasticbeanstalk/$environment/var/log/nginx/access.log --stream
+}
+
+function error-log {
+  environment=`environment_lookup $1`
+  eb logs $environment -g /aws/elasticbeanstalk/$environment/var/log/nginx/error.log --stream
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
