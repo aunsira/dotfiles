@@ -182,5 +182,3 @@ function error-log {
   environment=`environment_lookup $1`
   eb logs $environment -g /aws/elasticbeanstalk/$environment/var/log/nginx/error.log --stream
 }
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -11,3 +11,5 @@ source $ZSH/oh-my-zsh.sh
 . ~/.zsh/aliases
 . ~/.zsh/config
 . ~/.zsh/functions
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
