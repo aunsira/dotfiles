@@ -60,3 +60,12 @@
   template = ~/.gitmessage
 [branch]
   sort=-committerdate # Sort branches by last commit date, descending.
+[tig "color"]
+	# A strange looking cursor line
+	cursor		= red	black underline
+	# UI colors
+	title-blur	= black	white
+	title-focus	= black	green	bold
+# View-specific color
+[tig "color.tree"]
+	date		= cyan	default	bold

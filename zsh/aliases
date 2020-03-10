@@ -132,6 +132,7 @@ alias stashls='git stash list'
 alias stashpop='git stash pop'
 alias stashshow='git stash show stash@{0}  -p'
 alias t='tmux -2'
+alias ts='tig status'
 alias tmux='tmux -2'
 alias u='cd ..'
 alias v.="nvim ."
