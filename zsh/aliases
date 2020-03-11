@@ -8,12 +8,12 @@ alias ......="cd ../../../../.."            # .. five times
 alias cd-="cd -"
 alias cd.='cd ..'
 alias cd..="cd .."
-alias ai='cd ~/code/git/datawow-ai'
 alias dot='cd ~/code/git/dotfiles'
-alias ks='cd ~/code/git/k-sequencing'
 alias ky='cd ~/code/git/kiyo/kiyo_api'
-alias kyt='cd ~/code/git/kiyo-text'
-alias tk='cd ~/code/git/datawow-tasker'
+alias ai='cd ~/code/git/posmoni-ai'
+alias im='cd ~/code/git/posmoni-image'
+alias tk='cd ~/code/git/posmoni-tasker'
+alias dmp='cd ~/code/git/dmp'
 
 # For speed me up
 alias -g G='| grep'
