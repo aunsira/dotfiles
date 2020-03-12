@@ -167,4 +167,7 @@ endfunction
 let g:mkdp_browserfunc = 'MKDPSplit'
 let g:mkdp_browser = 'Safari'
 
+" let g:goyo_width = 100
+" let g:goyo_height = 100
+
 " vim:ft=vim
