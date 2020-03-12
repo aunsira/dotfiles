@@ -213,7 +213,7 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " Kill buffer with leader + bd and keep the window presents
-nnoremap <leader>bw :BW<CR>
+nnoremap <leader>bw :bp\|bd #<CR>
 
 " Git push stash code
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
