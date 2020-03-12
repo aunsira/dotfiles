@@ -424,7 +424,11 @@ snippet rspec
 require 'rails_helper'
 
 describe ${1} do
-  ${2}
+	describe "${2:docstring}" do
+		it "works" do
+			${3}
+		end
+	end
 end
 endsnippet
 
