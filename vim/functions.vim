@@ -12,7 +12,7 @@ function! Save()
   if &filetype != 'MARKDOWN'
     execute 'FixWhitespace'
   endif
-  execute ':wa'
+  execute ':wa!'
 endfunction
 
 " Google
