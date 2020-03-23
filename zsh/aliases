@@ -13,7 +13,7 @@ alias ky='cd ~/code/git/kiyo/kiyo_api'
 alias ai='cd ~/code/git/posmoni-ai'
 alias im='cd ~/code/git/posmoni-image'
 alias tk='cd ~/code/git/posmoni-tasker'
-alias dmp='cd ~/code/git/dmp'
+alias dmp='cd ~/code/git/dmp-backend'
 
 # For speed me up
 alias -g G='| grep'
