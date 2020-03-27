@@ -280,7 +280,11 @@ grep(${1:/pattern/}) { |${2:match}| ${3} }
 endsnippet
 
 snippet sub
-${1:g}sub(${2:/pattern/}) { |${3:match}| ${4} }
+subject { $1 }
+endsnippet
+
+snippet s
+subject
 endsnippet
 
 snippet sca "scan" w
@@ -352,6 +356,12 @@ snippet expectany
 expect_any_instance_of(${1}).to receive(:${2}).and_return(${3})
 endsnippet
 
+snippet de
+describe '${1}' do
+	${2}
+end
+endsnippet
+
 snippet desc
 describe `!p
 def ClassName(path):
@@ -401,8 +411,8 @@ subject(:${1}) { ${2} }
 endsnippet
 
 snippet it
-it 'works' do
-	${1}
+it '${1}' do
+	${2}
 end
 endsnippet
 
@@ -419,7 +429,7 @@ end
 endsnippet
 
 snippet spec
-require 'spec_helper'
+require 'rails_helper'
 
 describe ${1} do
 	${2}
