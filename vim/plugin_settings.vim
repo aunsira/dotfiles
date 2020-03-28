@@ -3,14 +3,14 @@ let g:EasyMotion_smartcase = 1
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
 " vim-ruby
-let ruby_space_errors=1
 let ruby_no_expensive = 1
 let ruby_operators = 1
 let ruby_space_errors=1
 let ruby_spellcheck_strings = 1
 
-let g:ruby_indent_access_modifier_style = 'indent'
-let g:ruby_indent_assignment_style = 'variable'
+let g:ruby_indent_access_modifier_style = 'normal'
+let g:ruby_indent_assignment_style = 'hanging'
+let g:ruby_indent_block_style = 'do'
 
 " CTRL-N and CTRL-P to revious-history instead of down and up.
 let g:fzf_history_dir = '~/.fzf-history'
