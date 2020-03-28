@@ -30,6 +30,8 @@ set confirm                       " confirm unsaved changes
 set nohidden
 set autoread
 set timeoutlen=500
+set ttimeout
+set ttimeoutlen=1
 set nocul
 set re=1                          " use old regexpengine to avoid lagging scroll.
 set termguicolors
