@@ -317,6 +317,10 @@ cnoremap <c-k> <up>
 cnoremap <c-l> <right>
 cnoremap <c-a> <C-b>
 
+" Move line in insert mode
+inoremap <C-j> <ESC>:m .+1<CR>==gi
+inoremap <C-k> <ESC>:m .-2<CR>==gi
+
 " Search in project, but open at bottom of screen.
 " command! -bang -nargs=* Ag
 "   \ call fzf#vim#ag(<q-args>, '', fzf#vim#with_preview('right:55%', '?'))
