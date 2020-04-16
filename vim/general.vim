@@ -45,7 +45,7 @@ set path+=**                      " For clever completion with the :find command
 set nu
 set relativenumber
 set completeopt-=preview
-set clipboard=unnamed
+" set clipboard=unnamed
 set undofile                      " Maintain undo history between sessions
 set undodir=/tmp//,.
 set viminfo='1000                 " Oldfiles to 1000 last recently opened files, :History uses it
