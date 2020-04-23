@@ -19,6 +19,7 @@ Plug 'christoomey/vim-tmux-runner'
 Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ecomba/vim-ruby-refactoring'
+Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
