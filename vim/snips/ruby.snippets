@@ -383,11 +383,11 @@ end
 endsnippet
 
 snippet descit
-describe '#$1' do
-	subject(:${1}) { instance.$1 }
+describe '$1' do
+	subject { instance.${1} }
 
 	it 'works' do
-		$1
+		subject
 	end
 end
 endsnippet
@@ -440,8 +440,8 @@ snippet rspec
 require 'rails_helper'
 
 describe ${1} do
-	describe "${2:docstring}" do
-		it "works" do
+	describe '${2:docstring}' do
+		it 'works' do
 			${3}
 		end
 	end
