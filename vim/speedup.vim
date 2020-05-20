@@ -425,6 +425,7 @@ nmap v[ vi[
 nmap v( vi(
 nmap v9 vi(
 nmap v{ vi{
+nmap vl vil
 
 nmap cw ciw
 nmap c' ci'
@@ -433,7 +434,7 @@ nmap c[ ci[
 nmap c( ci(
 nmap c{ ci{
 nmap c9 ci(
-nmap cl Vs
+nmap cl cil
 
 nmap d' di'
 nmap d" di"
@@ -442,6 +443,13 @@ nmap d( di(
 nmap d9 di(
 nmap d{ di{
 nmap dw daw
+nmap dl dil
+
+" Paste in line from vim-system-copy
+nmap cvl cvil
+" Remap default copy key from vim-system-copy
+nmap cy <Plug>SystemCopy
+xmap cy <Plug>SystemCopy
 
 " vim-textobj-quotes eg. ciq, diq, viq, yiq, tiq
 xmap q iq
