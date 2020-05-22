@@ -455,6 +455,9 @@ xmap cy <Plug>SystemCopy
 xmap q iq
 omap q iq
 
+xmap w iw
+omap w iw
+
 " Easier to reach % for matching block/bracket
 nmap <C-b> %
 xmap b i%
