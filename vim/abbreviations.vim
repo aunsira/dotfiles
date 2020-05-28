@@ -14,8 +14,15 @@ iab cons consensus
 iab Cons Consensus
 iab nec necessary
 iab stag staging
+iab Stag Staging
 iab prod production
+iab Prod Production
 iab incr increase
 iab decr decrease
 iab impl implementation
 iab Impl Implementation
+iab pr Pull Request
+iab depl deployment
+iab Depl Deployment
+iab tx transaction
+iab Tx Transaction

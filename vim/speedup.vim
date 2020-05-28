@@ -425,7 +425,6 @@ nmap v[ vi[
 nmap v( vi(
 nmap v9 vi(
 nmap v{ vi{
-nmap vl vil
 
 nmap cw ciw
 nmap c' ci'
