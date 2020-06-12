@@ -26,3 +26,5 @@ iab depl deployment
 iab Depl Deployment
 iab tx transaction
 iab Tx Transaction
+iab pmn posmoni
+iab Pmn Posmoni

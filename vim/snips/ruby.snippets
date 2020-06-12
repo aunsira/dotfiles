@@ -905,23 +905,23 @@ RAILS_DEFAULT_LOGGER.${1:debug} ${0}
 endsnippet
 
 snippet logd
-Rails.logger.debug { '${1:message}' }
+Rails.logger.debug '${1:message}'
 endsnippet
 
 snippet loge
-Rails.logger.error { '${1:message}' }
+Rails.logger.error '${1:message}'
 endsnippet
 
 snippet logf
-Rails.logger.fatal { '${1:message}' }
+Rails.logger.fatal '${1:message}'
 endsnippet
 
 snippet logi
-Rails.logger.info { '${1:message}' }
+Rails.logger.info '${1:message}'
 endsnippet
 
 snippet logw
-Rails.logger.warn { '${1:message}' }
+Rails.logger.warn '${1:message}'
 endsnippet
 
 snippet mapc
@@ -1002,6 +1002,10 @@ endsnippet
 
 snippet pa "params" w
 params[:${1:id}]
+endsnippet
+
+snippet op "options" w
+options[:${1:id}]
 endsnippet
 
 snippet ra

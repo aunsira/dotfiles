@@ -1,8 +1,8 @@
-snippet cl "console.log(...)" b
-console.log($0);
+snippet cl "console.log(...)" i
+console.log($0)
 endsnippet
 
-snippet fun "function with dynamic docblock" b
+snippet fun "function with dynamic docblock" w
 `!p
 # Currently Ultisnips does not support dynamic tabstops, so we cannot add
 # tabstops to the datatype for these param tags until that feature is added.
@@ -26,7 +26,7 @@ else:
 },
 endsnippet
 
-snippet re "require" b
+snippet re "require" w
 const `!p
 def formatVariableName(path):
 	if path == 'react/addons':

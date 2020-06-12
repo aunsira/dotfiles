@@ -168,4 +168,7 @@ endfunction
 let g:mkdp_browserfunc = 'MKDPSplit'
 let g:mkdp_browser = 'Safari'
 
+" want the default to scroll down the list
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
 " vim:ft=vim
