@@ -11,6 +11,7 @@ map <C-x> <C-w>c
 nnoremap <silent><Leader>w <esc>:call Save()<cr>
 nnoremap <silent><Leader>q :q!<cr>
 nnoremap <Leader>Q :qa!<cr>
+noremap <Leader>wq :wq<cr>
 
 " Circular windows navigation
 nnoremap <tab>   <c-w>w
@@ -443,6 +444,9 @@ nmap d9 di(
 nmap d{ di{
 nmap dw daw
 nmap dl dil
+
+nmap 'w ysiw'
+nmap "w ysiw"
 
 " Paste in line from vim-system-copy
 nmap cvl cvil
