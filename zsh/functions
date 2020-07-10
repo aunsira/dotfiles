@@ -21,6 +21,10 @@ is_in_git_repo() {
   git rev-parse HEAD > /dev/null 2>&1
 }
 
+base() {
+  echo -n $1 | base64 | pbcopy
+}
+
 gf() {
   is_in_git_repo || return
   git -c color.status=always status --short |
