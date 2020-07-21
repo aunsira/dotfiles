@@ -186,3 +186,27 @@ function error-log {
   environment=`environment_lookup $1`
   eb logs $environment -g /aws/elasticbeanstalk/$environment/var/log/nginx/error.log --stream
 }
+
+function getpods {
+  kubectl -n $1 get pods
+}
+
+function podbash {
+  kubectl exec -it -n $1 $2 bash
+}
+
+function podlogs {
+  kubectl -n $1 logs -f $2
+}
+
+function ctx {
+  kubectl config get-contexts
+}
+
+function ctx-staging {
+  kubectl config use-context arn:aws:eks:ap-southeast-1:240615393030:cluster/datawow-staging
+}
+
+function ctx-production {
+  kubectl config use-context arn:aws:eks:ap-southeast-1:240615393030:cluster/datawow-production
+}
