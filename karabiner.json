@@ -10,7 +10,7 @@
         "parameters": {
           "basic.simultaneous_threshold_milliseconds": 50,
           "basic.to_delayed_action_delay_milliseconds": 500,
-          "basic.to_if_alone_timeout_milliseconds": 200,
+          "basic.to_if_alone_timeout_milliseconds": 1000,
           "basic.to_if_held_down_threshold_milliseconds": 500,
           "mouse_motion_to_scroll.speed": 100
         },
@@ -147,6 +147,89 @@
                     "key_code": "f19",
                     "modifiers": [
                       "any"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "left shift + right shift to f19",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "right_shift",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f19",
+                    "modifiers": [
+                      "any"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "right shift + left shift to f19",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "left_shift",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_shift"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f19",
+                    "modifiers": [
+                      "any"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Ctrl + x to close safari tab",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com\\.apple\\.Safari$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "x",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "w",
+                    "modifiers": [
+                      "left_command"
                     ]
                   }
                 ],
@@ -343,6 +426,40 @@
             ]
           },
           {
+            "description": "Ctrl + enter to cmd + h",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^io\\.alacritty$",
+                      "^com\\.qvacua\\.VimR$"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": [
+                      "control"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "h",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "CMD + Eject key to minimize",
             "manipulators": [
               {
@@ -360,6 +477,85 @@
                     "key_code": "m",
                     "modifiers": [
                       "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Ctrl + cmd + enter to minimize",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": [
+                      "command",
+                      "control"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "m",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Left control + right shift to command + shift + right square bracket",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "right_shift",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "close_bracket",
+                    "modifiers": [
+                      "command",
+                      "shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Left control + left shift + right shift to command + shift + left square bracket",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "right_shift",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control",
+                      "left_shift"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "open_bracket",
+                    "modifiers": [
+                      "command",
+                      "shift"
                     ]
                   }
                 ],
@@ -400,7 +596,7 @@
                 "key_code": "caps_lock"
               },
               "to": {
-                "key_code": "left_control"
+                "key_code": "right_control"
               }
             }
           ]
@@ -439,22 +635,6 @@
               },
               "to": {
                 "key_code": "left_command"
-              }
-            },
-            {
-              "from": {
-                "key_code": "right_command"
-              },
-              "to": {
-                "key_code": "right_option"
-              }
-            },
-            {
-              "from": {
-                "key_code": "right_option"
-              },
-              "to": {
-                "key_code": "right_command"
               }
             }
           ]
@@ -500,7 +680,7 @@
                 "key_code": "right_option"
               },
               "to": {
-                "key_code": "right_command"
+                "key_code": "f19"
               }
             }
           ]
@@ -516,16 +696,7 @@
           },
           "ignore": false,
           "manipulate_caps_lock_led": false,
-          "simple_modifications": [
-            {
-              "from": {
-                "key_code": "f20"
-              },
-              "to": {
-                "key_code": "f19"
-              }
-            }
-          ]
+          "simple_modifications": []
         },
         {
           "disable_built_in_keyboard_if_exists": true,
@@ -576,13 +747,26 @@
           },
           "ignore": false,
           "manipulate_caps_lock_led": true,
+          "simple_modifications": []
+        },
+        {
+          "disable_built_in_keyboard_if_exists": false,
+          "fn_function_keys": [],
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": false,
+            "product_id": 632,
+            "vendor_id": 1452
+          },
+          "ignore": false,
+          "manipulate_caps_lock_led": true,
           "simple_modifications": [
             {
               "from": {
-                "consumer_key_code": "eject"
+                "key_code": "caps_lock"
               },
               "to": {
-                "key_code": "f19"
+                "key_code": "left_control"
               }
             }
           ]
@@ -694,7 +878,23 @@
       "simple_modifications": [
         {
           "from": {
+            "consumer_key_code": "eject"
+          },
+          "to": {
+            "key_code": "f16"
+          }
+        },
+        {
+          "from": {
             "key_code": "caps_lock"
+          },
+          "to": {
+            "key_code": "left_control"
+          }
+        },
+        {
+          "from": {
+            "key_code": "right_option"
           },
           "to": {
             "key_code": "left_control"
