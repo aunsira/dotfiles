@@ -187,6 +187,7 @@ function error-log {
   eb logs $environment -g /aws/elasticbeanstalk/$environment/var/log/nginx/error.log --stream
 }
 
+# K8s
 function getpods {
   kubectl -n $1 get pods
 }
@@ -209,4 +210,14 @@ function ctx-staging {
 
 function ctx-production {
   kubectl config use-context arn:aws:eks:ap-southeast-1:240615393030:cluster/datawow-production
+}
+
+# Files matching a search
+function vms {
+  vim $(ag -l "$1") -c "silent! /$1"
+}
+
+# Files selected from fuzzy finding w/ fzf
+function vf {
+  vim $(fzf --multi --preview 'bat --style=numbers --color=always --line-range :500 {}')
 }
