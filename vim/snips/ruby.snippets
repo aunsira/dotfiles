@@ -402,6 +402,74 @@ describe '' do
 end
 endsnippet
 
+snippet deindex "describe index action" w
+let(:user) { create(:user) }
+let(:format) { :html }
+
+before do
+	sign_in user
+end
+
+describe 'GET #index' do
+	subject { get :index, params: params, format: format }
+
+	let(:params) { {  } }
+
+	context 'succeeds' do
+		it 'returns 200' do
+			expect(subject).to have_http_status(:ok)
+		end
+
+		it 'assigns ${1:resource}' do
+			subject
+			expect(assigns(:$1)).to eq 'foo'
+		end
+	end
+end
+endsnippet
+
+snippet deshow "describe show action" w
+let(:user) { create(:user) }
+let(:format) { :html }
+
+before do
+	sign_in user
+end
+
+describe 'GET #show' do
+	subject { get :show, params: params, format: format }
+
+	let(:params) { {  } }
+
+	context 'succeeds' do
+		it 'returns 200' do
+			expect(subject).to have_http_status(:ok)
+		end
+
+		it 'assigns ${1:resource}' do
+			subject
+			expect(assigns(:$1)).to eq 'foo'
+		end
+	end
+end
+endsnippet
+
+snippet deupdate "describe update action" w
+describe 'PUT #update' do
+	subject { put :update, params: params, format: format }
+
+	let(:params) { {  } }
+
+	context 'succeeds' do
+		it { is_expected.to redirect_to(root_url) }
+
+		it 'updates ${1:resource} ${2:attribute}' do
+			expect { subject }.to change { $1.reload.$2 }.to('foo')
+		end
+	end
+end
+endsnippet
+
 snippet let
 let(:${1}) { ${2} }
 endsnippet
@@ -502,6 +570,10 @@ endsnippet
 
 snippet iexpb
 it { expect { ${1:object} }.${2} ${0} }
+endsnippet
+
+snippet isexp
+it { is_expected.to eq ${0} }
 endsnippet
 
 snippet exe
