@@ -470,6 +470,22 @@ describe 'PUT #update' do
 end
 endsnippet
 
+snippet decreate "describe create action" w
+describe 'POST #create' do
+	subject { post :create, params: params, format: format }
+
+	let(:params) { {  } }
+
+	context 'succeeds' do
+		it { is_expected.to redirect_to(root_url) }
+
+		it 'creates ${1:resource} ${2:attribute}' do
+			expect { subject }.to change($1, :count).by(1)
+		end
+	end
+end
+endsnippet
+
 snippet let
 let(:${1}) { ${2} }
 endsnippet
