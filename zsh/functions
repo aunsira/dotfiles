@@ -137,6 +137,14 @@ function exit() {
   fi
 }
 
+function g {
+  if [[ $# > 0 ]]; then
+    git $@
+  else
+    git status
+  fi
+}
+
 function git-trust-bin() {
   mkdir -p .git/safe
 }
@@ -151,6 +159,10 @@ function git-on-master {
   git checkout master && git pull --rebase
   git checkout $branch
   git rebase master && git push -f
+}
+
+function git-done {
+  gh pr merge --squash --delete-branch && gpl && bundle install && prepdb && bin/rspec
 }
 
 function environment_lookup {

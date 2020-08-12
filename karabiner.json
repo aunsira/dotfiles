@@ -562,6 +562,29 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "escape to command + tab",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": {
+                    "mandatory": [],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },

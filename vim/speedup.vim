@@ -110,7 +110,8 @@ map <leader>gs :Gstatus<cr>gg<c-n>
 map <leader>gc :Gcommit<cr>
 map <leader>gg :Gbrowse<cr>
 map <leader>gb :Gblame<cr>
-map <leader>gd :Gdiff<cr>
+map <leader>gd :Gdiffsplit<cr>
+map <leader>gh :Ghdiffsplit<cr>
 map <leader>gp :Gpush<cr>
 map <leader>ge :Gread<cr>
 
