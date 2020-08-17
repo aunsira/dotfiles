@@ -507,8 +507,8 @@ nnoremap <leader><leader> :
 vnoremap <leader><leader> :
 nnoremap <leader>, :!
 
-nnoremap [z I- [ ]<Space><Esc>
-nnoremap [x I- [x]<Space><Esc>
+nnoremap [z I[ ]<Space><Esc>
+nnoremap [x I[x]<Space><Esc>
 
 inoremap uu _
 cnoremap uu _

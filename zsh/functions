@@ -165,6 +165,14 @@ function git-done {
   gh pr merge --squash --delete-branch && gpl && bundle install && prepdb && bin/rspec
 }
 
+# Squash merge but keep branch alive
+function mkb {
+  branch=`git_branch_name`
+  gh pr merge --squash -d=false
+  git checkout master && git pull --rebase
+  git checkout $branch
+}
+
 function environment_lookup {
   val=`eb list 2>/dev/null | grep $1`
   if [[ $val == *"*"* ]]; then
