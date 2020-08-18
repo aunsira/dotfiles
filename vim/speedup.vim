@@ -69,6 +69,7 @@ nnoremap <leader>L :Lines<cr>
 nnoremap <enter> :Buffers<cr>
 nnoremap <silent> <Leader>` :Marks<CR>
 nnoremap <leader>fa :Files app/<cr>
+nnoremap <leader>fp :Files app/**/api<cr>
 nnoremap <leader>fm :Files app/models/<cr>
 nnoremap <leader>fc :Files app/controllers/<cr>
 nnoremap <leader>ff :Files spec/factories<cr>

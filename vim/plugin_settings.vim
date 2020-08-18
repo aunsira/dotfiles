@@ -144,6 +144,7 @@ let g:grammarous#disabled_rules = {
 " vim match-up
 let g:matchup_matchparen_deferred = 1
 let g:matchup_matchparen_status_offscreen = 0
+let g:matchup_matchparen_enabled = 0
 
 let g:projectionist_heuristics = {
       \ '*.go': {
