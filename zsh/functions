@@ -162,7 +162,11 @@ function git-on-master {
 }
 
 function git-done {
-  gh pr merge --squash --delete-branch && gpl && bundle install && prepdb && bin/rspec
+  gh pr merge --squash --delete-branch && gpl && bundle install && dbprep && ssbr
+}
+
+function got {
+  git rebase --onto $1 $2
 }
 
 # Squash merge but keep branch alive
@@ -171,6 +175,10 @@ function mkb {
   gh pr merge --squash -d=false
   git checkout master && git pull --rebase
   git checkout $branch
+}
+
+function plr {
+  git pull --rebase origin $1
 }
 
 function environment_lookup {
