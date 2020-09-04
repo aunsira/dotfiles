@@ -101,4 +101,6 @@ augroup ultisnips_no_auto_expansion
   au VimEnter * au! UltiSnips_AutoTrigger
 augroup END
 
+command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+
 " vim:ft=vim

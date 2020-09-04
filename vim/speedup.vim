@@ -1,6 +1,8 @@
 " Shortcut for typing :Ag
 nnoremap <leader>ag :Ag!<Space>
 nnoremap <leader><BS> :Ag!<Space>
+" Search in specific module
+nnoremap <leader>rg :Rag!<Space>
 
 " Write/Exit shortcuts
 inoremap <C-s> <esc>:call Save()<cr>
@@ -345,6 +347,8 @@ command! -bang -nargs=* Ag
 "   \                 <bang>0 ? fzf#vim#with_preview('up:60%')
 "   \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
 "   \                 <bang>0)
+
+command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " Test file
 nnoremap <leader>tf :TestFile<cr>
