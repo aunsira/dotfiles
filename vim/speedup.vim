@@ -245,7 +245,7 @@ nnoremap <leader>u5 m`^i##### <esc>``6l
 nmap <leader>ba :bufdo bd<cr>
 
 " Add binding.
-nnoremap <leader>bp orequire "pry"; binding.pry<esc>
+nnoremap <leader>bp orequire "pry"; binding.pry<esc>:call Save()<cr>
 
 map <Leader>rn :call RenameFile()<cr>
 
