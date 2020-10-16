@@ -240,6 +240,10 @@ function ctx-production {
   kubectl config use-context arn:aws:eks:ap-southeast-1:240615393030:cluster/datawow-production
 }
 
+function ctx-juwwa {
+  kubectl config use-context arn:aws:eks:ap-northeast-1:685264768833:cluster/juwwa
+}
+
 # Files matching a search
 function vms {
   vim $(ag -l "$1") -c "silent! /$1"
