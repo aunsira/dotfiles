@@ -424,6 +424,7 @@ nmap y[ yi[
 nmap y( yi(
 nmap y9 yi(
 nmap y{ yi{
+nmap y<Space> yt<Space>
 
 nmap vw viw
 nmap v' vi'
@@ -441,6 +442,7 @@ nmap c( ci(
 nmap c{ ci{
 nmap c9 ci(
 nmap cl cil
+nmap c<Space> ct<Space>
 
 nmap d' di'
 nmap d" di"
