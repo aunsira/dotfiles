@@ -433,6 +433,7 @@ nmap v[ vi[
 nmap v( vi(
 nmap v9 vi(
 nmap v{ vi{
+nmap v<Space> vt<Space>
 
 nmap cw ciw
 nmap c' ci'
@@ -452,6 +453,7 @@ nmap d9 di(
 nmap d{ di{
 nmap dw daw
 nmap dl dil
+nmap d<Space> dt<Space>
 
 nmap 'w ysiw'
 nmap "w ysiw"
