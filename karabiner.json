@@ -155,56 +155,6 @@
             ]
           },
           {
-            "description": "left shift + right shift to f19",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "right_shift",
-                  "modifiers": {
-                    "mandatory": [
-                      "left_shift"
-                    ],
-                    "optional": []
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f19",
-                    "modifiers": [
-                      "any"
-                    ]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "right shift + left shift to f19",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "left_shift",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_shift"
-                    ],
-                    "optional": []
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "f19",
-                    "modifiers": [
-                      "any"
-                    ]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
             "description": "Ctrl + x to close safari tab",
             "manipulators": [
               {
@@ -323,11 +273,15 @@
                 "to": [
                   {
                     "key_code": "a",
-                    "modifiers": ["left_control"]
+                    "modifiers": [
+                      "left_control"
+                    ]
                   },
                   {
                     "key_code": "n",
-                    "modifiers": ["left_control"]
+                    "modifiers": [
+                      "left_control"
+                    ]
                   }
                 ],
                 "type": "basic"
@@ -431,29 +385,6 @@
                     "modifiers": [
                       "command",
                       "shift"
-                    ]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Eject key (mapped to f16) to CMD + h",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "f16",
-                  "modifiers": {
-                    "mandatory": [],
-                    "optional": []
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "h",
-                    "modifiers": [
-                      "left_command"
                     ]
                   }
                 ],
@@ -592,29 +523,6 @@
                     "modifiers": [
                       "command",
                       "shift"
-                    ]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "escape to command + tab",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "escape",
-                  "modifiers": {
-                    "mandatory": [],
-                    "optional": []
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "tab",
-                    "modifiers": [
-                      "left_command"
                     ]
                   }
                 ],
@@ -940,7 +848,7 @@
             "consumer_key_code": "eject"
           },
           "to": {
-            "key_code": "f16"
+            "key_code": "f19"
           }
         },
         {
