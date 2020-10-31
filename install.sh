@@ -47,5 +47,5 @@ read -n1 -p "Symlink karabiner.json ~/.config/karabiner/karabiner.json (overwrit
 echo ""
 if [[ "$symlink_karabiner_answer" == "y" ]]; then
   ln -sfn $basedir/karabiner.json ${HOME}/.config/karabiner/karabiner.json
-  echo -e ${HOME}/.karabiner.d/configuration/karabiner.json \t→\t $basedir/karabiner.json
+  echo -e ${HOME}/.config/karabiner/karabiner.json \t→\t $basedir/karabiner.json
 fi
