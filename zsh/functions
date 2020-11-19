@@ -220,7 +220,7 @@ function getpods {
   kubectl -n $1 get pods
 }
 
-function podbash {
+function pb {
   kubectl exec -it -n $1 $2 bash
 }
 
