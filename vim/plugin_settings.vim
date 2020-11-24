@@ -3,7 +3,7 @@ let g:EasyMotion_smartcase = 1
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
 " vim-ruby
-let ruby_no_expensive = 1
+" let ruby_no_expensive = 0
 let ruby_operators = 1
 let ruby_space_errors=1
 let ruby_spellcheck_strings = 1
@@ -171,6 +171,7 @@ let g:mkdp_browserfunc = 'MKDPSplit'
 let g:mkdp_browser = 'Safari'
 
 " want the default to scroll down the list
-let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 
 " vim:ft=vim
