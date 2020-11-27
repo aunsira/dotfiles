@@ -165,7 +165,7 @@ let g:projectionist_heuristics = {
       \ }
 
 function! MKDPSplit(url)
-  call system('x5050 Safari '.shellescape(a:url))
+  call system('x5050 left Safari '.shellescape(a:url))
 endfunction
 let g:mkdp_browserfunc = 'MKDPSplit'
 let g:mkdp_browser = 'Safari'
