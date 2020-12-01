@@ -64,6 +64,7 @@ nnoremap <leader>tn :tabe<cr>
 " Map fzf plugin
 nnoremap <silent> <C-p> :Files<cr>
 nnoremap <silent> <M-BS> :Files<cr>
+nnoremap <silent> <leader>hf :History<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
