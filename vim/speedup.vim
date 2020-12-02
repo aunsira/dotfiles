@@ -523,4 +523,7 @@ nnoremap [x I[x]<Space><Esc>
 inoremap uu _
 cnoremap uu _
 
+" easier to reach context completion
+inoremap <c-x><c-u> <c-x><c-p>
+
 " vim:ft=vim
