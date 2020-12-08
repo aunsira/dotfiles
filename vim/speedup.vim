@@ -227,6 +227,7 @@ map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 " hub
 map <leader>hb :!hub browse<cr>
 map <leader>hc :!hub compare<cr>
+map <leader>hps :!hub pr show<cr>
 
 " Quickly open recently files
 map <Leader>sc :sp db/schema.rb<cr>
@@ -520,8 +521,8 @@ nnoremap <leader>, :!
 nnoremap [z I[ ]<Space><Esc>
 nnoremap [x I[x]<Space><Esc>
 
-inoremap uu _
-cnoremap uu _
+" inoremap uu _
+" cnoremap uu _
 
 " easier to reach context completion
 inoremap <c-x><c-u> <c-x><c-p>
