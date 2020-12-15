@@ -221,7 +221,11 @@ function getpods {
 }
 
 function pb {
-  kubectl exec -it -n $1 $2 bash
+  kubectl exec -it -n $1 $2 -- bash
+}
+
+function prc {
+  kubectl exec -it -n $1 $2 -- rails c
 }
 
 function podlogs {
