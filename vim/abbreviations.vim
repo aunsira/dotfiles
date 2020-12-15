@@ -21,7 +21,6 @@ iab incr increase
 iab decr decrease
 iab impl implementation
 iab Impl Implementation
-iab pr Pull Request
 iab depl deployment
 iab Depl Deployment
 iab tx transaction
