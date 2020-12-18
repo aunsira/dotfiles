@@ -418,6 +418,7 @@ nmap t9 gri(
 nmap tw griw
 nmap tl gril==
 nmap tq griq
+nmap t= gra=
 
 nmap yw yiw
 nmap y' yi'
@@ -427,6 +428,7 @@ nmap y( yi(
 nmap y9 yi(
 nmap y{ yi{
 nmap y<Space> yt<Space>
+nmap y= ya=
 
 nmap vw viw
 nmap v' vi'
@@ -436,6 +438,7 @@ nmap v( vi(
 nmap v9 vi(
 nmap v{ vi{
 nmap v<Space> vt<Space>
+nmap v= va=
 
 nmap cw ciw
 nmap c' ci'
@@ -446,6 +449,7 @@ nmap c{ ci{
 nmap c9 ci(
 nmap cl cil
 nmap c<Space> ct<Space>
+nmap c= ca=
 
 nmap d' di'
 nmap d" di"
@@ -456,6 +460,7 @@ nmap d{ di{
 nmap dw daw
 nmap dl dil
 nmap d<Space> dt<Space>
+nmap d= da=
 
 nmap 'w ysiw'
 nmap "w ysiw"
