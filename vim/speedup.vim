@@ -532,4 +532,7 @@ nnoremap [x I[x]<Space><Esc>
 " easier to reach context completion
 inoremap <c-x><c-u> <c-x><c-p>
 
+" fzf-tags
+nnoremap <c-]> :FZFTags<cr>
+
 " vim:ft=vim
