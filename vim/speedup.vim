@@ -535,4 +535,7 @@ inoremap <c-x><c-u> <c-x><c-p>
 " fzf-tags
 nnoremap <c-]> :FZFTags<cr>
 
+" zoomwintab.vim
+nnoremap <leader>z :ZoomWinTabToggle<cr>
+
 " vim:ft=vim
