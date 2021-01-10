@@ -324,6 +324,11 @@ cnoremap <c-k> <up>
 cnoremap <c-l> <right>
 cnoremap <c-a> <C-b>
 
+" Stay in search mode in Vim by using Ctrl-g and Ctrl-t after searching for a pattern
+" https://vimtricks.com/p/vimtrick-stay-in-search-mode/
+cnoremap <c-s> <c-t>
+cnoremap <c-t> <c-g>
+
 " Move line in insert mode
 inoremap <C-j> <ESC>:m .+1<CR>==gi
 inoremap <C-k> <ESC>:m .-2<CR>==gi
