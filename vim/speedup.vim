@@ -8,10 +8,10 @@ nnoremap <leader>rg :Rag!<Space>
 inoremap <C-s> <esc>:call Save()<cr>
 nnoremap <C-s> <esc>:call Save()<cr>
 inoremap <C-c> <esc>
-" map <Leader>q :copen<cr><tab>
+map <Leader>q :copen<cr><tab>
 map <C-x> <C-w>c
 nnoremap <silent><Leader>w <esc>:call Save()<cr>
-nnoremap <silent><Leader>q :q!<cr>
+" nnoremap <silent><Leader>q :q!<cr>
 nnoremap <Leader>Q :qa!<cr>
 noremap <Leader>wq :wq<cr>
 
@@ -359,6 +359,7 @@ command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'option
 
 " Test file
 nnoremap <leader>tf :TestFile<cr>
+nnoremap <leader>ta :TestFile ./<cr>
 nnoremap <leader>ts :TestNearest<cr>
 nnoremap <leader>tl :TestLast<cr>
 

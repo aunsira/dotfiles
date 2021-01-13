@@ -69,8 +69,12 @@ let g:used_javascript_libs = 'jquery,underscore,react,requirejs,handlebars'
 
 " Try test nearest with dispatch
 " vim-test
+" let test#strategy = {
+"       \ 'nearest': 'vtr',
+"       \ 'file':    'dispatch',
+"       \}
 let test#strategy = {
-      \ 'nearest': 'vtr',
+      \ 'nearest': 'dispatch',
       \ 'file':    'dispatch',
       \}
 
