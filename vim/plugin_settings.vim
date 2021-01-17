@@ -168,6 +168,41 @@ let g:projectionist_heuristics = {
       \   }
       \ }
 
+" https://thoughtbot.com/blog/extending-rails-vim-with-custom-commands
+let g:rails_projections = {
+  \ "app/serializers/*_serializer.rb": {
+  \   "command": "serializer",
+  \   "template": "class {camelcase|capitalize|colons}Serializer\n  include FastJsonapi::ObjectSerializer\n\n  attributes\nend"
+  \ },
+  \ "app/models/*.rb": {
+  \   "command": "model",
+  \   "template": "class {camelcase|capitalize|colons} < ApplicationRecord\nend"
+  \ },
+  \ "spec/factories/*.rb": {
+  \   "command": "factory",
+  \   "template": "FactoryBot.define do\n  factory :{underscore} do\n  end\nend"
+  \ },
+  \ "app/uploaders/*_uploader.rb": {
+  \   "command": "uploader",
+  \   "template": "class {camelcase|capitalize|colons}Uploader < CarrierWave::Uploader::Base\n  include CarrierWave::MiniMagick\nend"
+  \ },
+  \ "app/api/v1/*_api.rb": {
+  \   "command": "api",
+  \   "template": "class V1::{camelcase|capitalize|colons}API < Grape::API\n  resources :{underscore|plural} do\n  end\nend"
+  \ },
+  \ "spec/*_controller_spec.rb": {
+  \   "alternate": ["app/controllers/{}_controller.rb"]
+  \ },
+  \ "spec/api/*_spec.rb": {
+  \   "alternate": ["app/api/{}.rb"]
+  \ },
+  \ "app/api/*.rb": {
+  \   "alternate": ["spec/api/{}_spec.rb"]
+  \ },
+  \ "app/controllers/*_controller.rb": {
+  \   "spec": ["spec/{}_controller_spec.rb"]
+  \ } }
+
 function! MKDPSplit(url)
   call system('x5050 left Safari '.shellescape(a:url))
 endfunction
