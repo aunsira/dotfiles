@@ -194,7 +194,8 @@ let g:rails_projections = {
   \   "alternate": ["app/controllers/{}_controller.rb"]
   \ },
   \ "spec/api/*_spec.rb": {
-  \   "alternate": ["app/api/{}.rb"]
+  \   "alternate": ["app/api/{}.rb"],
+  \   "template": "require 'rails_helper'\n\ndescribe {camelcase|capitalize|colons}, type: :api do\nend"
   \ },
   \ "app/api/*.rb": {
   \   "alternate": ["spec/api/{}_spec.rb"]
