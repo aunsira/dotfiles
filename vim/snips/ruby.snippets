@@ -856,7 +856,7 @@ def create
 			format.json { render json: @$1 }
 		else
 			format.html { render action: 'new' }
-			format.json  { render json: @$1.errors, status: :unprocessable_entity }
+			format.json { render json: @$1.errors, status: :unprocessable_entity }
 		end
 	end
 end
@@ -869,7 +869,7 @@ def destroy
 
 	respond_to do |format|
 		format.html { redirect_to($1s_url) }
-		format.json  { render json: :success }
+		format.json { render json: :success }
 	end
 end
 endsnippet
@@ -924,7 +924,7 @@ def update
 			format.json { render json: @$1 }
 		else
 			format.html { render action: 'edit' }
-			format.json  { render json: @$1.errors, status: :unprocessable_entity }
+			format.json { render json: @$1.errors, status: :unprocessable_entity }
 		end
 	end
 end

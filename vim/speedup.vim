@@ -358,10 +358,10 @@ command! -bang -nargs=* Ag
 command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " Test file
-nnoremap <leader>tf :TestFile<cr>
-nnoremap <leader>ta :TestFile ./<cr>
-nnoremap <leader>ts :TestNearest<cr>
-nnoremap <leader>tl :TestLast<cr>
+nnoremap <leader>tf :wa<cr>:TestFile<cr>
+nnoremap <leader>ta :wa<cr>:TestFile ./<cr>
+nnoremap <leader>ts :wa<cr>:TestNearest<cr>
+nnoremap <leader>tl :wa<cr>:TestLast<cr>
 
 " Quick fix lint
 nmap zn :ALEFix<cr>
