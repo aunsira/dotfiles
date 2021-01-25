@@ -852,10 +852,15 @@ def create
 	respond_to do |format|
 		if @$1.save
 			flash[:notice] = '$2 was successfully created.'
-			format.html { redirect_to(@$1) }
-			format.json { render json: @$1 }
+			format.html { redirect_to($1s_url) }
+			format.json do
+				render json: @$1,
+							 serializer: $3,
+							 adapter: :json,
+							 status: :created
+			end
 		else
-			format.html { render action: 'new' }
+			format.html { render action: :new }
 			format.json { render json: @$1.errors, status: :unprocessable_entity }
 		end
 	end
@@ -885,8 +890,13 @@ def index
 	@${1:model_class_name} = ${2:ModelClassName}.all
 
 	respond_to do |format|
-		format.html # index.html.erb
-		format.json { render json: @$1 }
+		format.html
+		format.json do
+			render json: @$1,
+						 each_serializer: $3,
+						 meta: pagination_meta(@$1, per, page),
+						 adapter: :json
+		end
 	end
 end
 endsnippet
@@ -896,7 +906,7 @@ def new
 	@${1:model_class_name} = ${2:ModelClassName}.new
 
 	respond_to do |format|
-		format.html # new.html.erb
+		format.html
 		format.json { render json: @$1 }
 	end
 end
@@ -907,7 +917,7 @@ def show
 	@${1:model_class_name} = ${2:ModelClassName}.find(params[:id])
 
 	respond_to do |format|
-		format.html # show.html.erb
+		format.html
 		format.json { render json: @$1 }
 	end
 end
@@ -920,8 +930,12 @@ def update
 	respond_to do |format|
 		if @$1.update($1_params)
 			flash[:notice] = '$2 was successfully updated.'
-			format.html { redirect_to(@$1) }
-			format.json { render json: @$1 }
+			format.html { redirect_to($1s_url) }
+			format.json do
+				render json: @$1,
+							 serializer: $3,
+							 adapter: :json
+			end
 		else
 			format.html { render action: 'edit' }
 			format.json { render json: @$1.errors, status: :unprocessable_entity }
@@ -933,6 +947,32 @@ endsnippet
 snippet defparams
 def ${1:model_class_name}_params
 	params.require(:$1).permit()
+end
+endsnippet
+
+snippet pag "page" w
+page($1).per($2)
+endsnippet
+
+snippet act_serial
+class `!p
+def ClassName(path):
+	return re.sub(r'[_]', '', path.title())
+snip.rv = ClassName(snip.basename)
+` < ActiveModel::Serializer
+	attributes :$1
+end
+endsnippet
+
+snippet fast_serial
+class `!p
+def ClassName(path):
+	return re.sub(r'[_]', '', path.title())
+snip.rv = ClassName(snip.basename)
+`
+	include FastJsonapi::ObjectSerializer
+
+	attributes :$1
 end
 endsnippet
 
@@ -1102,6 +1142,10 @@ endsnippet
 
 snippet ral
 render action: '${1:action}', layout: '${0:layoutname}'
+endsnippet
+
+snippet re
+redirect_to action: :${0:action}
 endsnippet
 
 snippet sc

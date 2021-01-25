@@ -172,7 +172,7 @@ let g:projectionist_heuristics = {
 let g:rails_projections = {
   \ "app/serializers/*_serializer.rb": {
   \   "command": "serializer",
-  \   "template": "class {camelcase|capitalize|colons}Serializer\n  include FastJsonapi::ObjectSerializer\n\n  attributes\nend"
+  \   "template": "class {camelcase|capitalize|colons}Serializer < ActiveModel::Serializer\n  include FastJsonapi::ObjectSerializer\n\n  attributes\nend"
   \ },
   \ "app/models/*.rb": {
   \   "command": "model",
