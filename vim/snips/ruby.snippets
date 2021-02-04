@@ -770,7 +770,7 @@ class ${0:$1}sController < ApplicationController
 		@${1/./\l$0/}s = ${1:$1}.all
 
 		respond_to do |format|
-			format.html # index.html.erb
+			format.html
 			format.json { render json: @${1/./\l$0/}s }
 		end
 	end
@@ -778,7 +778,7 @@ class ${0:$1}sController < ApplicationController
 	# GET /${1/./\l$0/}s/1
 	def show
 		respond_to do |format|
-			format.html # show.html.erb
+			format.html
 			format.json { render json: @${1/./\l$0/} }
 		end
 	end
@@ -788,7 +788,7 @@ class ${0:$1}sController < ApplicationController
 		@${1/./\l$0/} = ${1:$1}.new
 
 		respond_to do |format|
-			format.html # new.html.erb
+			format.html
 			format.json { render json: @${1/./\l$0/} }
 		end
 	end
@@ -803,12 +803,11 @@ class ${0:$1}sController < ApplicationController
 
 		respond_to do |format|
 			if @${1/./\l$0/}.save
-				flash[:notice] = '${1:$1} was successfully created.'
-				format.html { redirect_to(@${1/./\l$0/}) }
-				format.json { render json: @${1/./\l$0/} }
+				format.html { redirect_to(@${1/./\l$0/}), notice: '${1:$1} was successfully created.' }
+				format.json { render json: @${1/./\l$0/}, status: :created }
 			else
-				format.html { render :action => "new" }
-				format.json  { render json: @${1/./\l$0/}.errors, status: :unprocessable_entity }
+				format.html { render :new, status: :unprocessable_entity }
+				format.json { render json: @${1/./\l$0/}.errors, status: :unprocessable_entity }
 			end
 		end
 	end
@@ -817,12 +816,11 @@ class ${0:$1}sController < ApplicationController
 	def update
 		respond_to do |format|
 			if @${1/./\l$0/}.update(params[:${1/./\l$0/}])
-				flash[:notice] = '${1:$1} was successfully updated.'
-				format.html { redirect_to(@${1/./\l$0/}) }
+				format.html { redirect_to(@${1/./\l$0/}), notice: '${1:$1} was successfully updated.' }
 				format.json { render json: @${1/./\l$0/} }
 			else
-				format.html { render :action => "edit" }
-				format.json  { render json: @${1/./\l$0/}.errors, status: :unprocessable_entity }
+				format.html { render :edit, status: :unprocessable_entity }
+				format.json { render json: @${1/./\l$0/}.errors, status: :unprocessable_entity }
 			end
 		end
 	end
@@ -838,9 +836,10 @@ class ${0:$1}sController < ApplicationController
 	end
 
 	private
-		def find_${1/./\l$0/}
-			@${1/./\l$0/} = ${1:Model}.find(params[:id])
-		end
+
+	def find_${1/./\l$0/}
+		@${1/./\l$0/} = ${1:Model}.find(params[:id])
+	end
 
 end
 endsnippet
@@ -851,8 +850,7 @@ def create
 
 	respond_to do |format|
 		if @$1.save
-			flash[:notice] = '$2 was successfully created.'
-			format.html { redirect_to($1s_url) }
+			format.html { redirect_to($1s_url), notice: '$2 was successfully created.' }
 			format.json do
 				render json: @$1,
 							 serializer: $3,
@@ -860,7 +858,7 @@ def create
 							 status: :created
 			end
 		else
-			format.html { render action: :new }
+			format.html { render :new, status: :unprocessable_entity }
 			format.json { render json: @$1.errors, status: :unprocessable_entity }
 		end
 	end
@@ -929,15 +927,14 @@ def update
 
 	respond_to do |format|
 		if @$1.update($1_params)
-			flash[:notice] = '$2 was successfully updated.'
-			format.html { redirect_to($1s_url) }
+			format.html { redirect_to($1s_url), notice: '$2 was successfully updated.' }
 			format.json do
 				render json: @$1,
 							 serializer: $3,
 							 adapter: :json
 			end
 		else
-			format.html { render action: 'edit' }
+			format.html { render :edit, status: :unprocessable_entity }
 			format.json { render json: @$1.errors, status: :unprocessable_entity }
 		end
 	end
