@@ -33,6 +33,8 @@ set timeoutlen=500
 set ttimeout
 set ttimeoutlen=1
 set nocul
+set regexpengine=1                " use old engine
+" set regexpengine=2              " use new engine
 set re=1                          " use old regexpengine to avoid lagging scroll.
 set termguicolors
 set diffopt=filler,vertical
@@ -54,5 +56,7 @@ set gdefault                      " assume the /g flag on :s substitutions to re
 set shiftround                    " When at 3 spaces and I hit >>, go to 4, not 5.
 set nocursorcolumn                " speed up syntax highlighting
 set noshowmatch                   " Do not show matching brackets by flickering
+set autowrite                     " Automatically :write before running commands
+set hidden
 
 " vim:ft=vim
