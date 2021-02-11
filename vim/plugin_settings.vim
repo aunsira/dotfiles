@@ -45,6 +45,7 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 let g:fzf_layout = { 'down': '~20%' }
+let g:fzf_preview_window = []
 
 " Disable default key of vim-move
 let g:move_map_keys = 0
