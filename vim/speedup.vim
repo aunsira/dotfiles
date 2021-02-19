@@ -69,7 +69,9 @@ imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 nnoremap <leader>L :Lines<cr>
-nnoremap <enter> :Buffers<cr>
+" nnoremap <enter> :Buffers<cr>
+" way faster with ctrl-p on switching between buffers
+nnoremap <enter> :CtrlPBuffer<cr>
 nnoremap <silent> <Leader>` :Marks<CR>
 nnoremap <leader>fa :Files app/<cr>
 nnoremap <leader>fp :Files app/**/api<cr>
@@ -298,6 +300,7 @@ nnoremap Q @q
 
 nnoremap <F5> :NumberToggle<cr>
 nnoremap <F6> :setlocal spell! spell?<CR>
+nnoremap <F7> :CtrlPClearCache<cr>
 
 command! Q q " Bind :Q to :q
 command! Qall qall
@@ -543,5 +546,13 @@ nnoremap <c-]> :FZFTags<cr>
 
 " zoomwintab.vim
 nnoremap <leader>z :ZoomWinTabToggle<cr>
+
+" tab navigation (with alt + number)
+" but the keyboard sends weird character to vim,,,so let's just map it then
+nnoremap ¡ 1gt
+nnoremap ™ 2gt
+nnoremap £ 3gt
+nnoremap ¢ 4gt
+nnoremap ∞ 5gt
 
 " vim:ft=vim
