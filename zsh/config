@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Save a ton of history
+HISTSIZE=20000
+HISTFILE=~/.zsh_history
+SAVEHIST=20000
+
 export EDITOR=nvim
 export GOPATH=~/gosrc
 export GOROOT=/usr/local/opt/go/libexec
@@ -34,3 +39,5 @@ command -v tree > /dev/null && export FZF_ALT_C_OPTS="--preview 'tree -C {} | he
 
 # Enable Kiex, Elixir version manager
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+
+bindkey -e
