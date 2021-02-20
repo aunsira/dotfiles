@@ -547,12 +547,11 @@ nnoremap <c-]> :FZFTags<cr>
 " zoomwintab.vim
 nnoremap <leader>z :ZoomWinTabToggle<cr>
 
-" tab navigation (with alt + number)
-" but the keyboard sends weird character to vim,,,so let's just map it then
-nnoremap ¡ 1gt
-nnoremap ™ 2gt
-nnoremap £ 3gt
-nnoremap ¢ 4gt
-nnoremap ∞ 5gt
+" tab navigation (with leader + number)
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
 
 " vim:ft=vim
