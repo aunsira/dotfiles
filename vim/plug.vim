@@ -81,7 +81,6 @@ Plug 'vim-scripts/SyntaxRange'
 Plug 'w0rp/ale'
 Plug 'wellle/targets.vim'
 Plug 'zackhsi/fzf-tags'
-Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 

@@ -215,17 +215,4 @@ let g:mkdp_browser = 'Safari'
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 
-" Use Crtlp for only switching between buffers, so disable the ctrl-p mapping
-let g:ctrlp_map = ''
-
-" Make CtrlP use ag for listing the files. Way faster and no useless files.
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 1
-
-" Don't jump to a different place just because the file is already open, dingus
-let g:ctrlp_switch_buffer = 0
-
-" Ignore certain directories
-let g:ctrlp_custom_ignore = '_site'
-
 " vim:ft=vim

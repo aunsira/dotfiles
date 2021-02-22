@@ -70,8 +70,7 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 nnoremap <leader>L :Lines<cr>
 " nnoremap <enter> :Buffers<cr>
-" way faster with ctrl-p on switching between buffers
-nnoremap <enter> :CtrlPBuffer<cr>
+nnoremap <enter> :ls<CR>:b<Space>
 nnoremap <silent> <Leader>` :Marks<CR>
 nnoremap <leader>fa :Files app/<cr>
 nnoremap <leader>fp :Files app/**/api<cr>
@@ -300,7 +299,6 @@ nnoremap Q @q
 
 nnoremap <F5> :NumberToggle<cr>
 nnoremap <F6> :setlocal spell! spell?<CR>
-nnoremap <F7> :CtrlPClearCache<cr>
 
 command! Q q " Bind :Q to :q
 command! Qall qall
