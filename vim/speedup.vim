@@ -69,8 +69,8 @@ imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 nnoremap <leader>L :Lines<cr>
-" nnoremap <enter> :Buffers<cr>
 nnoremap <enter> :ls<CR>:b<Space>
+nnoremap <leader><enter> :Buffers<cr>
 nnoremap <silent> <Leader>` :Marks<CR>
 nnoremap <leader>fa :Files app/<cr>
 nnoremap <leader>fp :Files app/**/api<cr>
@@ -117,7 +117,7 @@ map <leader>gg :Gbrowse<cr>
 map <leader>gb :Gblame<cr>
 map <leader>gd :Gdiffsplit<cr>
 map <leader>gh :Ghdiffsplit<cr>
-map <leader>gp :Gpush<cr>
+map <leader>gp :Git push<cr>
 map <leader>ge :Gread<cr>
 
 " Executes git cmd in the context of b:git_dir.
@@ -147,7 +147,7 @@ nmap UW Uw
 nmap UC Uc
 
 nmap  <silent> \<space> :ToggleGstatus<cr>
-nnoremap \p :Gpush<cr>
+nnoremap \p :Git push<cr>
 nnoremap \b :Gblame<cr>
 nnoremap <silent> \<tab> :<C-U>if &diff<bar>diffupdate<bar>elseif !v:count && empty(<SID>git_do('diff -- '.shellescape(FugitivePath())))<bar>echo 'no changes'<bar>else<bar>exe 'Gvdiff'.(v:count ? ' HEAD'.repeat('^', v:count) : '')<bar>call feedkeys('<c-v><c-l>')<bar>endif<cr>
 
