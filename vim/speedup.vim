@@ -69,8 +69,7 @@ imap <c-x><c-k> <plug>(fzf-complete-word)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 nnoremap <leader>L :Lines<cr>
-nnoremap <enter> :ls<CR>:b<Space>
-nnoremap <leader><enter> :Buffers<cr>
+nnoremap <enter> :Buffers<cr>
 nnoremap <silent> <Leader>` :Marks<CR>
 nnoremap <leader>fa :Files app/<cr>
 nnoremap <leader>fp :Files app/**/api<cr>

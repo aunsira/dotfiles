@@ -152,6 +152,8 @@ let g:matchup_matchparen_deferred = 1
 let g:matchup_matchparen_status_offscreen = 0
 let g:matchup_matchparen_enabled = 0
 
+" https://github.com/junegunn/fzf.vim/issues/392
+let g:projectionist_ignore_term = 1
 let g:projectionist_heuristics = {
       \ '*.go': {
       \   '*.go': {
