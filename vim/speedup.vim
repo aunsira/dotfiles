@@ -324,6 +324,7 @@ cnoremap <c-j> <down>
 cnoremap <c-k> <up>
 cnoremap <c-l> <right>
 cnoremap <c-a> <C-b>
+cnoremap <c-y> <right><bs>
 
 " Stay in search mode in Vim by using Ctrl-g and Ctrl-t after searching for a pattern
 " https://vimtricks.com/p/vimtrick-stay-in-search-mode/
