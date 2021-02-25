@@ -317,6 +317,7 @@ inoremap <C-h> <C-o>h
 inoremap <C-l> <C-o>a
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
+inoremap <c-y> <right><bs>
 " Movement in command mode
 cnoremap <c-h> <left>
 cnoremap <c-j> <down>
