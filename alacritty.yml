@@ -462,3 +462,5 @@ key_bindings:
   - { key: Backslash, mods: Alt,       chars: "\x1b\\"                      } # Alt + \
   - { key: Backslash, mods: Alt|Shift, chars: "\x1b|"                       } # Alt + |
   - { key: N, mods: Alt, action: SpawnNewInstance }
+  - { key: H,        mods: Alt,     chars: "\x1bh"                       }
+  - { key: H,              mods: Command|Alt,                action: HideOtherApplications }

@@ -484,7 +484,7 @@
             ]
           },
           {
-            "description": "Ctrl + cmd + enter to minimize",
+            "description": "Ctrl + cmd + enter to hide other windows",
             "manipulators": [
               {
                 "from": {
@@ -499,8 +499,9 @@
                 },
                 "to": [
                   {
-                    "key_code": "m",
+                    "key_code": "h",
                     "modifiers": [
+                      "left_option",
                       "left_command"
                     ]
                   }
@@ -509,6 +510,7 @@
               }
             ]
           },
+
           {
             "description": "Left control + right shift to command + shift + right square bracket",
             "manipulators": [
