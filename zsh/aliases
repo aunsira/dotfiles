@@ -33,6 +33,7 @@ alias cb='gcb'
 alias cdgo='cd ~/gosrc/src/github.com'
 alias cdh='cd ~'
 alias cdl='cd ~/.config/nvim'
+alias cdr="cd $(git rev-parse --show-toplevel)"
 alias clean='git clean -df'
 alias co='gco'
 alias d='wordpos def'
