@@ -220,6 +220,6 @@ let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 
 " Adjust height option to Copen,,,when run test inside vim
 " https://github.com/tpope/vim-dispatch/issues/177
-let g:dispatch_quickfix_height=25
+" let g:dispatch_quickfix_height=25
 
 " vim:ft=vim
