@@ -17,8 +17,8 @@ window:
   # Window dimensions in character columns and lines
   # (changes require restart)
   dimensions:
-    columns: 80
-    lines: 24
+    columns: 100
+    lines: 30
 
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
@@ -28,8 +28,33 @@ window:
     y: 2
 
   # Window decorations
-  # Setting this to false will result in window without borders and title bar.
-  decorations: full
+  #
+  # Available values:
+  # - `full`: Window with title bar and title bar buttons
+  # - `none`: Window without title bar, rounded corners, or drop shadow
+  # - `transparent`: Window with title bar with transparent background and title
+  #   bar buttons
+  # - `buttonless`: Window with title bar with transparent background and no
+  #   title bar buttons
+  # Window decorations
+  #
+  # Values for `decorations`:
+  #     - full: Borders and title bar
+  #     - none: Neither borders nor title bar
+  #     - buttonless: Title bar, transparent background and title bar buttons
+  #     - transparent: Title bar, transparent background, but no title bar buttons
+  decorations: none
+
+  # Startup Mode (changes require restart)
+  #
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  #
+  # Values for `startup_mode` (macOS only):
+  #   - SimpleFullscreen
+  startup_mode: SimpleFullscreen
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
@@ -152,7 +177,7 @@ visual_bell:
   duration: 0
 
 # Background opacity
-background_opacity: 1.0
+background_opacity: 0.95
 
 # Mouse bindings
 #
@@ -463,3 +488,4 @@ key_bindings:
   - { key: Backslash, mods: Alt|Shift, chars: "\x1b|"                       } # Alt + |
   - { key: N, mods: Alt, action: SpawnNewInstance }
   - { key: H,              mods: Command|Alt,                action: HideOtherApplications }
+  - { key: Return, mods: Command, action: ToggleSimpleFullscreen }
