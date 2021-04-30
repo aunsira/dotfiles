@@ -428,6 +428,8 @@ nmap tl gril==
 nmap tq griq
 nmap t= gra=
 
+nmap f9 f(
+
 nmap yw yiw
 nmap y' yi'
 nmap y" yi"
