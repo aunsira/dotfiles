@@ -563,6 +563,144 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "control + command + t to open Alacritty",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control",
+                      "left_command"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'Alacritty.app'"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "control + command + h to open Hey",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control",
+                      "left_command"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'Hey.app'"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "control + command + d to open Dash",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "g",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control",
+                      "left_command"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'Dash.app'"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "control + command + m to open Slack",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control",
+                      "left_command"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'Slack.app'"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "control + command + f to open Telegram",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "e",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control",
+                      "left_command"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'Telegram.app'"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "control + command + s to open Safari",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control",
+                      "left_command"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'Safari.app'"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
