@@ -225,4 +225,6 @@ let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 " https://github.com/tpope/vim-dispatch/issues/177
 " let g:dispatch_quickfix_height=25
 
+let g:markdown_fenced_languages = ['html', 'ruby', 'vim', 'json']
+
 " vim:ft=vim
