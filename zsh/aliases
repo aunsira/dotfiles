@@ -28,6 +28,7 @@ alias bi="bundle install"
 alias br='bin/rspec'
 alias bu='bundle update'
 alias c='clear'
+alias casdbprep='RAILS_ENV=test rails cequel:migrate'
 alias cat='bat'
 alias cb='gcb'
 alias cdgo='cd ~/gosrc/src/github.com'
