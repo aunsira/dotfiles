@@ -7,7 +7,8 @@ nnoremap <leader>rg :Rag!<Space>
 " Write/Exit shortcuts
 inoremap <C-s> <esc>:call Save()<cr>
 nnoremap <C-s> <esc>:call Save()<cr>
-inoremap <C-c> <esc>
+inoremap <C-c> <esc>`^
+nnoremap <C-c> <esc>
 map <Leader>q :copen<cr><tab>
 map <C-x> <C-w>c
 nnoremap <silent><Leader>w <esc>:call Save()<cr>
