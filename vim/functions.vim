@@ -157,7 +157,7 @@ function! ToggleGstatus()
   if buflisted(bufname('.git/index'))
     bd .git/index
   else
-    execute printf(':Gstatus') | normal! gg4j
+    execute printf(':Git') | normal! gg4j
   endif
 endfunction
 command! ToggleGstatus :call ToggleGstatus()

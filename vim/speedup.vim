@@ -111,7 +111,7 @@ nnoremap <leader>; :
 vnoremap <leader>; :
 
 " Git shortcuts
-map <leader>gs :Gstatus<cr>gg<c-n>
+map <leader>gs :Git<cr>gg<c-n>
 map <leader>gc :Gcommit<cr>
 map <leader>gg :Gbrowse<cr>
 map <leader>gb :Gblame<cr>
@@ -133,7 +133,7 @@ nnoremap Uc :Gcommit<cr>
 nnoremap Uf :Gcommit --fixup=
 nnoremap <expr><silent> Ul '@_<cmd>GV'.(v:count?'':'!').'<cr>'
 nnoremap <silent> Ur :Gread<cr>
-nmap <silent> Us :Gstatus<cr>gg<c-n>
+nmap <silent> Us :Git<cr>gg<c-n>
 nnoremap <silent> Uw :if !exists(":Gwrite")<bar>call fugitive#detect(expand('%:p'))<bar>endif<bar>Gwrite<cr>
 nnoremap <silent> Ug :Gbrowse<cr>
 
