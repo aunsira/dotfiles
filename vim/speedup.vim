@@ -556,4 +556,7 @@ noremap <leader>3 3gt
 noremap <leader>4 4gt
 noremap <leader>5 5gt
 
+" reselect pasted text
+nnoremap gp `[v`]
+
 " vim:ft=vim
