@@ -559,4 +559,8 @@ noremap <leader>5 5gt
 " reselect pasted text
 nnoremap gp `[v`]
 
+" tyru/open-browser.vim
+nmap gx <Plug>(openbrowser-open)
+vmap gx <Plug>(openbrowser-open)
+
 " vim:ft=vim

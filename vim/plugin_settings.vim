@@ -227,4 +227,7 @@ let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 
 let g:markdown_fenced_languages = ['html', 'ruby', 'vim', 'json']
 
+" Disable netrw gx mapping
+let g:netrw_nogx = get(g:, 'netrw_nogx', 1)
+
 " vim:ft=vim
