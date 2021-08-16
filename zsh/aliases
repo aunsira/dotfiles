@@ -18,12 +18,12 @@ alias dmp='cd ~/code/git/dmp-backend'
 # Mongo instances
 alias ai0='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-54-168-233-134.ap-northeast-1.compute.amazonaws.com'
 alias ai1='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-18-183-156-236.ap-northeast-1.compute.amazonaws.com'
-alias image0='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-13-113-48-250.ap-northeast-1.compute.amazonaws.com'
-alias image1='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-13-113-222-148.ap-northeast-1.compute.amazonaws.com'
-alias tasker0='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-18-183-101-237.ap-northeast-1.compute.amazonaws.com'
-alias tasker1='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-18-183-172-34.ap-northeast-1.compute.amazonaws.com'
-alias tasker2='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-18-181-211-111.ap-northeast-1.compute.amazonaws.com'
-alias video0='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-35-72-1-140.ap-northeast-1.compute.amazonaws.com'
+alias image0='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-54-95-82-87.ap-northeast-1.compute.amazonaws.com'
+alias image1='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-54-64-174-192.ap-northeast-1.compute.amazonaws.com'
+alias tasker0='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-46-51-232-134.ap-northeast-1.compute.amazonaws.com'
+alias tasker1='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-3-112-238-21.ap-northeast-1.compute.amazonaws.com'
+alias tasker2='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-54-178-68-209.ap-northeast-1.compute.amazonaws.com'
+alias video0='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-18-182-10-19.ap-northeast-1.compute.amazonaws.com'
 
 # For speed me up
 alias -g G='| grep'
