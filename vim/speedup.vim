@@ -563,4 +563,7 @@ nnoremap gp `[v`]
 nmap gx <Plug>(openbrowser-open)
 vmap gx <Plug>(openbrowser-open)
 
+" Dash integration
+nmap <silent> M <Plug>DashSearch
+
 " vim:ft=vim
