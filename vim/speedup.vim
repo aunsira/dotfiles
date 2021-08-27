@@ -84,6 +84,7 @@ nmap <LEADER>vs :vsplit<CR>
 
 " bind K to grep word under cursor
 nnoremap K :Ag! <C-R><C-W><CR>
+nnoremap B :Ag! <C-R><C-W><CR>!spec
 nnoremap <M-Tab> :Ag! <C-R><C-W><CR>
 " bind K to grep word from visual selection
 vnoremap K y:Ag! <C-R>"<CR>
