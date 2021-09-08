@@ -102,6 +102,10 @@ function git-nuke {
   git branch -D $1 && git push origin :$1
 }
 
+function gdme() {
+  gdm -- ":(exclude)*/$1/*_spec.rb"
+}
+
 function take {
   mkdir $1
   cd $1
