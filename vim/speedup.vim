@@ -88,6 +88,7 @@ nnoremap B :Ag! <C-R><C-W><CR>!spec<Space>
 nnoremap <M-Tab> :Ag! <C-R><C-W><CR>
 " bind K to grep word from visual selection
 vnoremap K y:Ag! <C-R>"<CR>
+vnoremap B y:Ag! <C-R>"<CR>!spec<Space>
 vnoremap <leader><BS> y:Ag! <C-R>"<CR>
 " normal search on visual selection
 vnoremap // y/<C-R>"<CR>
@@ -566,5 +567,8 @@ vmap gx <Plug>(openbrowser-open)
 
 " Dash integration
 nmap <silent> M <Plug>DashSearch
+
+" maximize current split or return to previous
+noremap <C-w>m :MaximizerToggle<CR>
 
 " vim:ft=vim
