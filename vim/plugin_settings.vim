@@ -87,7 +87,8 @@ let g:rspec_command = "!bin/rspec {spec}"
 let $NODE_ENV='test'
 
 " Plugin gabebw/vim-spec-runner
-let g:spec_runner_dispatcher = "VtrSendCommand! bin/{command}"
+" let g:spec_runner_dispatcher = "VtrSendCommand! bin/{command}"
+let g:spec_runner_dispatcher = '!echo "{command}" && {command}'
 
 let g:go_term_mode = "split"
 let g:go_term_enabled = 1
@@ -229,5 +230,8 @@ let g:markdown_fenced_languages = ['html', 'ruby', 'vim', 'json']
 
 " Disable netrw gx mapping
 let g:netrw_nogx = get(g:, 'netrw_nogx', 1)
+
+" Add text format surrounding with c key
+let g:surround_99 = "```\r```"
 
 " vim:ft=vim

@@ -58,5 +58,6 @@ set nocursorcolumn                " speed up syntax highlighting
 set noshowmatch                   " Do not show matching brackets by flickering
 set autowrite                     " Automatically :write before running commands
 set hidden
+set noshowmode
 
 " vim:ft=vim
