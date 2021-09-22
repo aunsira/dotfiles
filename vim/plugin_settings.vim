@@ -88,7 +88,7 @@ let $NODE_ENV='test'
 
 " Plugin gabebw/vim-spec-runner
 " let g:spec_runner_dispatcher = "VtrSendCommand! bin/{command}"
-let g:spec_runner_dispatcher = '!echo "{command}" && {command}'
+let g:spec_runner_dispatcher = '!{command}'
 
 let g:go_term_mode = "split"
 let g:go_term_enabled = 1
