@@ -571,4 +571,7 @@ nmap <silent> M <Plug>DashSearch
 " maximize current split or return to previous
 noremap <C-w>m :MaximizerToggle<CR>
 
+" paste and reindent
+nmap p p<esc>gp=
+
 " vim:ft=vim
