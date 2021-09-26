@@ -5,6 +5,8 @@ HISTSIZE=20000
 HISTFILE=~/.zsh_history
 SAVEHIST=20000
 
+setopt share_history
+
 export EDITOR=nvim
 export GOPATH=~/gosrc
 export GOROOT=/usr/local/opt/go/libexec
