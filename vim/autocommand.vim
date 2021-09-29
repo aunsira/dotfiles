@@ -1,5 +1,5 @@
 autocmd FileType json setlocal expandtab shiftwidth=2 tabstop=2
-autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 autoindent
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType gitcommit,markdown set nonumber
 " autocmd FileType gitcommit,markdown set spell
@@ -27,6 +27,9 @@ augroup ruby
   autocmd FileType ruby map tN :w<cr><Plug>RunFocusedSpec
   autocmd FileType ruby map tL :w<cr><Plug>RunMostRecentSpec
   autocmd FileType ruby map tS :w<cr><Plug>RunCurrentSpecFile
+
+  " Make ?,!,:s part of words
+  autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?,!
 augroup END
 
 augroup go
