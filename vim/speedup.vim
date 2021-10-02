@@ -297,6 +297,7 @@ imap <C-V> <C-R>*
 " Map Ctrl+C to copy in Visual mode
 vmap <C-C> "+y
 
+" Execute macro in q
 nnoremap Q @q
 
 nnoremap <F5> :NumberToggle<cr>
@@ -546,7 +547,7 @@ nnoremap [x I[x]<Space><Esc>
 inoremap <c-x><c-u> <c-x><c-p>
 
 " fzf-tags
-nnoremap <c-]> :FZFTags<cr>
+nnoremap <c-]> <c-]>zz
 
 " zoomwintab.vim
 nnoremap <leader>z :ZoomWinTabToggle<cr>
