@@ -86,10 +86,6 @@ let g:rspec_command = "!bin/rspec {spec}"
 " Run vim-test with test environment
 let $NODE_ENV='test'
 
-" Plugin gabebw/vim-spec-runner
-" let g:spec_runner_dispatcher = "VtrSendCommand! bin/{command}"
-let g:spec_runner_dispatcher = '!{command}'
-
 let g:go_term_mode = "split"
 let g:go_term_enabled = 1
 let g:go_fmt_command = "goimports"
