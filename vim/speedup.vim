@@ -546,7 +546,7 @@ nnoremap [x I[x]<Space><Esc>
 " easier to reach context completion
 inoremap <c-x><c-u> <c-x><c-p>
 
-" fzf-tags
+" tags
 nnoremap <c-]> <c-]>zz
 
 " zoomwintab.vim

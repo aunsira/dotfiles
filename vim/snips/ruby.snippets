@@ -394,10 +394,10 @@ endsnippet
 
 snippet descapi "describe api" w
 describe '' do
-	subject(:call) { call_api }
+	subject { call_api }
 
 	it 'succeeds' do
-		expect(call.status).to eq 200
+		expect(subject.status).to eq 200
 	end
 end
 endsnippet
@@ -545,7 +545,7 @@ puts "xxxxxxxxxxxxxx"
 endsnippet
 
 snippet ex
-expect(${1}).to ${2}
+expect(subject).to ${0}
 endsnippet
 
 snippet tz "timezone" w
@@ -581,11 +581,11 @@ snippet ->a
 endsnippet
 
 snippet iexp
-it { expect(${1:object}).${2} ${0} }
+it { expect(subject).${0} ${1} }
 endsnippet
 
 snippet iexpb
-it { expect { ${1:object} }.${2} ${0} }
+it { expect { subject }.${0} ${1} }
 endsnippet
 
 snippet isexp
@@ -593,19 +593,19 @@ it { is_expected.to eq ${0} }
 endsnippet
 
 snippet exe
-expect(${1:object}).to eq ${2:expectation}
+expect(subject).to eq ${1:expectation}
 endsnippet
 
 snippet exp
-expect(${1:object}).to be_present
+expect(subject).to be_present
 endsnippet
 
 snippet exs
-expect(${1:object}.size).to eq ${0}
+expect(subject.size).to eq ${0}
 endsnippet
 
-snippet ex2
-expect(last_response.status).to eq 200
+snippet exs2
+expect(subject.status).to eq 200
 endsnippet
 
 snippet fc "fixture create"
@@ -614,6 +614,10 @@ endsnippet
 
 snippet fcl "fixture create_list"
 create_list(:${1:object}, ${2:number})
+endsnippet
+
+snippet bs "fixture build_stubbed"
+build_stubbed(:${1:object})
 endsnippet
 
 snippet gapi "Grape API Skeleton"
@@ -715,12 +719,12 @@ snippet Conh "ConsensusHistory" w
 ConsensusHistory
 endsnippet
 
-snippet cb "call.body" w
-call.body
+snippet sb "subject.body" w
+subject.body
 endsnippet
 
-snippet cs "call.status" w
-call.status
+snippet ss "subject.status" w
+subject.status
 endsnippet
 
 snippet tx "transaction" w
