@@ -23,6 +23,10 @@ augroup ruby
   autocmd FileType ruby map tL :w<cr>:call RunLastSpec()<CR>
   " autocmd FileType ruby map tA :w<cr>:call RunAllSpecs()<CR>
 
+  nnoremap <leader>ts :wa<cr>:TestNearest -strategy=dispatch<cr>
+  nnoremap <leader>tf :wa<cr>:TestFile -strategy=dispatch<cr>
+  nnoremap <leader>tl :wa<cr>:TestLast -strategy=dispatch<cr>
+
   " Make ?,!,:s part of words
   autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?,!
 augroup END
@@ -38,8 +42,9 @@ augroup go
   autocmd FileType go nmap <silent> <Leader>l <Plug>(go-metalinter)
 
   autocmd FileType go nmap <silent> <leader>b :<C-u>call <SID>build_go_files()<CR>
-  autocmd FileType go nmap <silent> <leader>t  <Plug>(go-test)
-  autocmd FileType go nmap <silent> <leader>gf <Plug>(go-test-func)
+  autocmd FileType go nmap tS :wa<cr>:TestFile -strategy=make<cr>
+  autocmd FileType go nmap tN :wa<cr>:TestNearest -strategy=make -v<cr>
+  autocmd FileType go nmap tL :wa<cr>:TestLast -strategy=make<cr>
   autocmd FileType go nmap <silent> <leader>r  <Plug>(go-run)
   autocmd FileType go nmap <silent> <leader>e  <Plug>(go-install)
 
