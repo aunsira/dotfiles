@@ -490,3 +490,7 @@ key_bindings:
   - { key: N, mods: Alt, action: SpawnNewInstance }
   - { key: H,              mods: Command|Alt,                action: HideOtherApplications }
   - { key: Return, mods: Command, action: ToggleSimpleFullscreen }
+ # Make shift + space available in vim config
+ # ref: https://stackoverflow.com/questions/16359878/how-to-map-shift-enter
+ #      http://www.leonerd.org.uk/hacks/fixterms/
+  - { key: Space,   mods: Shift,   chars: "\x1b[32;2u" }

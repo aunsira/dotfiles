@@ -572,4 +572,8 @@ nmap <silent> M <Plug>DashSearch
 " maximize current split or return to previous
 noremap <C-w>m :MaximizerToggle<CR>
 
+" Shift + Space to underscore
+inoremap <S-Space> _
+cnoremap <S-Space> _
+
 " vim:ft=vim
