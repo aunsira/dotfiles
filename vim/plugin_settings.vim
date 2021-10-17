@@ -66,9 +66,6 @@ let g:ale_ruby_rubocop_auto_correct_all = 1
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
 
-" javascript library syntax
-let g:used_javascript_libs = 'jquery,underscore,react,requirejs,handlebars'
-
 " Try test nearest with dispatch
 " vim-test
 " let test#strategy = {
@@ -104,9 +101,6 @@ let g:go_highlight_operators = 1
 
 let g:go_fold_enable = []
 
-" JSX
-let g:jsx_ext_required = 0
-
 " vim-closetag
 let g:closetag_emptyTags_caseSensitive = 1
 let g:closetag_shortcut = '>'
@@ -140,11 +134,6 @@ let g:switch_custom_definitions =
 let g:netrw_localrmdir='rm -r'
 
 let g:alchemist_tag_disable = 1
-
-" vim-grammarous
-let g:grammarous#disabled_rules = {
-      \ '*' : ['WHITESPACE_RULE', 'EN_QUOTES', 'SENTENCE_WHITESPACE', 'UPPERCASE_SENTENCE_START'],
-      \ }
 
 " vim match-up
 let g:matchup_matchparen_deferred = 1

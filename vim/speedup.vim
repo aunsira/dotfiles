@@ -239,8 +239,6 @@ map <Leader>sc :sp db/schema.rb<cr>
 noremap <Leader>m :set mouse=<CR>
 noremap <Leader>M :set mouse=a<CR>
 
-" nnoremap <leader>u1 m`yypVr=``
-" nnoremap <leader>u2 m`yypVr-``
 nnoremap <leader>u1 m`^i# <esc>``2l
 nnoremap <leader>u2 m`^i## <esc>``3l
 nnoremap <leader>u3 m`^i### <esc>``4l
@@ -540,17 +538,11 @@ nnoremap <leader>, :!
 nnoremap [z I[ ]<Space><Esc>
 nnoremap [x I[x]<Space><Esc>
 
-" inoremap uu _
-" cnoremap uu _
-
 " easier to reach context completion
 inoremap <c-x><c-u> <c-x><c-p>
 
 " tags
 nnoremap <c-]> <c-]>zz
-
-" zoomwintab.vim
-nnoremap <leader>z :ZoomWinTabToggle<cr>
 
 " tab navigation (with leader + number)
 noremap <leader>1 1gt
