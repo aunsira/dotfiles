@@ -314,20 +314,6 @@ nmap zk <Plug>MoveLineUp
 vmap zj <plug>MoveBlockDown
 vmap zk <plug>MoveBlockUp
 
-" Movement in insert mode
-inoremap <C-h> <C-o>h
-inoremap <C-l> <C-o>a
-inoremap <C-j> <C-o>j
-inoremap <C-k> <C-o>k
-inoremap <c-y> <right><bs>
-" Movement in command mode
-cnoremap <c-h> <left>
-cnoremap <c-j> <down>
-cnoremap <c-k> <up>
-cnoremap <c-l> <right>
-cnoremap <c-a> <C-b>
-cnoremap <c-y> <right><bs>
-
 " Stay in search mode in Vim by using Ctrl-g and Ctrl-t after searching for a pattern
 " https://vimtricks.com/p/vimtrick-stay-in-search-mode/
 cnoremap <c-s> <c-t>
