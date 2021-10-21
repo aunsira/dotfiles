@@ -8,6 +8,8 @@ iab seperate separate
 iab dw Data Wow
 iab mod moderation
 iab Mod Moderation
+iab modreator moderator
+iab Modreator Moderator
 iab docv document_verification
 iab Docv DocumentVerification
 iab cons consensus

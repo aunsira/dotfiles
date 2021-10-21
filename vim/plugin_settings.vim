@@ -127,6 +127,7 @@ let g:switch_custom_definitions =
     \   ['approved', 'declined', 'kenta'],
     \   ['gnoon', 'gnui', 'gdee'],
     \   ['asc', 'desc'],
+    \   ['if', 'unless'],
     \   ['foo', 'bar', 'baz']
     \ ]
 
