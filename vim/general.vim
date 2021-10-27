@@ -48,8 +48,8 @@ set nu
 set relativenumber
 set completeopt-=preview
 " set clipboard=unnamed
+set undodir=~/.config/nvim/undo-dir
 set undofile                      " Maintain undo history between sessions
-" set undodir=/tmp//,.
 set viminfo='1000                 " Oldfiles to 1000 last recently opened files, :History uses it
 set maxmempattern=20000
 set gdefault                      " assume the /g flag on :s substitutions to replace all matches in a line
