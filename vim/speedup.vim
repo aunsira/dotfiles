@@ -116,7 +116,7 @@ vnoremap <leader>; :
 map <leader>gs :Git<cr>gg<c-n>
 map <leader>gc :Gcommit<cr>
 map <leader>gg :Gbrowse<cr>
-map <leader>gb :Gblame<cr>
+map <leader>gb :Git blame<cr>
 map <leader>gd :Gdiffsplit<cr>
 map <leader>gh :Ghdiffsplit<cr>
 map <leader>gp :Git push<cr>
@@ -129,7 +129,7 @@ function! s:git_do(cmd) abort
         \ . ' ' . a:cmd)
 endfunction
 
-nnoremap <silent> Ub :Gblame<cr>
+nnoremap <silent> Ub :Git blame<cr>
 nnoremap <silent> Ud :<C-U>if &diff<bar>diffupdate<bar>elseif !v:count && empty(<SID>git_do('diff -- '.shellescape(FugitivePath())))<bar>echo 'no changes'<bar>else<bar>exe 'Gvdiff'.(v:count ? ' HEAD'.repeat('^', v:count) : '')<bar>call feedkeys('<c-v><c-l>')<bar>endif<cr>
 nnoremap Uc :Gcommit<cr>
 nnoremap Uf :Gcommit --fixup=
@@ -150,7 +150,7 @@ nmap UC Uc
 
 nmap  <silent> \<space> :ToggleGstatus<cr>
 nnoremap \p :Git push<cr>
-nnoremap \b :Gblame<cr>
+nnoremap \b :Git blame<cr>
 nnoremap <silent> \<tab> :<C-U>if &diff<bar>diffupdate<bar>elseif !v:count && empty(<SID>git_do('diff -- '.shellescape(FugitivePath())))<bar>echo 'no changes'<bar>else<bar>exe 'Gvdiff'.(v:count ? ' HEAD'.repeat('^', v:count) : '')<bar>call feedkeys('<c-v><c-l>')<bar>endif<cr>
 
 " Make Y act like other capitals
