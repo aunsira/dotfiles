@@ -220,6 +220,7 @@ nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 map <Leader>/ <Plug>(easymotion-sn)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+map <C-_> <Plug>(easymotion-sn)
 
 " Kill buffer with leader + bd and keep the window presents
 nnoremap <leader>bw :bp\|bd #<CR>
