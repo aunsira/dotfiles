@@ -214,8 +214,6 @@ noremap <C-u> <C-u>zz
 " Use GV without hit colon
 map <Leader>gv :GV<cr>
 
-nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
-
 " Use Easymotion instead of normal vim search
 map <Leader>/ <Plug>(easymotion-sn)
 map <Leader>j <Plug>(easymotion-j)
