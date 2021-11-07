@@ -468,9 +468,6 @@ nmap dl dil
 " nmap d<Space> dt<Space>
 nmap d= da=
 
-nmap 'w ysiw'
-nmap "w ysiw"
-
 " Paste in line from vim-system-copy
 nmap cvl cvil
 " Remap default copy key from vim-system-copy
