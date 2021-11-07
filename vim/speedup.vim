@@ -243,6 +243,7 @@ nnoremap <leader>u2 m`^i## <esc>``3l
 nnoremap <leader>u3 m`^i### <esc>``4l
 nnoremap <leader>u4 m`^i#### <esc>``5l
 nnoremap <leader>u5 m`^i##### <esc>``6l
+nnoremap <leader>u9 :norm 90i=<esc><cr>
 
 nmap <leader>ba :bufdo bd<cr>
 
