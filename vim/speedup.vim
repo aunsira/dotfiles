@@ -556,7 +556,7 @@ nmap <silent> M <Plug>DashSearch
 noremap <C-w>m :MaximizerToggle<CR>
 
 " Shift + Space to underscore
-inoremap <S-Space> _
-cnoremap <S-Space> _
+" inoremap <S-Space> _
+" cnoremap <S-Space> _
 
 " vim:ft=vim

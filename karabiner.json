@@ -751,6 +751,33 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Left shift + Space to Underscore",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "hyphen",
+                    "modifiers": [
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
