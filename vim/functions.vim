@@ -178,6 +178,14 @@ function! SquashAll()
   normal ggj}klllcf:w
 endfunction
 
+function! Staging()
+  call feedkeys("/build\<cr>gcjnngck8jo- ")
+  call feedkeys(system("git rev-parse --abbrev-ref HEAD"))
+  call feedkeys("\<esc>13jo- ")
+  call feedkeys(system("git rev-parse --abbrev-ref HEAD"))
+  call feedkeys("\<esc> ")
+endfunction
+
 " https://gist.github.com/habamax/4662821a1dad716f5c18205489203a67
 "" number text object
 "" only "inner" text object: vin, din, cin
