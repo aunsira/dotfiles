@@ -45,6 +45,7 @@ Plug 'mhinz/vim-mix-format'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'rizzatti/dash.vim'

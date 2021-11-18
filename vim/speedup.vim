@@ -559,4 +559,36 @@ noremap <C-w>m :MaximizerToggle<CR>
 " inoremap <S-Space> _
 " cnoremap <S-Space> _
 
+" COC
+let g:coc_global_extensions = [
+  \ 'coc-solargraph',
+  \ 'coc-snippets',
+  \ 'coc-lists',
+  \ 'coc-yaml',
+  \ 'coc-json',
+  \ ]
+
+function! s:RestartCoc() abort
+  silent! CocRestart
+  echohl String | echom 'Restarting COC...' | echohl None
+endfunction
+command! RestartCoc call s:RestartCoc()
+nnoremap <leader>re :RestartCoc<cr>
+
+" https://github.com/neoclide/coc-snippets
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
+
+nmap <silent> <C-]> <Plug>(coc-definition)
+
 " vim:ft=vim

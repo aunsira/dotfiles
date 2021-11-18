@@ -1,0 +1,19 @@
+{
+  "codeLens.enable": true,
+  "solargraph.useBundler": false,
+  "solargraph.autoformat": true,
+  "solargraph.formatting": true,
+  "solargraph.hover": true,
+  "snippets.ultisnips.directories": [
+    "UltiSnips",
+    "~/code/git/dotfiles/vim/snips"
+  ],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "markdown",
+    "Markdown",
+    "ruby",
+    "eruby",
+    "yaml",
+    "json"
+  ]
+}
