@@ -566,6 +566,8 @@ let g:coc_global_extensions = [
   \ 'coc-lists',
   \ 'coc-yaml',
   \ 'coc-json',
+  \ 'coc-highlight',
+  \ 'coc-go',
   \ ]
 
 function! s:RestartCoc() abort
