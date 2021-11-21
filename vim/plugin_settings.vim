@@ -218,4 +218,12 @@ let g:netrw_nogx = get(g:, 'netrw_nogx', 1)
 " Add text format surrounding with c key
 let g:surround_99 = "```\r```"
 
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_new_list_item_indent = 0
+let g:markdown_fenced_languages = [
+  \ 'coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html',
+  \ 'sh', 'bash=sh', 'scala']
+let g:vim_markdown_conceal_code_blocks = 0
+
 " vim:ft=vim

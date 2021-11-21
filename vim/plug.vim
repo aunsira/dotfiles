@@ -48,6 +48,7 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
+Plug 'plasticboy/vim-markdown'
 Plug 'rizzatti/dash.vim'
 Plug 'roman/golden-ratio'
 Plug 'slashmili/alchemist.vim'
