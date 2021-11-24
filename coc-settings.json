@@ -1,5 +1,6 @@
 {
   "codeLens.enable": true,
+  "solargraph.checkGemVersion": false,
   "solargraph.useBundler": false,
   "solargraph.autoformat": true,
   "solargraph.formatting": true,
