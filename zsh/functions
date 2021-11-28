@@ -185,6 +185,16 @@ function plr {
   git pull --rebase origin $1
 }
 
+function up {
+  YARN=yarn.lock
+  git fetch
+  if [ -f "$YARN" ]; then
+    git pull && bundle check || bundle && yarn && dbprep
+  else
+    git pull && bundle check || bundle && dbprep
+  fi
+}
+
 function environment_lookup {
   val=`eb list 2>/dev/null | grep $1`
   if [[ $val == *"*"* ]]; then
