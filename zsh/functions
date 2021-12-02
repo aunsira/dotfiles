@@ -195,6 +195,10 @@ function up {
   fi
 }
 
+function remove-stale-branch {
+  git remote update origin --prune
+}
+
 function environment_lookup {
   val=`eb list 2>/dev/null | grep $1`
   if [[ $val == *"*"* ]]; then
