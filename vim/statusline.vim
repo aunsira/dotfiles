@@ -8,7 +8,7 @@ set statusline+=%l      " current line
 set statusline+=/%L     " Total lines
 set statusline+=\ %c    " Column number
 
-" Disable next line commenting
-autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+" Don't auto-break long lines
+autocmd BufNewFile,BufRead * setlocal formatoptions-=t
 
 " vim:ft=vim
