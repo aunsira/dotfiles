@@ -232,9 +232,6 @@ map <leader>hb :!hub browse<cr>
 map <leader>hc :!hub compare<cr>
 map <leader>hps :!hub pr show<cr>
 
-" Quickly open recently files
-map <Leader>sc :sp db/schema.rb<cr>
-
 " Modes  \m mouseOff, \M mouseOn,
 noremap <Leader>m :set mouse=<CR>
 noremap <Leader>M :set mouse=a<CR>
@@ -495,9 +492,6 @@ inoremap <silent> <C-G><C-T> <C-R>=repeat(complete(col('.'),map(["%Y-%m-%d %H:%M
 
 " Close all but the current one
 nnoremap <leader>o :only<CR>zz
-
-" Open .env
-nnoremap <silent> <leader>env :sp .env<cr>
 
 nnoremap <leader>ue :UltiSnipsEdit<Space>
 nnoremap <leader>tg :ALEToggle<cr>
