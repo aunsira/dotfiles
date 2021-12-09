@@ -111,6 +111,10 @@ function take {
   cd $1
 }
 
+function count {
+  ls $1 | wc -l
+}
+
 function current-commit() {
   git rev-parse HEAD
 }
