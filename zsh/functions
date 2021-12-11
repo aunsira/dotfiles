@@ -259,19 +259,19 @@ function ctx {
 }
 
 function staging {
-  kubectl config use-context arn:aws:eks:ap-southeast-1:240615393030:cluster/datawow-staging
+  kubectl config use-context datawow-staging
 }
 
 function production {
-  kubectl config use-context arn:aws:eks:ap-southeast-1:240615393030:cluster/datawow-production
+  kubectl config use-context datawow-production
 }
 
 function ndata-staging {
-  kubectl config use-context arn:aws:eks:ap-southeast-1:906884646351:cluster/ndatathoth-staging
+  kubectl config use-context ndatathoth-staging
 }
 
 function ndata-production {
-  kubectl config use-context arn:aws:eks:ap-southeast-1:906884646351:cluster/ndatathoth-production
+  kubectl config use-context ndatathoth-production
 }
 
 # Files matching a search
