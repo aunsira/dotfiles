@@ -296,3 +296,20 @@ pods() {
     --preview-window up:follow \
     --preview 'kubectl logs --follow --tail=100000 --namespace {1} {2}' "$@"
 }
+
+all-pods() {
+  FZF_DEFAULT_COMMAND='
+    (echo CONTEXT NAMESPACE NAME READY STATUS RESTARTS AGE
+     for context in $(kubectl config get-contexts --no-headers -o name | sort); do
+       kubectl get pods --all-namespaces --no-headers --context "$context" | sed "s/^/${context%} /"
+     done) 2> /dev/null | column -t
+  ' fzf --info=inline --layout=reverse --header-lines=1 --border \
+    --prompt 'all-pods> ' \
+    --header $'╱ Enter (kubectl exec) ╱ CTRL-O (open log in editor) ╱ CTRL-R (reload) ╱\n\n' \
+    --bind ctrl-/:toggle-preview \
+    --bind 'enter:execute:kubectl exec -it --context {1} --namespace {2} {3} -- bash > /dev/tty' \
+    --bind 'ctrl-o:execute:${EDITOR:-vim} <(kubectl logs --context {1} --namespace {2} {3}) > /dev/tty' \
+    --bind 'ctrl-r:reload:eval "$FZF_DEFAULT_COMMAND"' \
+    --preview-window up:follow \
+    --preview 'kubectl logs --follow --tail=100000 --context {1} --namespace {2} {3}' "$@"
+}
