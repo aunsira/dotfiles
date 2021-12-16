@@ -266,6 +266,14 @@ function production {
   kubectl config use-context datawow-production
 }
 
+function tokyo-staging {
+  kubectl config use-context tokyo-staging
+}
+
+function tokyo-production {
+  kubectl config use-context tokyo-production
+}
+
 function ndata-staging {
   kubectl config use-context ndatathoth-staging
 }
