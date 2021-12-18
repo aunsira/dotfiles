@@ -1,4 +1,5 @@
 {
+  "diagnostic.virtualText": true,
   "codeLens.enable": true,
   "solargraph.commandPath": "/Users/aun/.rbenv/versions/2.6.6/bin/solargraph",
   "solargraph.checkGemVersion": false,
@@ -6,6 +7,7 @@
   "solargraph.autoformat": true,
   "solargraph.formatting": true,
   "solargraph.hover": true,
+  "solargraph.diagnostics": true,
   "snippets.ultisnips.directories": [
     "UltiSnips",
     "~/code/git/dotfiles/vim/snips"
