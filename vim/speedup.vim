@@ -553,7 +553,7 @@ vmap gx <Plug>(openbrowser-open)
 nmap <silent> M <Plug>DashSearch
 
 " maximize current split or return to previous
-noremap <C-w>m :MaximizerToggle<CR>
+" noremap <C-w>m :MaximizerToggle<CR>
 
 " Shift + Space to underscore
 " inoremap <S-Space> _
