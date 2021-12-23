@@ -33,7 +33,8 @@
   editor = nvim
   # for m1, use
   # pager = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less -+$LESS -R
-  pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -+$LESS -R
+  # pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -+$LESS -R
+  pager = less -+$LESS -R
 [merge]
   tool = vimdiff
 [mergetool]
