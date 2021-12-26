@@ -6,6 +6,19 @@ fzf-gt-widget() {
 zle -N fzf-gt-widget
 bindkey '^b^b' fzf-gt-widget
 
+# https://blog.sher.pl/2014/03/21/how-to-boost-your-vim-productivity/
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
 gg() {
   search=""
   echo "Googling: $@"
