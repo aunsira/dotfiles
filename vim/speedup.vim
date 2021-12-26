@@ -4,6 +4,11 @@ nnoremap <leader><BS> :Ag!<Space>
 " Search in specific module
 nnoremap <leader>rg :Rag!<Space>
 
+" Automatically jump to end of text you pasted:
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
 " Write/Exit shortcuts
 inoremap <C-s> <esc>:call Save()<cr>
 nnoremap <C-s> <esc>:call Save()<cr>
