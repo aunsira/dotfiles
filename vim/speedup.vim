@@ -9,6 +9,9 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
+" Go back to last pasted after visual indent
+vnoremap <silent> = =`]
+
 " Write/Exit shortcuts
 inoremap <C-s> <esc>:call Save()<cr>
 nnoremap <C-s> <esc>:call Save()<cr>
