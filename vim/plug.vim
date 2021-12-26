@@ -23,7 +23,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
-Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'
 Plug 'fatih/molokai'
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
