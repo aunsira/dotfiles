@@ -20,6 +20,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
+Plug 'ervandew/supertab'
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
 Plug 'itchyny/vim-cursorword'
@@ -40,7 +41,6 @@ Plug 'matze/vim-move'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'plasticboy/vim-markdown'
@@ -63,6 +63,14 @@ Plug 'tyru/open-browser.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'wellle/targets.vim'
+
+" LSP
+Plug 'L3MON4D3/LuaSnip'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'neovim/nvim-lspconfig'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 call plug#end()
 
