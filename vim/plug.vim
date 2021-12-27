@@ -40,7 +40,7 @@ Plug 'matze/vim-move'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'plasticboy/vim-markdown'
@@ -63,6 +63,9 @@ Plug 'tyru/open-browser.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'wellle/targets.vim'
+
+" LSP
+Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 
