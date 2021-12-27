@@ -519,9 +519,6 @@ vnoremap > >gv
 vnoremap <silent> <C-h> <gv
 vnoremap <silent> <C-l> >gv
 
-nnoremap <leader>hh :SidewaysLeft<cr>
-nnoremap <leader>ll :SidewaysRight<cr>
-
 nnoremap <leader><leader> :
 vnoremap <leader><leader> :
 nnoremap <leader>, :!
@@ -551,13 +548,6 @@ vmap gx <Plug>(openbrowser-open)
 
 " Dash integration
 nmap <silent> M <Plug>DashSearch
-
-" maximize current split or return to previous
-noremap <C-w>m :MaximizerToggle<CR>
-
-" Shift + Space to underscore
-" inoremap <S-Space> _
-" cnoremap <S-Space> _
 
 " COC
 let g:coc_global_extensions = [
