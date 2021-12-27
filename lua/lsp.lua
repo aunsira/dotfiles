@@ -27,12 +27,13 @@ local on_attach = function(client, bufnr)
   -- buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+  --
+  --
+  -- local filetype = vim.api.nvim_buf_get_option(0, 'filetype')
 
-  local filetype = vim.api.nvim_buf_get_option(0, 'filetype')
-
-  if filetype == 'ruby' then
-    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
-  end
+  -- if filetype == 'ruby' then
+  --   vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+  -- end
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
