@@ -192,7 +192,7 @@ map <Leader>i mmgg=G`m
 cnoremap <expr> %%  getcmdtype() == ':' ? fnameescape(expand('%:h')).'/' : '%%'
 
 " Easy navigation for editing and coding
-nnoremap <leader>er :e <C-r>=escape(expand("%:p:h"), ' ')<cr>/
+nnoremap <leader>er :e <C-r>=fnameescape(expand('%:h')).'/'<cr>
 nnoremap <Leader>eg :e ~/code/git/
 nnoremap <Leader>eh :e ~/
 nnoremap <Leader>cd :cd <C-r>=escape(expand("%:p:h"), ' ')<cr>/
