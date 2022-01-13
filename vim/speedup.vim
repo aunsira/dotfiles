@@ -73,7 +73,7 @@ nnoremap <leader>tn :tabe<cr>
 
 " Map fzf plugin
 nnoremap <silent> <C-p> :Files<cr>
-nnoremap <silent> <M-BS> :Files<cr>
+" nnoremap <silent> <M-BS> :Files<cr>
 nnoremap <silent> <leader>hf :History<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
 " imap <c-x><c-l> <plug>(fzf-complete-line)
@@ -548,5 +548,9 @@ vmap gx <Plug>(openbrowser-open)
 
 " Dash integration
 nmap <silent> M <Plug>DashSearch
+
+" C-BS to word deletion
+inoremap <M-BS> <C-W>
+cnoremap <M-BS> <C-W>
 
 " vim:ft=vim
