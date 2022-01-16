@@ -62,6 +62,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_set_highlights = 0
 let g:ale_enabled = 0
 let g:ale_ruby_rubocop_auto_correct_all = 1
+let g:ale_set_signs = 0
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
