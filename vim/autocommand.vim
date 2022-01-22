@@ -111,4 +111,7 @@ augroup END
 
 command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
+" Auto fix whitespace  fter write.
+autocmd BufWritePre *.rb,*.erb,*.yml,*.yaml,*.go,*.json,*.ex,*.exs :execute 'FixWhitespace'
+
 " vim:ft=vim
