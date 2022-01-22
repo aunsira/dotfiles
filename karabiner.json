@@ -43,7 +43,7 @@
             ]
           },
           {
-            "description": "Cmd+delete to backslash",
+            "description": "Cmd+delete to Cmd+k (clear terminal screen)",
             "manipulators": [
               {
                 "from": {
@@ -59,7 +59,10 @@
                 },
                 "to": [
                   {
-                    "key_code": "backslash"
+                    "key_code": "n",
+                    "modifiers": [
+                      "left_command"
+                    ]
                   }
                 ],
                 "type": "basic"
