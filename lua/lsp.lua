@@ -95,7 +95,7 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'ultisnips' },
-    { name = 'buffer' },
+    { name = 'buffer', keyword_length = 5 },
     { name = 'path' },
   },
 }
