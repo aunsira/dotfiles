@@ -30,6 +30,8 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+# Exclude `/` from WORDCHARS so we can remove a word without removing slash
+export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 # Ruby environment config
 if type rbenv &> /dev/null; then
