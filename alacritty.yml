@@ -56,6 +56,9 @@ window:
   #   - SimpleFullscreen
   startup_mode: SimpleFullscreen
 
+    # Background opacity
+  opacity: 0.95
+
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
 
@@ -66,23 +69,23 @@ draw_bold_text_with_bright_colors: false
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Menlo
+    family: Fira Code
     # Style can be specified to pick a specific face.
     style: Regular
     antialias: true
 
   # The bold font face
   bold:
-    family: Menlo
+    family: Fira Code
     style: Bold
 
   # The italic font face
   italic:
-    family: Menlo
+    family: Fira Code
     style: Italic
 
   # Point size of the font
-  size: 12.0
+  size: 15.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -175,9 +178,6 @@ colors:
 visual_bell:
   animation: EaseOutExpo
   duration: 0
-
-# Background opacity
-background_opacity: 0.95
 
 # Mouse bindings
 #
@@ -487,7 +487,7 @@ key_bindings:
   - { key: Key6,      mods: Alt|Shift, chars: "\x1b^"                       } # Alt + ^
   - { key: Backslash, mods: Alt,       chars: "\x1b\\"                      } # Alt + \
   - { key: Backslash, mods: Alt|Shift, chars: "\x1b|"                       } # Alt + |
-  - { key: N, mods: Alt, action: SpawnNewInstance }
+  - { key: N, mods: Alt, action: CreateNewWindow }
   - { key: H,              mods: Command|Alt,                action: HideOtherApplications }
   - { key: Return, mods: Command, action: ToggleSimpleFullscreen }
   # Map shift + space to underscore available in vim config
