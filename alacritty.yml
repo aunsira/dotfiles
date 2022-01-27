@@ -388,7 +388,7 @@ key_bindings:
   - { key: LBracket, mods: Command,       chars: "\x06\x20" }
   - { key: RBracket, mods: Command,       chars: "\x06\x0e" }
   - { key: U,        mods: Command,       chars: "\x06\x71" }
-  - { key: H,        mods: Command,       chars: "\x06\x5b" }
+  - { key: Slash,    mods: Command,       chars: "\x06\x5b" }
   - { key: T,        mods: Command,       chars: "\x06\x63" }
   - { key: N,        mods: Command,       chars: "\x06\x2d" }
   - { key: N,        mods: Command|Shift, chars: "\x06\x7c" }
