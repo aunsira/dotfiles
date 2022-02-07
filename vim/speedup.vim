@@ -13,8 +13,8 @@ nnoremap <silent> p p`]
 vnoremap <silent> = =`]
 
 " Write/Exit shortcuts
-inoremap <C-s> <esc>:call Save()<cr>
-nnoremap <C-s> <esc>:call Save()<cr>
+inoremap <C-s> <esc>:update<cr>
+nnoremap <C-s> <esc>:update<cr>
 inoremap <C-c> <esc>`^
 nnoremap <C-c> <esc>
 vnoremap <C-c> <esc>

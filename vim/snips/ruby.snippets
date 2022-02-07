@@ -23,7 +23,7 @@ when ${1:condition}
 endsnippet
 
 snippet def
-def ${1:method_name}
+def ${1}
 	${2}
 end
 endsnippet
@@ -47,8 +47,8 @@ end
 endsnippet
 
 snippet memo
-def ${1:name}
-	@$1 ||= ${2:value}
+def ${1}
+	@$1 ||= ${2}
 end
 endsnippet
 
@@ -64,17 +64,17 @@ end
 endsnippet
 
 snippet ?
-${1:condition} ? ${2:true} : ${3:false}
+${1} ? ${2} : ${3}
 endsnippet
 
 snippet if
-if ${1:condition}
+if ${1}
 	${2}
 end
 endsnippet
 
 snippet ife
-if ${1:condition}
+if ${1}
 	${2}
 else
 	${3}
@@ -82,12 +82,12 @@ end
 endsnippet
 
 snippet elsif
-elsif ${1:condition}
+elsif ${1}
 	${2}
 endsnippet
 
 snippet unless
-unless ${1:condition}
+unless ${1}
 	${2}
 end
 endsnippet
@@ -146,17 +146,17 @@ endsnippet
 
 # attr_reader
 snippet r
-attr_reader :${1:attr_names}
+attr_reader :${1}
 endsnippet
 
 # attr_writer
 snippet w
-attr_writer :${1:attr_names}
+attr_writer :${1}
 endsnippet
 
 # attr_accessor
 snippet rw
-attr_accessor :${1:attr_names}
+attr_accessor :${1}
 endsnippet
 
 snippet tim "time" w
@@ -593,7 +593,7 @@ it { is_expected.to eq ${0} }
 endsnippet
 
 snippet exe
-expect(subject).to eq ${1:expectation}
+expect(subject).to eq ${1}
 endsnippet
 
 snippet exp
@@ -609,7 +609,7 @@ expect(subject.status).to eq 200
 endsnippet
 
 snippet fc "fixture create"
-create(:${1:object})
+create(:${1})
 endsnippet
 
 snippet fcl "fixture create_list"
@@ -617,7 +617,7 @@ create_list(:${1:object}, ${2:number})
 endsnippet
 
 snippet bs "fixture build_stubbed"
-build_stubbed(:${1:object})
+build_stubbed(:${1})
 endsnippet
 
 snippet gapi "Grape API Skeleton"
