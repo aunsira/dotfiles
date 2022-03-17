@@ -211,8 +211,6 @@ let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 " https://github.com/tpope/vim-dispatch/issues/177
 " let g:dispatch_quickfix_height=25
 
-let g:markdown_fenced_languages = ['html', 'ruby', 'vim', 'json']
-
 " Disable netrw gx mapping
 let g:netrw_nogx = get(g:, 'netrw_nogx', 1)
 
@@ -225,6 +223,6 @@ let g:vim_markdown_new_list_item_indent = 0
 let g:markdown_fenced_languages = [
   \ 'coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html',
   \ 'sh', 'bash=sh', 'scala']
-let g:vim_markdown_conceal_code_blocks = 0
+let g:vim_markdown_conceal_code_blocks = 1
 
 " vim:ft=vim
