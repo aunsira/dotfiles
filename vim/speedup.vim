@@ -59,8 +59,8 @@ nnoremap [b :bprev<cr>
 nnoremap <leader><tab> <C-^>
 
 " Tab navigation
-nnoremap <silent> ]t :tabn<cr>
-nnoremap <silent> [t :tabp<cr>
+nmap ]t :tabn<cr>
+nmap [t :tabp<cr>
 
 " Use actually useful arrow keys
 nnoremap <Left> :vertical resize +1<CR>
@@ -533,11 +533,11 @@ inoremap <c-x><c-u> <c-x><c-p>
 nnoremap <c-]> <c-]>zz
 
 " tab navigation (with leader + number)
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
+nmap <leader>1 1gt
+nmap <leader>2 2gt
+nmap <leader>3 3gt
+nmap <leader>4 4gt
+nmap <leader>5 5gt
 
 " reselect pasted text
 nnoremap gp `[v`]
