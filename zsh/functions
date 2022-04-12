@@ -322,8 +322,8 @@ all-pods() {
   FZF_DEFAULT_COMMAND='
     (echo CONTEXT NAMESPACE NAME READY STATUS RESTARTS AGE
      for context in $(kubectl config get-contexts --no-headers -o name | sort); do
-       kubectl get pods --all-namespaces --no-headers --context "$context" | sed "s/^/${context%} /"
-     done) 2> /dev/null | column -t
+       kubectl get pods --all-namespaces --no-headers --context "$context" | sed "s/^/${context%} /" &
+     done; wait) 2> /dev/null | column -t
   ' fzf --info=inline --layout=reverse --header-lines=1 --border \
     --prompt 'all-pods> ' \
     --header $'╱ Enter (kubectl exec) ╱ CTRL-O (open log in editor) ╱ CTRL-R (reload) ╱\n\n' \
