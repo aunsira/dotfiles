@@ -63,7 +63,7 @@ local cmp = require 'cmp'
 cmp.setup {
   snippet = {
     expand = function(args)
-      vim.fn["UltiSnips#Anon"](args.body)
+      require('snippy').expand_snippet(args.body)
     end,
   },
   mapping = {
@@ -94,7 +94,7 @@ cmp.setup {
   },
   sources = {
     { name = 'nvim_lsp' },
-    { name = 'ultisnips' },
+    { name = 'snippy' },
     { name = 'buffer', keyword_length = 5 },
     { name = 'path' },
   },
@@ -112,3 +112,13 @@ require'lspconfig'.jsonls.setup {
 require'lspconfig'.elixirls.setup{
   cmd = { "/Users/aun/elixir-ls/language_server.sh" };
 }
+
+-- Nvim Snippy https://github.com/dcampos/nvim-snippy
+require('snippy').setup({
+    mappings = {
+        is = {
+            ['<C-]>'] = 'expand_or_advance',
+            ['<C-[>'] = 'previous',
+        },
+    },
+})

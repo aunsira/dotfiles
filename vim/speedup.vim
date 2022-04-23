@@ -501,7 +501,6 @@ inoremap <silent> <C-G><C-T> <C-R>=repeat(complete(col('.'),map(["%Y-%m-%d %H:%M
 " Close all but the current one
 nnoremap <leader>o :only<CR>zz
 
-nnoremap <leader>ue :UltiSnipsEdit<Space>
 nnoremap <leader>tg :ALEToggle<cr>
 
 nnoremap <leader>ss :!spring stop<cr>

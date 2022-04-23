@@ -3,7 +3,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'AaronLasseigne/yank-code'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
-Plug 'SirVer/ultisnips'
 Plug 'alvan/vim-closetag'
 Plug 'andyl/vim-projectionist-elixir'
 Plug 'andymass/vim-matchup'
@@ -70,7 +69,10 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'neovim/nvim-lspconfig'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
+" Snippets
+Plug 'dcampos/nvim-snippy'
+Plug 'dcampos/cmp-snippy'
 
 call plug#end()
 

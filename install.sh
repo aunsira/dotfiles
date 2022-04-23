@@ -24,6 +24,12 @@ if [[ "$symlink_vim_answer" == "y" ]]; then
   ln -sfn $basedir/vim ${HOME}/.config/nvim/vim
 fi
 
+read -n1 -p "Symlink all snips files to ~/.config/nvim/snippets (overwriting)? (y/n)" symlink_vim_answer
+echo ""
+if [[ "$symlink_vim_answer" == "y" ]]; then
+  ln -sfn $basedir/vim/snips ${HOME}/.config/nvim/snippets
+fi
+
 read -n1 -p "Symlink all lua config files to ~/.config/nvim/lua (overwriting)? (y/n)" symlink_lua_answer
 echo ""
 if [[ "$symlink_lua_answer" == "y" ]]; then
