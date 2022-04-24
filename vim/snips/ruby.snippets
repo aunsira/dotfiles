@@ -57,11 +57,11 @@ snippet while
 snippet gd
 	return unless ${1}
 snippet mod module .. end
-	module ${1}
+	module `substitute(expand('%:t:r'), '\(_\|^\)\(.\)', '\u\2', 'g')`
 		${0}
 	end
 snippet cla class .. end
-	class ${1}
+	class `substitute(expand('%:t:r'), '\(_\|^\)\(.\)', '\u\2', 'g')`
 		${0}
 	end
 snippet r
@@ -364,12 +364,3 @@ snippet whe
 	${1:Model}.where(${2:attr}: ${3:value})
 snippet fi
 	${1:Model}.find_by(${2:attr}: ${3:value})
-snippet rh
-	require 'rails_helper'
-	describe ${1:ClassName} do
-		describe '${2:docstring}' do
-			it '$3' do
-				$4
-			end
-		end
-	end
