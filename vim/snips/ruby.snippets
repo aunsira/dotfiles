@@ -148,13 +148,15 @@ snippet bed
 	end
 snippet spec
 	require 'rails_helper'
+
 	describe ${1} do
 		${2}
 	end
 snippet rspec
 	require 'rails_helper'
+
 	describe ${1} do
-		describe '${2:docstring}' do
+		describe '${2}' do
 			it 'works' do
 				${3}
 			end
@@ -185,9 +187,9 @@ snippet ->
 snippet ->a
 	->(${1:args}) { ${0} }
 snippet iexp
-	it { expect(subject).${1} ${2} }
+	it { expect(subject).${1} ${2} ${3} }
 snippet iexpb
-	it { expect { subject }.${1} ${2} }
+	it { expect { subject }.${1} ${2} ${3} }
 snippet isexp
 	it { is_expected.to eq ${0} }
 snippet exe
