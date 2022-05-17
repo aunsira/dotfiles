@@ -60,6 +60,5 @@ set noshowmatch                   " Do not show matching brackets by flickering
 set autowrite                     " Automatically :write before running commands
 set hidden
 set noshowmode
-set iskeyword+=.                  " Include dot(.) as word chars.
 
 " vim:ft=vim

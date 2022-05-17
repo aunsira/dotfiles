@@ -108,4 +108,8 @@ command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'option
 " Auto fix whitespace  fter write.
 autocmd BufWritePre *.rb,*.erb,*.yml,*.yaml,*.go,*.json,*.ex,*.exs :execute 'FixWhitespace'
 
+" Include dot(.) as word chars only in Command-Line mode.
+autocmd CmdlineEnter * setlocal iskeyword+=.
+autocmd CmdlineLeave * setlocal iskeyword-=.
+
 " vim:ft=vim
