@@ -51,15 +51,6 @@ function! Dotfiles()
 endfunction
 command! Dotfiles call Dotfiles()
 
-function! ToggleAutoFix()
-  if g:ale_fix_on_save == 1
-    let g:ale_fix_on_save = 0
-  else
-    let g:ale_fix_on_save = 1
-  endif
-endfunction
-command! ToggleAutoFix call ToggleAutoFix()
-
 " Merge a tab into a split in the previous window
 function! MergeTabs()
   if tabpagenr() == 1

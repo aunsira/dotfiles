@@ -364,9 +364,6 @@ nnoremap <leader>ta :wa<cr>:TestFile ./<cr>
 nnoremap <leader>ts :wa<cr>:TestNearest<cr>
 nnoremap <leader>tl :wa<cr>:TestLast<cr>
 
-" Quick fix lint
-nmap zn :ALEFix<cr>
-
 " quickfix list
 nnoremap ]q :cnext<cr>
 nnoremap [q :cprevious<cr>
@@ -382,12 +379,6 @@ nnoremap [L :lfirst<cr>
 " Close quickfix/location window
 nnoremap <leader>cs :cclose<bar>lclose<bar>VtrKillRunner<cr>
 nnoremap <leader>cc :cc<cr>
-
-" ale errors
-nmap ]w <plug>(ale_next)
-nmap [w <plug>(ale_previous)
-nmap ]W <plug>(ale_first)
-nmap ]W <plug>(ale_last)
 
 " Golang stuff
 nmap <C-g> :GoDecls<cr>
@@ -500,8 +491,6 @@ inoremap <silent> <C-G><C-T> <C-R>=repeat(complete(col('.'),map(["%Y-%m-%d %H:%M
 
 " Close all but the current one
 nnoremap <leader>o :only<CR>zz
-
-nnoremap <leader>tg :ALEToggle<cr>
 
 nnoremap <leader>ss :!spring stop<cr>
 nnoremap <leader>pp :!rails db:test:prepare<cr>
