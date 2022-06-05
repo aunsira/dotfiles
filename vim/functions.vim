@@ -32,6 +32,12 @@ function! RenewTagsFile()
 endfunction
 nnoremap <Leader>rt :call RenewTagsFile()<CR>
 
+" Convert ruby symbol hash to string hash.
+" (Use switch.vim to convert back to symbol hash)
+function! StringHash()
+  :s/\(\w\+\):/'\1' =>/g
+endfunction
+
 function! NumberToggle()
   if(&relativenumber == 1)
     if (&number == 1)
