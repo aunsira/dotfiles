@@ -39,7 +39,11 @@ if type rbenv &> /dev/null; then
 fi
 
 # asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
+if [[ `uname -m` == 'arm64' ]]; then
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
+else
+  . /usr/local/opt/asdf/libexec/asdf.sh
+fi
 
 export PATH=".git/safe/../../bin:$PATH"
 
