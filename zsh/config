@@ -38,6 +38,9 @@ if type rbenv &> /dev/null; then
   eval "$(rbenv init - --no-rehash)"
 fi
 
+# asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
+
 export PATH=".git/safe/../../bin:$PATH"
 
 export CDPATH=.:~:$HOME/code/git:$HOME/code:$HOME/Downloads
