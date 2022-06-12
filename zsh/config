@@ -33,11 +33,6 @@ export LC_ALL=en_US.UTF-8
 # Exclude `/`, `-` and `_` from WORDCHARS so we can remove a word without removing slash
 export WORDCHARS='*?.[]~=&;!#$%^(){}<>'
 
-# Ruby environment config
-if type rbenv &> /dev/null; then
-  eval "$(rbenv init - --no-rehash)"
-fi
-
 # asdf
 if [[ `uname -m` == 'arm64' ]]; then
   . /opt/homebrew/opt/asdf/libexec/asdf.sh
