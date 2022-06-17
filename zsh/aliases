@@ -113,6 +113,7 @@ alias hc='hub compare'
 alias hpr='hub pull-request -a aunsira -d'
 alias hps='hub pr show'
 alias k9='kill -9'
+alias killbeam='killall -9 beam.smp'
 alias killruby='killall -9 ruby'
 alias l='ls -al'
 alias ll="ls -FGlh"
