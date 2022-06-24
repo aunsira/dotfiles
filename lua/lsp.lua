@@ -29,11 +29,15 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'zn', '<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>', opts)
   --
   --
-  -- local filetype = vim.api.nvim_buf_get_option(0, 'filetype')
+  local filetype = vim.api.nvim_buf_get_option(0, 'filetype')
 
   -- if filetype == 'ruby' then
   --   vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
   -- end
+
+  if filetype == 'elixir' then
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+  end
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
@@ -48,10 +52,6 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
-    capabilities = capabilities,
-    flags = {
-      debounce_text_changes = 150,
-    },
   }
 end
 
@@ -112,10 +112,6 @@ require'lspconfig'.jsonls.setup {
 require'lspconfig'.elixirls.setup{
   cmd = { "/Users/aun/elixir-ls/language_server.sh" },
   on_attach = on_attach,
-  capabilities = capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  },
 }
 
 -- Nvim Snippy https://github.com/dcampos/nvim-snippy
