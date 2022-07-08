@@ -42,7 +42,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'solargraph', 'elixirls', 'gopls', 'yamlls' }
+local servers = { 'solargraph', 'gopls', 'yamlls' }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
