@@ -1,0 +1,12 @@
+snippet def
+	def ${1} do
+		${2}
+	end
+snippet defp
+	defp ${1} do
+		${2}
+	end
+snippet mod defmodule .. end
+	defmodule `substitute(expand('%:t:r'), '\(_\|^\)\(.\)', '\u\2', 'g')` do
+		${0}
+	end
