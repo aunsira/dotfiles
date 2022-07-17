@@ -56,7 +56,6 @@ set maxmempattern=20000
 set gdefault                      " assume the /g flag on :s substitutions to replace all matches in a line
 set shiftround                    " When at 3 spaces and I hit >>, go to 4, not 5.
 set nocursorcolumn                " speed up syntax highlighting
-set noshowmatch                   " Do not show matching brackets by flickering
 set autowrite                     " Automatically :write before running commands
 set hidden
 set noshowmode

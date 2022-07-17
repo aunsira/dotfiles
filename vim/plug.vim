@@ -13,7 +13,6 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-system-copy'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
-Plug 'cohama/lexima.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'elixir-editors/vim-elixir'
@@ -23,7 +22,6 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
 Plug 'itchyny/vim-cursorword'
 Plug 'janko-m/vim-test'
-Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim', { 'on' : 'GV' }

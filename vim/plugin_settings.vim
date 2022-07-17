@@ -20,11 +20,6 @@ if has('nvim')
   let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 endif
 
-" Lexima settings
-let g:lexima_enable_basic_rules=1
-let g:lexima_enable_newline_rules=1
-let g:lexima_enable_endwise_rules=1
-
 " Fzf Tweaks
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
