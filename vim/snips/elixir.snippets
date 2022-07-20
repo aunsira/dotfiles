@@ -10,3 +10,9 @@ snippet mod defmodule .. end
 	defmodule `substitute(expand('%:t:r'), '\(_\|^\)\(.\)', '\u\2', 'g')` do
 		${0}
 	end
+snippet puts
+	IO.puts "\n\n************ #{ ${1} } **************\n\n"
+snippet inspect
+	IO.inspect "\n\n************ #{ ${1} } **************\n\n"
+snippet px
+	IO.puts "xxxxxxxxxxxxxx"
