@@ -130,7 +130,7 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^io\\.alacritty$",
+                      "^org\\.alacritty$",
                       "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_unless"
@@ -256,7 +256,7 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^io\\.alacritty$",
+                      "^org\\.alacritty$",
                       "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_unless"
@@ -290,7 +290,7 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^io\\.alacritty$",
+                      "^org\\.alacritty$",
                       "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_unless"
@@ -484,7 +484,7 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^io\\.alacritty$",
+                      "^org\\.alacritty$",
                       "^com\\.qvacua\\.VimR$"
                     ],
                     "type": "frontmost_application_unless"
