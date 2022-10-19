@@ -199,4 +199,7 @@ let g:markdown_fenced_languages = [
   \ 'sh', 'bash=sh', 'scala']
 let g:vim_markdown_conceal_code_blocks = 1
 
+" Tweak for ignoring trailing whitespaces in Fzf.
+let g:extra_whitespace_ignored_filetypes = ['fzf']
+
 " vim:ft=vim
