@@ -67,6 +67,12 @@ augroup js
   autocmd FileType javascript nnoremap <silent> <2-LeftMouse> *:TernDef<cr>
 augroup END
 
+augroup ex
+  au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+  au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
+  au BufRead,BufNewFile mix.lock set filetype=elixir
+augroup END
+
 " Help in new tabs
 function! s:helptab()
   if &buftype == 'help'
