@@ -202,4 +202,20 @@ let g:vim_markdown_conceal_code_blocks = 1
 " Tweak for ignoring trailing whitespaces in Fzf.
 let g:extra_whitespace_ignored_filetypes = ['fzf']
 
+" CTRL-A CTRL-Q to select all and build quickfix list from Fzf.
+
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
+let g:fzf_action = {
+  \ 'ctrl-q': function('s:build_quickfix_list'),
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+
 " vim:ft=vim
