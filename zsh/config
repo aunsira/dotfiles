@@ -61,4 +61,7 @@ type tree &> /dev/null && export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -2
 # Enable Kiex, Elixir version manager
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
+# Load Configurations
+for f in /users/aun/.config/deemoney/*; do source $f; done
+
 bindkey -e
