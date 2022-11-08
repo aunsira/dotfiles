@@ -25,6 +25,7 @@ export ELIXIR_PATH=/usr/local/opt/elixir/bin
 mkdir -p $GOPATH
 export PATH=/usr/local/bin:/opt/homebrew/bin:$GOPATH/bin:$GOROOT/bin:$ELIXIR_PATH/bin:$PATH
 export PATH="/opt/homebrew/opt/postgresql@9.6/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
