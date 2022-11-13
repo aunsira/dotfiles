@@ -32,6 +32,19 @@ function! RenewTagsFile()
 endfunction
 nnoremap <Leader>rt :call RenewTagsFile()<CR>
 
+" Remap jump to definition for ctags
+function! FzfTagsCurrentWord()
+  let l:word = expand('<cword>')
+  let l:list = taglist(l:word)
+  if len(l:list) == 1
+    execute ':tag ' . l:word
+  else
+    call fzf#vim#tags(l:word)
+  endif
+endfunction
+
+noremap <leader>] :call FzfTagsCurrentWord()<cr>
+
 " Convert ruby symbol hash to string hash.
 " (Use switch.vim to convert back to symbol hash)
 function! StringHash()

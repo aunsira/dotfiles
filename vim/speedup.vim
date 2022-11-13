@@ -42,9 +42,6 @@ vnoremap <leader>y "*y
 vnoremap <leader>d "*d
 map <leader>x y
 
-" Remap jump to definition for ctags
-nmap <leader>] g<C-]>zz
-
 " Faster viewport scrolling (10 lines at a time)
 nnoremap <C-e> 10<C-e>
 nnoremap <C-y> 10<C-y>
@@ -518,7 +515,7 @@ nnoremap [x I[x]<Space><Esc>
 inoremap <c-x><c-u> <c-x><c-p>
 
 " tags
-nnoremap <c-]> <c-]>zz
+nnoremap <c-]> g<c-]>zz
 
 " tab navigation (with leader + number)
 nmap <leader>1 1gt
