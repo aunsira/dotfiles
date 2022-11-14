@@ -29,7 +29,7 @@
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
 [core]
-  excludesfile = /Users/aun/.gitignore_global
+  excludesfile = ~/.gitignore_global
   editor = nvim
   # for m1, use
   # pager = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less -+$LESS -R
