@@ -3,7 +3,6 @@ iab que queue
 iab iv I've
 iab il I'll
 iab td # TODO(aun):
-iab nt # NOTE:
 iab seperate separate
 iab dw Data Wow
 iab mod moderation
