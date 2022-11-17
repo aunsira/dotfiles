@@ -17,9 +17,9 @@ snippet inspect
 snippet px
 	IO.puts "xxxxxxxxxxxxxx"
 snippet lin
-	IO.inspect(${1}, label: "${2} `bufname()`:`line(".")`")
+	IO.inspect(${1}, label: "${2}${1} `bufname()`:`line(".")`")
 snippet pin
-	|> IO.inspect(label: "${1} `bufname()`:`line(".")`")
+	|> IO.inspect(label: "${2}${1} `bufname()`:`line(".")`")
 snippet k
 	$1: $1
 snippet ks
