@@ -118,4 +118,7 @@ autocmd BufWritePre *.rb,*.erb,*.yml,*.yaml,*.go,*.json,*.ex,*.exs :execute 'Fix
 autocmd CmdlineEnter * setlocal iskeyword+=.
 autocmd CmdlineLeave * setlocal iskeyword-=.
 
+" Don't fold anything.
+autocmd BufWinEnter * set foldlevel=999999
+
 " vim:ft=vim
