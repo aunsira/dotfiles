@@ -47,7 +47,7 @@ local servers = { 'solargraph', 'gopls', 'yamlls' }
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 --- auto complete
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
@@ -75,7 +75,7 @@ cmp.setup {
     ['<C-e>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
+      select = false,
     },
     ['<Tab>'] = function(fallback)
       if cmp.visible() then
@@ -112,14 +112,22 @@ require'lspconfig'.jsonls.setup {
 require'lspconfig'.elixirls.setup{
   cmd = { "/Users/aun/elixir-ls/language_server.sh" },
   on_attach = on_attach,
+  settings = {
+    elixirLS = {
+      dialyzerEnabled = false,
+      fetchDeps = false,
+      enableTestLenses = false,
+      suggestSpecs = false
+    }
+  }
 }
 
 -- Nvim Snippy https://github.com/dcampos/nvim-snippy
 require('snippy').setup({
-    mappings = {
-        is = {
-            ['<C-]>'] = 'expand_or_advance',
-            ['<C-[>'] = 'previous',
-        },
+  mappings = {
+    is = {
+      ['<C-]>'] = 'expand_or_advance',
+      ['<C-[>'] = 'previous',
     },
+  },
 })
