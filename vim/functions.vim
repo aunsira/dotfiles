@@ -43,7 +43,7 @@ function! FzfTagsCurrentWord()
   endif
 endfunction
 
-noremap <leader>] :call FzfTagsCurrentWord()<cr>
+noremap <leader>] :call FzfTagsCurrentWord()<cr><space>
 
 " Convert ruby symbol hash to string hash.
 " (Use switch.vim to convert back to symbol hash)
