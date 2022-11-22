@@ -110,7 +110,7 @@ require'lspconfig'.jsonls.setup {
 
 -- Elixir LSP
 require'lspconfig'.elixirls.setup{
-  cmd = { "/Users/aun/elixir-ls/language_server.sh" },
+  cmd = { os.getenv("HOME") .. "/elixir-ls/language_server.sh" },
   on_attach = on_attach,
   settings = {
     elixirLS = {
