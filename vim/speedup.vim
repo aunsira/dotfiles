@@ -90,11 +90,11 @@ nmap <LEADER>vs :vsplit<CR>
 
 " bind K to grep word under cursor
 nnoremap K :Ag! <C-R><C-W><CR>
-nnoremap B :Ag! <C-R><C-W><CR>!spec<Space>
+nnoremap B :Ag! <C-R><C-W><CR>!test<Space>
 nnoremap <M-Tab> :Ag! <C-R><C-W><CR>
 " bind K to grep word from visual selection
 vnoremap K y:Ag! <C-R>"<CR>
-vnoremap B y:Ag! <C-R>"<CR>!spec<Space>
+vnoremap B y:Ag! <C-R>"<CR>!test<Space>
 vnoremap <leader><BS> y:Ag! <C-R>"<CR>
 " normal search on visual selection
 vnoremap // y/<C-R>"<CR>
