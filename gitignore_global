@@ -4,3 +4,4 @@ node_modules
 .ruby-version
 tags
 .project-notes
+.projections.json
