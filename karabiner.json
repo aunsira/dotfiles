@@ -779,6 +779,29 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "Disable command q",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "q",
+                  "modifiers": {
+                    "mandatory": [
+                      "command"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "escape",
+                    "modifiers": []
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
