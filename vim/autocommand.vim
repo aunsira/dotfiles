@@ -25,6 +25,8 @@ augroup ruby
   autocmd FileType ruby map tL :w<cr>:call RunLastSpec()<CR>
   " autocmd FileType ruby map tA :w<cr>:call RunAllSpecs()<CR>
 
+  autocmd FileType ruby nnoremap <leader>bp orequire "pry"; binding.pry<esc>:call Save()<cr>
+
   nnoremap <leader>ts :wa<cr>:TestNearest -strategy=dispatch<cr>
   nnoremap <leader>tf :wa<cr>:TestFile -strategy=dispatch<cr>
   nnoremap <leader>tl :wa<cr>:TestLast -strategy=dispatch<cr>
@@ -71,6 +73,8 @@ augroup ex
   au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
   au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
   au BufRead,BufNewFile mix.lock set filetype=elixir
+
+  autocmd FileType elixir nnoremap <leader>bp orequire IEx; IEx.pry<esc>:call Save()<cr>
 augroup END
 
 " Help in new tabs

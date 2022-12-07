@@ -250,9 +250,6 @@ nnoremap <leader>u9 :norm 90i=<esc><cr>
 
 nmap <leader>ba :bufdo bd<cr>
 
-" Add binding.
-nnoremap <leader>bp orequire "pry"; binding.pry<esc>:call Save()<cr>
-
 map <Leader>rn :call RenameFile()<cr>
 
 " Jump list (to newer position)
