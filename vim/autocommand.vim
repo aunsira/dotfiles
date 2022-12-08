@@ -125,4 +125,7 @@ autocmd CmdlineLeave * setlocal iskeyword-=.
 " Don't fold anything.
 autocmd BufWinEnter * set foldlevel=999999
 
+" Pull path into system clipboard
+command! Path let @* = expand("%")
+
 " vim:ft=vim
