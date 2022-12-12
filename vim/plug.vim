@@ -62,6 +62,7 @@ Plug 'wellle/targets.vim'
 Plug 'yegappan/mru'
 
 " LSP
+Plug 'f3fora/cmp-spell'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-path'

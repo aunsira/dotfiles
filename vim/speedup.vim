@@ -535,4 +535,7 @@ nmap <silent> M <Plug>DashSearch
 inoremap <M-BS> <C-W>
 cnoremap <M-BS> <C-W>
 
+" Insert a pipe with ctrl-l
+imap <c-l> \|><space>
+
 " vim:ft=vim
