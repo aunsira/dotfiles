@@ -58,10 +58,6 @@ end
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
--- f3fora/cmp-spell
-vim.opt.spell = true
-vim.opt.spelllang = { 'en_us' }
-
 -- nvim-cmp setup
 local cmp = require 'cmp'
 cmp.setup {
@@ -100,7 +96,6 @@ cmp.setup {
     { name = 'snippy' },
     { name = 'buffer', keyword_length = 5 },
     { name = 'path' },
-    { name = 'spell', keyword_length = 6 },
   },
 }
 
