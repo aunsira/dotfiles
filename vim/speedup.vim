@@ -68,6 +68,12 @@ nnoremap <Down> :resize -1<CR>
 " New tab
 nnoremap <leader>tn :tabe<cr>
 
+" Project browsing
+"
+" Karabiner complex modifications rules - Map Option to soft-meta for Alacritty is required.
+nmap <Esc><Space> :e<space>
+nmap <Esc><Enter> :b<space>
+
 " Map fzf plugin
 nnoremap <silent> <C-p> :Files<cr>
 " nnoremap <silent> <M-BS> :Files<cr>
