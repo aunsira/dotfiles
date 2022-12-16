@@ -194,7 +194,7 @@ nnoremap <Leader>eg :e ~/code/git/
 nnoremap <Leader>eh :e ~/
 nnoremap <Leader>cd :cd <C-r>=escape(expand("%:p:h"), ' ')<cr>/
 nnoremap <Leader>cg :cd ~/code/git/
-nnoremap <leader>ed :Files ~/Dropbox/notes/<cr>
+nnoremap <leader>ed :Files ~/Library/CloudStorage/Dropbox/notes<cr>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
