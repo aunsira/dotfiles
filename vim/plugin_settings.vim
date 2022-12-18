@@ -16,9 +16,16 @@ let g:ruby_indent_block_style = 'do'
 let g:fzf_history_dir = '~/.fzf-history'
 
 if has('nvim')
-  let $FZF_DEFAULT_OPTS .= "--ansi"
+  let $FZF_DEFAULT_OPTS .= "--ansi --bind alt-a:select-all"
   let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 endif
+
+" ALT-A CTRL-Q to select all and build quickfix list from Fzf.
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
 
 " Fzf Tweaks
 let g:fzf_colors =
@@ -36,6 +43,7 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 let g:fzf_buffers_jump = 1
 let g:fzf_action = {
+  \ 'ctrl-q': function('s:build_quickfix_list'),
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
@@ -201,21 +209,5 @@ let g:vim_markdown_conceal_code_blocks = 1
 
 " Tweak for ignoring trailing whitespaces in Fzf.
 let g:extra_whitespace_ignored_filetypes = ['fzf']
-
-" CTRL-A CTRL-Q to select all and build quickfix list from Fzf.
-
-function! s:build_quickfix_list(lines)
-  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
-  copen
-  cc
-endfunction
-
-let g:fzf_action = {
-  \ 'ctrl-q': function('s:build_quickfix_list'),
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
-
-let $FZF_DEFAULT_OPTS = '--bind alt-a:select-all'
 
 " vim:ft=vim
