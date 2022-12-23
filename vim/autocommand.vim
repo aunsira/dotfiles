@@ -75,6 +75,9 @@ augroup ex
   au BufRead,BufNewFile mix.lock set filetype=elixir
 
   autocmd FileType elixir nnoremap <leader>bp orequire IEx; IEx.pry<esc>:call Save()<cr>
+  autocmd FileType elixir nnoremap <leader>ts :wa<cr>:TestNearest -strategy=neovim<cr>
+  autocmd FileType elixir nnoremap <leader>tf :wa<cr>:TestFile -strategy=neovim<cr>
+  autocmd FileType elixir nnoremap <leader>tl :wa<cr>:TestLast -strategy=neovim<cr>
 augroup END
 
 " Help in new tabs
