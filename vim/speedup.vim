@@ -544,4 +544,7 @@ cnoremap <M-BS> <C-W>
 " Insert a pipe with ctrl-l
 imap <c-l> \|><space>
 
+" Switch to normal mode in terminal window by ctrl-o
+tmap <C-o> <C-\><C-n>
+
 " vim:ft=vim
