@@ -56,7 +56,7 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = 'menuone,noinsert,noselect'
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
@@ -68,9 +68,6 @@ local has_words_before = function()
 end
 
 cmp.setup {
-  completion = {
-    autocomplete = false,
-  },
   snippet = {
     expand = function(args)
       require('snippy').expand_snippet(args.body)
@@ -83,8 +80,8 @@ cmp.setup {
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
+      behavior = cmp.ConfirmBehavior.Insert,
+      select = false,
     },
     ['<Tab>'] = function(fallback)
       if cmp.visible() then
