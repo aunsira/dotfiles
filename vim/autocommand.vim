@@ -73,6 +73,8 @@ augroup ex
   au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
   au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
   au BufRead,BufNewFile mix.lock set filetype=elixir
+  " Make ?,!,:s part of words
+  autocmd FileType *.ex,*.exs setlocal iskeyword+=?,!
 
   autocmd FileType elixir nnoremap <leader>bp orequire IEx; IEx.pry<esc>:call Save()<cr>
   autocmd FileType elixir nnoremap <leader>ts :wa<cr>:TestNearest -strategy=neovim<cr>

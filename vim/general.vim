@@ -59,5 +59,6 @@ set nocursorcolumn                " speed up syntax highlighting
 set autowrite                     " Automatically :write before running commands
 set hidden
 set noshowmode
+set nofoldenable                  " Say no to code folding...
 
 " vim:ft=vim
