@@ -68,6 +68,7 @@ local has_words_before = function()
 end
 
 cmp.setup {
+  preselect = cmp.PreselectMode.None,
   snippet = {
     expand = function(args)
       require('snippy').expand_snippet(args.body)
@@ -85,7 +86,7 @@ cmp.setup {
     },
     ['<Tab>'] = function(fallback)
       if cmp.visible() then
-        cmp.select_next_item()
+        cmp.confirm({ select = true})
       elseif has_words_before() then
         cmp.complete()
       else
