@@ -60,5 +60,6 @@ set autowrite                     " Automatically :write before running commands
 set hidden
 set noshowmode
 set nofoldenable                  " Say no to code folding...
+set cpt-=t                        " Ignore tag in completion list
 
 " vim:ft=vim
