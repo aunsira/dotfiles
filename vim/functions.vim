@@ -164,8 +164,8 @@ command! -nargs=+ GcDown execute call('printf', ['+%s,+%s Commentary'] + split(<
 command! -nargs=1 Count execute printf('%%s/%s//gn', escape(<q-args>, '/')) | normal! ``
 
 function! ToggleGstatus()
-  if buflisted(bufname('.git/index'))
-    bd .git/index
+  if buflisted(bufname('fugitive:///*/.git/'))
+    execute ":bd" bufname('fugitive:///*/.git/')
   else
     execute printf(':Git') | normal! gg4j
   endif
