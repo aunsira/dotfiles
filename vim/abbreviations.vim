@@ -1,18 +1,7 @@
 " Abbreviations
 iab que queue
-iab iv I've
-iab il I'll
 iab td # TODO(aun):
 iab seperate separate
-iab dw Data Wow
-iab mod moderation
-iab Mod Moderation
-iab modreator moderator
-iab Modreator Moderator
-iab docv document_verification
-iab Docv DocumentVerification
-iab cons consensus
-iab Cons Consensus
 iab nec necessary
 iab stag staging
 iab Stag Staging
@@ -26,8 +15,6 @@ iab depl deployment
 iab Depl Deployment
 iab tx transaction
 iab Tx Transaction
-iab pmn posmoni
-iab Pmn Posmoni
 iab imprv improvement
 iab desc description
 iab Desc Description
