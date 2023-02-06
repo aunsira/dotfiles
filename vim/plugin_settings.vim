@@ -210,6 +210,7 @@ let g:vim_markdown_conceal_code_blocks = 1
 " Tweak for ignoring trailing whitespaces in Fzf.
 let g:extra_whitespace_ignored_filetypes = ['fzf']
 
+" To get netrw buffers to close themselves.
 let g:netrw_fastbrowse = 0
 
 " vim:ft=vim
