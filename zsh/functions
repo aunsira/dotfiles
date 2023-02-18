@@ -198,6 +198,15 @@ function mkb {
   git checkout $branch
 }
 
+function openpr() {
+  gh pr list \
+    | fzf \
+    --delimiter "\t" \
+    --reverse \
+    --preview="GH_FORCE_TTY=true CICOLOR_FORCE=1 gh pr view {1}" \
+    --bind="enter:become(gh pr view -w {1}),ctrl-e:become(gh pr checkout {1})"
+}
+
 function plr {
   git pull --rebase origin $1
 }
