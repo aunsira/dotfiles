@@ -8,7 +8,7 @@ Plug 'andyl/vim-projectionist-elixir'
 Plug 'andymass/vim-matchup'
 Plug 'aunsira/vim-thai-keys'
 Plug 'beloglazov/vim-textobj-quotes'
-Plug 'bronson/vim-trailing-whitespace'
+Plug 'bronson/vim-trailing-whitespace', {'commit': '9b472b1'}
 Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-system-copy'
 Plug 'christoomey/vim-tmux-navigator'
