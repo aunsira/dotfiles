@@ -124,61 +124,6 @@ let g:matchup_matchparen_deferred = 1
 let g:matchup_matchparen_status_offscreen = 0
 let g:matchup_matchparen_enabled = 0
 
-" https://github.com/junegunn/fzf.vim/issues/392
-let g:projectionist_ignore_term = 1
-let g:projectionist_heuristics = {
-      \ '*.go': {
-      \   '*.go': {
-      \       'alternate': '{}_test.go',
-      \       'type': 'source'
-      \   },
-      \   '*_test.go': {
-      \       'alternate': '{}.go',
-      \       'type': 'test'
-      \   }
-      \ },
-      \ "*.rb": {
-      \     "*.rb": { "alternate": "{}_spec.rb" },
-      \     "*_spec.rb": { "alternate": "{}.rb" },
-      \   }
-      \ }
-
-" https://thoughtbot.com/blog/extending-rails-vim-with-custom-commands
-let g:rails_projections = {
-  \ "app/serializers/*_serializer.rb": {
-  \   "command": "serializer",
-  \   "template": "class {camelcase|capitalize|colons}Serializer < ActiveModel::Serializer\n  include FastJsonapi::ObjectSerializer\n\n  attributes\nend"
-  \ },
-  \ "app/models/*.rb": {
-  \   "command": "model",
-  \   "template": "class {camelcase|capitalize|colons} < ApplicationRecord\nend"
-  \ },
-  \ "spec/factories/*.rb": {
-  \   "command": "factory",
-  \   "template": "FactoryBot.define do\n  factory :{underscore} do\n  end\nend"
-  \ },
-  \ "app/uploaders/*_uploader.rb": {
-  \   "command": "uploader",
-  \   "template": "class {camelcase|capitalize|colons}Uploader < CarrierWave::Uploader::Base\n  include CarrierWave::MiniMagick\nend"
-  \ },
-  \ "app/api/v1/*_api.rb": {
-  \   "command": "api",
-  \   "template": "class V1::{camelcase|capitalize|colons}API < Grape::API\n  resources :{underscore|plural} do\n  end\nend"
-  \ },
-  \ "spec/*_controller_spec.rb": {
-  \   "alternate": ["app/controllers/{}_controller.rb"]
-  \ },
-  \ "spec/api/*_spec.rb": {
-  \   "alternate": ["app/api/{}.rb"],
-  \   "template": "require 'rails_helper'\n\ndescribe {camelcase|capitalize|colons}, type: :api do\nend"
-  \ },
-  \ "app/api/*.rb": {
-  \   "alternate": ["spec/api/{}_spec.rb"]
-  \ },
-  \ "app/controllers/*_controller.rb": {
-  \   "spec": ["spec/{}_controller_spec.rb"]
-  \ } }
-
 function! MKDPSplit(url)
   call system('x5050 left Safari '.shellescape(a:url))
 endfunction
