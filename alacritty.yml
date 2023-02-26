@@ -69,29 +69,29 @@ draw_bold_text_with_bright_colors: false
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Fira Code
+    family: Menlo
     # Style can be specified to pick a specific face.
     style: Regular
     antialias: true
 
   # The bold font face
   bold:
-    family: Fira Code
+    family: Menlo
     style: Bold
 
   # The italic font face
   italic:
-    family: Fira Code
+    family: Menlo
     style: Italic
 
   # Point size of the font
-  size: 15.0
+  size: 12.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
     x: 0
-    y: 0
+    y: 1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increase the x offset to move the glyph to
@@ -493,9 +493,10 @@ key_bindings:
   - { key: Key6,      mods: Alt|Shift, chars: "\x1b^"                       } # Alt + ^
   - { key: Backslash, mods: Alt,       chars: "\x1b\\"                      } # Alt + \
   - { key: Backslash, mods: Alt|Shift, chars: "\x1b|"                       } # Alt + |
-  - { key: N, mods: Alt, action: CreateNewWindow }
-  - { key: H,              mods: Command|Alt,                action: HideOtherApplications }
-  - { key: Return, mods: Command, action: ToggleSimpleFullscreen }
+  - { key: N,      mods: Command|Alt, action: CreateNewWindow }
+  - { key: W,      mods: Command|Alt, action: Quit }
+  - { key: H,      mods: Command|Alt, action: HideOtherApplications }
+  - { key: Return, mods: Command,     action: ToggleSimpleFullscreen }
   # Map shift + space to underscore available in vim config
   # ref: https://arslan.io/2018/02/05/gpu-accelerated-terminal-alacritty/
   # - { key: Space,   mods: Shift,   chars: "\x5f" }
