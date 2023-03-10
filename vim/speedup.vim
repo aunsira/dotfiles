@@ -548,4 +548,7 @@ imap <c-l> \|><space>
 " Switch to normal mode in terminal window by ctrl-o
 tmap <C-o> <C-\><C-n>
 
+" nvim-snippy
+imap <expr> <C-]> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<C-]>'
+
 " vim:ft=vim
