@@ -11,7 +11,3 @@ endfunction
 
 call s:SourceConfigFilesIn('vim')
 call s:SourceConfigFilesIn('local')
-
-if has('nvim')
-  lua require("lsp")
-endif
