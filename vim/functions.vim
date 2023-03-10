@@ -128,6 +128,11 @@ function! SquashAll()
   normal :w
 endfunction
 
+" Disable LSP Diagnostic
+function! DisableDiagnostic()
+  execute 'lua vim.diagnostic.config({virtual_text = false, signs = false})'
+endfunction
+
 " https://gist.github.com/habamax/4662821a1dad716f5c18205489203a67
 "" number text object
 "" only "inner" text object: vin, din, cin

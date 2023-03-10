@@ -30,6 +30,12 @@ if [[ "$symlink_vim_answer" == "y" ]]; then
   ln -sfn $basedir/vim/snips ${HOME}/.config/nvim/snippets
 fi
 
+read -n1 -p "Symlink all lua config files to ~/.config/nvim/lua (overwriting)? (y/n)" symlink_lua_answer
+echo ""
+if [[ "$symlink_lua_answer" == "y" ]]; then
+  ln -sfn $basedir/lua ${HOME}/.config/nvim/lua
+fi
+
 _zshfiles_path=$basedir/zsh;
 read -n1 -p "Symlink all zsh files to ~/.zsh/ (overwriting)? (y/n)" symlink_zsh_answer
 echo ""

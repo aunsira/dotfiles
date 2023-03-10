@@ -11,7 +11,6 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'christoomey/vim-system-copy'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
-Plug 'dcampos/nvim-snippy'
 Plug 'easymotion/vim-easymotion'
 Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'elixir-editors/vim-elixir'
@@ -58,6 +57,17 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vim-scripts/ReplaceWithSameIndentRegister'
 Plug 'wellle/targets.vim'
 Plug 'yegappan/mru'
+
+" LSP
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'neovim/nvim-lspconfig'
+
+" Snippets
+Plug 'dcampos/nvim-snippy'
+Plug 'dcampos/cmp-snippy'
 
 call plug#end()
 
