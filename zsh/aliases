@@ -1,31 +1,5 @@
 #!/bin/bash
 
-# Shortcut for changing directories
-alias ...="cd ../.."                        # go up parent dir twice
-alias ....="cd ../../.."                    # .. thrice
-alias .....="cd ../../../.."                # .. four times
-alias ......="cd ../../../../.."            # .. five times
-alias cd-="cd -"
-alias cd.='cd ..'
-alias cd..="cd .."
-alias dot='cd ~/code/git/dotfiles'
-alias ky='cd ~/code/git/kiyo/kiyo_api'
-alias ai='cd ~/code/git/posmoni-ai'
-alias im='cd ~/code/git/posmoni-image'
-alias tk='cd ~/code/git/posmoni-tasker'
-alias dmp='cd ~/code/git/dmp-backend'
-
-# Mongo instances
-alias ai0='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-54-168-233-134.ap-northeast-1.compute.amazonaws.com'
-alias ai1='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-18-183-156-236.ap-northeast-1.compute.amazonaws.com'
-alias image0='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-54-95-82-87.ap-northeast-1.compute.amazonaws.com'
-alias image1='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-54-64-174-192.ap-northeast-1.compute.amazonaws.com'
-alias tasker0='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-46-51-232-134.ap-northeast-1.compute.amazonaws.com'
-alias tasker1='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-3-112-238-21.ap-northeast-1.compute.amazonaws.com'
-alias tasker2='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-54-178-68-209.ap-northeast-1.compute.amazonaws.com'
-alias video0='ssh -i "posmoni-tokyo.pem" ec2-user@ec2-18-182-10-19.ap-northeast-1.compute.amazonaws.com'
-
-# For speed me up
 alias -g G='| grep'
 alias -g L='| less'
 alias -g M='| more'
@@ -38,15 +12,12 @@ alias bi="bundle install"
 alias br='bin/rspec'
 alias bu='bundle update'
 alias c='clear'
-alias casdbprep='RAILS_ENV=test rails cequel:migrate'
 alias cb='gcb'
-alias cdgo='cd ~/gosrc/src/github.com'
 alias cdh='cd ~'
 alias cdl='cd ~/.config/nvim'
 alias cdr="cd $(git rev-parse --show-toplevel)"
 alias clean='git clean -df'
 alias co='gco'
-alias d='wordpos def'
 alias dbprep='rdm && rdtp'
 alias dcb='docker-compose build'
 alias dcl="docker-compose logs -f"
@@ -56,20 +27,18 @@ alias dcu="docker-compose up -d"
 alias develop='git checkout develop'
 alias di='docker images'
 alias dimp='docker image prune'
+alias dot='cd ~/code/git/dotfiles'
 alias dp='docker ps'
 alias dpa='docker ps -a'
 alias drm='docker rm'
 alias drmi='docker rmi'
 alias e='exit'
-alias edp='deploy production'
-alias eds='deploy staging'
 alias fco='git fetch && git checkout $1'
 alias fetch='git fetch'
 alias ff='fixup; git push --force origin $(git_branch_name)'
 alias fixup='git add -A && git commit --fixup $(current-commit) && git rebase -i --autosquash $(before-fixup-commit)'
 alias fp='git fetch && git pull --rebase origin $(git rev-parse --abbrev-ref HEAD)'
 alias fs='bundle install && foreman start --procfile Procfile'
-alias fuck='eval $(thefuck $(fc -ln -1))'
 alias ga='git add -A'
 alias gaf='git add $(gf)'
 alias gag='git add -A && git commit --amend --no-edit && git push -f'
@@ -105,7 +74,6 @@ alias grc='git rebase --continue'
 alias grh='git reset HEAD^'
 alias grs='git rebase --skip'
 alias gs='git show'
-alias gto='git-open'
 alias gv='vim +GV +"autocmd BufWipeout <buffer> qall"'
 alias h='sync'
 alias hb='gh browse'
@@ -148,14 +116,8 @@ alias rff='bundle exec rspec --fail-fast'
 alias rg='rails generate'
 alias rr='bin/rails routes'
 alias rs='bundle check && rails s'
-alias sc='starscope -e ctags'
-alias server='NODE_ENV=development nodemon --inspect server.js'
-alias sn='spotify next'
-alias sp='spotify previous'
 alias ss='spring stop'
 alias ssbr='spring stop && bin/rspec'
-alias ssp='shell production'
-alias sss='shell staging'
 alias stash='git stash'
 alias stashclear='git stash clear'
 alias stashls='git stash list'

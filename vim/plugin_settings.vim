@@ -73,24 +73,6 @@ let g:rspec_command = "!bin/rspec {spec}"
 " Run vim-test with test environment
 let $NODE_ENV='test'
 
-let g:go_test_show_name = 1
-let g:go_list_type = "quickfix"
-let g:go_doc_keywordprg_enabled = 0
-
-let g:go_autodetect_gopath = 1
-let g:go_metalinter_autosave_enabled = ['vet', 'golint']
-let g:go_metalinter_enabled = ['vet', 'golint']
-
-let g:go_gopls_complete_unimported = 1
-
-let g:go_imports_mode="gopls"
-let g:go_imports_autosave=1
-
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_operators = 1
-
-let g:go_fold_enable = []
-
 " vim-closetag
 let g:closetag_emptyTags_caseSensitive = 1
 let g:closetag_shortcut = '>'
@@ -116,8 +98,6 @@ let g:switch_custom_definitions =
 
 " Allow netrw to remove non-empty local directories
 let g:netrw_localrmdir='rm -r'
-
-let g:alchemist_tag_disable = 1
 
 " vim match-up
 let g:matchup_matchparen_deferred = 1
