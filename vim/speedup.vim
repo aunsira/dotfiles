@@ -96,27 +96,10 @@ nnoremap <leader>; :
 vnoremap <leader>; :
 
 " Git shortcuts
-" Executes git cmd in the context of b:git_dir.
-function! s:git_do(cmd) abort
-  " git 1.8.5: -C is a (more reliable) alternative to --git-dir/--work-tree.
-  return systemlist('git -C '.shellescape(fnamemodify(b:git_dir, ':p:h:h'))
-        \ . ' ' . a:cmd)
-endfunction
-
-nnoremap <silent> Ub :Git blame<cr>
-nnoremap <silent> Ud :<C-U>if &diff<bar>diffupdate<bar>elseif !v:count && empty(<SID>git_do('diff -- '.shellescape(FugitivePath())))<bar>echo 'no changes'<bar>else<bar>exe 'Gvdiff'.(v:count ? ' HEAD'.repeat('^', v:count) : '')<bar>call feedkeys('<c-v><c-l>')<bar>endif<cr>
-nnoremap Uc :Git commit<cr>
-nnoremap Uf :Git commit --fixup=
-nnoremap <expr><silent> Ul '@_<cmd>GV'.(v:count?'':'!').'<cr>'
-nnoremap <silent> Ur :Gread<cr>
-nmap <silent> Us :Git<cr>gg<c-n>
-nnoremap <silent> Uw :if !exists(":Gwrite")<bar>call fugitive#detect(expand('%:p'))<bar>endif<bar>Gwrite<cr>
-nnoremap <silent> Ug :GBrowse<cr>
-
 nmap  <silent> \<space> :ToggleGstatus<cr>
 nnoremap \p :Git push<cr>
 nnoremap \b :Git blame<cr>
-nnoremap <silent> \<tab> :<C-U>if &diff<bar>diffupdate<bar>elseif !v:count && empty(<SID>git_do('diff -- '.shellescape(FugitivePath())))<bar>echo 'no changes'<bar>else<bar>exe 'Gvdiff'.(v:count ? ' HEAD'.repeat('^', v:count) : '')<bar>call feedkeys('<c-v><c-l>')<bar>endif<cr>
+nnoremap <silent> \<tab> :Gdiffsplit<cr>
 
 " Make Y act like other capitals
 map Y yg_

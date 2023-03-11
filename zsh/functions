@@ -244,14 +244,6 @@ function ctx {
   kubectl config get-contexts
 }
 
-function staging {
-  kubectl config use-context datawow-staging
-}
-
-function production {
-  kubectl config use-context datawow-production
-}
-
 # Files matching a search
 function vms {
   vim $(ag -l "$1") -c "silent! /$1"
