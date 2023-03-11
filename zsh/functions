@@ -140,8 +140,6 @@ function current-branch() {
   git rev-parse --abbrev-ref HEAD
 }
 
-j() { export JAVA_HOME=$(/usr/libexec/java_home); }
-
 function exit() {
   if [[ -z $TMUX ]]; then
     builtin exit
@@ -225,40 +223,6 @@ function remove-stale-branch {
   git remote update origin --prune
 }
 
-function environment_lookup {
-  val=`eb list 2>/dev/null | grep $1`
-  if [[ $val == *"*"* ]]; then
-    echo "$val" | colrm 1 2
-  else
-    echo "$val"
-  fi
-}
-
-function deploy {
-  environment=`environment_lookup $1`
-  eb deploy $environment
-}
-
-function shell {
-  environment=`environment_lookup $1`
-  eb ssh $environment
-}
-
-function deployment-log {
-  environment=`environment_lookup $1`
-  eb logs $environment -g /aws/elasticbeanstalk/$environment/var/log/eb-activity.log --stream
-}
-
-function access-log {
-  environment=`environment_lookup $1`
-  eb logs $environment -g /aws/elasticbeanstalk/$environment/var/log/nginx/access.log --stream
-}
-
-function error-log {
-  environment=`environment_lookup $1`
-  eb logs $environment -g /aws/elasticbeanstalk/$environment/var/log/nginx/error.log --stream
-}
-
 # K8s
 function getpods {
   watch kubectl -n $1 get pods
@@ -286,22 +250,6 @@ function staging {
 
 function production {
   kubectl config use-context datawow-production
-}
-
-function tokyo-staging {
-  kubectl config use-context tokyo-staging
-}
-
-function tokyo-production {
-  kubectl config use-context tokyo-production
-}
-
-function ndata-staging {
-  kubectl config use-context ndatathoth-staging
-}
-
-function ndata-production {
-  kubectl config use-context ndatathoth-production
 }
 
 # Files matching a search
