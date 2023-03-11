@@ -9,8 +9,6 @@ iab prod production
 iab Prod Production
 iab incr increase
 iab decr decrease
-iab impl implementation
-iab Impl Implementation
 iab depl deployment
 iab Depl Deployment
 iab tx transaction
