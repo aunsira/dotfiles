@@ -285,62 +285,6 @@ nnoremap <leader>- :Switch<cr>
 
 nnoremap <leader>lc q:k<C-c>
 
-" Reduce `in` verb while operating
-nmap t' gri'
-nmap t" gri"
-nmap t[ gri[
-nmap t( gri(
-nmap t{ gri{
-nmap t9 gri(
-nmap tw griw
-nmap tl gril==
-nmap tq griq
-nmap t= gra=
-
-nmap f9 f(
-
-nmap yw yiw
-nmap y' yi'
-nmap y" yi"
-nmap y[ yi[
-nmap y( yi(
-nmap y9 yi(
-nmap y{ yi{
-nmap y<Space> yt<Space>
-nmap y= ya=
-
-nmap vw viw
-nmap v' vi'
-nmap v" vi"
-nmap v[ vi[
-nmap v( vi(
-nmap v9 vi(
-nmap v{ vi{
-nmap v<Space> vt<Space>
-nmap v= va=
-
-nmap cw ciw
-nmap c' ci'
-nmap c" ci"
-nmap c[ ci[
-nmap c( ci(
-nmap c{ ci{
-nmap c9 ci(
-nmap cl cil
-nmap c<Space> ct<Space>
-nmap c= ca=
-
-nmap d' di'
-nmap d" di"
-nmap d[ di[
-nmap d( di(
-nmap d9 di(
-nmap d{ di{
-nmap dw daw
-nmap dl dil
-" nmap d<Space> dt<Space>
-nmap d= da=
-
 " Paste in line from vim-system-copy
 nmap cvl cvil
 " Remap default copy key from vim-system-copy
