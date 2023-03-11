@@ -40,7 +40,6 @@ nmap <leader>gr "*gr
 " yank to clipboard
 vnoremap <leader>y "*y
 vnoremap <leader>d "*d
-map <leader>x y
 
 " Faster viewport scrolling (10 lines at a time)
 nnoremap <C-e> 10<C-e>
@@ -59,15 +58,6 @@ nnoremap <leader><tab> <C-^>
 nmap ]t :tabn<cr>
 nmap [t :tabp<cr>
 
-" Use actually useful arrow keys
-nnoremap <Left> :vertical resize +1<CR>
-nnoremap <Right> :vertical resize -1<CR>
-nnoremap <Up> :resize +1<CR>
-nnoremap <Down> :resize -1<CR>
-
-" New tab
-nnoremap <leader>tn :tabe<cr>
-
 " Project browsing
 "
 " Karabiner complex modifications rules - Map Option to soft-meta for Alacritty is required.
@@ -76,23 +66,10 @@ nmap <Esc><Enter> :b<space>
 
 " Map fzf plugin
 nnoremap <silent> <C-p> :Files<cr>
-" nnoremap <silent> <M-BS> :Files<cr>
-nnoremap <silent> <leader>hf :History<cr>
 imap <c-x><c-k> <plug>(fzf-complete-word)
-" imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
 nnoremap <leader>L :Lines<cr>
 nnoremap <enter> :Buffers<cr>
-nnoremap <silent> <Leader>` :Marks<CR>
-nnoremap <leader>fa :Files app/<cr>
-nnoremap <leader>fp :Files app/**/api<cr>
-nnoremap <leader>fm :Files app/models/<cr>
-nnoremap <leader>fc :Files app/controllers/<cr>
-nnoremap <leader>ff :Files spec/factories<cr>
-nnoremap <leader>fs :Files spec/<cr>
-
-" Quickly open a second window to view files side by side
-nmap <LEADER>vs :vsplit<CR>
 
 " bind K to grep word under cursor
 nnoremap K :Ag! <C-R><C-W><CR>
@@ -105,13 +82,7 @@ vnoremap <leader><BS> y:Ag! <C-R>"<CR>
 " normal search on visual selection
 vnoremap // y/<C-R>"<CR>
 
-" Use C-Space to Esc out of any mode (Terminal sees <C-@> as <C-space> WTF, but ok)
-nnoremap <C-@> <Esc>:noh<cr>
-vnoremap <C-@> <Esc>gV
-onoremap <C-@> <Esc>
-cnoremap <C-@> <C-c>
-inoremap <C-@> <Esc>`^
-" For GUI
+" Use C-Space to Esc out of any mode
 nnoremap <C-Space> <Esc>:noh<cr>
 vnoremap <C-Space> <Esc>gV
 onoremap <C-Space> <Esc>
@@ -125,15 +96,6 @@ nnoremap <leader>; :
 vnoremap <leader>; :
 
 " Git shortcuts
-map <leader>gs :Git<cr>gg<c-n>
-map <leader>gc :Gcommit<cr>
-map <leader>gg :Gbrowse<cr>
-map <leader>gb :Git blame<cr>
-map <leader>gd :Gdiffsplit<cr>
-map <leader>gh :Ghdiffsplit<cr>
-map <leader>gp :Git push<cr>
-map <leader>ge :Gread<cr>
-
 " Executes git cmd in the context of b:git_dir.
 function! s:git_do(cmd) abort
   " git 1.8.5: -C is a (more reliable) alternative to --git-dir/--work-tree.
@@ -143,22 +105,13 @@ endfunction
 
 nnoremap <silent> Ub :Git blame<cr>
 nnoremap <silent> Ud :<C-U>if &diff<bar>diffupdate<bar>elseif !v:count && empty(<SID>git_do('diff -- '.shellescape(FugitivePath())))<bar>echo 'no changes'<bar>else<bar>exe 'Gvdiff'.(v:count ? ' HEAD'.repeat('^', v:count) : '')<bar>call feedkeys('<c-v><c-l>')<bar>endif<cr>
-nnoremap Uc :Gcommit<cr>
-nnoremap Uf :Gcommit --fixup=
+nnoremap Uc :Git commit<cr>
+nnoremap Uf :Git commit --fixup=
 nnoremap <expr><silent> Ul '@_<cmd>GV'.(v:count?'':'!').'<cr>'
 nnoremap <silent> Ur :Gread<cr>
 nmap <silent> Us :Git<cr>gg<c-n>
 nnoremap <silent> Uw :if !exists(":Gwrite")<bar>call fugitive#detect(expand('%:p'))<bar>endif<bar>Gwrite<cr>
-nnoremap <silent> Ug :Gbrowse<cr>
-
-nmap UB Ub
-nmap UD Ud
-nmap UF Uf
-nmap UL Ul
-nmap UR Ur
-nmap US Us
-nmap UW Uw
-nmap UC Uc
+nnoremap <silent> Ug :GBrowse<cr>
 
 nmap  <silent> \<space> :ToggleGstatus<cr>
 nnoremap \p :Git push<cr>
@@ -172,11 +125,6 @@ map <leader>Y vg_"*y
 " move by line on the screen rather than by line in the file
 nnoremap k gk
 nnoremap j gj
-
-nnoremap gj 5j
-nnoremap gk 5k
-vnoremap gk 5k
-vnoremap gj 5j
 
 " Emacs-like beginning and end of line.
 inoremap <silent> <c-e> <esc>A
@@ -214,18 +162,6 @@ nnoremap <leader>sub :%s//
 vnoremap <leader>sub :s//
 map <leader>ra :%S/<c-r><c-w>/<c-r><c-w><c-w>
 
-" Auto center with these motions
-noremap n nzz
-noremap N Nzz
-noremap G Gzz
-noremap } }zz
-noremap { {zz
-noremap <C-d> <C-d>zz
-noremap <C-u> <C-u>zz
-
-" Use GV without hit colon
-map <Leader>gv :GV<cr>
-
 " Use Easymotion instead of normal vim search
 map <Leader>/ <Plug>(easymotion-sn)
 map <Leader>j <Plug>(easymotion-j)
@@ -242,10 +178,6 @@ map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 map <leader>hb :!hub browse<cr>
 map <leader>hc :!hub compare<cr>
 map <leader>hps :!hub pr show<cr>
-
-" Modes  \m mouseOff, \M mouseOn,
-noremap <Leader>m :set mouse=<CR>
-noremap <Leader>M :set mouse=a<CR>
 
 nnoremap <leader>u1 m`^i# <esc>``2l
 nnoremap <leader>u2 m`^i## <esc>``3l
@@ -265,17 +197,6 @@ nnoremap <C-o> <C-o>zz
 " Reload configuration file
 map <leader>sop :source ~/.config/nvim/init.vim<cr>
 
-" Split window mappings
-nnoremap Zh     :leftabove vsplit<CR>
-nnoremap Zj     :belowright split<CR>
-nnoremap Zk     :aboveleft split<CR>
-nnoremap Zl     :rightbelow vsplit<CR>
-nmap     ZH     Zh
-nmap     ZJ     Zj
-nmap     ZK     Zk
-nmap     ZL     Zl
-nmap     ZT     :tabclose<cr>
-
 nnoremap z. :call Save()<CR>
 
 " Mark position before search, use `u to go back to last position
@@ -287,22 +208,11 @@ nnoremap <leader>! :call Goog(expand("<cWORD>"), 1)<cr>
 xnoremap <leader>? "gy:call Goog(@g, 0)<cr>gv
 xnoremap <leader>! "gy:call Goog(@g, 1)<cr>gv
 
-onoremap p i(
-onoremap ' i'
-onoremap " i"
-vnoremap <leader>' <esc>a'<esc>`<i'<esc>`>el
-vnoremap <leader>" <esc>a"<esc>`<i"<esc>`>el
-nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
-nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-
 " Map Ctrl+V to paste in Insert mode
 imap <C-V> <C-R>*
 
 " Execute macro in q
 nnoremap Q @q
-
-nnoremap <F5> :NumberToggle<cr>
-nnoremap <F6> :setlocal spell! spell?<CR>
 
 command! Q q " Bind :Q to :q
 command! Qall qall
@@ -359,12 +269,6 @@ command! -bang -nargs=* Ag
 
 command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
-" Test file
-nnoremap <leader>tf :wa<cr>:TestFile<cr>
-nnoremap <leader>ta :wa<cr>:TestFile ./<cr>
-nnoremap <leader>ts :wa<cr>:TestNearest<cr>
-nnoremap <leader>tl :wa<cr>:TestLast<cr>
-
 " quickfix list
 nnoremap ]q :cnext<cr>
 nnoremap [q :cprevious<cr>
@@ -381,10 +285,6 @@ nnoremap [L :lfirst<cr>
 nnoremap <leader>cs :cclose<bar>lclose<bar>VtrKillRunner<cr>
 nnoremap <leader>cc :cc<cr>
 
-" Golang stuff
-nmap <C-g> :GoDecls<cr>
-imap <C-g> <esc>:<C-u>GoDecls<cr>
-
 " Go to marked
 nnoremap gm `u
 
@@ -392,11 +292,6 @@ nnoremap gm `u
 nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
 nnoremap <silent> <C-n> :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
 vmap <C-n> *<c-o>
-
-" imap uu _
-" cnoremap uu _
-
-nnoremap <silent> <leader>rd :redraw!<cr>
 
 " Tmux-runner
 map <leader>sl :VtrSendLinesToRunner<cr>
@@ -481,20 +376,11 @@ nmap <C-b> %
 xmap b i%
 omap b i%
 
-" vim-rails
-nnoremap <leader>A :A<cr>
-nnoremap <leader>av :AV<cr>
-nnoremap <leader>at :AT<cr>
-nnoremap <leader>as :AS<cr>
-
 " Insert current time
 inoremap <silent> <C-G><C-T> <C-R>=repeat(complete(col('.'),map(["%Y-%m-%d %H:%M:%S","%a, %d %b %Y %H:%M:%S %z","%Y %b %d","%d-%b-%y","%a %b %d %T %Z %Y"],'strftime(v:val)')+[localtime()]),0)<CR>
 
 " Close all but the current one
 nnoremap <leader>o :only<CR>zz
-
-nnoremap <leader>ss :!spring stop<cr>
-nnoremap <leader>pp :!rails db:test:prepare<cr>
 
 " mimic the behavior of /%Vfoobar which searches within the previously
 " selected visual selection
@@ -512,6 +398,7 @@ nnoremap <leader><leader> :
 vnoremap <leader><leader> :
 nnoremap <leader>, :!
 
+" Keymap for creating todo list.
 nnoremap [z I[ ]<Space><Esc>
 nnoremap [x I[x]<Space><Esc>
 
