@@ -7,16 +7,6 @@ autocmd FileType gitcommit,markdown set nonumber
 autocmd FileType gitcommit set spell
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
-" run :GoBuild or :GoTestCompile based on the go file
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#test#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
-
 augroup ruby
   autocmd FileType ruby nnoremap <silent> <2-LeftMouse> *<C-]>
   autocmd FileType ruby nnoremap <silent> gd *<C-]>zz
@@ -33,40 +23,6 @@ augroup ruby
 
   " Make ?,!,:s part of words
   autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?,!
-augroup END
-
-augroup go
-  autocmd!
-
-  autocmd FileType go nmap <silent> <Leader>v <Plug>(go-def-vertical)
-  autocmd FileType go nmap <silent> <Leader>s <Plug>(go-def-split)
-
-  autocmd FileType go nmap <silent> <Leader>x <Plug>(go-doc-vertical)
-
-  autocmd FileType go nmap <silent> <Leader>l <Plug>(go-metalinter)
-
-  autocmd FileType go nmap <silent> <leader>b :<C-u>call <SID>build_go_files()<CR>
-  autocmd FileType go nmap tS :wa<cr>:TestFile -strategy=make<cr>
-  autocmd FileType go nmap tN :wa<cr>:TestNearest -strategy=make -v<cr>
-  autocmd FileType go nmap tL :wa<cr>:TestLast -strategy=make<cr>
-  autocmd FileType go nmap <silent> <leader>r  <Plug>(go-run)
-  autocmd FileType go nmap <silent> <leader>e  <Plug>(go-install)
-
-  autocmd FileType go nmap <silent> <Leader>c <Plug>(go-coverage-toggle)
-
-  autocmd FileType go nmap <silent> <2-LeftMouse> *<Plug>(go-def)
-augroup END
-
-augroup js
-  autocmd!
-  autocmd FileType javascript inoremap <silent> <M-r> =><space>
-  autocmd FileType javascript inoremap <silent> <M-t> return<space>
-  autocmd FileType javascript inoremap <silent> <M-f> function<space>
-  autocmd FileType javascript inoremap <silent> <M-q> require('');<left><left><left>
-  autocmd FileType javascript nnoremap <silent> <M-a> A;<esc>
-  autocmd FileType javascript nnoremap <silent> <leader>cl oconsole.log();<Left><Left>
-  autocmd FileType javascript inoremap <silent> <M-c> console.log();<Left><Left>
-  autocmd FileType javascript nnoremap <silent> <2-LeftMouse> *:TernDef<cr>
 augroup END
 
 augroup ex
