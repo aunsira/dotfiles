@@ -17,8 +17,8 @@ window:
   # Window dimensions in character columns and lines
   # (changes require restart)
   dimensions:
-    columns: 100
-    lines: 30
+    columns: 160
+    lines: 48
 
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
@@ -54,7 +54,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: SimpleFullscreen
+  # startup_mode: SimpleFullscreen
 
     # Background opacity
   opacity: 0.95
@@ -72,7 +72,6 @@ font:
     family: Menlo
     # Style can be specified to pick a specific face.
     style: Regular
-    antialias: true
 
   # The bold font face
   bold:
@@ -91,7 +90,7 @@ font:
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
     x: 0
-    y: 1
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increase the x offset to move the glyph to
@@ -238,6 +237,7 @@ dynamic_title: true
 # - Beam
 cursor:
   style: Block
+  unfocused_hollow: false
 
 # Live config reload (changes require restart)
 live_config_reload: true
