@@ -274,7 +274,7 @@ nnoremap gm `u
 " Highlight current word without move to the next
 nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
 nnoremap <silent> <C-n> :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
-vmap <C-n> *<c-o>
+vmap <C-n> *N
 
 " Tmux-runner
 map <leader>sl :VtrSendLinesToRunner<cr>
