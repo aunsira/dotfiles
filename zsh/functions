@@ -28,6 +28,21 @@ gg() {
   open "http://www.google.com/search?q=$search"
 }
 
+# Simplest CLI pomodoro - https://dev.to/petros/simplest-cli-pomodoro-g1g
+work() {
+  # usage: work 10m, work 60s etc. Default is 25m
+  timer "${1:-25m}" && terminal-notifier -message 'Pomodoro'\
+        -title 'Work Timer is up! Take a Break 😊'\
+        -sound Crystal
+}
+
+rest() {
+  # usage: rest 10m, rest 60s etc. Default is 5m
+  timer "${1:-5m}" && terminal-notifier -message 'Pomodoro'\
+        -title 'Break is over! Get back to work 😬'\
+        -sound Crystal
+}
+
 # GIT heart FZF
 # --------------------------------------------
 is_in_git_repo() {
