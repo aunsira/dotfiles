@@ -89,4 +89,11 @@ autocmd BufWinEnter * set foldlevel=999999
 " Pull path into system clipboard
 command! Path let @* = expand("%")
 
+" Disable Copilot for large files as it can be slow and impair the editing.
+autocmd BufReadPre *
+      \ let f=getfsize(expand("<afile>"))
+      \ | if f > 100000 || f == -2
+      \ | let b:copilot_enabled = v:false
+      \ | endif
+
 " vim:ft=vim
