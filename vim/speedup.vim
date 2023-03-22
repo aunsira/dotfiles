@@ -367,6 +367,5 @@ imap <expr> <C-]> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-adva
 
 " GitHub Copilot
 imap <silent><script><expr> <C-E> copilot#Accept("<End>")
-let g:copilot_no_tab_map = v:true
 
 " vim:ft=vim

@@ -138,4 +138,13 @@ let g:extra_whitespace_ignored_filetypes = ['fzf']
 " To get netrw buffers to close themselves.
 let g:netrw_fastbrowse = 0
 
+" GitHub Copilot
+let g:copilot_no_tab_map = v:true
+" Include these file types in Copilot.
+let g:copilot_filetypes = {
+      \ 'gitcommit': v:true,
+      \ 'markdown': v:true,
+      \ 'yaml': v:true
+      \ }
+
 " vim:ft=vim
