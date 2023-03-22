@@ -47,7 +47,7 @@ local servers = { 'solargraph', 'gopls', 'yamlls' }
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 --- auto complete
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+-- capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
@@ -58,56 +58,56 @@ end
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noinsert,noselect'
 
--- nvim-cmp setup
-local cmp = require 'cmp'
+--- nvim-cmp setup
+-- local cmp = require 'cmp'
 
-local has_words_before = function()
-  unpack = unpack or table.unpack
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-end
+-- local has_words_before = function()
+--   unpack = unpack or table.unpack
+--   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+--   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+-- end
 
-cmp.setup {
-  preselect = cmp.PreselectMode.None,
-  snippet = {
-    expand = function(args)
-      require('snippy').expand_snippet(args.body)
-    end,
-  },
-  mapping = {
-    ['<C-p>'] = cmp.mapping.select_prev_item(),
-    ['<C-n>'] = cmp.mapping.select_next_item(),
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.close(),
-    ['<CR>'] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Insert,
-      select = false,
-    },
-    ['<Tab>'] = function(fallback)
-      if cmp.visible() then
-        cmp.confirm({ select = true})
-      elseif has_words_before() then
-        cmp.complete()
-      else
-        fallback()
-      end
-    end,
-    ['<S-Tab>'] = function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      else
-        fallback()
-      end
-    end,
-  },
-  sources = {
-    { name = 'nvim_lsp' },
-    { name = 'snippy' },
-    { name = 'buffer', keyword_length = 5 },
-    { name = 'path' },
-  },
-}
+-- cmp.setup {
+--   preselect = cmp.PreselectMode.None,
+--   snippet = {
+--     expand = function(args)
+--       require('snippy').expand_snippet(args.body)
+--     end,
+--   },
+--   mapping = {
+--     ['<C-p>'] = cmp.mapping.select_prev_item(),
+--     ['<C-n>'] = cmp.mapping.select_next_item(),
+--     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+--     ['<C-f>'] = cmp.mapping.scroll_docs(4),
+--     ['<C-Space>'] = cmp.mapping.close(),
+--     ['<CR>'] = cmp.mapping.confirm {
+--       behavior = cmp.ConfirmBehavior.Insert,
+--       select = false,
+--     },
+--     ['<Tab>'] = function(fallback)
+--       if cmp.visible() then
+--         cmp.confirm({ select = true})
+--       elseif has_words_before() then
+--         cmp.complete()
+--       else
+--         fallback()
+--       end
+--     end,
+--     ['<S-Tab>'] = function(fallback)
+--       if cmp.visible() then
+--         cmp.select_prev_item()
+--       else
+--         fallback()
+--       end
+--     end,
+--   },
+--   sources = {
+--     { name = 'nvim_lsp' },
+--     { name = 'snippy' },
+--     { name = 'buffer', keyword_length = 5 },
+--     { name = 'path' },
+--   },
+-- }
 
 -- jsonls https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls
 --Enable (broadcasting) snippet capability for completion

@@ -59,15 +59,15 @@ Plug 'wellle/targets.vim'
 Plug 'yegappan/mru'
 
 " LSP
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-buffer'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/cmp-path'
+" Plug 'hrsh7th/nvim-cmp'
 Plug 'neovim/nvim-lspconfig'
 
 " Snippets
 Plug 'dcampos/nvim-snippy'
-Plug 'dcampos/cmp-snippy'
+" Plug 'dcampos/cmp-snippy'
 
 call plug#end()
 
