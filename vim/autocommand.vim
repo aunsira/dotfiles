@@ -96,4 +96,7 @@ autocmd BufReadPre *
       \ | let b:copilot_enabled = v:false
       \ | endif
 
+" mix format
+autocmd! BufWritePost *.ex,*.exs :Dispatch! mix format <afile>
+
 " vim:ft=vim

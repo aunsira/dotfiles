@@ -203,7 +203,6 @@ command! QA qall
 command! E e
 command! W w
 command! Wq wq
-command! WF :update | !mix format %
 
 " vim-move
 nmap zj <Plug>MoveLineDown
