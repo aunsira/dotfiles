@@ -270,10 +270,11 @@ nnoremap <leader>cc :cc<cr>
 " Go to marked
 nnoremap gm `u
 
-" Highlight current word without move to the next
-nnoremap <silent> * :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
-nnoremap <silent> <C-n> :let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
-vmap <C-n> *N
+" Highlight current word without move to the next.
+" Also mark position before search by using 'mu' and `u or gm to go back to last position.
+nnoremap <silent> * mu:let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
+nnoremap <silent> <C-n> mu:let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
+vmap <C-n> *Nmu
 
 " Tmux-runner
 map <leader>sl :VtrSendLinesToRunner<cr>
