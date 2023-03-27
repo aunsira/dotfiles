@@ -3,8 +3,8 @@ autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 autoindent
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 softtabstop=4
 autocmd BufEnter PULLREQ_EDITMSG setlocal filetype=gitcommit
 autocmd BufEnter PULLREQ_EDITMSG setlocal filetype=gitcommit
-autocmd FileType gitcommit,markdown set nonumber
-autocmd FileType gitcommit set spell
+autocmd FileType gitcommit,markdown setlocal nonumber wrap linebreak nolist
+autocmd FileType gitcommit setlocal spell
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 augroup ruby
@@ -54,7 +54,7 @@ endfunction
 
 augroup quickfix
     autocmd!
-    autocmd FileType qf setlocal wrap
+    autocmd FileType qf setlocal wrap linebreak nolist
 augroup END
 
 
