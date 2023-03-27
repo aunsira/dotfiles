@@ -53,9 +53,6 @@ let g:fzf_preview_window = []
 " Disable default key of vim-move
 let g:move_map_keys = 0
 
-" vim-javascript
-let g:javascript_plugin_jsdoc = 1
-
 " Try test nearest with dispatch
 " vim-test
 " let test#strategy = {
@@ -72,12 +69,6 @@ let g:rspec_command = "!bin/rspec {spec}"
 
 " Run vim-test with test environment
 let $NODE_ENV='test'
-
-" vim-closetag
-let g:closetag_emptyTags_caseSensitive = 1
-let g:closetag_shortcut = '>'
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.html.erb'
 
 " SplitJoin
 let g:splitjoin_trailing_comma = 0
