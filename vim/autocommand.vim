@@ -33,9 +33,9 @@ augroup ex
   autocmd FileType *.ex,*.exs setlocal iskeyword+=?,!
 
   autocmd FileType elixir nnoremap <leader>bp orequire IEx; IEx.pry<esc>:call Save()<cr>
-  autocmd FileType elixir nnoremap <leader>ts :wa<cr>:TestNearest -strategy=neovim<cr>
-  autocmd FileType elixir nnoremap <leader>tf :wa<cr>:TestFile -strategy=neovim<cr>
-  autocmd FileType elixir nnoremap <leader>tl :wa<cr>:TestLast -strategy=neovim<cr>
+  autocmd FileType elixir nnoremap <leader>ts :wa<cr>:TestNearest -strategy=make_bang<cr>
+  autocmd FileType elixir nnoremap <leader>tf :wa<cr>:TestFile -strategy=make_bang<cr>
+  autocmd FileType elixir nnoremap <leader>tl :wa<cr>:TestLast -strategy=make_bang<cr>
 augroup END
 
 " Help in new tabs
