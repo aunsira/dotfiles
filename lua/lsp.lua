@@ -118,7 +118,7 @@ require'lspconfig'.jsonls.setup {
 }
 
 -- Elixir LSP
-local path_to_elixirls = vim.fn.expand("~/elixir-ls/language_server.sh")
+local path_to_elixirls = vim.fn.expand("~/.elixir-ls/release/language_server.sh")
 require'lspconfig'.elixirls.setup{
   cmd = { path_to_elixirls },
   on_attach = on_attach,
