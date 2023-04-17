@@ -97,6 +97,6 @@ autocmd BufReadPre *
       \ | endif
 
 " mix format
-autocmd! BufWritePost *.ex,*.exs :Dispatch! mix format <afile>
+" autocmd! BufWritePost *.ex,*.exs :Dispatch! mix format <afile>
 
 " vim:ft=vim

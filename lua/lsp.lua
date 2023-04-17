@@ -26,7 +26,7 @@ local on_attach = function(client, bufnr)
   -- buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   -- buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<Bslash>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-  buf_set_keymap('n', 'zn', '<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>', opts)
+  buf_set_keymap('n', 'zn', '<cmd>lua vim.lsp.buf.format({ async = false })()<CR>', opts)
   --
   --
   local filetype = vim.api.nvim_buf_get_option(0, 'filetype')
@@ -36,7 +36,7 @@ local on_attach = function(client, bufnr)
   -- end
 
   if filetype == 'elixir' then
-    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format({ async = false })]]
   end
 end
 
