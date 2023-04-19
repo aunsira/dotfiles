@@ -63,6 +63,7 @@ Plug 'yegappan/mru'
 " Plug 'hrsh7th/cmp-nvim-lsp'
 " Plug 'hrsh7th/cmp-path'
 " Plug 'hrsh7th/nvim-cmp'
+Plug 'elixir-tools/elixir-tools.nvim' | Plug 'nvim-lua/plenary.nvim'
 Plug 'neovim/nvim-lspconfig'
 
 " Snippets

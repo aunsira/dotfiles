@@ -118,17 +118,20 @@ require'lspconfig'.jsonls.setup {
 }
 
 -- Elixir LSP
-local path_to_elixirls = vim.fn.expand("~/.elixir-ls/release/language_server.sh")
-require'lspconfig'.elixirls.setup{
-  cmd = { path_to_elixirls },
-  on_attach = on_attach,
-  settings = {
-    elixirLS = {
+local elixir = require("elixir")
+local elixirls = require("elixir.elixirls")
+
+elixir.setup {
+  credo = { enable = false },
+  elixirls = {
+    tag = "v0.14.3",
+    settings = elixirls.settings {
       dialyzerEnabled = false,
       fetchDeps = false,
       enableTestLenses = false,
-      suggestSpecs = false
-    }
+      suggestSpecs = false,
+    },
+    on_attach = on_attach
   }
 }
 
