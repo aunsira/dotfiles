@@ -130,7 +130,7 @@ endfunction
 
 " Disable LSP Diagnostic
 function! DisableDiagnostic()
-  execute 'lua vim.diagnostic.config({virtual_text = false, signs = false, underline = false})'
+  execute 'lua vim.diagnostic.disable()'
 endfunction
 
 " https://gist.github.com/habamax/4662821a1dad716f5c18205489203a67

@@ -36,7 +36,10 @@ local on_attach = function(client, bufnr)
   -- end
 
   if filetype == 'elixir' then
+    -- Auto format on save
     vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format({ async = false })]]
+    -- Disable inline diagnostics
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.diagnostic.disable()]]
   end
 end
 
