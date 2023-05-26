@@ -99,4 +99,7 @@ autocmd BufReadPre *
 " mix format
 autocmd! BufWritePost *.ex,*.exs :Dispatch! mix format <afile>
 
+" Automatically resize all vim buffers if terminal window has been resized.
+autocmd VimResized * wincmd =
+
 " vim:ft=vim
