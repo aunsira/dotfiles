@@ -140,7 +140,7 @@ let g:copilot_filetypes = {
 
 " Use Ag instead of Grep when available
 if executable("ag")
-  set grepprg=ag!
+  set grepprg=ag
   let g:grep_cmd_opts = '--line-numbers --noheading --nobreak'
   let g:ackprg = 'ag --vimgrep'
 endif
