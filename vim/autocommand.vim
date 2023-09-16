@@ -55,6 +55,9 @@ endfunction
 augroup quickfix
     autocmd!
     autocmd FileType qf setlocal wrap linebreak nolist
+    " Automatically open quickfix window after performing grep.
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost l* lwindow
 augroup END
 
 

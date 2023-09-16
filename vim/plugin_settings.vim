@@ -138,4 +138,11 @@ let g:copilot_filetypes = {
       \ 'yaml': v:true
       \ }
 
+" Use Ag instead of Grep when available
+if executable("ag")
+  set grepprg=ag!
+  let g:grep_cmd_opts = '--line-numbers --noheading --nobreak'
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 " vim:ft=vim
