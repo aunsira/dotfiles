@@ -265,7 +265,7 @@ nnoremap ]L :llast<cr>
 nnoremap [L :lfirst<cr>
 
 " Close quickfix/location window
-nnoremap <leader>cs :cclose<bar>lclose<bar>VtrKillRunner<cr>
+nnoremap <leader>cs :cclose<bar>lclose<cr>
 nnoremap <leader>cc :cc<cr>
 
 " Go to marked
@@ -276,11 +276,6 @@ nnoremap gm `u
 nnoremap <silent> * mu:let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
 nnoremap <silent> <C-n> mu:let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
 vmap <C-n> *Nmu
-
-" Tmux-runner
-map <leader>sl :VtrSendLinesToRunner<cr>
-nnoremap <leader>ap :VtrAttachToPane<cr>
-nnoremap <leader>rr :VtrFocusRunner<cr>
 
 nnoremap <leader>- :Switch<cr>
 
