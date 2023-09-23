@@ -12,6 +12,12 @@ nnoremap <silent> p p`]
 " Go back to last pasted after visual indent
 vnoremap <silent> = =`]
 
+" Make navigating around splits easier
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
 " Write/Exit shortcuts
 inoremap <C-s> <esc>:update<cr>
 nnoremap <C-s> <esc>:update<cr>
@@ -211,12 +217,7 @@ vmap zj <plug>MoveBlockDown
 vmap zk <plug>MoveBlockUp
 
 " Movement in command mode
-cnoremap <c-h> <left>
-cnoremap <c-j> <down>
-cnoremap <c-k> <up>
-cnoremap <c-l> <right>
 cnoremap <c-a> <C-b>
-cnoremap <c-y> <right><bs>
 
 " Stay in search mode in Vim by using Ctrl-g and Ctrl-t after searching for a pattern
 " https://vimtricks.com/p/vimtrick-stay-in-search-mode/
