@@ -4,8 +4,12 @@
 [diff]
 [pager]
   diff = true
+[grep]
+  linenumber = true
 [color]
   ui = auto
+  diff = always
+  grep = always
 [color "diff-highlight"]
   oldNormal = red bold
   oldHighlight = red bold 52
@@ -34,7 +38,8 @@
   # for m1, use
   # pager = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less -+$LESS -R
   # pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less -+$LESS -R
-  pager = less -+$LESS -R
+  # pager = less -+$LESS -R
+  pager = cat
 [merge]
   tool = vimdiff
 [mergetool]
