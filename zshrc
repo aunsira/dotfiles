@@ -13,3 +13,4 @@ if type brew &>/dev/null; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.config/zsh/zshrc.local ] && source ~/.config/zsh/zshrc.local
