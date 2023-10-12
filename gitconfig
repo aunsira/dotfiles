@@ -8,7 +8,7 @@
   linenumber = true
 [color]
   ui = auto
-  diff = always
+  diff = auto
   grep = always
 [color "diff-highlight"]
   oldNormal = red bold
