@@ -145,4 +145,7 @@ if executable("ag")
   let g:ackprg = 'ag --vimgrep'
 endif
 
+" Global Projectionist
+let g:projectionist_heuristics = json_decode(join(readfile(expand('~/.config/projections.json'))))
+
 " vim:ft=vim
