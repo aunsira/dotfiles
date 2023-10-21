@@ -78,11 +78,6 @@ let g:splitjoin_ruby_hanging_args = 0
 " Allow netrw to remove non-empty local directories
 let g:netrw_localrmdir='rm -r'
 
-" vim match-up
-let g:matchup_matchparen_deferred = 1
-let g:matchup_matchparen_status_offscreen = 0
-let g:matchup_matchparen_enabled = 0
-
 function! MKDPSplit(url)
   call system('x5050 left Safari '.shellescape(a:url))
 endfunction
