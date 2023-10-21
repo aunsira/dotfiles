@@ -210,12 +210,6 @@ command! E e
 command! W w
 command! Wq wq
 
-" vim-move
-nmap zj <Plug>MoveLineDown
-nmap zk <Plug>MoveLineUp
-vmap zj <plug>MoveBlockDown
-vmap zk <plug>MoveBlockUp
-
 " Movement in command mode
 cnoremap <c-a> <C-b>
 
