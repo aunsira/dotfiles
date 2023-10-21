@@ -64,12 +64,6 @@ let test#strategy = {
       \ 'file':    'dispatch',
       \}
 
-" Plugin vim-rspec
-let g:rspec_command = "!bin/rspec {spec}"
-
-" Run vim-test with test environment
-let $NODE_ENV='test'
-
 " SplitJoin
 let g:splitjoin_trailing_comma = 0
 let g:splitjoin_ruby_curly_braces = 0
