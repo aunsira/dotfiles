@@ -277,8 +277,6 @@ nnoremap <silent> * mu:let stay_star_view = winsaveview()<cr>*:call winrestview(
 nnoremap <silent> <C-n> mu:let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
 vmap <C-n> *Nmu
 
-nnoremap <leader>- :Switch<cr>
-
 nnoremap <leader>lc q:k<C-c>
 
 " Paste in line from vim-system-copy

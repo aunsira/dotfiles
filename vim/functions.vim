@@ -46,9 +46,13 @@ endfunction
 noremap <leader>] :call FzfTagsCurrentWord()<cr><space>
 
 " Convert ruby symbol hash to string hash.
-" (Use switch.vim to convert back to symbol hash)
 function! StringHash()
   :s/\(\w\+\):/"\1" =>/g
+endfunction
+
+" Convert string hash to symbol hash.
+function! SymbolHash()
+  :s/"\(\w\+\)" =>/\1:/g
 endfunction
 
 function! NumberToggle()

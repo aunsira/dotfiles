@@ -2,7 +2,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'AaronLasseigne/yank-code'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'AndrewRadev/switch.vim'
 Plug 'andymass/vim-matchup'
 Plug 'aunsira/vim-thai-keys'
 Plug 'beloglazov/vim-textobj-quotes'
