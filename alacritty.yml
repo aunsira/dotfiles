@@ -406,7 +406,6 @@ key_bindings:
   - { key: N,        mods: Command,       chars: "\x06\x2d" }
   - { key: N,        mods: Command|Shift, chars: "\x06\x7c" }
   - { key: W,        mods: Command,       chars: "\x06\x78" }
-  - { key: N,        mods: Command,       chars: "\x06\x08" } # Command + K to clear screen
   - { key: S,        mods: Command,       chars: "\x06\x0f" }
   - { key: Z,        mods: Command,       chars: "\x06\x7a" }
   - { key: R,        mods: Command,       chars: "\x06\x52" }
