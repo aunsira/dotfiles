@@ -89,7 +89,8 @@ let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 " Disable netrw gx mapping
 let g:netrw_nogx = get(g:, 'netrw_nogx', 1)
 
-" Add text format surrounding with c key
+" Add text format surrounding with c key.
+" For example: Surround a visual line with code block - VSc
 let g:surround_99 = "```\r```"
 
 " vim-markdown
