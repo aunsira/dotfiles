@@ -1,7 +1,3 @@
-" Set ignore case for Easy motion
-let g:EasyMotion_smartcase = 1
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
 " vim-ruby
 " let ruby_no_expensive = 0
 let ruby_operators = 1
@@ -50,15 +46,7 @@ let g:fzf_action = {
 let g:fzf_layout = { 'down': '~20%' }
 let g:fzf_preview_window = []
 
-" Disable default key of vim-move
-let g:move_map_keys = 0
-
-" Try test nearest with dispatch
 " vim-test
-" let test#strategy = {
-"       \ 'nearest': 'vtr',
-"       \ 'file':    'dispatch',
-"       \}
 let test#strategy = {
       \ 'nearest': 'dispatch',
       \ 'file':    'dispatch',
