@@ -114,4 +114,9 @@ endif
 " Global Projectionist
 let g:projectionist_heuristics = json_decode(join(readfile(expand('~/.config/projections.json'))))
 
+" vim-peekaboo
+" Leader + " or Leader + @ to see contents of registers.
+" (Avoid conflict with @ to repeat last command)
+let g:peekaboo_prefix = '<leader>'
+
 " vim:ft=vim
