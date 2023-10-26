@@ -79,8 +79,17 @@ xmap cy <Plug>SystemCopy
 
 " Easier to reach % for matching block/bracket
 nmap <C-b> %
+" textobj for matching block/bracket
 xmap b i%
 omap b i%
+
+" textobj for matching quotes
+xmap q iq
+omap q iq
+
+" textobj for word
+xmap w iw
+omap w iw
 
 " Stay in visual after indenting
 vnoremap < <gv
