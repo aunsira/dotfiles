@@ -26,9 +26,6 @@ inoremap <C-Space> <Esc>`^
 
 " Go to position of last edit(`.) and recenter. Mnem: 'Go to Edit'
 nnoremap ge `.zz
-" Leader-; to enter command mode. No more holding shift!
-nnoremap <leader>; :
-vnoremap <leader>; :
 
 " move by line on the screen rather than by line in the file
 nnoremap k gk
@@ -96,10 +93,6 @@ vnoremap < <gv
 vnoremap > >gv
 vnoremap <silent> <C-h> <gv
 vnoremap <silent> <C-l> >gv
-
-nnoremap <leader><leader> :
-vnoremap <leader><leader> :
-nnoremap <leader>, :!
 
 " reselect pasted text
 nnoremap gp `[v`]
