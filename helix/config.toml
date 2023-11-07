@@ -1,0 +1,29 @@
+theme = "ayu_dark"
+
+[editor]
+line-number = "relative"
+cursorline = true
+true-color = true
+scrolloff = 999
+idle-timeout = 0
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.insert]
+"C-space" = ["collapse_selection", "normal_mode"]
+
+[keys.select]
+"C-space" = ["collapse_selection", "normal_mode"]
+
+[keys.normal]
+"C-space" = ["collapse_selection", "normal_mode"]
+"C-h" = "jump_view_left"
+"C-l" = "jump_view_right"
+"C-j" = "jump_view_down"
+"C-k" = "jump_view_up"
+
+[keys.normal."space"]
+c = "file_picker_in_current_buffer_directory"
