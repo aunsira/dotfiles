@@ -136,8 +136,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                    ],
+                    "bundle_identifiers": [],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -400,29 +399,29 @@
           },
           {
             "description": "Right option + [ to command + shift + [",
-              "manipulators": [
-                {
-                  "from": {
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "open_bracket",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_option"
+                    ],
+                    "optional": []
+                  }
+                },
+                "to": [
+                  {
                     "key_code": "open_bracket",
-                    "modifiers": {
-                      "mandatory": [
-                        "right_option"
-                      ],
-                      "optional": []
-                    }
-                  },
-                  "to": [
-                    {
-                      "key_code": "open_bracket",
-                      "modifiers": [
-                        "command",
-                        "shift"
-                      ]
-                    }
-                  ],
-                  "type": "basic"
-                }
-              ]
+                    "modifiers": [
+                      "command",
+                      "shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           },
           {
             "description": "Right option + ] to command + shift + ]",
@@ -536,7 +535,6 @@
               }
             ]
           },
-
           {
             "description": "Left control + right shift to command + shift + right square bracket",
             "manipulators": [
