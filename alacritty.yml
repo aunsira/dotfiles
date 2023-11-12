@@ -59,13 +59,6 @@ window:
     # Background opacity
   opacity: 0.95
 
-  # Make `Option` key behave as `Alt` (macOS only):
-  #   - OnlyLeft
-  #   - OnlyRight
-  #   - Both
-  #   - None (default)
-  option_as_alt: OnlyLeft
-
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
 
@@ -243,7 +236,9 @@ dynamic_title: true
 # - Underline
 # - Beam
 cursor:
-  style: Block
+  style:
+    shape: Block
+
   unfocused_hollow: false
 
 # Live config reload (changes require restart)
@@ -501,7 +496,7 @@ key_bindings:
   - { key: Backslash, mods: Alt|Shift, chars: "\x1b|"                       } # Alt + |
   - { key: N,      mods: Command|Alt, action: CreateNewWindow }
   - { key: W,      mods: Command|Alt, action: Quit }
-  - { key: H,      mods: Command|Alt, action: HideOtherApplications }
+  # - { key: H,      mods: Command|Alt, action: HideOtherApplications }
   - { key: Return, mods: Command,     action: ToggleSimpleFullscreen }
   # Map shift + space to underscore available in vim config
   # ref: https://arslan.io/2018/02/05/gpu-accelerated-terminal-alacritty/
