@@ -65,4 +65,8 @@ test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 # Load Configurations
 for f in ~/.config/deemoney/*; do source $f; done
 
+# Temporary fix for clipboard provider in Helix
+# https://github.com/helix-editor/helix/discussions/8470
+unset TMUX
+
 bindkey -e
