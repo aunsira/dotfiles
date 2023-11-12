@@ -64,7 +64,7 @@ window:
   #   - OnlyRight
   #   - Both
   #   - None (default)
-option_as_alt: Both
+  option_as_alt: Both
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
