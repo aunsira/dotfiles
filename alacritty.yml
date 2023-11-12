@@ -59,6 +59,13 @@ window:
     # Background opacity
   opacity: 0.95
 
+  # Make `Option` key behave as `Alt` (macOS only):
+  #   - OnlyLeft
+  #   - OnlyRight
+  #   - Both
+  #   - None (default)
+option_as_alt: Both
+
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
 
