@@ -6,12 +6,16 @@ cursorline = true
 true-color = true
 scrolloff = 999
 idle-timeout = 0
+soft-wrap = { enable = true }
 mouse = false
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
 
 [keys.normal."space"]
 c = "file_picker_in_current_buffer_directory"
