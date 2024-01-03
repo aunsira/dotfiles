@@ -1,0 +1,278 @@
+live_config_reload = true
+
+[colors.bright]
+black = "0x666666"
+blue = "0x7aa6da"
+cyan = "0x54ced6"
+green = "0x9ec400"
+magenta = "0xb77ee0"
+red = "0xff3334"
+white = "0xffffff"
+yellow = "0xe7c547"
+
+[colors.cursor]
+cursor = "0xff2600"
+text = "0xf1c1c1"
+
+[colors.normal]
+black = "0x6A6563"
+blue = "0x7aa6da"
+cyan = "0x82fff7"
+green = "0xb1e969"
+magenta = "0xe86aff"
+red = "0xff615a"
+white = "0xdedacf"
+yellow = "0xebd99c"
+
+[colors.primary]
+background = "0x000000"
+foreground = "0xeaeaea"
+
+[cursor]
+unfocused_hollow = false
+
+[cursor.style]
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 15.5
+
+[font.bold]
+family = "Berkeley Mono"
+style = "Regular"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Berkeley Mono"
+style = "Italic"
+
+[font.normal]
+family = "Berkeley Mono"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[[hints.enabled]]
+command = "xdg-open"
+post_processing = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
+
+[hints.enabled.mouse]
+enabled = false
+mods = "None"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006n"
+key = "RBracket"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0006p"
+key = "LBracket"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0006 "
+key = "LBracket"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006\u000E"
+key = "RBracket"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006q"
+key = "U"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006["
+key = "Slash"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006c"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006-"
+key = "N"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006|"
+key = "N"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0006x"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006\u000F"
+key = "S"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006z"
+key = "Z"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006R"
+key = "R"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0000"
+key = "Space"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0006D"
+key = "Down"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006U"
+key = "Up"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006<"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006>"
+key = "Right"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00061"
+key = "Key1"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00062"
+key = "Key2"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00063"
+key = "Key3"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00064"
+key = "Key4"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00065"
+key = "Key5"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00066"
+key = "Key6"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00067"
+key = "Key7"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00068"
+key = "Key8"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00069"
+key = "Key9"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Command|Option"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "W"
+mods = "Command|Option"
+
+[[keyboard.bindings]]
+action = "ToggleSimpleFullscreen"
+key = "Return"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\r"
+key = "NumpadEnter"
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[scrolling]
+multiplier = 0
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[window]
+decorations = "transparent"
+opacity = 1.0
+
+[window.dimensions]
+columns = 160
+lines = 48
+
+[window.padding]
+y = 27
