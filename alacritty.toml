@@ -101,12 +101,12 @@ mods = "Command"
 
 [[keyboard.bindings]]
 chars = "\u0006n"
-key = "RBracket"
+key = "}"
 mods = "Command|Shift"
 
 [[keyboard.bindings]]
 chars = "\u0006p"
-key = "LBracket"
+key = "{"
 mods = "Command|Shift"
 
 [[keyboard.bindings]]
