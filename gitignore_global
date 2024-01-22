@@ -6,3 +6,4 @@ tags
 .project-notes
 .projections.json
 priv/key/*
+.lexical/
