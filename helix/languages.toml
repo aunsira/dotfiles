@@ -1,6 +1,10 @@
+[language-server.lexical]
+command = "/Users/aun/code/git/lexical/_build/dev/package/lexical/bin/start_lexical.sh"
+
 [[language]]
 name = "elixir"
-auto-format = true
-language-servers = [
-  {name = "elixir-ls", except-features = ["diagnostics"]}
-]
+language-servers = ["lexical"]
+
+[[language]]
+name = "heex"
+language-servers = ["lexical"]
