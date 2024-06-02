@@ -114,7 +114,4 @@ tmap <C-o> <C-\><C-n>
 " nvim-snippy
 imap <expr> <C-]> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<C-]>'
 
-" GitHub Copilot
-imap <silent><script><expr> <C-E> copilot#Accept("<End>")
-
 " vim:ft=vim

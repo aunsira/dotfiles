@@ -11,7 +11,6 @@ Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
-Plug 'github/copilot.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
 Plug 'itchyny/vim-cursorword'
 Plug 'janko-m/vim-test'
