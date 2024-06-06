@@ -64,6 +64,12 @@ command! -bang -nargs=* Ag
   \         : fzf#vim#with_preview('right:50%:hidden', '?'),
   \ <bang>0)
 
+" Fuzzy search
+nnoremap <silent> <leader>f :Files<CR>
+
+" Grep
+nmap <leader>/ :grep! -Q ""<Space><Left><Left>
+
 " Highlight current word without move to the next.
 " Also mark position before search by using 'mu' and `u or gm to go back to last position.
 nnoremap <silent> * mu:let stay_star_view = winsaveview()<cr>*:call winrestview(stay_star_view)<cr>zz
@@ -72,6 +78,7 @@ vmap <C-n> *Nmu
 
 " Remap default copy key from vim-system-copy
 nmap cy <Plug>SystemCopy
+nmap cY <Plug>SystemCopyLine
 xmap cy <Plug>SystemCopy
 
 " Easier to reach % for matching block/bracket
@@ -113,5 +120,9 @@ tmap <C-o> <C-\><C-n>
 
 " nvim-snippy
 imap <expr> <C-]> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<C-]>'
+
+" Navigation in quickfix list
+nnoremap ]q :cnext<cr>
+nnoremap [q :cprevious<cr>
 
 " vim:ft=vim

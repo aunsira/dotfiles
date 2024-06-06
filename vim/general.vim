@@ -18,13 +18,14 @@ set expandtab                     " always uses spaces instead of tab characters
 set wildmenu                      " Enhanced tab completion
 set wildmode=list:longest         " Wildcard matches show a list, matching the longest first
 set textwidth=90
-set colorcolumn=+1
+set cc=                           " Disable colorcolumn
 set showcmd
 set lazyredraw
 set splitbelow
 set splitright
 set visualbell
-set nowrap
+set wrap linebreak nolist         " Soft wrap
+set showbreak=↪                   " Character put at the start line that has been wrapped
 set foldlevelstart=0              " don't fold initially
 set nostartofline
 set confirm                       " confirm unsaved changes
@@ -40,9 +41,9 @@ set re=1                          " use old regexpengine to avoid lagging scroll
 set termguicolors
 set diffopt=filler,vertical
 set tags=./tags;/                 " Set project directory's ctags
-set scrolloff=5
+set scrolloff=999                 " Keep the cursor centered in the screen
 set fillchars=vert:\│             " show/hide whitespace marker in insert mode
-set mouse=a
+set mouse=                        " Disable mouse mode
 set rtp+=~/code/git/dotfiles/vim
 set path+=**                      " For clever completion with the :find command
 set nu
@@ -61,5 +62,7 @@ set hidden
 set noshowmode
 set nofoldenable                  " Say no to code folding...
 set cpt-=t                        " Ignore tag in completion list
+set cursorline                    " Highlight only the current line number.
+set cursorlineopt=number
 
 " vim:ft=vim

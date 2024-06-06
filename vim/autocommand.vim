@@ -89,10 +89,10 @@ autocmd BufWinEnter * set foldlevel=999999
 " Pull path into system clipboard
 command! Path let @* = expand("%")
 
-" mix format
-autocmd! BufWritePost *.ex,*.exs :Dispatch! mix format <afile>
-
 " Automatically resize all vim buffers if terminal window has been resized.
 autocmd VimResized * wincmd =
+
+" Don't automatically continue comments after newline
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 " vim:ft=vim
