@@ -1,8 +1,5 @@
 #!/bin/bash
 
-alias -g G='| grep'
-alias -g L='| less'
-alias -g M='| more'
 alias amend="git commit --amend"
 alias autosquash='git rebase -i --autosquash'
 alias b="bundle"
@@ -126,12 +123,3 @@ alias stashshow='git stash show stash@{0}  -p'
 alias sync='git add -u . && git commit -m "Minor changes. Commit message skipped." && repush'
 alias t='tmux -2'
 alias tmux='tmux -2'
-alias u='cd ..'
-alias v.="nvim ."
-alias v="nvim"
-alias vim='nvim'
-alias vimn='nvim -u NONE'
-alias vr='vimr -n'
-alias y='yarn'
-alias yi='yarn install'
-alias yt='yarn test'
