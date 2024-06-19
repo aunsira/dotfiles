@@ -14,8 +14,8 @@ vnoremap <C-y> 10<C-y>
 nnoremap <leader><tab> <C-^>
 
 " Tab navigation
-nnoremap <C-[> :tabprevious<CR>
-nnoremap <C-]> :tabnext<CR>
+nnoremap [t :tabprevious<CR>
+nnoremap ]t :tabnext<CR>
 
 " Use C-Space to Esc out of any mode
 nnoremap <C-Space> <Esc>:noh<cr>
