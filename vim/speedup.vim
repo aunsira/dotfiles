@@ -68,7 +68,7 @@ command! -bang -nargs=* Ag
 nnoremap <silent> <leader>f :Files<CR>
 
 " Grep
-nmap <leader>/ :grep! -Q ""<Space><Left><Left>
+nnoremap <leader>/ :grep! -Q ""<Space><Left><Left>
 
 " Highlight current word without move to the next.
 " Also mark position before search by using 'mu' and `u or gm to go back to last position.
@@ -124,5 +124,10 @@ imap <expr> <C-]> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-adva
 " Navigation in quickfix list
 nnoremap ]q :cnext<cr>
 nnoremap [q :cprevious<cr>
+
+" Quicker access to Ex commands
+nnoremap ; :
+nnoremap : ;
+xnoremap ; :
 
 " vim:ft=vim
