@@ -97,9 +97,8 @@ let g:netrw_fastbrowse = 0
 
 " Use Ag instead of Grep when available
 if executable("ag")
-  set grepprg=ag
-  let g:grep_cmd_opts = '--line-numbers --noheading --nobreak'
-  let g:ackprg = 'ag --vimgrep'
+  set grepprg=ag\ --vimgrep\ $*
+  set grepformat=%f:%l:%c:%m
 endif
 
 " Global Projectionist
