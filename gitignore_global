@@ -7,3 +7,4 @@ tags
 .projections.json
 priv/key/*
 .lexical/
+review.diff
