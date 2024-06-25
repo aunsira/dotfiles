@@ -112,6 +112,9 @@ vmap gx <Plug>(openbrowser-open)
 inoremap <M-BS> <C-W>
 cnoremap <M-BS> <C-W>
 
+" Delete forward
+inoremap <C-d> <Del>
+
 " Insert a pipe with ctrl-l
 imap <c-l> \|><space>
 
