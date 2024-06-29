@@ -133,4 +133,11 @@ nnoremap ; :
 nnoremap : ;
 xnoremap ; :
 
+" Remap U to <C-r> for easier redo
+nnoremap U <C-r>
+
+" Removes doc lookup mapping because it's easy to fat finger and never useful.
+nnoremap K k
+vnoremap K k
+
 " vim:ft=vim
