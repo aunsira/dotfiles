@@ -36,7 +36,6 @@ Plug 'tyru/open-browser.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'vim-scripts/ReplaceWithSameIndentRegister'
-Plug 'yegappan/mru'
 
 call plug#end()
 
