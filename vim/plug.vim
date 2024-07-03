@@ -11,7 +11,6 @@ Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
-Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown', 'on': 'MarkdownPreview' }
 Plug 'itchyny/vim-cursorword'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
@@ -26,7 +25,6 @@ Plug 'kana/vim-textobj-user'
 Plug 'nanotech/jellybeans.vim'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'pbrisbin/vim-mkdir'
-Plug 'plasticboy/vim-markdown'
 Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'

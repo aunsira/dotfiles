@@ -60,12 +60,6 @@ let g:splitjoin_ruby_hanging_args = 0
 " Allow netrw to remove non-empty local directories
 let g:netrw_localrmdir='rm -r'
 
-function! MKDPSplit(url)
-  call system('x5050 left Safari '.shellescape(a:url))
-endfunction
-let g:mkdp_browserfunc = 'MKDPSplit'
-let g:mkdp_browser = 'Safari'
-
 " want the default to scroll down the list
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
@@ -80,14 +74,6 @@ let g:netrw_nogx = get(g:, 'netrw_nogx', 1)
 " Add text format surrounding with c key.
 " For example: Surround a visual line with code block - VSc
 let g:surround_99 = "```\r```"
-
-" vim-markdown
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_new_list_item_indent = 0
-let g:markdown_fenced_languages = [
-  \ 'coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html',
-  \ 'sh', 'bash=sh', 'scala']
-let g:vim_markdown_conceal_code_blocks = 1
 
 " Tweak for ignoring trailing whitespaces in Fzf.
 let g:extra_whitespace_ignored_filetypes = ['fzf']
