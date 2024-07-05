@@ -48,8 +48,8 @@ let g:fzf_preview_window = []
 
 " vim-test
 let test#strategy = {
-      \ 'nearest': 'dispatch',
-      \ 'file':    'dispatch',
+      \ 'nearest': 'make_bang',
+      \ 'file':    'make_bang'
       \}
 
 " SplitJoin

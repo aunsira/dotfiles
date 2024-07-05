@@ -10,16 +10,6 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 augroup ruby
   autocmd FileType ruby nnoremap <silent> <2-LeftMouse> *<C-]>
   autocmd FileType ruby nnoremap <silent> gd *<C-]>zz
-  autocmd FileType ruby map tS :w<cr>:call RunCurrentSpecFile()<CR>
-  autocmd FileType ruby map tN :w<cr>:call RunNearestSpec()<CR>
-  autocmd FileType ruby map tL :w<cr>:call RunLastSpec()<CR>
-  " autocmd FileType ruby map tA :w<cr>:call RunAllSpecs()<CR>
-
-  autocmd FileType ruby nnoremap <leader>bp orequire "pry"; binding.pry<esc>:call Save()<cr>
-
-  nnoremap <leader>ts :wa<cr>:TestNearest -strategy=dispatch<cr>
-  nnoremap <leader>tf :wa<cr>:TestFile -strategy=dispatch<cr>
-  nnoremap <leader>tl :wa<cr>:TestLast -strategy=dispatch<cr>
 
   " Make ?,!,:s part of words
   autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?,!
@@ -31,11 +21,6 @@ augroup ex
   au BufRead,BufNewFile mix.lock set filetype=elixir
   " Make ?,!,:s part of words
   autocmd FileType *.ex,*.exs setlocal iskeyword+=?,!
-
-  autocmd FileType elixir nnoremap <leader>bp orequire IEx; IEx.pry<esc>:call Save()<cr>
-  autocmd FileType elixir nnoremap <leader>ts :wa<cr>:TestNearest -strategy=make_bang<cr>
-  autocmd FileType elixir nnoremap <leader>tf :wa<cr>:TestFile -strategy=make_bang<cr>
-  autocmd FileType elixir nnoremap <leader>tl :wa<cr>:TestLast -strategy=make_bang<cr>
 augroup END
 
 " Help in new tabs
@@ -94,5 +79,9 @@ autocmd VimResized * wincmd =
 
 " Don't automatically continue comments after newline
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+
+" Switch test strategy
+command! TestDispatch let test#strategy = "dispatch" | echo "vim-test: switched to dispatch strategy"
+command! TestMakeBang let test#strategy = "make_bang" | echo "vim-test: switched to make_bang strategy"
 
 " vim:ft=vim

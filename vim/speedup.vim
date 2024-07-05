@@ -140,4 +140,9 @@ nnoremap U <C-r>
 nnoremap K k
 vnoremap K k
 
+" vim-test
+nnoremap <leader>ts :wa<cr>:TestNearest<cr>
+nnoremap <leader>tf :wa<cr>:TestFile<cr>
+nnoremap <leader>tl :wa<cr>:TestLast<cr>
+
 " vim:ft=vim
