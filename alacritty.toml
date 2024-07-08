@@ -210,6 +210,16 @@ key = "Right"
 mods = "Command"
 
 [[keyboard.bindings]]
+chars = "\u001BB"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
 chars = "\u00061"
 key = "Key1"
 mods = "Command"
