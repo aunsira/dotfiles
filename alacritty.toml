@@ -165,6 +165,26 @@ key = "R"
 mods = "Command"
 
 [[keyboard.bindings]]
+chars = "\u0006h"
+key = "H"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006l"
+key = "L"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006k"
+key = "K"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0006j"
+key = "J"
+mods = "Command"
+
+[[keyboard.bindings]]
 chars = "\u0000"
 key = "Space"
 mods = "Control"
