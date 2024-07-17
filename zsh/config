@@ -14,7 +14,7 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history # share command history data
 
-export EDITOR=nvim
+export EDITOR=hx
 export GOPATH=~/gosrc
 if [[ `uname -m` == 'arm64' ]]; then
   export GOROOT=/opt/homebrew/opt/go/libexec

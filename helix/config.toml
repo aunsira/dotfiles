@@ -17,11 +17,13 @@ select = "underline"
 [editor.statusline]
 right = ["version-control", "diagnostics", "selections", "position", "file-encoding"]
 
-[editor.lsp]
-inline-diagnostics.other-lines = "hint"
-
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
+";" = "command_mode"
+"C-h" = "jump_view_left"
+"C-l" = "jump_view_right"
+"C-j" = "jump_view_down"
+"C-k" = "jump_view_up"
 
 [keys.normal."space"]
 c = "file_picker_in_current_buffer_directory"
