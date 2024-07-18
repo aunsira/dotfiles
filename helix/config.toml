@@ -14,6 +14,10 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "hint"
+
 [editor.statusline]
 right = ["version-control", "diagnostics", "selections", "position", "file-encoding"]
 
