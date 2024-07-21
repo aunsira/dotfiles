@@ -97,7 +97,7 @@ gr() {
 
 log-commit() {
   local commits commit
-  commits=$(git log --pretty=oneline --abbrev-commit --reverse) &&
+  commits=$(git log --pretty=oneline --abbrev-commit --reverse --format="%h %s") &&
   commit=$(echo "$commits" | fzf --tac +s +m -e)
   echo $commit
 }
