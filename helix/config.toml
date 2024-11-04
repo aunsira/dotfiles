@@ -21,6 +21,9 @@ other-lines = "hint"
 [editor.statusline]
 right = ["version-control", "diagnostics", "selections", "position", "file-encoding"]
 
+[editor.gutters]
+layout = ["line-numbers", "spacer", "diff"]
+
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
 ";" = "command_mode"
@@ -28,6 +31,14 @@ esc = ["collapse_selection", "keep_primary_selection"]
 "C-l" = "jump_view_right"
 "C-j" = "jump_view_down"
 "C-k" = "jump_view_up"
+W = 'move_next_sub_word_start'
+B = 'move_prev_sub_word_start'
+E = 'move_next_sub_word_end'
+
+[keys.select]
+W = 'extend_next_sub_word_start'
+B = 'extend_prev_sub_word_start'
+E = 'extend_next_sub_word_end'
 
 [keys.normal."space"]
 c = "file_picker_in_current_buffer_directory"
