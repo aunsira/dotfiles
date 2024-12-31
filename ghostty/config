@@ -3,6 +3,8 @@ font-size = 14.0
 
 cursor-style = block
 
+confirm-close-surface = false
+
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 0
 
