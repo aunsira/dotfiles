@@ -1,0 +1,24 @@
+font-family = TX-02 Medium
+font-size = 14.0
+
+cursor-style = block
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 0
+
+window-padding-balance = true
+window-padding-x = 0
+window-padding-y = 0
+
+# Tmux (https://github.com/ghostty-org/ghostty/discussions/3309)
+# ASCII Character Set (https://www3.rocketsoftware.com/bluezone/help/v42/en/bzadmin/APPENDIX_C/ASCII_Character_Set.htm)
+keybind = super+one=text:\x061
+keybind = super+two=text:\x062
+keybind = super+three=text:\x063
+keybind = super+four=text:\x064
+keybind = super+t=text:\x06c
+keybind = super+left_bracket=text:\x06\x20
+keybind = super+right_bracket=text:\x06\x0e
+keybind = super+slash=text:\x06[
+keybind = super+shift+left_bracket=text:\x06p
+keybind = super+shift+right_bracket=text:\x06n

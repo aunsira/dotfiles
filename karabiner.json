@@ -263,7 +263,8 @@
                   {
                     "bundle_identifiers": [
                       "^org\\.alacritty$",
-                      "^com\\.qvacua\\.VimR$"
+                      "^com\\.qvacua\\.VimR$",
+                      "^com\\.mitchellh\\.ghostty"
                     ],
                     "type": "frontmost_application_unless"
                   }
