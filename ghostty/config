@@ -1,6 +1,9 @@
 font-family = Berkeley Mono Medium
 font-size = 14.0
 
+# Workaround to disable bold
+font-variation-bold = wght=100
+
 cursor-style = block
 
 confirm-close-surface = false
