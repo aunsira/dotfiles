@@ -14,6 +14,3 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.config/zsh/zshrc.local ] && source ~/.config/zsh/zshrc.local
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/sira.sa/.lmstudio/bin"
