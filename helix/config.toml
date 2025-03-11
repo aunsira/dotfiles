@@ -8,6 +8,7 @@ idle-timeout = 0
 soft-wrap = { enable = true }
 mouse = false
 completion-trigger-len = 1
+jump-label-alphabet = "ntdhseriaobkjlguvmfycxzwqp"
 
 [editor.cursor-shape]
 insert = "bar"
