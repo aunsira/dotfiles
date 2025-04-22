@@ -54,7 +54,7 @@ style = "Italic"
 
 [font.normal]
 family = "Berkeley Mono"
-style = "Regular"
+style = "SemiCondensed"
 
 [font.offset]
 x = 0
