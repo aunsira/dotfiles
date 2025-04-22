@@ -306,4 +306,5 @@ columns = 160
 lines = 48
 
 [window.padding]
-y = 27
+x = 0
+y = 0
