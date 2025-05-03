@@ -68,4 +68,8 @@ test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 # https://github.com/helix-editor/helix/discussions/8470
 unset TMUX
 
+# rbenv
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(rbenv init - --no-rehash zsh)"
+
 bindkey -e
