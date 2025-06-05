@@ -9,6 +9,7 @@ soft-wrap = { enable = true }
 mouse = false
 completion-trigger-len = 1
 jump-label-alphabet = "ntdhseriaobkjlguvmfycxzwqp"
+trim-trailing-whitespace = true
 
 [editor.cursor-shape]
 insert = "bar"
