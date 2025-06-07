@@ -7,6 +7,7 @@ scrolloff = 999
 idle-timeout = 0
 soft-wrap = { enable = true }
 mouse = false
+completion-timeout = 5
 completion-trigger-len = 1
 jump-label-alphabet = "ntdhseriaobkjlguvmfycxzwqp"
 trim-trailing-whitespace = true
