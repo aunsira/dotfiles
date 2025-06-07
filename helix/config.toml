@@ -26,6 +26,9 @@ right = ["version-control", "diagnostics", "selections", "position", "file-encod
 [editor.gutters]
 layout = ["line-numbers", "spacer", "diff"]
 
+[editor.word-completion]
+trigger-length = 1
+
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
 ";" = "command_mode"
