@@ -298,3 +298,22 @@ all-pods() {
     --preview-window up:follow \
     --preview 'kubectl logs --follow --tail=100000 --context {1} --namespace {2} {3}' "$@"
 }
+
+rgrep() {
+  RELOAD='reload:rg --column --color=always --smart-case {q} || :'
+  OPENER='if [[ $FZF_SELECT_COUNT -eq 0 ]]; then
+            "$EDITOR" {1} +{2}     # No selection. Open the current line in $EDITOR.
+          elif [[ $EDITOR == vim ]] || [[ $EDITOR == nvim ]]; then
+            "$EDITOR" +cw -q {+f}  # Build quickfix list for the selected items.
+          else
+            "$EDITOR" {+1}
+          fi'
+
+  fzf --no-height --tmux 100% --disabled --ansi --multi --query "${*:-}" \
+      --bind "start,change:$RELOAD" \
+      --bind "enter:become:$OPENER" \
+      --bind "ctrl-o:execute:$OPENER" \
+      --bind 'alt-a:select-all,alt-d:deselect-all,ctrl-/:toggle-preview' \
+      --delimiter : \
+      --preview-window 'up,border-bottom,~3,+{2}+3/3'
+}
