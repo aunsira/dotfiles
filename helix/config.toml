@@ -12,6 +12,9 @@ completion-trigger-len = 1
 jump-label-alphabet = "ntdhseriaobkjlguvmfycxzwqp"
 trim-trailing-whitespace = true
 
+[editor.lsp]
+enable = false
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
