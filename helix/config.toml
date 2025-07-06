@@ -23,6 +23,7 @@ other-lines = "hint"
 
 [editor.statusline]
 right = ["version-control", "diagnostics", "selections", "position", "file-encoding"]
+render = "single"
 
 [editor.gutters]
 layout = ["line-numbers", "spacer", "diff"]
