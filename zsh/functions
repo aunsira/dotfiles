@@ -179,6 +179,14 @@ function g {
   fi
 }
 
+function gd {
+  if [[ $# > 0 ]]; then
+    git diff $@ | less -R
+  else
+    git diff | less -R
+  fi
+}
+
 function git-trust-bin() {
   mkdir -p .git/safe
 }
