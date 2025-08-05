@@ -4,9 +4,12 @@ font-size = 15.0
 cursor-style = block
 
 title = " "
+theme = OneHalfDark
 
 confirm-close-surface = false
 macos-option-as-alt = true
+macos-titlebar-style = hidden
+link-url = false
 
 mouse-hide-while-typing = true
 
