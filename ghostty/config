@@ -1,9 +1,6 @@
 font-family = Berkeley Mono Medium SemiCondensed
 font-size = 15.0
 
-# Workaround to disable bold
-font-variation-bold = wght=100
-
 cursor-style = block
 
 title = " "
