@@ -9,7 +9,6 @@ confirm-close-surface = false
 macos-option-as-alt = true
 
 mouse-hide-while-typing = true
-mouse-scroll-multiplier = 0
 
 window-padding-balance = true
 window-padding-x = 0
