@@ -25,6 +25,7 @@ keybind = super+two=text:\x062
 keybind = super+three=text:\x063
 keybind = super+four=text:\x064
 keybind = super+t=text:\x06c
+keybind = super+z=text:\x06z
 keybind = super+left_bracket=text:\x06\x20
 keybind = super+right_bracket=text:\x06\x0e
 keybind = super+slash=text:\x06[
