@@ -4,7 +4,7 @@ font-size = 15.0
 cursor-style = block
 
 title = " "
-theme = OneHalfDark
+theme = Builtin Tango Dark
 
 confirm-close-surface = false
 macos-option-as-alt = true
