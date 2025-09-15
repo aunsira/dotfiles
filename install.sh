@@ -48,3 +48,10 @@ if [[ "$symlink_karabiner_answer" == "y" ]]; then
   ln -sfn $basedir/karabiner.json ${HOME}/.config/karabiner/karabiner.json
   echo -e ${HOME}/.config/karabiner/karabiner.json \t→\t $basedir/karabiner.json
 fi
+
+read -n1 -p "Symlink fish config directory to ~/.config/fish (overwriting)? (y/n)" symlink_fish_answer
+echo ""
+if [[ "$symlink_fish_answer" == "y" ]]; then
+  ln -sfn $basedir/fish ${HOME}/.config/fish
+  echo -e "${HOME}/.config/fish \t→\t $basedir/fish"
+fi
