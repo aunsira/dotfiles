@@ -20,10 +20,10 @@ window-padding-color = extend
 
 # Tmux (https://github.com/ghostty-org/ghostty/discussions/3309)
 # ASCII Character Set (https://www3.rocketsoftware.com/bluezone/help/v42/en/bzadmin/APPENDIX_C/ASCII_Character_Set.htm)
-keybind = super+one=text:\x061
-keybind = super+two=text:\x062
-keybind = super+three=text:\x063
-keybind = super+four=text:\x064
+keybind = super+digit_1=text:\x061
+keybind = super+digit_2=text:\x062
+keybind = super+digit_3=text:\x063
+keybind = super+digit_4=text:\x064
 keybind = super+t=text:\x06c
 keybind = super+z=text:\x06z
 keybind = super+f=text:\x06q
