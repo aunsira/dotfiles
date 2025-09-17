@@ -11,6 +11,7 @@ completion-timeout = 5
 completion-trigger-len = 1
 jump-label-alphabet = "ntdhseriaobkjlguvmfycxzwqp"
 trim-trailing-whitespace = true
+clipboard-provider = "pasteboard"
 
 [editor.lsp]
 enable = false
