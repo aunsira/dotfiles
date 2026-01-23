@@ -25,6 +25,7 @@ set -x PATH /opt/homebrew/opt/postgresql@13/bin $PATH
 set -x PATH /usr/local/opt/openjdk/bin $PATH
 set -x PATH /opt/homebrew/opt/openssl@1.1/bin $PATH
 set -x PATH .git/safe/../../bin $PATH
+set -x PATH $HOME/.local/bin $PATH
 
 # Ruby and language settings
 set -x RUBY_CONFIGURE_OPTS --with-openssl-dir=(brew --prefix openssl@1.1)
