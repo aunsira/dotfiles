@@ -1,3 +1,5 @@
+command = /opt/homebrew/bin/fish --login --interactive
+
 font-family = Berkeley Mono Medium SemiCondensed
 font-size = 15.0
 
@@ -13,6 +15,7 @@ link-url = false
 
 mouse-hide-while-typing = true
 
+window-decoration = false
 window-padding-balance = true
 window-padding-x = 0
 window-padding-y = 0
