@@ -1,0 +1,17 @@
+#!/usr/bin/env fish
+# Opens localhost URL based on PORT from .env.development in the given directory
+# Usage: open-app-tab [directory]
+
+set dir (if test (count $argv) -gt 0; echo $argv[1]; else; echo .; end)
+set port (grep '^PORT=' "$dir/.env.development" 2>/dev/null | cut -d= -f2 | tr -d '"\'')
+if test -z "$port"
+    set port 3000
+end
+
+set url "http://localhost:$port"
+
+if test -x ~/bin/open-tab
+    ~/bin/open-tab "$url"
+else
+    open "$url"
+end

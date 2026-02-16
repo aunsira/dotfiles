@@ -1,0 +1,166 @@
+#!/usr/bin/env -S ruby --disable-gems -x
+require 'optparse'
+require 'open3'
+
+class TabOpener
+  TAB_NOT_FOUND = :tab_not_found
+
+  def initialize(app_url, options)
+    @app_url = app_url
+    @options = options
+  end
+
+  def self.open_for(app_url, options)
+    new(app_url, options).open!
+  end
+
+  def open!
+    if tab_exists?
+      log("Tab exists!")
+      activate_tab
+    else
+      log("Tab not found -- opening anew")
+      open_app_in_new_tab
+    end
+    unless options[:detached]
+      focus_browser
+    end
+  end
+
+  private
+
+  attr_reader :app_url, :options
+
+  def tab_exists?
+    app_tab != TAB_NOT_FOUND
+  end
+
+  def app_tab
+    @app_tab ||= find_safari_tab
+  end
+
+  def find_safari_tab
+    script = <<~APPLESCRIPT
+      tell application "Safari"
+        set winIndex to 0
+        repeat with w in windows
+          set winIndex to winIndex + 1
+          set tabIndex to 0
+          repeat with t in tabs of w
+            set tabIndex to tabIndex + 1
+            try
+              if URL of t is not missing value and URL of t contains "#{app_url}" then
+                return (winIndex as text) & "," & (tabIndex as text)
+              end if
+            end try
+          end repeat
+        end repeat
+        return "not_found"
+      end tell
+    APPLESCRIPT
+
+    result = nil
+    Open3.popen3("osascript", "-") do |stdin, stdout, stderr, wait_thr|
+      stdin.write(script)
+      stdin.close
+      result = stdout.read.chomp
+      err = stderr.read.chomp
+      log("find_safari_tab stdout: #{result}")
+      log("find_safari_tab stderr: #{err}") unless err.empty?
+    end
+    if result.nil? || result == "not_found"
+      TAB_NOT_FOUND
+    else
+      result.split(",").map(&:to_i)
+    end
+  end
+
+  def activate_tab
+    win_idx, tab_idx = app_tab
+    script = <<~APPLESCRIPT
+      tell application "Safari"
+        set current tab of window #{win_idx} to tab #{tab_idx} of window #{win_idx}
+        set index of window #{win_idx} to 1
+      end tell
+    APPLESCRIPT
+    Open3.popen3("osascript", "-") do |stdin, stdout, stderr, _|
+      stdin.write(script)
+      stdin.close
+      log("activate_tab stderr: #{stderr.read.chomp}")
+    end
+  end
+
+  def debug_safari_tabs
+    script = <<~APPLESCRIPT
+      tell application "Safari"
+        set output to ""
+        repeat with w in windows
+          repeat with t in tabs of w
+            set output to output & URL of t & "\n"
+          end repeat
+        end repeat
+        return output
+      end tell
+    APPLESCRIPT
+
+    Open3.popen3("osascript", "-") do |stdin, stdout, stderr, _|
+      stdin.write(script)
+      stdin.close
+      log("Safari tabs:\n#{stdout.read}")
+    end
+  end
+
+  def open_app_in_new_tab
+    script = %{osascript -e 'tell application "Safari" to tell window 1 to set current tab to (make new tab with properties {URL:"#{app_url}"})'}
+    try_system_cmd script
+  end
+
+  def focus_browser
+    try_system_cmd %{osascript -e 'tell application "Safari" to activate'}
+  end
+
+  def try_system_cmd(cmd)
+    Open3.popen3(cmd) do |_, stdout, stderr, wait_thr|
+      output = stdout.read
+      error = stderr.read
+      exit_status = wait_thr.value
+      if exit_status != 0
+        log("Error: system command failed ['#{cmd}']")
+        log("  stdout: #{output}")
+        log("  stderr: #{error}")
+      end
+    end
+  end
+end
+
+def desired_app_url
+  if app_url = ARGV[0]
+    app_url
+  else
+    project_name = Dir.pwd.split("/").last
+    "http://#{project_name}.dev"
+  end
+end
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: open-tab [options] [<tab-url>]"
+  opts.on("-r", "--[no-]reload", "Reload tab after activating") do |r|
+    options[:reload] = r
+  end
+  opts.on("-d", "--detached", "Detached -- do not focus browser") do |d|
+    options[:detached] = d
+  end
+end.parse!
+
+def logging_enabled?
+  false
+end
+
+def log(message)
+  if logging_enabled?
+    puts message
+  end
+end
+
+TabOpener.open_for(desired_app_url, options)
