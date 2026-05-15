@@ -38,6 +38,8 @@ trigger-length = 1
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
 ";" = "command_mode"
+"C-e" = "@:e "
+"C-r" = "@:e <C-r>%<C-w>"
 "C-h" = "jump_view_left"
 "C-l" = "jump_view_right"
 "C-j" = "jump_view_down"
@@ -53,7 +55,6 @@ C-g = [
   ":buffer-close!",
   ":redraw"
 ]
-"C-r" = "@:e <C-r>%"
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
 
