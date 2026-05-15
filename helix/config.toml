@@ -53,6 +53,7 @@ C-g = [
   ":buffer-close!",
   ":redraw"
 ]
+"C-r" = "@:e <C-r>%"
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
 
