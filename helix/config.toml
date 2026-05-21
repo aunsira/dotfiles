@@ -39,6 +39,7 @@ trigger-length = 1
 esc = ["collapse_selection", "keep_primary_selection"]
 ";" = "command_mode"
 "C-e" = "@:e "
+"C-b" = "@:b "
 "C-r" = "@:e <C-r>%<C-w>"
 "C-h" = "jump_view_left"
 "C-l" = "jump_view_right"
