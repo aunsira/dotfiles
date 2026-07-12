@@ -1,17 +1,20 @@
-theme = "ayu_dark"
+theme = "terminal-mono"
 
 [editor]
-line-number = "relative"
+line-number = "absolute"
 true-color = true
-scrolloff = 999
+scrolloff = 1
 idle-timeout = 0
 soft-wrap = { enable = true }
-mouse = false
+mouse = true
 completion-timeout = 5
 completion-trigger-len = 1
 jump-label-alphabet = "ntdhseriaobkjlguvmfycxzwqp"
 trim-trailing-whitespace = true
 clipboard-provider = "pasteboard"
+auto-pairs = false
+auto-completion = false
+cursorline = false
 
 [editor.lsp]
 enable = false

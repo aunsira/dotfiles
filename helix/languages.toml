@@ -1,20 +1,9 @@
-[language-server.lexical]
-command = "/Users/aun/code/git/lexical/_build/dev/package/lexical/bin/start_lexical.sh"
-
-[language-server.ruby-lsp]
-command = "ruby-lsp"
-# Pulling Diagnostics is currently implementing
-# https://github.com/helix-editor/helix/pull/11315
-config = { diagnostics = false }
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
 
 [[language]]
 name = "elixir"
-language-servers = ["lexical"]
-
-[[language]]
-name = "ruby"
-language-servers = [ { name = "ruby-lsp" } ]
-
-[[language]]
-name = "heex"
-language-servers = ["lexical"]
+auto-format = true
+formatter = { command = "mix", args = ["format", "-"] }
