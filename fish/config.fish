@@ -78,3 +78,8 @@ if status is-interactive
     # FZF integration
     fzf --fish | source
 end
+
+set -l local_config $HOME/.config/fish-local/*.fish
+for f in $local_config
+    source $f
+end
