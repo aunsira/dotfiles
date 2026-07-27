@@ -4,6 +4,7 @@ font-family = Berkeley Mono Medium SemiCondensed
 font-size = 15.0
 
 cursor-style = block
+cursor-color = #b5d5ff
 
 title = " "
 theme = Builtin Tango Dark
