@@ -22,8 +22,11 @@ scroll=${scroll:-0}
 
 [[ -z $pane ]] && exit 0
 
-cwd=$(tmux display-message -p -t "$pane" '#{pane_current_path}')
-width=$(tmux display-message -p -t "$pane" '#{pane_width}')
+# Every tmux round trip costs a few milliseconds, so ask for everything about
+# the clicked pane at once.
+IFS=$'\t' read -r cwd width src_session < <(
+  tmux display-message -p -t "$pane" '#{pane_current_path}	#{pane_width}	#{session_id}'
+)
 clicked_row=$((my - scroll))
 
 # -J drops trailing cells that were never written to, so a row comes back at
@@ -62,8 +65,10 @@ after=${line:mx}
 token="${before##* }${after%% *}"
 
 # Strip decoration the surrounding output added: quotes, brackets, trailing
-# punctuation. Anything that cannot start or end a path:line is dropped.
-token=$(printf '%s' "$token" | sed -E 's/^[^A-Za-z0-9_./~-]+//; s/[^A-Za-z0-9_]+$//')
+# punctuation. Anything that cannot start or end a path:line is dropped. Done
+# in the shell rather than with sed, which would cost a fork for a few chars.
+while [[ -n $token && $token != [A-Za-z0-9_./~-]* ]]; do token=${token#?}; done
+while [[ -n $token && $token != *[A-Za-z0-9_] ]]; do token=${token%?}; done
 [[ -z $token ]] && exit 0
 
 # Ruby backtraces carry the frame along on the same token, as in
@@ -90,44 +95,12 @@ elif [[ $token =~ ^(.+):([0-9]+)$ ]]; then
 fi
 rel=${file#./}
 
-# --- collect Helix panes, nearest scope first -------------------------------
-# tmux's #{pane_current_command} is unreliable on macOS -- it reports the shell
-# rather than the program it is running -- so ask ps what lives on the pane's
-# tty. A pane that grabs the mouse but is not visibly Helix is kept as a last
-# resort, but only within the window that was clicked.
-running_hx() {
-  ps -t "${1#/dev/}" -o comm= 2>/dev/null | grep -qE '(^|/)hx$'
-}
-
-candidates=
-mouse_pane=
-seen=
-collect() {
-  local id tty mouse path same_window=$1
-  shift
-  while read -r id tty mouse path; do
-    [[ $id == "$pane" ]] && continue
-    case "$seen" in *" $id "*) continue ;; esac
-    seen="$seen $id "
-    if running_hx "$tty"; then
-      candidates+="$id	$path"$'\n'
-    elif [[ $mouse == 1 && $same_window == 1 && -z $mouse_pane ]]; then
-      mouse_pane=$id
-    fi
-  done < <(tmux list-panes "$@" -F '#{pane_id} #{pane_tty} #{mouse_any_flag} #{pane_current_path}')
-}
-
-collect 1 -t "$pane"    # same window
-collect 0 -s -t "$pane" # rest of the session
-collect 0 -a            # rest of the server
-
-# --- resolve the path -------------------------------------------------------
+# --- resolve the path against the clicked pane ------------------------------
+# Sets GITROOT rather than printing, so the caller does not pay for a subshell.
 git_root() {
-  [[ -n $1 ]] && git -C "$1" rev-parse --show-toplevel 2>/dev/null
-}
-
-resolve_in() {
-  [[ -n $1 && -f $1/$2 ]] && printf '%s' "$1/$2"
+  GITROOT=
+  [[ -n $1 ]] || return
+  GITROOT=$(git -C "$1" rev-parse --show-toplevel 2>/dev/null)
 }
 
 abs=
@@ -135,38 +108,79 @@ case $rel in
   /*) [[ -f $rel ]] && abs=$rel ;;
   "~"/*) [[ -f $HOME/${rel#"~/"} ]] && abs=$HOME/${rel#"~/"} ;;
   *)
-    for base in "$cwd" "$(git_root "$cwd")"; do
-      abs=$(resolve_in "$base" "$rel")
-      [[ -n $abs ]] && break
-    done
+    if [[ -f $cwd/$rel ]]; then
+      abs=$cwd/$rel
+    else
+      git_root "$cwd"
+      [[ -n $GITROOT && -f $GITROOT/$rel ]] && abs=$GITROOT/$rel
+    fi
     ;;
 esac
 
-# Pick the Helix instance that actually holds this file: the one whose working
-# directory (or checkout) contains it. That is what makes clicking in one
-# window land in the Helix running in another.
+# --- find the Helix instance that holds the file ----------------------------
+# tmux's #{pane_current_command} is unreliable on macOS -- it reports the shell
+# rather than the program it is running -- so ask ps what lives on the pane's
+# tty. That probe costs a process per pane, and this server has dozens, so widen
+# the search one scope at a time and stop at the first Helix whose working
+# directory (or checkout) contains the file. A pane that grabs the mouse but is
+# not visibly Helix is a last resort, and only in the window that was clicked.
+running_hx() {
+  ps -t "${1#/dev/}" -o comm= 2>/dev/null | grep -qE '(^|/)hx$'
+}
+
 hx_pane=
-while IFS=$'\t' read -r id path; do
-  [[ -z $id ]] && continue
-  root=$(git_root "$path")
-  if [[ -n $abs ]]; then
-    case $abs in
-      "$path"/* | "$root"/*) hx_pane=$id; break ;;
-    esac
-  else
-    for base in "$path" "$root"; do
-      abs=$(resolve_in "$base" "$rel")
+hx_session=
+first_hx=
+first_session=
+mouse_pane=
+seen=
+scan() {
+  local same_window=$1 id tty mouse path sess
+  shift
+  while IFS=$'\t' read -r id tty mouse path sess; do
+    [[ $id == "$pane" ]] && continue
+    case "$seen" in *" $id "*) continue ;; esac
+    seen="$seen $id "
+
+    if ! running_hx "$tty"; then
+      [[ $mouse == 1 && $same_window == 1 && -z $mouse_pane ]] && mouse_pane=$id
+      continue
+    fi
+    [[ -z $first_hx ]] && { first_hx=$id; first_session=$sess; }
+
+    if [[ -n $abs ]]; then
+      # Cheap prefix test first; only shell out to git if the pane sits
+      # somewhere below its checkout root.
+      case $abs in "$path"/*) hx_pane=$id; hx_session=$sess; return 0 ;; esac
+      git_root "$path"
+      case $abs in "$GITROOT"/*) hx_pane=$id; hx_session=$sess; return 0 ;; esac
+    else
+      if [[ -f $path/$rel ]]; then
+        abs=$path/$rel
+      else
+        git_root "$path"
+        [[ -n $GITROOT && -f $GITROOT/$rel ]] && abs=$GITROOT/$rel
+      fi
       if [[ -n $abs ]]; then
         hx_pane=$id
-        break 2
+        hx_session=$sess
+        return 0
       fi
-    done
-  fi
-done <<< "$candidates"
+    fi
+  done < <(tmux list-panes "$@" -F '#{pane_id}	#{pane_tty}	#{mouse_any_flag}	#{pane_current_path}	#{session_id}')
+  return 1
+}
+
+scan 1 -t "$pane" ||      # same window
+  scan 0 -s -t "$pane" || # rest of the session
+  scan 0 -a               # rest of the server
 
 # Nothing contained it, so fall back to the nearest Helix, then to whatever
 # grabbed the mouse in this window.
-[[ -z $hx_pane ]] && hx_pane=$(printf '%s' "$candidates" | head -1 | cut -f1)
+if [[ -z $hx_pane ]]; then
+  hx_pane=$first_hx
+  hx_session=$first_session
+fi
 [[ -z $hx_pane ]] && hx_pane=$mouse_pane
 
 if [[ -z $abs ]]; then
@@ -190,10 +204,9 @@ sleep 0.05
 tmux send-keys -t "$hx_pane" -l ":open '$arg:$line_no:$col_no'"
 tmux send-keys -t "$hx_pane" Enter
 
-# Follow the file, switching session and window if Helix lives elsewhere.
-src_session=$(tmux display-message -p -t "$pane" '#{session_id}')
-hx_session=$(tmux display-message -p -t "$hx_pane" '#{session_id}')
-if [[ $src_session != "$hx_session" ]]; then
+# Follow the file, switching session and window if Helix lives elsewhere. Both
+# session ids came back with the pane listings above.
+if [[ -n $hx_session && $src_session != "$hx_session" ]]; then
   client=$(tmux list-clients -t "$src_session" -F '#{client_name}' | head -1)
   [[ -n $client ]] && tmux switch-client -c "$client" -t "$hx_session"
 fi
