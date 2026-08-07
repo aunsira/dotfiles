@@ -1,0 +1,201 @@
+#!/usr/bin/env bash
+#
+# Open the "path:line" under the mouse in a Helix pane.
+#
+# Invoked from tmux.conf's DoubleClick1Pane binding with the pane that was
+# clicked and the mouse position inside it:
+#
+#   tmux-open-in-helix <pane-id> <mouse-x> <mouse-y> [scroll-position]
+#
+# The scroll position is how far the pane is scrolled back in copy mode; it
+# shifts the clicked row into the scrollback, where 0 is the live screen.
+#
+# Does nothing when the token under the cursor is not a file we can find.
+
+set -u
+
+pane=${1:-}
+mx=${2:-0}
+my=${3:-0}
+scroll=${4:-0}
+scroll=${scroll:-0}
+
+[[ -z $pane ]] && exit 0
+
+cwd=$(tmux display-message -p -t "$pane" '#{pane_current_path}')
+width=$(tmux display-message -p -t "$pane" '#{pane_width}')
+clicked_row=$((my - scroll))
+
+# -J drops trailing cells that were never written to, so a row comes back at
+# the full pane width only when it really is full -- which is what wrapping
+# means. Plain -N pads with trailing spaces and would fake a wrap.
+row() {
+  tmux capture-pane -p -J -t "$pane" -S "$1" -E "$1" 2>/dev/null
+}
+
+# --- rebuild the logical line the click landed on ---------------------------
+# A long path wraps across rows, and each row is a separate capture, so walk
+# out in both directions to stitch the pieces back together.
+first=$clicked_row
+for _ in 1 2 3 4 5 6 7 8 9 10; do
+  prev=$(row $((first - 1)))
+  [[ ${#prev} -eq $width ]] || break
+  first=$((first - 1))
+done
+
+line=
+r=$first
+for _ in 1 2 3 4 5 6 7 8 9 10 11; do
+  piece=$(row "$r")
+  line+=$piece
+  [[ ${#piece} -eq $width ]] || break
+  r=$((r + 1))
+done
+
+# Every row above the clicked one contributed exactly $width columns.
+mx=$(((clicked_row - first) * width + mx))
+
+# --- token under the cursor, whitespace delimited ---------------------------
+line=${line//$'\t'/ }
+before=${line:0:mx}
+after=${line:mx}
+token="${before##* }${after%% *}"
+
+# Strip decoration the surrounding output added: quotes, brackets, trailing
+# punctuation. Anything that cannot start or end a path:line is dropped.
+token=$(printf '%s' "$token" | sed -E 's/^[^A-Za-z0-9_./~-]+//; s/[^A-Za-z0-9_]+$//')
+[[ -z $token ]] && exit 0
+
+# Ruby backtraces carry the frame along on the same token, as in
+# "app/models/foo.rb:52:in 'Foo#bar'". Drop trailing colon segments until the
+# token ends in a number again, which is the position we can actually use.
+while [[ $token == *:* && ! $token =~ :[0-9]+$ ]]; do
+  token=${token%:*}
+done
+
+# --- split off :row[:col] ---------------------------------------------------
+file=$token
+line_no=1
+col_no=1
+located=
+if [[ $token =~ ^(.+):([0-9]+):([0-9]+)$ ]]; then
+  file=${BASH_REMATCH[1]}
+  line_no=${BASH_REMATCH[2]}
+  col_no=${BASH_REMATCH[3]}
+  located=1
+elif [[ $token =~ ^(.+):([0-9]+)$ ]]; then
+  file=${BASH_REMATCH[1]}
+  line_no=${BASH_REMATCH[2]}
+  located=1
+fi
+rel=${file#./}
+
+# --- collect Helix panes, nearest scope first -------------------------------
+# tmux's #{pane_current_command} is unreliable on macOS -- it reports the shell
+# rather than the program it is running -- so ask ps what lives on the pane's
+# tty. A pane that grabs the mouse but is not visibly Helix is kept as a last
+# resort, but only within the window that was clicked.
+running_hx() {
+  ps -t "${1#/dev/}" -o comm= 2>/dev/null | grep -qE '(^|/)hx$'
+}
+
+candidates=
+mouse_pane=
+seen=
+collect() {
+  local id tty mouse path same_window=$1
+  shift
+  while read -r id tty mouse path; do
+    [[ $id == "$pane" ]] && continue
+    case "$seen" in *" $id "*) continue ;; esac
+    seen="$seen $id "
+    if running_hx "$tty"; then
+      candidates+="$id	$path"$'\n'
+    elif [[ $mouse == 1 && $same_window == 1 && -z $mouse_pane ]]; then
+      mouse_pane=$id
+    fi
+  done < <(tmux list-panes "$@" -F '#{pane_id} #{pane_tty} #{mouse_any_flag} #{pane_current_path}')
+}
+
+collect 1 -t "$pane"    # same window
+collect 0 -s -t "$pane" # rest of the session
+collect 0 -a            # rest of the server
+
+# --- resolve the path -------------------------------------------------------
+git_root() {
+  [[ -n $1 ]] && git -C "$1" rev-parse --show-toplevel 2>/dev/null
+}
+
+resolve_in() {
+  [[ -n $1 && -f $1/$2 ]] && printf '%s' "$1/$2"
+}
+
+abs=
+case $rel in
+  /*) [[ -f $rel ]] && abs=$rel ;;
+  "~"/*) [[ -f $HOME/${rel#"~/"} ]] && abs=$HOME/${rel#"~/"} ;;
+  *)
+    for base in "$cwd" "$(git_root "$cwd")"; do
+      abs=$(resolve_in "$base" "$rel")
+      [[ -n $abs ]] && break
+    done
+    ;;
+esac
+
+# Pick the Helix instance that actually holds this file: the one whose working
+# directory (or checkout) contains it. That is what makes clicking in one
+# window land in the Helix running in another.
+hx_pane=
+while IFS=$'\t' read -r id path; do
+  [[ -z $id ]] && continue
+  root=$(git_root "$path")
+  if [[ -n $abs ]]; then
+    case $abs in
+      "$path"/* | "$root"/*) hx_pane=$id; break ;;
+    esac
+  else
+    for base in "$path" "$root"; do
+      abs=$(resolve_in "$base" "$rel")
+      if [[ -n $abs ]]; then
+        hx_pane=$id
+        break 2
+      fi
+    done
+  fi
+done <<< "$candidates"
+
+# Nothing contained it, so fall back to the nearest Helix, then to whatever
+# grabbed the mouse in this window.
+[[ -z $hx_pane ]] && hx_pane=$(printf '%s' "$candidates" | head -1 | cut -f1)
+[[ -z $hx_pane ]] && hx_pane=$mouse_pane
+
+if [[ -z $abs ]]; then
+  # Only complain when it looked like a location; ordinary words stay silent.
+  [[ -n $located ]] && tmux display-message "not found: $file"
+  exit 0
+fi
+if [[ -z $hx_pane ]]; then
+  tmux display-message "no helix pane found for $file"
+  exit 0
+fi
+
+# --- drive Helix ------------------------------------------------------------
+# Single quotes make the argument literal in Helix's command line; a literal
+# quote inside is escaped by doubling it.
+arg=${abs//\'/\'\'}
+
+tmux send-keys -t "$hx_pane" Escape
+# Escape immediately followed by ':' reads as Alt-: , so let it land on its own.
+sleep 0.05
+tmux send-keys -t "$hx_pane" -l ":open '$arg:$line_no:$col_no'"
+tmux send-keys -t "$hx_pane" Enter
+
+# Follow the file, switching session and window if Helix lives elsewhere.
+src_session=$(tmux display-message -p -t "$pane" '#{session_id}')
+hx_session=$(tmux display-message -p -t "$hx_pane" '#{session_id}')
+if [[ $src_session != "$hx_session" ]]; then
+  client=$(tmux list-clients -t "$src_session" -F '#{client_name}' | head -1)
+  [[ -n $client ]] && tmux switch-client -c "$client" -t "$hx_session"
+fi
+tmux select-window -t "$hx_pane"
+tmux select-pane -t "$hx_pane"
