@@ -60,16 +60,30 @@ mx=$(((clicked_row - first) * width + mx))
 
 # --- token under the cursor, whitespace delimited ---------------------------
 line=${line//$'\t'/ }
-before=${line:0:mx}
-after=${line:mx}
-token="${before##* }${after%% *}"
+token=
+if ((mx < ${#line})); then
+  before=${line:0:mx}
+  after=${line:mx}
+  token="${before##* }${after%% *}"
+fi
 
 # Strip decoration the surrounding output added: quotes, brackets, trailing
 # punctuation. Anything that cannot start or end a path:line is dropped. Done
 # in the shell rather than with sed, which would cost a fork for a few chars.
-while [[ -n $token && $token != [A-Za-z0-9_./~-]* ]]; do token=${token#?}; done
-while [[ -n $token && $token != *[A-Za-z0-9_] ]]; do token=${token%?}; done
-[[ -z $token ]] && exit 0
+strip_decoration() {
+  token=$1
+  while [[ -n $token && $token != [A-Za-z0-9_./~-]* ]]; do token=${token#?}; done
+  while [[ -n $token && $token != *[A-Za-z0-9_] ]]; do token=${token%?}; done
+}
+strip_decoration "$token"
+
+# A click in the whitespace of an output line still means that line, so fall
+# back to its first word -- where "rg --no-heading", grep -n and compilers all
+# put the location.
+if [[ -z $token ]]; then
+  rest=${line#"${line%%[![:space:]]*}"}
+  strip_decoration "${rest%%[[:space:]]*}"
+fi
 
 # Ruby backtraces carry the frame along on the same token, as in
 # "app/models/foo.rb:52:in 'Foo#bar'". Drop trailing colon segments until the
@@ -93,6 +107,43 @@ elif [[ $token =~ ^(.+):([0-9]+)$ ]]; then
   line_no=${BASH_REMATCH[2]}
   located=1
 fi
+
+# --- ripgrep heading mode ---------------------------------------------------
+# With a heading (rg's default on a terminal) the path is printed once and each
+# hit below it is just "13:    match text" -- a line number with no path. Take
+# the number off the front and walk back up the pane for the heading those hits
+# belong to. Context lines from -A/-B use "13-" instead of "13:".
+if [[ -z $located && $line =~ ^([0-9]+)[:-] ]]; then
+  rg_line=${BASH_REMATCH[1]}
+  heading=
+  # One ranged capture rather than a call per row, and -J hands back logical
+  # lines, which is all this needs. Hits are contiguous under their heading, so
+  # the last plain line above the click is it.
+  while IFS= read -r above; do
+    case $above in
+      '' | '--') continue ;;
+    esac
+    [[ $above =~ ^[0-9]+[:-] ]] && continue
+    heading=$above
+  done < <(tmux capture-pane -p -J -t "$pane" -S $((first - 200)) -E $((first - 1)) 2>/dev/null)
+
+  strip_decoration "$heading"
+  # A heading scrolled out of reach leaves the shell prompt as the last plain
+  # line, so require something path-shaped. Costs paths containing spaces, which
+  # are rarer than being wrong about the prompt.
+  if [[ -n $token && $token != *[[:space:]]* ]]; then
+    file=$token
+    line_no=$rg_line
+    col_no=1
+    located=1
+  fi
+fi
+
+# Nothing usable under the cursor: whitespace, or a word that is not a path.
+# Checked here rather than at the token, because a click in the gap between a
+# ripgrep line number and its match text has no token but still has a location.
+[[ -z $file ]] && exit 0
+
 rel=${file#./}
 
 # --- resolve the path against the clicked pane ------------------------------
