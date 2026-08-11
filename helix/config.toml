@@ -39,6 +39,10 @@ layout = ["line-numbers", "spacer", "diff"]
 trigger-length = 1
 
 [keys.normal]
+# Sent by tmux-open-in-helix when a file location is double-clicked in another
+# pane. Reading the path out of a file beats typing ":open <path>", which makes
+# Helix recompute a directory completion for every character of the path.
+F12 = ":open %sh{cat $HOME/.cache/helix/open-$TMUX_PANE}"
 esc = ["collapse_selection", "keep_primary_selection"]
 ";" = "command_mode"
 "C-e" = "@:e "
@@ -63,11 +67,17 @@ C-g = [
 "}" = "goto_next_paragraph"
 
 [keys.select]
+F12 = ":open %sh{cat $HOME/.cache/helix/open-$TMUX_PANE}"
 W = 'extend_next_sub_word_start'
 B = 'extend_prev_sub_word_start'
 E = 'extend_next_sub_word_end'
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
+
+# Bound in every mode a click can land in, so the script never has to guess
+# which mode Helix was left in.
+[keys.insert]
+F12 = ":open %sh{cat $HOME/.cache/helix/open-$TMUX_PANE}"
 
 [keys.normal."space"]
 c = "file_picker_in_current_buffer_directory"

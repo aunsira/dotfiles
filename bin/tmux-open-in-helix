@@ -22,12 +22,19 @@ scroll=${scroll:-0}
 
 [[ -z $pane ]] && exit 0
 
-# Every tmux round trip costs a few milliseconds, so ask for everything about
-# the clicked pane at once.
-IFS=$'\t' read -r cwd width src_session < <(
-  tmux display-message -p -t "$pane" '#{pane_current_path}	#{pane_width}	#{session_id}'
-)
 clicked_row=$((my - scroll))
+
+# A tmux invocation costs ~3ms of fork and socket round trip, which dwarfs the
+# work it does, and tmux takes several commands per invocation. So ask for the
+# pane's metadata and the row above the click together: that row is needed
+# either way, to decide whether the click landed on a wrapped continuation.
+{
+  IFS=$'\t' read -r cwd width src_session
+  IFS= read -r prev
+} < <(
+  tmux display-message -p -t "$pane" '#{pane_current_path}	#{pane_width}	#{session_id}' \; \
+    capture-pane -p -J -t "$pane" -S $((clicked_row - 1)) -E $((clicked_row - 1)) 2>/dev/null
+)
 
 # -J drops trailing cells that were never written to, so a row comes back at
 # the full pane width only when it really is full -- which is what wrapping
@@ -38,12 +45,13 @@ row() {
 
 # --- rebuild the logical line the click landed on ---------------------------
 # A long path wraps across rows, and each row is a separate capture, so walk
-# out in both directions to stitch the pieces back together.
+# out in both directions to stitch the pieces back together. $prev already holds
+# the first row to test, from the batched call above.
 first=$clicked_row
 for _ in 1 2 3 4 5 6 7 8 9 10; do
-  prev=$(row $((first - 1)))
   [[ ${#prev} -eq $width ]] || break
   first=$((first - 1))
+  prev=$(row $((first - 1)))
 done
 
 line=
@@ -245,21 +253,40 @@ if [[ -z $hx_pane ]]; then
 fi
 
 # --- drive Helix ------------------------------------------------------------
-# Single quotes make the argument literal in Helix's command line; a literal
-# quote inside is escaped by doubling it.
-arg=${abs//\'/\'\'}
+# Typing ":open <path>" makes Helix recompute a filesystem completion after
+# every character of the path -- a directory walk, a .gitignore load and a
+# redraw each time, which is ~100ms and a popup flickering through the
+# directories on the way. Hand the path over out of band instead and spend a
+# single keypress. F12 is bound in config.toml to
+#   :open %sh{cat $HOME/.cache/helix/open-$TMUX_PANE}
+# and that shell inherits Helix's environment, so $TMUX_PANE is Helix's own
+# pane: the name below is the one it will look for, and two Helix panes racing
+# on the same click never read each other's file.
+handoff=$HOME/.cache/helix/open-$hx_pane
+[[ -d ${handoff%/*} ]] || mkdir -p "${handoff%/*}"
+printf '%s' "$abs:$line_no:$col_no" >"$handoff"
 
+# Escape first, so a file picker or a half-typed command prompt does not eat the
+# key -- a keymap binding cannot fire while one of those owns the input.
+#
+# This has to stay its own invocation. Batched with the next one, tmux writes
+# both keys to the pty in a single write, Helix reads "\e" and "\e[24~" as one
+# chunk and parses the pair as Alt-F12, which is bound to nothing. Two
+# invocations means two writes, and the lone Escape resolves on its own. No
+# sleep is needed between them -- the process spawn is separation enough.
 tmux send-keys -t "$hx_pane" Escape
-# Escape immediately followed by ':' reads as Alt-: , so let it land on its own.
-sleep 0.05
-tmux send-keys -t "$hx_pane" -l ":open '$arg:$line_no:$col_no'"
-tmux send-keys -t "$hx_pane" Enter
 
-# Follow the file, switching session and window if Helix lives elsewhere. Both
-# session ids came back with the pane listings above.
+# The rest send no keys, so they are safe to batch, and a tmux invocation costs
+# ~3ms of fork and socket whatever it carries.
+tmux \
+  send-keys -t "$hx_pane" F12 \; \
+  select-window -t "$hx_pane" \; \
+  select-pane -t "$hx_pane"
+
+# Helix in another session needs the client moved as well; its window is already
+# selected above, so the client lands on it. Left out of the batch because it is
+# the rare case and costs two more processes to find the client.
 if [[ -n $hx_session && $src_session != "$hx_session" ]]; then
   client=$(tmux list-clients -t "$src_session" -F '#{client_name}' | head -1)
   [[ -n $client ]] && tmux switch-client -c "$client" -t "$hx_session"
 fi
-tmux select-window -t "$hx_pane"
-tmux select-pane -t "$hx_pane"
