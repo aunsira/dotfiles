@@ -116,6 +116,26 @@ elif [[ $token =~ ^(.+):([0-9]+)$ ]]; then
   located=1
 fi
 
+# Pick the file a search was pointed at out of the command line that ran it, as
+# in `rg "t.date" -w db/schema.rb`. Scans the words from the right, where the
+# path argument sits, and takes the first that is a file on disk: that also
+# throws out the flags and the pattern, which cannot be told apart from a path
+# by shape alone. Leaves it in $token, like strip_decoration.
+command_line_file() {
+  local words i
+  read -ra words <<<"$1"
+  for ((i = ${#words[@]} - 1; i >= 0; i--)); do
+    strip_decoration "${words[i]}"
+    case $token in
+      '') continue ;;
+      /*) [[ -f $token ]] && return ;;
+      "~"/*) [[ -f $HOME/${token#"~/"} ]] && return ;;
+      *) [[ -f $cwd/$token ]] && return ;;
+    esac
+  done
+  token=
+}
+
 # --- ripgrep heading mode ---------------------------------------------------
 # With a heading (rg's default on a terminal) the path is printed once and each
 # hit below it is just "13:    match text" -- a line number with no path. Take
@@ -136,9 +156,12 @@ if [[ -z $located && $line =~ ^([0-9]+)[:-] ]]; then
   done < <(tmux capture-pane -p -J -t "$pane" -S $((first - 200)) -E $((first - 1)) 2>/dev/null)
 
   strip_decoration "$heading"
-  # A heading scrolled out of reach leaves the shell prompt as the last plain
-  # line, so require something path-shaped. Costs paths containing spaces, which
-  # are rarer than being wrong about the prompt.
+  # Whitespace in there means it is not a heading: either the command line that
+  # ran the search -- rg given a file prints no heading at all, so the prompt is
+  # the last plain line above the hits -- or a prompt left over from a heading
+  # that has scrolled away. The first names the file, the second does not.
+  [[ $token == *[[:space:]]* ]] && command_line_file "$heading"
+
   if [[ -n $token && $token != *[[:space:]]* ]]; then
     file=$token
     line_no=$rg_line

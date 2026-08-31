@@ -73,3 +73,5 @@
 # View-specific color
 [tig "color.tree"]
 	date		= cyan	default	bold
+[rerere]
+	enabled = true
