@@ -73,7 +73,7 @@ alias hb='gh browse'
 alias hc='hub compare'
 alias hpr='gh pr create'
 alias hps='gh pr view --web'
-alias merge='gh pr merge --squash --delete-branch && pl'
+alias merge='gh pr merge --squash -t (gh pr view --json title,number -q \'"\(.title) (#\(.number))"\') --delete-branch && pl'
 alias ready='gh pr ready'
 alias review='PAGER=less gh pr diff'
 
