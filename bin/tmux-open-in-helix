@@ -185,6 +185,23 @@ git_root() {
   GITROOT=$(git -C "$1" rev-parse --show-toplevel 2>/dev/null)
 }
 
+# Output that ran into the path without a newline -- minitest's progress dots
+# ahead of an exception, as in "......../Users/x/app.rb:73:in 'Foo#bar'" --
+# leaves junk glued to its front that the whitespace split cannot see, and a
+# dot is a legal way for a path to start. What Ruby prints that way is always
+# absolute, so try the rest of the token from each slash in turn and take the
+# first that is a file on disk.
+embedded_abs() {
+  local rest=$1
+  while [[ $rest == */* ]]; do
+    rest=${rest#*/}
+    if [[ -f /$rest ]]; then
+      abs=/$rest
+      return
+    fi
+  done
+}
+
 abs=
 case $rel in
   /*) [[ -f $rel ]] && abs=$rel ;;
@@ -196,6 +213,7 @@ case $rel in
       git_root "$cwd"
       [[ -n $GITROOT && -f $GITROOT/$rel ]] && abs=$GITROOT/$rel
     fi
+    [[ -z $abs ]] && embedded_abs "$file"
     ;;
 esac
 
